@@ -1081,14 +1081,6 @@ ENG_missions_2_2 = {
 			}
 		}
 		effect = {
-			random_province = {
-				limit = {
-					country_or_non_sovereign_subject_holds = ROOT
-					colonial_region = colonial_the_carribean
-					NOT = { province_has_center_of_trade_of_level = 1 }
-				}
-				center_of_trade = 1
-			}
 			add_mercantilism = 3
 		}
 	}
