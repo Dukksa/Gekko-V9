@@ -335,7 +335,7 @@ estate_cossacks_expand_the_cossack_regiments = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	influence = 0.05
 	is_valid = {
-		has_estate_privilege = estate_cossacks_establish_the_cossack_regiments
+		
 	}
 	can_select = {
 	}
@@ -381,7 +381,6 @@ estate_cossacks_expand_the_cossack_regiments = {
 		}
 	}
 	modifier_by_land_ownership = {
-		allowed_cossack_fraction = 0.5
 	}
 	penalties = {
 	}
@@ -409,7 +408,6 @@ estate_cossacks_expand_the_cossack_regiments = {
 					influence = 75
 				}
 			}
-			NOT = { has_estate_privilege = estate_cossacks_establish_the_cossack_regiments }
 		}
 	}
 }
