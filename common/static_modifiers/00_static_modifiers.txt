@@ -1928,7 +1928,7 @@ prepared_streltsy_modifier = {
 }
 
 new_order_regiment_mobilized_modifier = {
-	infantry_power = 0.1
+	infantry_power = 0.05
 }
 
 inward_focus_modifier = {
@@ -2181,7 +2181,7 @@ cultural_revolution = {
 }
 
 mobilized_new_order_regiments = {
-	infantry_power = 0.1
+	infantry_power = 0.05
 }
 
 ########################################
