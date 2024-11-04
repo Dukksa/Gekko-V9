@@ -239,7 +239,7 @@ X_VEN_slot_1 = {
 			cavalry_leader = 3
 		}
 		effect = {
-			add_yearly_manpower = 5
+			add_yearly_manpower = 1.5
 			custom_tooltip = X_VEN_mission_24_tt 
 			add_country_modifier = {
 				name = X_VEN_innovative_tactics_cmod
