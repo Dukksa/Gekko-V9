@@ -475,50 +475,6 @@ country_event = {
 	}
 }
 
-country_event = {
-    id = echo.19
-    title = echo.19.t
-    desc = echo.19.d
-    picture = COURT_eventPicture
-
-    trigger = {
-		NOT = { has_country_modifier = Merc_payments_reneged }
-		has_country_modifier = Merc_payments
-	}
-	mean_time_to_happen = {
-        months = 1
-    }
-	hidden = yes
-    option = {
-		name = echo.15.a
-		add_country_modifier = {
-			name = Merc_payments_reneged
-			duration = -1
-		}
-	}
-}
-
-country_event = {
-    id = echo.20
-    title = echo.20.t
-    desc = v.d
-    picture = COURT_eventPicture
-
-    trigger = {
-		has_country_modifier = Merc_payments_reneged
-		NOT = {has_country_modifier = Merc_payments }
-	}
-	
-	mean_time_to_happen = {
-        months = 1
-    }
-	hidden = yes
-    option = {
-		name = echo.18.a
-		remove_country_modifier = Merc_payments_reneged
-	}
-}
-
 #End of the Righteous Army
 country_event = {
 	id = echo.21

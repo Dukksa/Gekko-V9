@@ -53,11 +53,6 @@ b_colony_warscore = {
 	local_warscore_cost_modifier = 1
 }
 
-Merc_payments_reneged = {
-	is_mercenary_modifier = yes
-	reinforce_speed = -0.33
-}
-
 defense_of_the_low_countries = {
 	global_tax_modifier = -0.1
 	hostile_attrition = 3
