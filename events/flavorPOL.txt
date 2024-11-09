@@ -1809,23 +1809,44 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 1
+		modifier = {
+			factor = 0.5
+			is_year = 1448
 		}
+	}
 	
-	#option = {
-	#	name = flavor_pol.18.a #We must retain the Jagiellon Dynasty
-	#	ai_chance = { 
-	#		factor = 75 
-	#	}
-	#	LIT = { 
-	#		country_event = { id = flavor_lit.16 }
-	#	}
-	#	if = {
-	#		limit = { has_dlc = "Lions of the North" }
-	#		custom_tooltip = pol_impact_future_missions_tt 
-	#		set_country_flag = pol_chose_pu_flag
-	#	}
-	#}
-	
+	option = {
+		name = flavor_pol.18.a
+		define_ruler = {
+			adm = 3
+			dip = 3
+			mil = 3
+			claim = 100
+			dynasty = "Jagiellon"
+			culture = lithuanian
+		}
+		create_union = LIT
+		LIT = {
+			release = PLT
+			release = SMO
+			release = VOL
+			hidden_effect = {
+				every_core_province = {
+					limit = {
+						OR = {
+							is_core = PLT
+							is_core = SMO
+							is_core = VOL
+						}
+					}
+					remove_core = LIT
+				}
+			}
+		}
+		inherit = VOL
+		country_event = { id = flavor_pol.20 }
+	}
+
 	option = {
 		name = flavor_pol.18.b #Appoint a Local Noble.
 		ai_chance = { 

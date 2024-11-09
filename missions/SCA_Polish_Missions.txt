@@ -1301,9 +1301,6 @@ POL_Missions_3_1 = {
 					name = POL_return
 					duration = 9125
 				}
-				silesia_area = { add_permanent_claim = ROOT }
-				breg_area = { add_permanent_claim = ROOT }
-				opole_area = { add_permanent_claim = ROOT }
 				slovakia_area = { add_permanent_claim = ROOT }
 				neumark_area = { add_permanent_claim = ROOT }
 				hinter_pommern_area = { add_permanent_claim = ROOT }
