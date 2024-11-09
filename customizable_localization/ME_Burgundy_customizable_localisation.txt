@@ -1,0 +1,65 @@
+defined_text = {
+	name = RolandDescription1
+	random = no
+
+	text = {
+		localisation_key = RolandBook1
+		trigger = {
+			check_variable = {
+				which = LOTRolandCounter
+				value = 1
+			}
+		}
+	}
+
+	text = {
+		localisation_key = EMPTY
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = RolandDescription2
+	random = no
+
+	text = {
+		localisation_key = RolandBook2
+		trigger = {
+			check_variable = {
+				which = LOTRolandCounter
+				value = 2
+			}
+		}
+	}
+
+	text = {
+		localisation_key = EMPTY
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = RolandDescription3
+	random = no
+
+	text = {
+		localisation_key = RolandBook3
+		trigger = {
+			check_variable = {
+				which = LOTRolandCounter
+				value = 3
+			}
+		}
+	}
+
+	text = {
+		localisation_key = EMPTY
+		trigger = {
+			always = yes
+		}
+	}
+}
