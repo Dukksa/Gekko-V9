@@ -1258,17 +1258,6 @@ ME_lot_3 = {
 				loyalty = 10
 			}
 
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			custom_tooltip = ME_BUR_UNLOCK_ROLAND_DECISION
-			set_country_flag = me_bur_roland_flag
-
-			hidden_effect = {
-				set_variable = {
-					which = LOTRolandCounter
-					value = 0
-				}
-			}
 		} 
 	}
 }
