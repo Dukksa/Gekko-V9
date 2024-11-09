@@ -116,6 +116,7 @@ country_decisions = {
 					trade_goods = wool
 				}
 			}
+			NOT = { has_country_modifier = echo_provincial_investment_cmod }
 		}
 		allow = {
 			custom_trigger_tooltip = {

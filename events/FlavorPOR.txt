@@ -1128,6 +1128,7 @@ country_event = {
 	}
 }
 
+namespace = X_POR_events
 #West African Slave Trade
 country_event = {
 	id = X_POR_events.1
