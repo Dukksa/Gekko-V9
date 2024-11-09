@@ -1303,11 +1303,7 @@ POL_Missions_3_1 = {
 				}
 				slovakia_area = { add_permanent_claim = ROOT }
 				neumark_area = { add_permanent_claim = ROOT }
-				hinter_pommern_area = { add_permanent_claim = ROOT }
-				add_ruler_modifier = {
-					name = POL_a_piast_ruler
-					duration = -1
-				}			
+				hinter_pommern_area = { add_permanent_claim = ROOT }		
 			hidden_effect = {
 				if = {
 					limit = {
