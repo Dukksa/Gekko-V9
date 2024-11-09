@@ -1,0 +1,764 @@
+####################
+# Russia
+####################
+defined_text = {
+	name = GetXRUSIsolationVsWesternization
+	random = no
+	text = {
+		trigger = {
+			check_variable = { which = X_RUS_isolation_vs_westernization_variable value = 0 }
+		}
+		localisation_key = X_RUS_isolation
+	}
+	text = {
+		trigger = {
+		   always = yes
+		}
+		localisation_key = X_RUS_westernization
+	}
+}
+
+defined_text = {
+	name = GetXRUSIsolationVsWesternizationEffects
+	random = no
+	text = {
+		trigger = {
+			is_variable_equal = {
+				which = X_RUS_isolation_vs_westernization_variable
+				value = 4
+			}
+		}
+		localisation_key = X_RUS_isolation_4_cmod_effects
+	}
+	text = {
+		trigger = {
+			is_variable_equal = {
+				which = X_RUS_isolation_vs_westernization_variable
+				value = 3
+			}
+		}
+		localisation_key = X_RUS_isolation_3_cmod_effects
+	}
+	text = {
+		trigger = {
+			is_variable_equal = {
+				which = X_RUS_isolation_vs_westernization_variable
+				value = 2
+			}
+		}
+		localisation_key = X_RUS_isolation_2_cmod_effects
+	}
+	text = {
+		trigger = {
+			is_variable_equal = {
+				which = X_RUS_isolation_vs_westernization_variable
+				value = 1
+			}
+		}
+		localisation_key = X_RUS_isolation_1_cmod_effects
+	}
+	text = {
+		trigger = {
+			is_variable_equal = {
+				which = X_RUS_isolation_vs_westernization_variable
+				value = -1
+			}
+		}
+		localisation_key = X_RUS_westernization_1_cmod_effects
+	}
+	text = {
+		trigger = {
+			is_variable_equal = {
+				which = X_RUS_isolation_vs_westernization_variable
+				value = -2
+			}
+		}
+		localisation_key = X_RUS_westernization_2_cmod_effects
+	}
+	text = {
+		trigger = {
+			is_variable_equal = {
+				which = X_RUS_isolation_vs_westernization_variable
+				value = -3
+			}
+		}
+		localisation_key = X_RUS_westernization_3_cmod_effects
+	}
+	text = {
+		trigger = {
+			is_variable_equal = {
+				which = X_RUS_isolation_vs_westernization_variable
+				value = -4
+			}
+		}
+		localisation_key = X_RUS_westernization_4_cmod_effects
+	}
+}
+####################
+# Estates
+####################
+defined_text = {
+	name = GetXCossackLootAmount
+	random = no
+	text = {
+		localisation_key = X_cossack_raid_loot_amount_zero
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = X_cossack_raid_total_development_localization_variable
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = X_cossack_raid_loot_amount_not_zero
+		trigger = {
+			check_variable = {
+				which = X_cossack_raid_total_development_localization_variable
+				value = 1
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = GetXCossackLootAmountTT
+	random = no
+	text = {
+		localisation_key = X_cossack_raid_loot_amount_zero_tt
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = X_cossack_raid_total_development_localization_variable
+					value = 1
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = X_cossack_raid_loot_amount_not_zero_tt
+		trigger = {
+			check_variable = {
+				which = X_cossack_raid_total_development_localization_variable
+				value = 1
+			}
+		}
+	}
+}
+####################
+# Province Estates & Expand Infrastructure
+####################
+defined_text = {
+	name = GetXProvinceEstatesNumOfChurchProvinces
+	random = no
+	text = {
+		trigger = {
+			has_estate = estate_church
+		}
+		localisation_key = X_province_estates_num_of_estate_church_provinces
+	}
+}
+
+defined_text = {
+	name = GetXProvinceEstatesNumOfBurghersProvinces
+	random = no
+	text = {
+		trigger = {
+			has_estate = estate_burghers
+		}
+		localisation_key = X_province_estates_num_of_estate_burghers_provinces
+	}
+}
+
+defined_text = {
+	name = GetXProvinceEstatesNumOfNoblesProvinces
+	random = no
+	text = {
+		trigger = {
+			has_estate = estate_nobles
+		}
+		localisation_key = X_province_estates_num_of_estate_nobles_provinces
+	}
+}
+
+defined_text = {
+	name = GetXProvinceEstatesNumOfDhimmiProvinces
+	random = no
+	text = {
+		trigger = {
+			has_estate = estate_dhimmi
+		}
+		localisation_key = X_province_estates_num_of_estate_dhimmi_provinces
+	}
+}
+
+defined_text = {
+	name = GetXProvinceEstatesController
+	random = no
+	text = {
+		trigger = {
+			has_province_modifier = X_estate_church_province_control_pmod
+		}
+		localisation_key = X_estate_church_province_controller
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_estate_burghers_province_control_pmod
+		}
+		localisation_key = X_estate_burghers_province_controller
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_estate_nobles_province_control_pmod
+		}
+		localisation_key = X_estate_nobles_province_controller
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_estate_dhimmi_province_control_pmod
+		}
+		localisation_key = X_estate_dhimmi_province_controller
+	}
+	text = {
+		trigger = {
+		   always = yes
+		}
+		localisation_key = X_no_estate_province_controller
+	}
+}
+
+defined_text = {
+	name = GetXProvinceEstatesGrantOrRevoke
+	random = no
+	text = {
+		trigger = {
+			X_province_estates_has_pmod_trigger = no
+		}
+		localisation_key = X_grant
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = X_revoke
+	}
+}
+
+defined_text = {
+	name = GetXProvinceEstatesBurghersRestrictions
+	random = no
+	text = {
+		trigger = {
+			X_province_estates_has_pmod_trigger = no
+			NOT = { province_trade_power = 5 }
+			NOT = { development = 10 }
+			NOT = { province_has_center_of_trade_of_level = 1 }
+		}
+		localisation_key = X_estate_burghers_province_restrictions
+	}
+}
+
+defined_text = {
+	name = GetXProvinceEstatesDhimmiRestrictions
+	random = no
+	text = {
+		trigger = {
+			X_province_estates_has_pmod_trigger = no
+			religion_group = muslim
+		}
+		localisation_key = X_estate_dhimmi_province_restrictions
+	}
+}
+
+defined_text = {
+	name = GetXExpandInfrastructureCostRestrictions
+	random = no
+	text = {
+		trigger = {
+			owner = { NOT = { adm_power = 30 } }
+		}
+		localisation_key = X_expand_infrastructure_cost_restrictions
+	}
+}
+
+defined_text = {
+	name = GetXExpandInfrastructureDevelopmentRestrictions
+	random = no
+	text = {
+		trigger = {
+			NOT = { development = 10 }
+		}
+		localisation_key = X_expand_infrastructure_development_restrictions_1
+	}
+	text = {
+		trigger = {
+			development = 10
+			NOT = { development = 20 }
+			has_province_modifier = X_expand_infrastructure_tier_1_pmod
+		}
+		localisation_key = X_expand_infrastructure_development_restrictions_2
+	}
+	text = {
+		trigger = {
+			development = 20
+			NOT = { development = 30 }
+			has_province_modifier = X_expand_infrastructure_tier_2_pmod
+		}
+		localisation_key = X_expand_infrastructure_development_restrictions_3
+	}
+	text = {
+		trigger = {
+			development = 30
+			NOT = { development = 40 }
+			has_province_modifier = X_expand_infrastructure_tier_3_pmod
+		}
+		localisation_key = X_expand_infrastructure_development_restrictions_4
+	}
+	text = {
+		trigger = {
+			development = 40
+			NOT = { development = 50 }
+			has_province_modifier = X_expand_infrastructure_tier_4_pmod
+		}
+		localisation_key = X_expand_infrastructure_development_restrictions_5
+	}
+	text = {
+		trigger = {
+			development = 50
+			NOT = { development = 60 }
+			has_province_modifier = X_expand_infrastructure_tier_5_pmod
+		}
+		localisation_key = X_expand_infrastructure_development_restrictions_6
+	}
+	text = {
+		trigger = {
+			development = 60
+			NOT = { development = 70 }
+			has_province_modifier = X_expand_infrastructure_tier_6_pmod
+		}
+		localisation_key = X_expand_infrastructure_development_restrictions_7
+	}
+	text = {
+		trigger = {
+			development = 70
+			NOT = { development = 80 }
+			has_province_modifier = X_expand_infrastructure_tier_7_pmod
+		}
+		localisation_key = X_expand_infrastructure_development_restrictions_8
+	}
+	text = {
+		trigger = {
+			development = 80
+			NOT = { development = 90 }
+			has_province_modifier = X_expand_infrastructure_tier_8_pmod
+		}
+		localisation_key = X_expand_infrastructure_development_restrictions_9
+	}
+	text = {
+		trigger = {
+			development = 90
+			NOT = { development = 100 }
+			has_province_modifier = X_expand_infrastructure_tier_9_pmod
+		}
+		localisation_key = X_expand_infrastructure_development_restrictions_10
+	}
+}
+
+defined_text = {
+	name = GetXExpandInfrastructureLevel
+	random = no
+	text = {
+		trigger = {
+			has_province_modifier = X_expand_infrastructure_tier_1_pmod
+		}
+		localisation_key = X_expand_infrastructure_level_1
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_expand_infrastructure_tier_2_pmod
+		}
+		localisation_key = X_expand_infrastructure_level_2
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_expand_infrastructure_tier_3_pmod
+		}
+		localisation_key = X_expand_infrastructure_level_3
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_expand_infrastructure_tier_4_pmod
+		}
+		localisation_key = X_expand_infrastructure_level_4
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_expand_infrastructure_tier_5_pmod
+		}
+		localisation_key = X_expand_infrastructure_level_5
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_expand_infrastructure_tier_6_pmod
+		}
+		localisation_key = X_expand_infrastructure_level_6
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_expand_infrastructure_tier_7_pmod
+		}
+		localisation_key = X_expand_infrastructure_level_7
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_expand_infrastructure_tier_8_pmod
+		}
+		localisation_key = X_expand_infrastructure_level_8
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_expand_infrastructure_tier_9_pmod
+		}
+		localisation_key = X_expand_infrastructure_level_9
+	}
+	text = {
+		trigger = {
+			has_province_modifier = X_expand_infrastructure_tier_10_pmod
+		}
+		localisation_key = X_expand_infrastructure_level_10
+	}
+	text = {
+		trigger = {
+		   always = yes
+		}
+		localisation_key = X_expand_infrastructure_level_0
+	}
+}
+####################
+# Cultural Unions
+####################
+#tartar
+defined_text = {
+	name = GetXTartarCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_tartar_culture_control_union_key
+		trigger = {
+			has_global_flag = X_tartar_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_tartar_culture_control_development_key
+		trigger = {
+			has_global_flag = X_tartar_control_development_gflag
+		}
+	}
+}
+#germanic
+defined_text = {
+	name = GetXGermanicCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_germanic_culture_control_union_key
+		trigger = {
+			has_global_flag = X_germanic_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_germanic_culture_control_development_key
+		trigger = {
+			has_global_flag = X_germanic_control_development_gflag
+		}
+	}
+}
+#latin
+defined_text = {
+	name = GetXLatinCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_latin_culture_control_union_key
+		trigger = {
+			has_global_flag = X_latin_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_latin_culture_control_development_key
+		trigger = {
+			has_global_flag = X_latin_control_development_gflag
+		}
+	}
+}
+#west_slavic
+defined_text = {
+	name = GetXWestSlavicCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_west_slavic_culture_control_union_key
+		trigger = {
+			has_global_flag = X_west_slavic_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_west_slavic_culture_control_development_key
+		trigger = {
+			has_global_flag = X_west_slavic_control_development_gflag
+		}
+	}
+}
+#east_slavic
+defined_text = {
+	name = GetXEastSlavicCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_east_slavic_culture_control_union_key
+		trigger = {
+			has_global_flag = X_east_slavic_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_east_slavic_culture_control_development_key
+		trigger = {
+			has_global_flag = X_east_slavic_control_development_gflag
+		}
+	}
+}
+#scandinavian
+defined_text = {
+	name = GetXScandinavianCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_scandinavian_culture_control_union_key
+		trigger = {
+			has_global_flag = X_scandinavian_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_scandinavian_culture_control_development_key
+		trigger = {
+			has_global_flag = X_scandinavian_control_development_gflag
+		}
+	}
+}
+#carpathian
+defined_text = {
+	name = GetXCarpathianCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_carpathian_culture_control_union_key
+		trigger = {
+			has_global_flag = X_carpathian_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_carpathian_culture_control_development_key
+		trigger = {
+			has_global_flag = X_carpathian_control_development_gflag
+		}
+	}
+}
+#iberian
+defined_text = {
+	name = GetXIberianCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_iberian_culture_control_union_key
+		trigger = {
+			has_global_flag = X_iberian_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_iberian_culture_control_development_key
+		trigger = {
+			has_global_flag = X_iberian_control_development_gflag
+		}
+	}
+}
+#maghrebi
+defined_text = {
+	name = GetXMaghrebiCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_maghrebi_culture_control_union_key
+		trigger = {
+			has_global_flag = X_maghrebi_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_maghrebi_culture_control_development_key
+		trigger = {
+			has_global_flag = X_maghrebi_control_development_gflag
+		}
+	}
+}
+#french
+defined_text = {
+	name = GetXFrenchCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_french_culture_control_union_key
+		trigger = {
+			has_global_flag = X_french_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_french_culture_control_development_key
+		trigger = {
+			has_global_flag = X_french_control_development_gflag
+		}
+	}
+}
+#lowlands
+defined_text = {
+	name = GetXLowlandsCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_lowlands_culture_control_union_key
+		trigger = {
+			has_global_flag = X_lowlands_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_lowlands_culture_control_development_key
+		trigger = {
+			has_global_flag = X_lowlands_control_development_gflag
+		}
+	}
+}
+#british
+defined_text = {
+	name = GetXBritishCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_british_culture_control_union_key
+		trigger = {
+			has_global_flag = X_british_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_british_culture_control_development_key
+		trigger = {
+			has_global_flag = X_british_control_development_gflag
+		}
+	}
+}
+#hindusthani
+defined_text = {
+	name = GetXHindusthaniCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_hindusthani_culture_control_union_key
+		trigger = {
+			has_global_flag = X_hindusthani_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_hindusthani_culture_control_development_key
+		trigger = {
+			has_global_flag = X_hindusthani_control_development_gflag
+		}
+	}
+}
+#iranian
+defined_text = {
+	name = GetXIranianCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_iranian_culture_control_union_key
+		trigger = {
+			has_global_flag = X_iranian_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_iranian_culture_control_development_key
+		trigger = {
+			has_global_flag = X_iranian_control_development_gflag
+		}
+	}
+}
+#turko_semitic
+defined_text = {
+	name = GetXTurkoSemiticCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_turko_semitic_culture_control_union_key
+		trigger = {
+			has_global_flag = X_turko_semitic_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_turko_semitic_culture_control_development_key
+		trigger = {
+			has_global_flag = X_turko_semitic_control_development_gflag
+		}
+	}
+}
+#cushitic
+defined_text = {
+	name = GetXCushiticCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_cushitic_culture_control_union_key
+		trigger = {
+			has_global_flag = X_cushitic_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_cushitic_culture_control_development_key
+		trigger = {
+			has_global_flag = X_cushitic_control_development_gflag
+		}
+	}
+}
+#southern_african
+defined_text = {
+	name = GetXSouthernAfricanCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_southern_african_culture_control_union_key
+		trigger = {
+			has_global_flag = X_southern_african_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_southern_african_culture_control_development_key
+		trigger = {
+			has_global_flag = X_southern_african_control_development_gflag
+		}
+	}
+}
+#mande
+defined_text = {
+	name = GetXMandeCultureEffect
+	random = no
+
+	text = {
+		localisation_key = X_mande_culture_control_union_key
+		trigger = {
+			has_global_flag = X_mande_control_union_gflag
+		}
+	}
+	text = {
+		localisation_key = X_mande_culture_control_development_key
+		trigger = {
+			has_global_flag = X_mande_control_development_gflag
+		}
+	}
+}
