@@ -1274,7 +1274,7 @@ rheinland={
 	color={
 		114 171 184 
 	}
-	inland=yes
+
 	outgoing={
 		name="holland"
 		path={
@@ -1304,7 +1304,6 @@ rheinland={
 	}
 	members={
 		57 1758 4773 2971 #braunschweig_area
-		54 55 1874 4771 #weser_area
 		56 78 80 81 82 83 84 85 86 1760 1876 1878 2973 2975 2972 1762 69 4768 4774 4775 
 		49 50 62 63 51 60 61 1759 1763 52 58 59 2964 2965 2969 2993 4741 4742 4743 4744 4747 4748 4778 
 		4749 4786
@@ -1361,6 +1360,7 @@ lubeck = {
 		47 2994 4745 1858 #vorpommern_area
 		48 2995 4746 6177 #hinter_pommern_area
 		6 26 1982 4165 #skaneland area
+		54 55 1874 4771 #weser_area
 	}
 }
 wien={

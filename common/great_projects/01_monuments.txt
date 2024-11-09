@@ -11332,7 +11332,7 @@ cahokia = {
 		}
 		country_modifiers = {
 			tribal_development_growth = 0.02
-			global_manpower_modifier = 0.1
+			
 		}
 		on_upgraded = {
 		}
@@ -11352,7 +11352,7 @@ cahokia = {
 		}
 		country_modifiers = {
 			tribal_development_growth = 0.03
-			global_manpower_modifier = 0.2
+			global_manpower_modifier = 0.1
 		}
 		on_upgraded = {
 		}
