@@ -1127,3 +1127,68 @@ country_event = {
 		add_prestige = 10
 	}
 }
+
+#West African Slave Trade
+country_event = {
+	id = X_POR_events.1
+	title = X_POR_events.1.t
+	desc = X_POR_events.1.d1
+	picture = AFRICAN_EUROPEAN_PURCHASE_eventPicture
+	fire_only_once = yes
+	mean_time_to_happen = { months = 1 }
+	trigger = {
+		slaves = 1
+		owns_core_province = 1111
+	}
+	option = {
+		name = X_POR_events.1.a
+		230 = {
+			change_trade_goods = slaves
+		}
+		1111 = {
+			X_center_of_trade_effect = { cost_equivalency_max_lvl_2 = yes }
+		}
+		add_country_modifier = {
+			name = X_POR_companhia_de_lagos_cmod
+			duration = 7300
+		}
+		every_known_country = {
+			limit = {
+				capital_scope = { region = guinea_region }
+			}
+			ROOT = {
+				reverse_add_opinion = { 
+					who = PREV
+					modifier = opinion_good_relations 
+				}
+			}
+		}
+	}
+	option = {
+		name = X_POR_events.1.b
+		230 = {
+			change_trade_goods = slaves
+		}
+		1111 = {
+			X_center_of_trade_effect = { cost_equivalency_max_lvl_2 = yes }
+		}
+		add_country_modifier = {
+			name = X_POR_razias_de_escravos_cmod
+			duration = 7300
+		}
+		every_known_country = {
+			limit = {
+				capital_scope = { region = guinea_region }
+			}
+			ROOT = {
+				reverse_add_opinion = { 
+					who = PREV
+					modifier = opinion_displeased 
+				}
+			}
+		}
+	}
+	after = {
+		set_country_flag = X_POR_west_african_slave_trade_cflag
+	}
+}
