@@ -1,0 +1,348 @@
+namespace = ME_Yemen_Events
+
+country_event = {
+	id = ME_Yemen_Events.1
+	title = ME_Yemen_Events.1.t 
+	desc = ME_Yemen_Events.1.d 
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		NOT = { is_year = 1450 }
+		tag = RAS
+	}
+	mean_time_to_happen = {
+		days = 30 
+	}
+	
+	option = {
+		name = ME_Yemen_Events.1.a 
+		
+		add_legitimacy = -30 
+		add_country_modifier = {
+			name = yem_yemeni_crisis_modifier 
+			duration = -1 
+		}
+		custom_tooltip = yem_yemeni_crisis_duration_tt 
+		hidden_effect = { set_country_flag = yem_has_had_yemeni_crisis_event_flag } 
+	}
+}
+
+country_event = {
+	id = ME_Yemen_Events.2
+	title = ME_Yemen_Events.2.t 
+	desc = ME_Yemen_Events.2.d 
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = ME_Yemen_Events.2.a 
+		
+		2344 = {
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				add_prosperity = 100 
+			}
+			else = {
+				RAS = 
+					{ add_adm_power = 100 }
+			}
+			add_province_modifier = {
+				name = yem_marib_dam_modifier 
+				duration = -1 
+			}
+			add_base_tax = 1 
+			add_base_production = 1 
+			add_base_manpower = 1
+		}
+	}
+}
+
+country_event = {
+	id = ME_Yemen_Events.3 
+	title = ME_Yemen_Events.3.t 
+	desc = ME_Yemen_Events.3.d 
+	picture = COUNTRY_COLLAPSE_eventPicture 
+	
+	fire_only_once = yes 
+	hidden = yes 
+	
+	trigger = {
+		tag = RAS 
+		tihama_al_yemen_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		yemen_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		upper_yemen_area = {
+			type = all 
+			country_or_non_sovereign_subject_holds = ROOT 
+		}
+		stability = 1 
+	}
+	
+	mean_time_to_happen = {
+		days = 1 
+	}
+	immediate = {
+		remove_country_modifier = yem_yemeni_crisis_modifier
+		clr_country_flag = yem_has_had_yemeni_crisis_event_flag
+	}
+	
+	option = {
+		name = ME_Yemen_Events.3.a 
+		
+	}
+}
+
+country_event = {
+	id = ME_Yemen_Events.4
+	title = ME_Yemen_Events.4.t 
+	desc = ME_Yemen_Events.4.d 
+	picture = COUNTRY_COLLAPSE_eventPicture 
+	
+	fire_only_once = yes 
+	hidden = yes 
+	
+	trigger = {
+		tag = RAS 
+		has_country_flag = yem_dissemination_prevention_flag 
+		387 = { 
+			NOT = { has_province_modifier = coffea_arabica_modifier }
+		}
+	}
+	
+	mean_time_to_happen = { 
+		days = 1 
+	}
+	
+	option = {
+		name = ME_Yemen_Events.4.a 
+		
+		387 = {
+			add_province_modifier = {
+				name = coffea_arabica_new_modifier
+				duration = -1 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ME_Yemen_Events.5
+	title = "muslim_dlc.EVTNAME7"
+	desc = "muslim_dlc.EVTDESC7"
+	picture = GREAT_BUILDING_eventPicture
+	
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		set_country_flag = mimar_sinan_flag
+	}
+	
+	option = {
+		name = "muslim_dlc.EVTOPTA7"
+		add_meritocracy_effect = yes
+		define_advisor = {
+			name = "Mimar Sinan"
+			discount = yes
+			type = artist
+			skill = 3
+			religion = sunni
+			culture = armenian
+		}
+		add_years_of_income = -0.5
+		add_ruler_modifier = { name = repaired_masjid_al_haram }
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 15
+		}
+	}
+	option = {
+		name = "muslim_dlc.EVTOPTB7"
+		add_years_of_income = -0.2
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 15
+		}
+		add_ruler_modifier = { name = repaired_masjid_al_haram }
+	}
+	option = {
+		name = "muslim_dlc.EVTOPTC7"
+		add_piety = -0.1
+	}
+}	
+	
+country_event = {
+	id = ME_Yemen_Events.6
+	title = "muslim_dlc.EVTNAME21"
+	desc = "muslim_dlc.EVTDESC21"
+	picture = UNIVERSITY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = dev_madrassa_flag
+			random_owned_province = {
+				limit = {
+					is_core = owner
+					religion_group = muslim
+				}
+				set_province_flag = madrassa_flag1
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_flag = madrassa_flag1
+					}
+				}
+				set_province_flag = madrassa_flag2
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_flag = madrassa_flag2
+					}
+					NOT = {
+						has_province_flag = madrassa_flag1
+					}
+				}
+				set_province_flag = madrassa_flag3
+			}
+		}
+	}
+	
+	option = {
+		name = "muslim_dlc.EVTOPTA21"
+		add_country_modifier = { 
+			name = muslim_madrassa 
+			duration = 7300 
+		}
+		add_years_of_income = -0.5
+		hidden_effect = {
+				random_owned_province = {
+				limit = {
+					has_province_flag = madrassa_flag1
+				}
+				clr_province_flag = madrassa_flag1
+			}
+			random_owned_province = {
+				limit = {
+					has_province_flag = madrassa_flag2
+				}
+				clr_province_flag = madrassa_flag2
+			}
+			random_owned_province = {
+				limit = {
+					has_province_flag = madrassa_flag3
+				}
+				clr_province_flag = madrassa_flag3
+			}
+		}
+	}
+	option = {
+		name = "muslim_dlc.EVTOPTB21"
+		add_years_of_income = -0.25
+		random_owned_province = {
+			limit = {
+				has_province_flag = madrassa_flag1
+			}
+			clr_province_flag = madrassa_flag1
+			add_province_modifier = { name = province_madrassa duration = 7300 }
+		}
+		random_owned_province = {
+			limit = {
+				has_province_flag = madrassa_flag2
+			}
+			clr_province_flag = madrassa_flag2
+			add_province_modifier = { name = province_madrassa duration = 7300 }
+		}
+		random_owned_province = {
+			limit = {
+				has_province_flag = madrassa_flag3
+			}
+			clr_province_flag = madrassa_flag3
+			add_province_modifier = { name = province_madrassa duration = 7300 }
+		}
+	}
+	option = {
+		name = "muslim_dlc.EVTOPTC21"
+		hidden_effect = {
+				random_owned_province = {
+				limit = {
+					has_province_flag = madrassa_flag1
+				}
+				clr_province_flag = madrassa_flag1
+			}
+			random_owned_province = {
+				limit = {
+					has_province_flag = madrassa_flag2
+				}
+				clr_province_flag = madrassa_flag2
+			}
+			random_owned_province = {
+				limit = {
+					has_province_flag = madrassa_flag3
+				}
+				clr_province_flag = madrassa_flag3
+			}
+		}
+	}
+}	
+	
+country_event = {
+	id = ME_Yemen_Events.7 
+	title = ME_Yemen_Events.7.t 
+	desc = ME_Yemen_Events.7.d 
+	
+	picture = UNIVERSITY_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes 
+	
+	trigger = {
+		was_tag = RAS 
+		tag = YEM 
+		has_country_flag = ras_convert_yem_flag
+		is_at_war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1 
+	}
+	
+	immediate = {
+		every_owned_province = {
+			limit = {
+				is_core = ROOT 
+				owned_by = ROOT 
+				has_owner_religion = no 
+			}
+			change_religion = ROOT 
+		}
+	}
+	
+	option = {
+		name = ME_Yemen_Events.7.a
+		clr_country_flag = ras_convert_yem_flag
+		
+	}
+}
+			
+	
+
+	
+
+
+		
