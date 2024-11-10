@@ -38,7 +38,7 @@ merchant_navy = {
 
 	cost = 0.1
 	country_modifier = {
-		global_ship_trade_power = 0.33
+		ship_power_propagation = 0.33
 	}
 	effect = {}
 	removed_effect = {}
