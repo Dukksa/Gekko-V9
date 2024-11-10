@@ -402,7 +402,6 @@ milan_missions_2 = { #Made by Big Boss for Flavor Universalis
 		effect = {
 			custom_tooltip = emp_ven_plague_doctor_training_tt
 			hidden_effect = { set_country_flag = has_competent_doctors }
-			country_event = { id = flavor_mlo.3 } #dummy event
 			custom_tooltip = FU_prevent_plagues_tt 
 			hidden_effect = { set_country_flag = prevent_plague_event } 
 		}
