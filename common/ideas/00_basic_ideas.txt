@@ -669,6 +669,7 @@ court_ideas = {
 		great_project_upgrade_time = -0.25
 		}
 	respected_authority = {
+		max_absolutism = 20
 		prestige_from_land = 0.25
 		land_morale = 0.05
 	}
