@@ -517,6 +517,23 @@ milan_missions_3 = { #Made by Big Boss for Flavor Universalis
 					}
 					add_permanent_claim = ROOT
 				}
+				torino_area ={
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						is_empty = no
+					}
+					add_permanent_claim = ROOT
+				}
+
+				siena_area ={
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						is_empty = no
+					}
+					add_permanent_claim = ROOT
+				}
 				
 				lazio_area = {
 					limit = {

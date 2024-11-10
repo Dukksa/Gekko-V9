@@ -65,7 +65,6 @@ We_stand_alone = {
 				
 				OR = {
 					NOT = { num_of_allies = 1 }
-					has_country_modifier = Peace_of_Italy
 					has_country_modifier = Berber_Raids
 					has_country_modifier = Stop_the_raids
 					has_country_modifier = spice_bros
