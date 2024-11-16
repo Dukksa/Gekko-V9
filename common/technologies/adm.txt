@@ -190,6 +190,7 @@ technology = { #University
 technology = { #National Sovereignty
 	# Tech 18
 	year = 1635
+	administrative_efficiency = 0.025
 	
 	allowed_idea_groups	= 5
 }
@@ -198,6 +199,7 @@ technology = { #Cathedral
 	# Tech 19
 	year = 1648	
 	
+	administrative_efficiency = 0.025
 	#Cathedral
 	cathedral = yes
 }
@@ -282,6 +284,7 @@ technology = { #Modern Bureaucracy
 technology = { #Rotherham Plough
 	# Tech 28
 	year = 1775
+	administrative_efficiency = 0.025
 	
 	#Rotherham Plough
 	production_efficiency 	=	0.01
@@ -291,6 +294,7 @@ technology = { #Rotherham Plough
 technology = { #Rights of Man
 	# Tech 29
 	year = 1790
+	administrative_efficiency = 0.025
 	
 	allowed_idea_groups = 8
 	enlightened_despotism = yes
@@ -300,6 +304,7 @@ technology = { #Rights of Man
 technology = { #Advanced Production
 	# Tech 30
 	year = 1805
+	administrative_efficiency = 0.025
 	
 	#Improved Draft Animals
 	production_efficiency 	=	0.01
@@ -309,7 +314,8 @@ technology = { #Advanced Production
 technology = { #Revolutionary Ideals
 	# Tech 31
 	year = 1820
-	
+
+	administrative_efficiency = 0.025
 	revolutionary_republic = yes
 	revolutionary_empire = yes
 	governing_capacity = 500
@@ -318,7 +324,7 @@ technology = { #Revolutionary Ideals
 technology = { #Four Field Rotation
 	# Tech 32
 	year = 1835
-	
+	administrative_efficiency = 0.025
 	#Four field rotation
 	production_efficiency 	=	0.01
 	
