@@ -565,6 +565,39 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = echo.24
+	title = echo.24.t
+	desc = echo.24.d
+	picture = BATTLE_eventPicture
+	hidden = yes
+	trigger = {
+		NOT = { is_year = 1445}
+		tag = FRS
+	}
+
+	option = {
+		4332 = {
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+
+		}
+	}
+}
+
 country_event = { # state edicts
 		id = sealand_events.28
 		title = sealand_events.28.t
