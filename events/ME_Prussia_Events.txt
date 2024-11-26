@@ -22,9 +22,6 @@ country_event = {
 				change_tag = POM
 				on_change_tag_effect = yes
 				add_liberty_desire = -50
-				change_subject_type = {
-					subject_type = march
-				}
 			}
 		}
 		else_if = {
@@ -36,9 +33,6 @@ country_event = {
 				change_tag = POM
 				on_change_tag_effect = yes
 				add_liberty_desire = -50
-				change_subject_type = {
-					subject_type = march
-				}
 			}
 		}
 		else_if = {
@@ -52,9 +46,6 @@ country_event = {
 				change_tag = POM
 				on_change_tag_effect = yes
 				add_liberty_desire = -50
-				change_subject_type = {
-					subject_type = march
-				}
 			}
 		}
 		else = {
@@ -63,12 +54,12 @@ country_event = {
 				change_tag = POM
 				on_change_tag_effect = yes
 				add_liberty_desire = -50
-				change_subject_type = {
-					subject_type = march
-				}
 			}
 		}
-		
+		create_subject = {
+			subject = POM
+			subject_type = march
+		}
 	}
 	option = {
 		name = ME_Prussia_Events.7.b
