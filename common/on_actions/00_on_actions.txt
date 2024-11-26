@@ -18,8 +18,7 @@ on_startup = {
 		flavor_fra.206 # Setup the general for missions
 		flavor_geo.1 # Disaster info
 		flavor_mam.111 # Mamluks-Syria relations
-		frscolor.1 #fars color event
-		echo.24 # spawns ships in fars
+		frscolor.1 #fars color event and ships
 	}
 	on_startup_effect = yes
 	on_startup_dlc_cleanup_effect = yes

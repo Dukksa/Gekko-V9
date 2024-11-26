@@ -7,9 +7,31 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { is_year = 1445}
 		tag = FRS
 	}
 	is_triggered_only = yes
+
+	immediate = {
+		4332 = {
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+			galley = root
+
+		}
+	}
 	
 	option = {
 		ai_chance = {
