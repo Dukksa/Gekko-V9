@@ -1,0 +1,190 @@
+namespace = ME_Prussia_Events
+
+country_event = {
+	id = ME_Prussia_Events.7 
+	title = ME_Prussia_Events.7.t #treaty of prenzlau
+	desc = ME_Prussia_Events.7.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ME_Prussia_Events.7.a
+		
+		ai_chance = { factor = 100 }
+		
+		if = {
+			limit = {
+				STE = { ai = no }
+			}
+			STE = {
+				inherit = WOL
+				change_tag = POM
+				on_change_tag_effect = yes
+				add_liberty_desire = -50
+				change_subject_type = {
+					subject_type = march
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				WOL = { ai = no }
+			}
+			WOL = {
+				inherit = STE
+				change_tag = POM
+				on_change_tag_effect = yes
+				add_liberty_desire = -50
+				change_subject_type = {
+					subject_type = march
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					STE = { total_development = WOL }
+				}
+			}
+			WOL = {
+				inherit = STE
+				change_tag = POM
+				on_change_tag_effect = yes
+				add_liberty_desire = -50
+				change_subject_type = {
+					subject_type = march
+				}
+			}
+		}
+		else = {
+			STE = {
+				inherit = WOL
+				change_tag = POM
+				on_change_tag_effect = yes
+				add_liberty_desire = -50
+				change_subject_type = {
+					subject_type = march
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = ME_Prussia_Events.7.b
+
+		add_country_modifier = {
+			name = BRA_rightful_duchy
+			duration = 10950
+		}
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+country_event = {
+	id = ME_Prussia_Events.18
+	title = ME_Prussia_Events.18.t #Bierziese
+	desc = ME_Prussia_Events.18.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ME_Prussia_Events.18.a #Implement the Bierziese (Bierkrieg)
+		
+		ai_chance = { factor = 100 }
+		
+		add_country_modifier = {
+			name = BRA_bierziese
+			duration = 9125
+		}
+		custom_tooltip = BRA_this_will_upset_the_populace
+		#this may lead to burgher rebellion
+		country_event = { id = ME_Prussia_Events.19 days = 60 } #Bierskrieg
+	}
+	option = {
+		name = ME_Prussia_Events.18.b #Maintain the Status Quo
+		
+		ai_chance = { factor = 100 }
+		
+		add_adm_power = 50
+	}
+}
+
+country_event = {
+	id = ME_Prussia_Events.19
+	title = ME_Prussia_Events.19.t #Bierskrieg
+	desc = ME_Prussia_Events.19.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ME_Prussia_Events.19.a #Repel the Bierziese and appease the cities
+		
+		ai_chance = { factor = 100 }
+		
+		add_country_modifier = {
+			name = BRA_appeasement
+			duration = 10950
+		}
+		remove_country_modifier = BRA_bierziese
+		if = {
+			limit = { has_estate = estate_burghers }
+			give_estate_land_share_large = { estate = estate_burghers } #3%
+		}
+	}
+	option = {
+		name = ME_Prussia_Events.19.b #Deal with the revoltrs
+		
+		ai_chance = { factor = 100 }
+		
+		if = {
+			limit = { has_estate = estate_burghers }
+			take_estate_land_share_large = { estate = estate_burghers } #3%
+		}
+		random_owned_province = {
+			particularist_rebels = 1
+		}
+		random_owned_province = {
+			particularist_rebels = 1
+		}
+	}
+}
+
+country_event = {
+	id = ME_Prussia_Events.30
+	title = ME_Prussia_Events.30.t #Kreditwerk
+	desc = ME_Prussia_Events.30.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ME_Prussia_Events.30.a #Ok
+		
+		ai_chance = { factor = 100 }
+		
+		add_adm_power = 50
+		add_country_modifier = {
+			name = BRA_abolished_kreditwerk
+			duration = 18250
+		}
+	}
+	option = {
+		name = ME_Prussia_Events.30.b #Ok
+		
+		ai_chance = { factor = 100 }
+		
+		change_government_reform_progress = 25
+		add_country_modifier = {
+			name = BRA_reformed_kreditwerk
+			duration = 18250
+		}
+	}
+}
