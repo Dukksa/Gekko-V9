@@ -1596,7 +1596,7 @@ burgundian_state_reform = {
 	nation_designer_cost = 10
 	modifiers = {
 		rival_change_cost = -1
-		rival_border_fort_maintenance = -1
+		rival_border_fort_maintenance = -0.25
 		diplomatic_upkeep = 2
 		years_to_integrate_personal_union = -5
 	}
