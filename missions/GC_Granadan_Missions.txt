@@ -1186,7 +1186,7 @@ granada_slot_4_missions = {
 				type = trader
 				skill = 2
 				culture = ROOT
-				cost_multiplier = 0.25
+				cost_multiplier = 0.75
 			}
 			if = {
 				limit = {

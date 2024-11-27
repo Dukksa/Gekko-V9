@@ -643,6 +643,69 @@ yem_missions_3 = {
 			}
 		}
 	}
+	YEM_city_of_sanaa_ras = {
+		icon = mission_golden_century
+		required_missions = { }
+		position = 6
+		provinces_to_highlight = {
+			province_id = 390
+		}
+		trigger = {
+			390 = {
+				owned_by = ROOT 
+				religion = ROOT
+				has_tax_building_trigger = yes 
+				if = {
+					limit = { has_dlc = "Leviathan" }
+					custom_trigger_tooltip = {
+						tooltip = YEM_city_of_sanaa_ras_tt
+						or = {
+							has_great_project = { tier = 1 type = city_of_sanaa }
+							has_great_project = { tier = 2 type = city_of_sanaa }
+							has_great_project = { tier = 3 type = city_of_sanaa }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			390 = {
+				upgrade_tax_building = yes
+			
+				custom_tooltip = " "
+			
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					custom_tooltip = YEM_upgrade_city_of_sanaa
+				}
+				else = {
+					add_province_modifier = {
+						name = YEM_center_of_zaidi_islam
+						duration = -1
+					}
+				}
+			}
+			set_country_flag = YEM_upgrade_city_of_sanaa_flag
+			
+			complex_dynamic_effect = {
+				first_custom_tooltip = YEM_if_we_are_allied_with_shiite_country
+				first_limit = "
+					any_ally = {
+						religion = shiite
+					}
+				"
+				first_effect = "
+					390 = {
+						add_base_tax = 2
+						add_base_production = 2
+						add_base_manpower = 1
+					}
+				"
+			}
+		}
+	}
 }
 
 yem_missions_4 = {
