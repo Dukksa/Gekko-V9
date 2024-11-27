@@ -402,7 +402,7 @@ country_decisions = {
 					ai = no
 				}
 			}
-			primary_culture = franconian
+			tag = ROT
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -837,17 +837,8 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
-			NOT = { tag = GER }
-			NOT = { tag = PRU }
-			NOT = { tag = NGF }
-			NOT = { tag = SAX } #Saxe-Lauenburg should form either Saxony or Hannover, not both
 			NOT = { exists = HAN }
-			OR = {
-				TAG = HSA
-				primary_culture = lower_saxon
-			}
+			TAG = HSA
 			is_colonial_nation = no			
 			OR = {
 				is_former_colonial_nation = no
@@ -969,18 +960,9 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { tag = HLR }
-			NOT = { tag = HAN }
-			NOT = { tag = PAP }
-			NOT = { tag = GER }
-			NOT = { tag = PRU }
-			NOT = { tag = SWI }
 			NOT = { exists = WES }
 			NOT = { has_reform = celestial_empire }
-			OR = {
-				primary_culture = hannoverian #Westphalian
-				primary_culture = hessian
-			}
+			tag = HES
 			is_colonial_nation = no
 			OR = {
 				ai = no
