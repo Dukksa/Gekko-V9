@@ -3867,7 +3867,6 @@ FKN_ideas = {
 	bonus = {
 		leader_land_fire = 1
 	}
-	
 	trigger = {
 		tag = FKN
 	}
