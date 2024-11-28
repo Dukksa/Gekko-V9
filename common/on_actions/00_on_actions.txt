@@ -5857,6 +5857,13 @@ on_new_age = {
 			desc = until_end_of_age_desc
 		}
 	}
+	if = {
+		limit = {
+			has_country_flag = eng_longbowmen_last_until_end_of_reformation
+			current_age = age_of_absolutism
+		}
+		remove_country_modifier = { eng_longbowmen }
+	}
 }
 
 #ROOT = province

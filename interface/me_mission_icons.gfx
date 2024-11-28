@@ -1,0 +1,62 @@
+spriteTypes = {
+	spriteType = {
+		name = "me_mission_brandenburg_irontooth"
+		texturefile = "gfx//interface//missions//missions_expanded//brandenburg//mission_brandenburg_irontooth.dds"
+	}
+	spriteType = {
+		name = "me_mission_venice_navy"
+		texturefile = "gfx//interface//missions//missions_expanded//venice//mission_venice_navy.dds"
+	}
+	spriteType = {
+		name = "me_mission_venice_ship_in_port"
+		texturefile = "gfx//interface//missions//missions_expanded//venice//mission_venice_ship_in_port.dds"
+	}
+	spriteType = {
+		name = "me_mission_france_100_years_war"
+		texturefile = "gfx//interface//missions//missions_expanded//france//mission_france_100_years_war.dds"
+	}
+	spriteType = {
+		name = "me_mission_british_flag"
+		texturefile = "gfx//interface//missions//missions_expanded//england//mission_british_flag.dds"
+	}
+	spriteType = {
+		name = "pluto_missions_icon"
+		texturefile = "gfx//interface//missions//missions_expanded//idea_groups//pluto_missions_icon.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+	spriteType = {
+		name = "explore_missions_icon"
+		texturefile = "gfx//interface//missions//missions_expanded//idea_groups//explore_missions_icon.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+	spriteType = {
+		name = "inf_missions_icon"
+		texturefile = "gfx//interface//missions//missions_expanded//idea_groups//inf_missions_icon.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+	spriteType = {
+		name = "me_mission_industrial_salt_mine"
+		texturefile = "gfx//interface//missions//missions_expanded//_generic//mission_industrial_salt_mine.dds"
+	}
+	spriteType = {
+		name = "me_mission_renaissance"
+		texturefile = "gfx//interface//missions//missions_expanded//_generic//mission_renaissance.dds"
+	}
+	spriteType = {
+		name = "me_mission_voltaire"
+		texturefile = "gfx//interface//missions//missions_expanded//_generic//mission_voltaire.dds"	
+	}
+	spriteType = {
+		name = "me_mission_aachen_cloth_trade"
+		texturefile = "gfx//interface//missions//missions_expanded//aachen//mission_aachen_cloth_trade.dds"
+	}
+	spriteType = {
+		name = "me_mission_aachen_dominate_cloth_trade"
+		texturefile = "gfx//interface//missions//missions_expanded//aachen//mission_aachen_dominate_cloth_trade.dds"
+	}
+
+
+}

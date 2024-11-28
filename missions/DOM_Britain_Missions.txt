@@ -3807,7 +3807,7 @@ GBR_missions_5_2 = {
 	}
 	GBR_indian_dominion = {
 		icon = mission_unite_home_region
-		required_missions = { GBR_along_the_rivers }
+		required_missions = {  }
 		position = 24
 		provinces_to_highlight = {
 			OR = {
