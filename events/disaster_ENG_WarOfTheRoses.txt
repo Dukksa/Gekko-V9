@@ -53,7 +53,7 @@ country_event = {
 			}
 			hidden_effect = { add_ruler_personality_ancestor = { key = well_connected } }
 		}
-		add_yearly_manpower = -2.5
+		add_yearly_manpower = -4
 
 		if = {
 			limit = {
@@ -69,7 +69,7 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 3
 					leader = "Richard"
 					leader_dynasty = "York"
 					win = yes
@@ -98,7 +98,7 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 3
 					leader = "Richard"
 					leader_dynasty = "York"
 					win = yes
@@ -131,7 +131,7 @@ country_event = {
 			}
 			hidden_effect = { add_ruler_personality_ancestor = { key = tactical_genius } }
 		}
-		add_yearly_manpower = -2.5
+		add_yearly_manpower = -4
 		if = {
 			limit = {
 				owns = 244		# Lancashire
@@ -146,7 +146,7 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 3
 					leader = "Edward"
 					leader_dynasty = "Lancaster"
 					win = yes
@@ -175,7 +175,7 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 3
 					leader = "Edward"
 					leader_dynasty = "Lancaster"
 					win = yes
@@ -584,7 +584,7 @@ country_event = {
 	option = {		# Send money to help the local authorities
 		name = war_of_the_roses.9.a
 		ai_chance = { factor = 25 }
-		add_years_of_income = -0.75
+		add_years_of_income = -1.75
 		add_dip_power = -50
 	}
 	option = {		# The money is better needed closer to home
@@ -602,7 +602,7 @@ country_event = {
 			}
 			spawn_rebels = {
 				type = pretender_rebels
-				size = 2
+				size = 3
 			}			
 			add_province_modifier = {
 				name = rebel_refugees
@@ -1046,7 +1046,7 @@ country_event = {
 					save_event_target_as = the_province
 					spawn_rebels = {
 						type = pretender_rebels
-						size = 1
+						size = 2
 						friend = FROM
 					}
 				}
@@ -1094,7 +1094,7 @@ country_event = {
 					save_event_target_as = the_province
 					spawn_rebels = {
 						type = pretender_rebels
-						size = 1
+						size = 2
 						friend = FROM
 					}
 				}
@@ -1108,7 +1108,7 @@ country_event = {
 			event_target:the_province = {
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 1
+					size = 3
 					friend = FROM
 				}
 			}

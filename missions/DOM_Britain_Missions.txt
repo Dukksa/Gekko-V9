@@ -621,6 +621,12 @@ ENG_missions_2_1 = {
 			}
 		}
 		effect = {
+			if = {
+				limit = {
+					has_country_modifier = eng_longbowmen
+				}
+				remove_country_modifier = eng_longbowmen
+			}
 			add_country_modifier = {
 				name = eng_longbowmen
 				duration = 1825
@@ -2004,7 +2010,7 @@ ENG_missions_3_3 = {
 			}
 		}
 		effect = {
-			1500 = {
+			1516 = {
 				add_trade_modifier = {
 					who = ROOT
 					duration = 9125
@@ -3430,6 +3436,12 @@ ENG_missions_5_1 = {
 			else = {
 				custom_tooltip = ENG_Tooltip.5
 			}
+			if = {
+				limit = {
+					has_country_modifier = eng_longbowmen
+				}
+				remove_country_modifier = eng_longbowmen
+			}
 			add_country_modifier = {
 				name = eng_longbowmen
 				duration = -1
@@ -3598,7 +3610,7 @@ ENG_missions_5_2 = {
 			NOT = {
 				any_owned_province = {
 					trade_goods = wool
-					NOT = { base_production = 5 }
+					NOT = { base_production = 6 }
 				}
 			}
 			wool = 1
@@ -3610,7 +3622,7 @@ ENG_missions_5_2 = {
 				}
 				add_province_modifier = {
 					name = ENG_english_wool
-					duration = 36500
+					duration = 18250
 				}
 			}
 		}
