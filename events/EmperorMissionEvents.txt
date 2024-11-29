@@ -534,8 +534,7 @@ country_event = {
 	
 	option = {
 		name = emp_mission_events.10.b
-		ai_chance = { factor = 0 }
-		add_stability = -1
+		ai_chance = { factor = 1 }
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = -20
