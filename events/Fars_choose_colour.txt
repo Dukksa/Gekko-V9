@@ -13,23 +13,25 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		4332 = {
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-			galley = root
-
+		hidden_effect = {
+			4332 = {
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+	
+			}
 		}
 	}
 	

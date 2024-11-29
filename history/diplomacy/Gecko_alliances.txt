@@ -22,6 +22,13 @@ vassal = {
 	end_date = 1534.1.1
 }
 
+vassal = {
+	first = FRS
+	second = LRI
+	start_date = 1444.1.1
+	end_date = 1534.1.1
+}
+
 #vassal = {
 #	first = TRS
 #	second = KHI

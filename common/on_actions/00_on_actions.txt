@@ -5862,7 +5862,7 @@ on_new_age = {
 			has_country_flag = eng_longbowmen_last_until_end_of_reformation
 			current_age = age_of_absolutism
 		}
-		remove_country_modifier = { eng_longbowmen }
+		remove_country_modifier = eng_longbowmen 
 	}
 }
 
