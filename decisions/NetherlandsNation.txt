@@ -158,6 +158,40 @@ country_decisions = {
 					}
 				}
 	  		}
+			if = {
+				limit = {
+					tag = BUR
+					exists = SWI
+					SWI = {
+						ai = no
+					}
+				}
+				south_german_region = {
+					limit = {
+						owned_by = BUR
+					}
+					remove_core = BUR
+	  				add_core = SWI
+	  				cede_province = SWI
+				}
+			}
+			if = {
+				limit = {
+					tag = BUR
+					exists = HAB
+					SWI = {
+						ai = yes
+					}
+				}
+				south_german_region = {
+					limit = {
+						owned_by = BUR
+					}
+					remove_core = BUR
+	  				add_core = HAB
+	  				cede_province = HAB
+				}
+			}
 			change_tag = NED
 			on_change_tag_effect = yes
 			restore_country_name = yes
