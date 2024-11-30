@@ -1688,6 +1688,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		NOT = { is_year = 1445}
 		tag = ENG
 		is_subject = no
 		exists = FRA
@@ -1705,11 +1706,9 @@ country_event = {
 		FRA = {
 			is_subject = no
 		}
-		is_year = 1445
 	}
-	
 	mean_time_to_happen = {
-		months = 3
+		days = 5
 	}
 
 	option = {
