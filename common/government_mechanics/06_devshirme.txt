@@ -89,7 +89,7 @@ devshirme_mechanic = {
 				define_advisor = {
 					type = statesman
 					skill = 3
-					cost_multiplier = 0.25
+					cost_multiplier = 0.75
 				}
 				add_country_modifier = {
 					name = tur_grand_vizier_modifier
