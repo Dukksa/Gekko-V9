@@ -1920,7 +1920,8 @@ french_missions_2_Continuation_b = {
 				add_dip_power = 50
 				random_province = { 
 					limit = { 
-						owned_by = ROOT
+						owned_by_subject_of = ROOT
+						owner_is_colonial_nation = yes
 						region = carribeans_region
 						is_city = yes
 					}
