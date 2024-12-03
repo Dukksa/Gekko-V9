@@ -492,13 +492,10 @@ estate_nobles_right_of_counsel = {
 		allowed_cossack_fraction = 0.5
 	}
 	on_granted = {
-		hidden_effect = {
-			set_country_flag = got_five_cossacks
-		}
 		if = {
 			limit = {
 				hidden_trigger = {
-					has_country_flag = got_five_cossacks
+					NOT = { has_country_flag = got_five_cossacks }
 				}
 				capital_scope = { 
 					owned_by = ROOT
@@ -515,7 +512,7 @@ estate_nobles_right_of_counsel = {
 		if = {
 			limit = {
 				hidden_trigger = {
-					has_country_flag = got_five_cossacks
+					NOT = { has_country_flag = got_five_cossacks }
 				}
 				capital_scope = {
 					NOT = {
@@ -530,6 +527,9 @@ estate_nobles_right_of_counsel = {
 				cossack_cavalry = ROOT
 				cossack_cavalry = ROOT
 			}
+		}
+		hidden_effect = {
+			set_country_flag = got_five_cossacks
 		}
 	}
 	on_revoked = {
