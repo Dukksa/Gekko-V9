@@ -686,3 +686,51 @@ estate_nomadic_tribes_tribal_absolutism = {
 		factor = 0
 	}
 }
+estate_tribes_right_of_counsel = {
+	icon = privilege_royal_authority
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	is_valid = {
+		has_dlc = "Domination"
+	}
+	can_select = {
+		cavalry_fraction = 0.01
+	}
+	influence = 0.1
+	mechanics = {
+		enables_cossack_regiments
+	}
+	benefits = {
+	}
+	penalties = {		
+		cavalry_cost = 0.1
+	}
+	modifier = {
+
+	}
+	modifier_by_land_ownership = {
+		allowed_cossack_fraction = 0.5
+	}
+	on_granted = {
+
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = russian_modernization_mechanic }
+		modifier = { monthly_russian_modernization = -0.05 }
+	}
+	#conditional_modifier = {
+	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
+	#	modifier = { monthly_ottoman_decadence = 0.02 }
+	#}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}

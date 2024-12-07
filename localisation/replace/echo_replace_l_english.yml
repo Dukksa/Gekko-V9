@@ -70,6 +70,7 @@
 
 #privileges
 estate_nobles_right_of_counsel:0 "Invest in Heavy Cavalry"
+estate_tribes_right_of_counsel:0 "Invest in Heavy Cavalry"
 #events
  mam_mosque_great_mosque_generates_crown_land_tt:0 "\nConstructing §YMosques§! and §YGreat Mosques§! will grant us §G+0.25%§! Crown Land for §Y20 Years§!, as well as the following reward:\n"
  mam_adm_advisors_generate_idea_cost_tt:0 "\nAll our §YAdministrative§! advisors will generate §G-1%§! Idea cost per level for §Y20 Years§!."
