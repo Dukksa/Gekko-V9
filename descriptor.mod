@@ -13,5 +13,5 @@ tags={
 }
 name="Gecko V9 (bastard x gecko)"
 picture="thumbnail.png"
-supported_version="v1.37.4.0"
+supported_version="v1.37.*"
 remote_file_id="3275925261"
