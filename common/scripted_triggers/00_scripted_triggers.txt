@@ -1304,6 +1304,7 @@ has_been_insulted_by_root = {
 
 valid_for_personal_unions_trigger = {
 	exists = yes
+	ai = yes
 	is_subject = no
 	government = monarchy
 	religion_group = christian
