@@ -599,9 +599,8 @@ swi_regional_diets_modifier = {
 	country_admin_power = 1 
 }
 swi_national_expansion_plan_modifier = {
-	local_manpower_modifier = 0.33
+	local_manpower_modifier = 0.20
 	local_hostile_movement_speed = -0.33
-	local_development_cost = -0.25
 }
 swi_eidgenossenschaft_modifier = {
 	global_unrest = -1 
@@ -656,8 +655,8 @@ swi_tales_of_legends_modifier = {
 swi_canton_republican_ties_modifier = {
 	republican_tradition = 0.1
 	vassal_income = 0.05
-	advisor_cost = -0.025
-	development_cost = -0.02
+	advisor_cost = -0.02
+	development_cost = -0.01
 }
 
 swi_bastion_catholicism_modifier = {
