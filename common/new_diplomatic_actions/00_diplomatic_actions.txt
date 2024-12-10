@@ -3014,6 +3014,13 @@ invite_into_cultural_sphere_of_influence = {
 				FROM = { NOT = { total_development = root } }
 			}
 		}
+		if = {
+			limit = { FROM = { ai = no } }
+			custom_trigger_tooltip = {
+				tooltip = FROM_NOT_AI_TT
+				FROM = { NOT = { ai = no } }
+			}
+		}
 	}
 	on_accept = {
 		create_subject = {
