@@ -189,6 +189,7 @@ country_decisions = {
 			change_tag = GER
 			on_change_tag_effect = yes
 			restore_country_name_effect = yes
+			swap_non_generic_missions = yes
 			if = {
 				limit = {
 					is_emperor = yes
