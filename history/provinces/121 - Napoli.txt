@@ -11,7 +11,6 @@ trade_goods = cloth
 base_manpower = 6
 capital = "Napoli" 
 is_city = yes	# Estimated
-fort_15th = yes
 add_core = NAP
 discovered_by = western
 discovered_by = eastern
