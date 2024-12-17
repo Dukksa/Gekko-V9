@@ -1,0 +1,131 @@
+xorme_global_check_cd = {}
+
+xorme_ai_policy_reset_cooldown = {}
+
+xorme_ai_build_fort_cooldown = {}
+
+xorme_ai_upgrade_fort_cooldown = {}
+
+xorme_ai_u_forts_cooldown_1 = {}
+
+xorme_ai_u_forts_cooldown_2 = {}
+
+xorme_ai_u_forts_cooldown_3 = {}
+
+xorme_ai_pap_cooldown = {}
+
+xorme_ai_expand_infrastructure_cooldown = {}
+
+xorme_ai_buildings_cooldown_1 = {}
+
+xorme_ai_buildings_cooldown_2 = {}
+
+xorme_ai_buildings_cooldown_3 = {}
+
+xorme_ai_merchant_reset_cooldown = {}
+
+xorme_ai_conqueror_cooldown = {}
+
+xorme_ai_search_conqueror_cooldown = {}
+
+special_unit_cooldown = {}
+
+xorme_ai_merchant_reset_modifier = {
+	merchants = -20
+}
+
+xorme_ai_prepare_to_war = {
+	province_warscore_cost = -0.1
+	manpower_recovery_speed = 0.05
+}
+
+xorme_ai_policy_reset_modifier = {
+	free_policy = -4
+}
+xorme_ai_agenda_building_spot = {
+	local_build_cost = -0.1
+}
+
+xorme_ai_war_is_near_low = {
+	land_morale = 0.05
+	regiment_recruit_speed = -0.025
+}
+
+xorme_ai_war_is_near_high = {
+	land_morale = 0.05
+	drill_gain_modifier = 0.05
+	regiment_recruit_speed = -0.05
+}
+
+expand_infrastructure_1 = {
+	picture = "expand_administration_cost"
+
+	allowed_num_of_buildings = 1
+	allowed_num_of_manufactories = 1
+	regiment_recruit_speed = -0.15
+	ship_recruit_speed = -0.15
+	local_defensiveness = 0.05
+	garrison_growth = 0.05
+	local_development_cost = -0.15
+	local_production_efficiency = 0.05
+	local_tax_modifier = 0.1
+	local_manpower_modifier = 0.05
+	local_sailors_modifier = 0.05
+	local_ship_repair = 0.05
+	local_autonomy = -0.005
+	local_build_cost = -0.05
+	local_build_time = -0.05
+	province_trade_power_modifier = 0.05
+	trade_goods_size_modifier = 0.05
+	local_governing_cost_increase = 15
+	local_governing_cost = 0.1
+	local_great_project_upgrade_cost = -0.05
+}
+expand_infrastructure_2 = {
+	picture = "expand_administration_cost"
+
+	allowed_num_of_buildings = 2
+	allowed_num_of_manufactories = 2
+	regiment_recruit_speed = -0.3
+	ship_recruit_speed = -0.3
+	local_defensiveness = 0.1
+	garrison_growth = 0.1
+	local_development_cost = -0.30
+	local_production_efficiency = 0.1
+	local_tax_modifier = 0.2
+	local_manpower_modifier = 0.1
+	local_sailors_modifier = 0.1
+	local_ship_repair = 0.1
+	local_autonomy = -0.01
+	local_build_cost = -0.1
+	local_build_time = -0.1
+	province_trade_power_modifier = 0.1
+	trade_goods_size_modifier = 0.1
+	local_governing_cost_increase = 30
+	local_governing_cost = 0.2
+	local_great_project_upgrade_cost = -0.1
+}
+expand_infrastructure_3 = {
+	picture = "expand_administration_cost"
+	
+	allowed_num_of_buildings = 3
+	allowed_num_of_manufactories = 3
+	regiment_recruit_speed = -0.45
+	ship_recruit_speed = -0.45
+	local_defensiveness = 0.15
+	garrison_growth = 0.15
+	local_development_cost = -0.45
+	local_production_efficiency = 0.15
+	local_tax_modifier = 0.3
+	local_manpower_modifier = 0.15
+	local_sailors_modifier = 0.15
+	local_ship_repair = 0.15
+	local_autonomy = -0.015
+	local_build_cost = -0.15
+	local_build_time = -0.15
+	province_trade_power_modifier = 0.15
+	trade_goods_size_modifier = 0.15
+	local_governing_cost_increase = 45
+	local_governing_cost = 0.3
+	local_great_project_upgrade_cost = -0.15
+}

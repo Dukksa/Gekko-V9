@@ -78,6 +78,34 @@ marketplace = {
 
 	ai_will_do = {
 		factor = 1.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		modifier = {
+			factor = 10
+			province_has_center_of_trade_of_level = 1
+		}
+		modifier = {
+			factor = 20
+			province_has_center_of_trade_of_level = 2
+		}
+		modifier = {
+			factor = 30
+			province_has_center_of_trade_of_level = 3
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
 	}
 }
 
@@ -110,6 +138,82 @@ workshop = {
 
 	ai_will_do = {
 		factor = 1
+		factor = 10.0
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		#FROM AUTONOMY
+		modifier = {
+			factor = 0.25
+			num_free_building_slots = 2
+			NOT = { xorme_has_any_manufactory_trigger = yes }
+		}
+		modifier = {
+			factor = 0.4
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.6
+			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.8
+			local_autonomy = 25
+		}
+		#FROM BASE DEV
+		modifier = {
+			factor = 3.0
+			base_production = 4
+		}
+		modifier = {
+			factor = 6.0
+			base_production = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_production = 8
+		}
+		#FROM TRADE GOODS
+		modifier = {
+			factor = 5.0
+			xorme_lowest_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 10.0
+			xorme_low_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 15.0
+			xorme_medium_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 20.0
+			xorme_high_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 25.0
+			xorme_province_with_special_goods_produced_trigger = yes
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
+		#FROM CASH
+		modifier = {
+			factor = 100.0
+			FROM = {
+				treasury = 7500
+			}
+		}
 	}
 }
 
@@ -219,9 +323,79 @@ temple = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 250
+			factor = 0
+			OR = {
+				FROM = { num_of_loans = 1 }
+			}
+		}
+		#FROM AUTONOMY
+		modifier = {
+			factor = 0.05
+			OR = {
+				NOT = { num_free_building_slots = 2 }
+				xorme_has_production_buildings_trigger = no
+			}
+		}
+		modifier = {
+			factor = 0.4
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.6
+			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.8
+			local_autonomy = 25
+		}
+		#FROM BASE DEV
+		modifier = {
+			factor = 3.0
 			base_tax = 4
-			is_state = yes
+		}
+		modifier = {
+			factor = 6.0
+			base_tax = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_tax = 8
+		}
+		#FROM TRADE GOODS
+		modifier = {
+			factor = 5.0
+			xorme_province_with_special_goods_produced_trigger = yes
+		}
+		modifier = {
+			factor = 10.0
+			xorme_high_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 15.0
+			xorme_medium_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 20.0
+			xorme_low_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 25.0
+			xorme_lowest_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
+		modifier = {
+			factor = 100.0
+			num_free_building_slots = 3
+		}
+		#FROM CASH
+		modifier = {
+			factor = 100.0
+			FROM = {
+				treasury = 7500
+			}
 		}
 	}
 }
@@ -329,11 +503,81 @@ barracks = {
 #	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 4.5
 		modifier = {
-			factor = 250
-			base_manpower = 3	
-			is_state = yes
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		#FROM AUTONOMY
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = { navy_size_percentage = 0.9 }
+			}
+		}
+		modifier = {
+			factor = 0.05
+			OR = {
+				NOT = { num_free_building_slots = 2 }
+				xorme_has_production_buildings_trigger = no
+			}
+		}
+		modifier = {
+			factor = 0.4
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.6
+			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.8
+			local_autonomy = 25
+		}
+		#FROM BASE DEV
+		modifier = {
+			factor = 3.0
+			FROM = { num_of_ports = 5 }
+		}
+		modifier = {
+			factor = 6.0
+			FROM = { num_of_ports = 10 }
+		}
+		modifier = {
+			factor = 9.0
+			FROM = { num_of_ports = 15 }
+		}
+		modifier = {
+			factor = 10.0
+			NOT = { development = 7 }
+		}
+		#BUILDINGS
+		modifier = {
+			factor = 10.0
+			xorme_has_production_buildings_trigger = yes
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
+		modifier = {
+			factor = 100.0
+			num_free_building_slots = 4
+		}
+		#FROM CASH
+		modifier = {
+			factor = 100.0
+			FROM = {
+				treasury = 7500
+			}
 		}
 	}
 }
@@ -377,14 +621,81 @@ shipyard = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 4.5
 		modifier = {
-			factor = 1.5 # bit more likely if close to the naval force limit
-			FROM = { navy_size_percentage = 0.95 }
+			factor = 0
+			FROM = { num_of_loans = 1 }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		#FROM AUTONOMY
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = { navy_size_percentage = 0.9 }
+			}
+		}
+		modifier = {
+			factor = 0.05
+			OR = {
+				NOT = { num_free_building_slots = 2 }
+				xorme_has_production_buildings_trigger = no
+			}
+		}
+		modifier = {
+			factor = 0.4
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.6
 			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.8
+			local_autonomy = 25
+		}
+		#FROM BASE DEV
+		modifier = {
+			factor = 3.0
+			FROM = { num_of_ports = 5 }
+		}
+		modifier = {
+			factor = 6.0
+			FROM = { num_of_ports = 10 }
+		}
+		modifier = {
+			factor = 9.0
+			FROM = { num_of_ports = 15 }
+		}
+		modifier = {
+			factor = 10.0
+			NOT = { development = 7 }
+		}
+		#BUILDINGS
+		modifier = {
+			factor = 10.0
+			xorme_has_production_buildings_trigger = yes
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
+		modifier = {
+			factor = 100.0
+			num_free_building_slots = 4
+		}
+		#FROM CASH
+		modifier = {
+			factor = 100.0
+			FROM = {
+				treasury = 7500
+			}
 		}
 	}
 }
@@ -548,6 +859,10 @@ fort_15th = {
 
 	ai_will_do = {
 		factor = 1 #Lots of logic in code instead, that multiplies with this value
+		modifier = {
+			factor = 1000.0
+			is_capital = yes
+		}
 	}
 }
 
@@ -570,7 +885,23 @@ coastal_defence = {
 		bastard_dev_cost_remove_from_buildings = yes
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 1
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = slaves_raided
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
 	}
 }
 
@@ -622,7 +953,66 @@ courthouse = {
 	}
 
 	ai_will_do = {
-		factor = 250
+		factor = 15
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		modifier = {
+			factor = 0
+			area_for_scope_province = {
+				is_capital_of = FROM
+			}
+		}
+		modifier = {
+			factor = 0.25
+			num_free_building_slots = 2
+		}
+		#FROM AUTONOMY
+		modifier = {
+			factor = 1.5
+			local_autonomy = 25
+		}
+		modifier = {
+			factor = 3.0
+			local_autonomy = 50
+		}
+		modifier = {
+			factor = 4.5
+			local_autonomy = 75
+		}
+		#FROM GOV CAP
+		modifier = {
+			factor = 20.0
+			FROM = { governing_capacity_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 30.0
+			FROM = { governing_capacity_percentage = 1.0 }
+		}
+		modifier = {
+			factor = 50.0
+			FROM = { governing_capacity_percentage = 1.1 }
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
+		#FROM CASH
+		modifier = {
+			factor = 100.0
+			FROM = {
+				treasury = 7500
+			}
+		}
 	}
 }
 
@@ -685,6 +1075,25 @@ dock = {
 			factor = 250
 			base_manpower = 6	
 			is_state = yes
+		}
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		modifier = {
+			factor = 0.5
+		}
+		modifier = {
+			factor = 100.0
+			num_free_building_slots = 5
 		}
 	}
 }
@@ -754,6 +1163,82 @@ regimental_camp = {
 		modifier = {
 			factor = 1 # Little above build cost
 			FROM = { army_size_percentage = 0.95 }
+		}
+		factor = 5.5
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		#FROM AUTONOMY
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = { army_size_percentage = 0.9 }
+			}
+		}
+		modifier = {
+			factor = 0.05
+			OR = {
+				NOT = { num_free_building_slots = 2 }
+				xorme_has_production_buildings_trigger = no
+			}
+		}
+		modifier = {
+			factor = 0.4
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.6
+			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.8
+			local_autonomy = 25
+		}
+		#FROM BASE DEV
+		modifier = {
+			factor = 3.0
+			FROM = { num_of_cities = 5 }
+		}
+		modifier = {
+			factor = 6.0
+			FROM = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 9.0
+			FROM = { num_of_cities = 15 }
+		}
+		modifier = {
+			factor = 20.0
+			NOT = { development = 7 }
+		}
+		#BUILDINGS
+		modifier = {
+			factor = 100.0
+			xorme_has_production_buildings_trigger = yes
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
+		modifier = {
+			factor = 100.0
+			num_free_building_slots = 2
+		}
+		#FROM CASH
+		modifier = {
+			factor = 100.0
+			FROM = {
+				treasury = 7500
+			}
 		}
 	}
 }
@@ -918,6 +1403,14 @@ fort_16th = {
 
 	ai_will_do = {
 		factor = 1 #Lots of logic in code instead, that multiplies with this value
+		modifier = {
+			factor = 1000.0
+			has_building = fort_15th
+		}
+		modifier = {
+			factor = 1000.0
+			is_capital = yes
+		}
 	}
 }
 
@@ -942,7 +1435,19 @@ naval_battery = {
 		bastard_dev_cost_remove_from_buildings = yes
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 1
+		modifier = {
+			factor = 100.0
+			has_province_modifier = slaves_raided
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		modifier = {
+			factor = 10
+			has_building = coastal_defence
+		}
 	}
 }
 
@@ -1058,11 +1563,93 @@ cathedral = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 5.0
 		modifier = {
-			factor = 250
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		#FROM BUILDINGS
+		modifier = {
+			factor = 0.05
+			OR = {
+				NOT = { num_free_building_slots = 2 }
+				xorme_has_production_buildings_trigger = no
+			}
+		}
+		#FROM AUTONOMY
+		modifier = {
+			factor = 0.4
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.6
+			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.8
+			local_autonomy = 25
+		}
+		#FROM BASE DEV
+		modifier = {
+			factor = 3.0
 			base_tax = 4
-			is_state = yes
+		}
+		modifier = {
+			factor = 6.0
+			base_tax = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_tax = 8
+		}
+		#FROM UPGRADE
+		modifier = {
+			factor = 25.0
+			has_building = temple
+		}
+		#FROM TRADE GOODS
+		modifier = {
+			factor = 5.0
+			xorme_province_with_special_goods_produced_trigger = yes
+		}
+		modifier = {
+			factor = 10.0
+			xorme_high_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 15.0
+			xorme_medium_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 20.0
+			xorme_low_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 25.0
+			xorme_lowest_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
+		modifier = {
+			factor = 100.0
+			num_free_building_slots = 3
+		}
+		#FROM CASH
+		modifier = {
+			factor = 100.0
+			FROM = {
+				treasury = 7500
+			}
 		}
 	}
 }
@@ -1194,7 +1781,40 @@ trade_depot = {
 	}
 
 	ai_will_do = {
-		factor = 1.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 2.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		#FROM UPGRADE
+		modifier = {
+			factor = 25.0
+			has_building = marketplace
+		}
+		modifier = {
+			factor = 10
+			province_has_center_of_trade_of_level = 1
+		}
+		modifier = {
+			factor = 20
+			province_has_center_of_trade_of_level = 2
+		}
+		modifier = {
+			factor = 30
+			province_has_center_of_trade_of_level = 3
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
 	}
 }
 
@@ -1243,14 +1863,86 @@ grand_shipyard = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 6.5
 		modifier = {
-			factor = 1.5 # bit more likely if close to the force limit
-			FROM = { navy_size_percentage = 0.95 }
+			factor = 0
+			FROM = { num_of_loans = 1 }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		#FROM AUTONOMY
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = { navy_size_percentage = 0.9 }
+			}
+		}
+		modifier = {
+			factor = 0.05
+			OR = {
+				NOT = { num_free_building_slots = 2 }
+				xorme_has_production_buildings_trigger = no
+			}
+		}
+		modifier = {
+			factor = 0.4
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.6
 			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.8
+			local_autonomy = 25
+		}
+		#FROM UPGRADE
+		modifier = {
+			factor = 25.0
+			has_building = shipyard
+		}
+		#FROM BASE DEV
+		modifier = {
+			factor = 3.0
+			FROM = { num_of_ports = 5 }
+		}
+		modifier = {
+			factor = 6.0
+			FROM = { num_of_ports = 10 }
+		}
+		modifier = {
+			factor = 9.0
+			FROM = { num_of_ports = 15 }
+		}
+		modifier = {
+			factor = 10.0
+			NOT = { development = 7 }
+		}
+		#BUILDINGS
+		modifier = {
+			factor = 10.0
+			xorme_has_production_buildings_trigger = yes
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
+		modifier = {
+			factor = 100.0
+			num_free_building_slots = 3
+		}
+		#FROM CASH
+		modifier = {
+			factor = 100.0
+			FROM = {
+				treasury = 7500
+			}
 		}
 	}
 }
@@ -1363,11 +2055,77 @@ training_fields = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 3.5
 		modifier = {
-			factor = 250
-			base_manpower = 3	
-			is_state = yes
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		#FROM AUTONOMY
+		modifier = {
+			factor = 0.05
+			OR = {
+				NOT = { num_free_building_slots = 2 }
+				xorme_has_production_buildings_trigger = no
+			}
+		}
+		modifier = {
+			factor = 0.4
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.6
+			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.8
+			local_autonomy = 25
+		}
+		#FROM UPGRADE
+		modifier = {
+			factor = 25.0
+			has_building = barracks
+		}
+		#FROM BASE DEV
+		modifier = {
+			factor = 3.0
+			base_manpower = 4
+		}
+		modifier = {
+			factor = 6.0
+			base_manpower = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_manpower = 8
+		}
+		#FROM TRADE GOODS
+		modifier = {
+			factor = 10.0
+			xorme_additional_manpower_goods_trigger = yes
+		}
+		#BUILDINGS
+		modifier = {
+			factor = 10.0
+			xorme_has_production_buildings_trigger = yes
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
+		#FROM CASH
+		modifier = {
+			factor = 100.0
+			FROM = {
+				treasury = 7500
+			}
 		}
 	}
 }
@@ -1533,7 +2291,18 @@ fort_17th = {
 	influencing_fort = yes
 
 	ai_will_do = {
-		factor = 1 #Lots of logic in code instead, that multiplies with this value
+		factor = 1.6
+		modifier = {
+			factor = 1000.0
+			OR = {
+				has_building = fort_15th
+				has_building = fort_16th
+			}
+		}
+		modifier = {
+			factor = 1000.0
+			is_capital = yes
+		}
 	}
 }
 
@@ -1598,7 +2367,43 @@ stock_exchange = {
 	}
 
 	ai_will_do = {
-		factor = 1.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 3.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		#FROM UPGRADE
+		modifier = {
+			factor = 25.0
+			OR = {
+				has_building = marketplace
+				has_building = trade_depot
+			}
+		}
+		modifier = {
+			factor = 10
+			province_has_center_of_trade_of_level = 1
+		}
+		modifier = {
+			factor = 20
+			province_has_center_of_trade_of_level = 2
+		}
+		modifier = {
+			factor = 30
+			province_has_center_of_trade_of_level = 3
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
 	}
 }
 
@@ -1635,7 +2440,86 @@ counting_house = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 250
+		factor = 15.0
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		#FROM AUTONOMY
+		modifier = {
+			factor = 0.25
+			num_free_building_slots = 2
+		}
+		modifier = {
+			factor = 0.4
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.6
+			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.8
+			local_autonomy = 25
+		}
+		#FROM UPGRADE
+		modifier = {
+			factor = 25.0
+			has_building = workshop
+		}
+		#FROM BASE DEV
+		modifier = {
+			factor = 3.0
+			base_production = 4
+		}
+		modifier = {
+			factor = 6.0
+			base_production = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_production = 8
+		}
+		#FROM TRADE GOODS
+		modifier = {
+			factor = 5.0
+			xorme_lowest_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 10.0
+			xorme_low_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 15.0
+			xorme_medium_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 20.0
+			xorme_high_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 25.0
+			xorme_province_with_special_goods_produced_trigger = yes
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
+		#FROM CASH
+		modifier = {
+			factor = 100.0
+			FROM = {
+				treasury = 7500
+			}
+		}
 	}
 }
 
@@ -1817,6 +2701,18 @@ drydock = {
 
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
 	}
 }
 
@@ -1909,14 +2805,82 @@ conscription_center = {
 	}
 
 	ai_will_do = {
-		factor = 250
+		factor = 6.5
 		modifier = {
-			factor = 1.5 # more likely if we have an army close to the force limit
-			FROM = { army_size_percentage = 0.95 }
+			factor = 0
+			FROM = { num_of_loans = 1 }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		#FROM AUTONOMY
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = { army_size_percentage = 0.9 }
+			}
+		}
+		modifier = {
+			factor = 0.05
+			OR = {
+				NOT = { num_free_building_slots = 2 }
+				xorme_has_production_buildings_trigger = no
+			}
+		}
+		modifier = {
+			factor = 0.4
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.6
 			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.8
+			local_autonomy = 25
+		}
+		#FROM UPGRADE
+		modifier = {
+			factor = 25.0
+			has_building = regimental_camp
+		}
+		#FROM BASE DEV
+		modifier = {
+			factor = 3.0
+			FROM = { num_of_cities = 5 }
+		}
+		modifier = {
+			factor = 6.0
+			FROM = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 9.0
+			FROM = { num_of_cities = 15 }
+		}
+		modifier = {
+			factor = 20.0
+			NOT = { development = 7 }
+		}
+		#BUILDINGS
+		modifier = {
+			factor = 100.0
+			xorme_has_production_buildings_trigger = yes
+		}
+		modifier = {
+			factor = 100.0
+			has_province_modifier = xorme_ai_agenda_building_spot
+		}
+		#FROM CASH
+		modifier = {
+			factor = 100.0
+			FROM = {
+				treasury = 7500
+			}
 		}
 	}
 }
@@ -2084,7 +3048,19 @@ fort_18th = {
 	influencing_fort = yes
 
 	ai_will_do = {
-		factor = 1 #Lots of logic in code instead, that multiplies with this value
+		factor = 1.8
+		modifier = {
+			factor = 1000.0
+			OR = {
+				has_building = fort_15th
+				has_building = fort_16th
+				has_building = fort_17th
+			}
+		}
+		modifier = {
+			factor = 1000.0
+			is_capital = yes
+		}
 	}
 }
 
@@ -2140,31 +3116,54 @@ wharf = {
 	}
 
 	ai_will_do = {
-		factor = 3000
-
+		factor = 1000
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
 		modifier = {
 			factor = 0.4
-			NOT = { base_production = 6 }
+			NOT = { base_production = 3 }
 		}
 		modifier = {
-			factor = 1.5
-			base_production = 10
+			factor = 0.8
+			NOT = { base_production = 4 }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
+			base_production = 4
+		}
+		modifier = {
+			factor = 6.0
+			base_production = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_production = 8
+		}
+		modifier = {
+			factor = 10.0
 			base_production = 15
 		}
 		modifier = {
-			factor = 5
-			OR = {
-				has_province_modifier = skanemarket
-				has_province_modifier = comet_ore_modifier
-				has_province_modifier = paradise_modifier
-			}
+			factor = 2.5
+			has_building = workshop
 		}
 		modifier = {
-			NOT = { num_free_building_slots = 3 }
-			factor = 1.5
+			factor = 3.5
+			has_building = counting_house
+		}
+		modifier = {
+			factor = 10.0
+			xorme_province_with_special_goods_produced_trigger = yes
 		}
 	}
 }
@@ -2205,7 +3204,55 @@ weapons = {
 	}
 
 	ai_will_do = {
-		factor = 3000
+		factor = 1000
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		modifier = {
+			factor = 0.4
+			NOT = { base_production = 3 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { base_production = 4 }
+		}
+		modifier = {
+			factor = 3.0
+			base_production = 4
+		}
+		modifier = {
+			factor = 6.0
+			base_production = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_production = 8
+		}
+		modifier = {
+			factor = 10.0
+			base_production = 15
+		}
+		modifier = {
+			factor = 2.5
+			has_building = workshop
+		}
+		modifier = {
+			factor = 3.5
+			has_building = counting_house
+		}
+		modifier = {
+			factor = 10.0
+			xorme_province_with_special_goods_produced_trigger = yes
+		}
 	}
 }
 
@@ -2247,7 +3294,55 @@ textile = {
 	}
 
 	ai_will_do = {
-		factor = 3000
+		factor = 1000
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		modifier = {
+			factor = 0.4
+			NOT = { base_production = 3 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { base_production = 4 }
+		}
+		modifier = {
+			factor = 3.0
+			base_production = 4
+		}
+		modifier = {
+			factor = 6.0
+			base_production = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_production = 8
+		}
+		modifier = {
+			factor = 10.0
+			base_production = 15
+		}
+		modifier = {
+			factor = 2.5
+			has_building = workshop
+		}
+		modifier = {
+			factor = 3.5
+			has_building = counting_house
+		}
+		modifier = {
+			factor = 10.0
+			xorme_province_with_special_goods_produced_trigger = yes
+		}
 	}
 }
 
@@ -2291,7 +3386,55 @@ plantations = {
 	}
 
 	ai_will_do = {
-		factor = 3000
+		factor = 1000
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		modifier = {
+			factor = 0.4
+			NOT = { base_production = 3 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { base_production = 4 }
+		}
+		modifier = {
+			factor = 3.0
+			base_production = 4
+		}
+		modifier = {
+			factor = 6.0
+			base_production = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_production = 8
+		}
+		modifier = {
+			factor = 10.0
+			base_production = 15
+		}
+		modifier = {
+			factor = 2.5
+			has_building = workshop
+		}
+		modifier = {
+			factor = 3.5
+			has_building = counting_house
+		}
+		modifier = {
+			factor = 10.0
+			xorme_province_with_special_goods_produced_trigger = yes
+		}
 	}
 }
 
@@ -2335,7 +3478,55 @@ tradecompany = {
 	}
 
 	ai_will_do = {
-		factor = 3000
+		factor = 1000
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		modifier = {
+			factor = 0.4
+			NOT = { base_production = 3 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { base_production = 4 }
+		}
+		modifier = {
+			factor = 3.0
+			base_production = 4
+		}
+		modifier = {
+			factor = 6.0
+			base_production = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_production = 8
+		}
+		modifier = {
+			factor = 10.0
+			base_production = 15
+		}
+		modifier = {
+			factor = 2.5
+			has_building = workshop
+		}
+		modifier = {
+			factor = 3.5
+			has_building = counting_house
+		}
+		modifier = {
+			factor = 10.0
+			xorme_province_with_special_goods_produced_trigger = yes
+		}
 	}
 }
 
@@ -2392,7 +3583,55 @@ farm_estate = {
 	}
 
 	ai_will_do = {
-		factor = 3000
+		factor = 1000
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		modifier = {
+			factor = 0.4
+			NOT = { base_production = 3 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { base_production = 4 }
+		}
+		modifier = {
+			factor = 3.0
+			base_production = 4
+		}
+		modifier = {
+			factor = 6.0
+			base_production = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_production = 8
+		}
+		modifier = {
+			factor = 10.0
+			base_production = 15
+		}
+		modifier = {
+			factor = 2.5
+			has_building = workshop
+		}
+		modifier = {
+			factor = 3.5
+			has_building = counting_house
+		}
+		modifier = {
+			factor = 10.0
+			xorme_province_with_special_goods_produced_trigger = yes
+		}
 	}
 }
 
@@ -2435,7 +3674,55 @@ mills = {
 	}
 
 	ai_will_do = {
-		factor = 3000
+		factor = 1000
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		modifier = {
+			factor = 0.4
+			NOT = { base_production = 3 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { base_production = 4 }
+		}
+		modifier = {
+			factor = 3.0
+			base_production = 4
+		}
+		modifier = {
+			factor = 6.0
+			base_production = 6
+		}
+		modifier = {
+			factor = 9.0
+			base_production = 8
+		}
+		modifier = {
+			factor = 10.0
+			base_production = 15
+		}
+		modifier = {
+			factor = 2.5
+			has_building = workshop
+		}
+		modifier = {
+			factor = 3.5
+			has_building = counting_house
+		}
+		modifier = {
+			factor = 10.0
+			xorme_province_with_special_goods_produced_trigger = yes
+		}
 	}
 }
 
@@ -2473,7 +3760,11 @@ furnace = {
 	}
 
 	ai_will_do = {
-		factor = 3000
+		factor = 2000.0
+		modifier = {
+			factor = 4.0
+			development = 10
+		}
 	}
 }
 
@@ -2626,7 +3917,54 @@ soldier_households = {
 	}
 
 	ai_will_do = {
-		factor = 3000
+		factor = 10.0
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 0.1
+			xorme_high_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 0.2
+			xorme_medium_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
+		modifier = {
+			factor = 0.5
+			base_production = 5
+		}
+		modifier = {
+			factor = 2.5
+			base_manpower = 4
+		}
+		modifier = {
+			factor = 5.0
+			base_manpower = 8
+		}
+		modifier = {
+			factor = 7.5
+			base_manpower = 12
+		}
+		modifier = {
+			factor = 10.0
+			OR = {
+				has_building = barracks
+				has_building = training_fields
+			}
+		}
+		modifier = {
+			factor = 1000
+			xorme_additional_manpower_goods_trigger = yes
+		}
 	}
 }
 
@@ -2680,7 +4018,27 @@ impressment_offices = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 5
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 0.1
+			xorme_high_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 0.2
+			xorme_medium_quality_trade_goods_trigger = yes
+		}
+		modifier = {
+			factor = 4.5
+			owner = { is_subject = yes }
+		}
+		modifier = {
+			factor = 100.0
+			FROM = { treasury = 10000 }
+		}
 	}
 }
 

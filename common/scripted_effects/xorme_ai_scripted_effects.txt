@@ -1,0 +1,435 @@
+#EVERY AI NATION ON STARTUP
+xorme_ai_estates_initialization_effect = {
+	if = {
+		limit = { has_estate = estate_church }
+		set_estate_privilege = estate_church_religious_state
+	}
+	if = {
+		limit = { has_estate = estate_nobles }
+		set_estate_privilege = estate_nobles_nobility_primacy
+	}
+	if = {
+		limit = { has_estate = estate_burghers }
+		set_estate_privilege = estate_burghers_land_of_commerce
+	}
+}
+#ESTATES
+xorme_ai_add_main_3_land_rights = {
+	if = {
+		limit = { has_estate = estate_church }
+		set_estate_privilege = estate_church_land_rights
+	}
+	if = {
+		limit = { has_estate = estate_nobles }
+		set_estate_privilege = estate_nobles_land_rights
+	}
+	if = {
+		limit = { has_estate = estate_burghers }
+		set_estate_privilege = estate_burghers_land_rights
+	}
+}
+#BUILD ARMY INITIALIZATION
+xorme_ai_build_to_force_limit = {
+	if = {
+		limit = { is_emperor = no }
+		random_owned_province = {
+			limit = { highest_supply_limit_in_area = yes }
+			build_to_forcelimit = {
+				infantry = 0.6
+				cavalry = 0.1
+				artillery = 0.2
+			}
+		}
+		if = {
+			limit = { num_of_ports = 1 }
+			random_owned_province = {
+				limit = { has_port = yes }
+				build_to_forcelimit = {
+					heavy_ship = 0.2
+					light_ship = 0.1
+					galley = 0.4
+					transport = 0.3
+				}
+			}
+		}
+	}
+	else = {
+		random_owned_province = {
+			limit = { highest_supply_limit_in_area = yes }
+			build_to_forcelimit = {
+				infantry = 0.5
+				cavalry = 0.1
+				artillery = 0.2
+			}
+		}
+		if = {
+			limit = { num_of_ports = 1 }
+			random_owned_province = {
+				limit = { has_port = yes }
+				build_to_forcelimit = {
+					heavy_ship = 0.2
+					light_ship = 0.1
+					galley = 0.4
+					transport = 0.3
+				}
+			}
+		}
+	}
+}
+#SET CROWNLAND INITIALIZATION
+xorme_ai_set_crown_land = {
+	if = {
+		limit = { NOT = { crown_land_share = 25 } }
+		change_estate_land_share = {
+			estate = all
+			share = -20
+		}
+	}
+	add_estate_loyalty = {
+		estate = all
+		loyalty = 15
+		short = yes
+	}
+}
+
+xorme_ai_essentials = {
+	if = {
+		limit = {
+			OR = {
+				is_great_power = yes
+				luck = yes
+				total_development = 300
+			}
+		}
+		add_prestige = 10
+		add_years_of_income = 1.2
+		add_yearly_manpower = 2.5
+		add_stability = 1
+		add_mil_power = 75
+		add_adm_power = 100
+		create_general = {
+			tradition = 45
+		}
+	}
+	if = {
+		limit = { num_of_ports = 1 }
+		create_admiral = {
+			tradition = 21
+		}
+	}
+	add_stability = 1
+	add_years_of_income = 0.6
+	add_yearly_manpower = 1.3
+	create_general = {
+		tradition = 15
+	}
+}
+
+xorme_ai_alliance_initialization_effect = {
+	#HISTORICAL FRIEND = ALLIANCE
+	if = {
+		limit = {
+			num_of_free_diplomatic_relations = 1
+			any_known_country = {
+				historical_friend_with = ROOT
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+		}
+		every_known_country = {
+			limit = {
+				historical_friend_with = ROOT
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+			create_alliance = ROOT
+		}
+	}
+	#SPECIAL
+	if = {
+		limit = {
+			exists = MAM
+			exists = MDA
+			MDA = {
+				ai = yes
+				guaranteed_by = MAM
+			}
+			MAM = {
+				ai = yes
+				is_great_power = yes
+			}
+		}
+		MAM = {
+			set_ai_attitude = {
+				attitude = attitude_friendly
+				who = MDA
+			}
+			vassalize = MDA
+			create_marriage	= MDA
+		}
+	}
+	if = {
+		limit = {
+			exists = TUR
+			exists = CRI
+			TUR = {
+				ai = yes
+				NOT = { is_enemy = CRI }
+			}
+			CRI = {
+				ai = yes
+			}
+		}
+		CRI = {
+			set_ai_attitude = {
+				attitude = attitude_friendly
+				who = TUR
+			}
+		}
+		TUR = {
+			set_ai_attitude = {
+				attitude = attitude_friendly
+				who = CRI
+			}
+			create_alliance = CRI
+			create_marriage	= CRI
+		}
+	}
+	if = {
+		limit = {
+			exists = TUR
+			exists = RAM
+			TUR = {
+				ai = yes
+				NOT = { is_enemy = RAM }
+			}
+			RAM = {
+				ai = yes
+			}
+		}
+		RAM = {
+			set_ai_attitude = {
+				attitude = attitude_friendly
+				who = TUR
+			}
+		}
+		TUR = {
+			set_ai_attitude = {
+				attitude = attitude_friendly
+				who = RAM
+			}
+			create_alliance = RAM
+			create_marriage	= RAM
+		}
+	}
+
+	#GUARANTEED = ALLIANCE
+	if = {
+		limit = {
+			any_known_country = {
+				is_subject = no
+				guaranteed_by = ROOT
+				ai = yes
+			}
+		}
+		every_known_country = {
+			limit = {
+				is_subject = no
+				guaranteed_by = ROOT
+				ai = yes
+			}
+			create_alliance = ROOT
+		}
+	}
+	#EMPEROR - ELECTOR = ALLIANCE
+	if = {
+		limit = {
+			is_emperor = yes
+			num_of_free_diplomatic_relations = 2
+			any_elector = {
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+		}
+		every_elector = {
+			limit = {
+				total_development = 35
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+			create_alliance = ROOT
+		}
+	}
+	#GREAT POWER - NOT WEAK NATION = ALLIANCE
+	if = {
+		limit = {
+			is_great_power = yes
+			num_of_free_diplomatic_relations = 1
+			any_known_country = {
+				army_strength = {
+					who = ROOT
+					value = 0.45
+				}
+				NOT = {
+					border_distance = {
+						who = ROOT
+						distance = 175
+					}
+				}
+				border_distance = {
+					who = ROOT
+					distance = 50
+				}
+				religion_group = ROOT
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+		}
+		random_known_country = {
+			limit = {
+				army_strength = {
+					who = ROOT
+					value = 0.45
+				}
+				NOT = {
+					border_distance = {
+						who = ROOT
+						distance = 175
+					}
+				}
+				border_distance = {
+					who = ROOT
+					distance = 55
+				}
+				NOT = { is_emperor = yes }
+				NOT = { is_elector = yes }
+				religion_group = ROOT
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+			create_alliance = ROOT
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				is_great_power = yes
+				total_development = 165
+			}
+		}
+		every_neighbor_country = {
+			limit = {
+				ai = yes
+				NOT = { total_development = 105 }
+				NOT = { is_subject_of = ROOT }
+				NOT = { alliance_with = ROOT }
+				NOT = { historical_friend_with = ROOT }
+				NOT = { tag = PAP }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = xorme_ai_conq_box
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = xorme_ai_conq_box
+			}
+		}
+	}
+}
+
+#BUILD FORT
+xorme_ai_build_forts_effect = {
+	if = {
+		limit = {
+			can_build = fort_18th
+			FROM = {
+				treasury = 700
+				monthly_income = 30
+				current_income_balance = 10
+			}
+		}
+		add_building_construction = {
+			building = fort_18th
+			speed = 1
+			cost = 0.75
+		}
+	}
+	else_if = {
+		limit = {
+			can_build = fort_17th
+			FROM = {
+				treasury = 600
+				monthly_income = 25
+				current_income_balance = 8
+			}
+		}
+		add_building_construction = {
+			building = fort_17th
+			speed = 1
+			cost = 0.75
+		}
+	}
+	else_if = {
+		limit = {
+			can_build = fort_16th
+			FROM = {
+				treasury = 400
+				monthly_income = 20
+				current_income_balance = 6
+			}
+		}
+		add_building_construction = {
+			building = fort_16th
+			speed = 1
+			cost = 0.75
+		}
+	}
+	else_if = {
+		limit = {
+			can_build = fort_15th
+			FROM = {
+				treasury = 200
+				monthly_income = 15
+				current_income_balance = 4
+			}
+		}
+		add_building_construction = {
+			building = fort_15th
+			speed = 1
+			cost = 0.75
+		}
+	}
+	else = {}
+}
+
+#EASTEREGG
+xorme_for_ck3_nation = {
+	random_country = {
+		limit = {
+			capital = 201
+			NOT = { total_development = 175 }
+			OR = {
+				is_playing_custom_nation = yes
+				dynasty = "Xantum"
+			}
+		}
+		add_adm_power = 325
+		add_dip_power = 325
+		add_mil_power = 325
+		add_army_tradition = 30
+		add_navy_tradition = 30
+		change_innovativeness = 25
+		change_government_reform_progress = 750
+		change_estate_land_share = {
+			estate = all
+			share = -30
+		}
+	}
+}

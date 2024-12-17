@@ -1,0 +1,121 @@
+country_decisions = {
+	#######################
+	##Build Production 1 ##
+	#######################
+	xorme_ai_build_base_1 = {
+		potential = {
+			NOT = { is_year = 1700 }
+			has_country_modifier = xorme_ai_great_power
+			adm_tech = 6
+			NOT = { num_of_loans = 1 }
+			treasury = 500
+		}
+
+		allow = {
+			any_owned_province = {
+				OR = {
+					xorme_forcelimit_buildings_potential_trigger = yes
+					xorme_production_potential_trigger = yes	
+				}
+				xorme_not_under_construction = yes
+				is_core = ROOT
+			}
+		}
+
+		effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						xorme_production_potential_trigger = yes
+						xorme_forcelimit_buildings_potential_trigger = yes
+					}
+					xorme_not_under_construction = yes
+				}
+				if = {
+					limit = { xorme_production_potential_trigger = yes }
+					xorme_ai_build_production_buildings_effect = { production = yes }
+				}
+				if = {
+					limit = { xorme_forcelimit_buildings_potential_trigger = yes }
+					xorme_ai_build_forcelimit_buildings_effect = { forcelimit = yes }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50.0
+		}
+	}
+	#########################
+	##Build Manufactory 1 ##
+	########################
+	xorme_ai_build_manufactory_1 = {
+		potential = {
+			
+			NOT = { is_year = 1760 }
+			NOT = { has_country_modifier = xorme_ai_buildings_cooldown_2 }
+			has_country_modifier = xorme_ai_great_power
+			adm_tech = 6
+			NOT = { num_of_loans = 1 }
+			treasury = 2000
+		}
+
+		allow = {
+			OR = {
+				is_month = 1
+				is_month = 2
+				is_month = 3
+			}
+			any_owned_province = {
+				xorme_production_potential_trigger = yes
+				xorme_not_under_construction = yes
+				is_core = ROOT
+			}
+		}
+
+		effect = {
+			set_variable = {
+                which = check_loop_m
+                value = 0
+            }
+			while = {
+                limit = {
+                    treasury = 900
+                    is_variable_equal = {
+                        which = check_loop_m
+                        value = 0
+                    }
+                }
+                random_owned_province = {
+	                limit = {
+						xorme_good_manufactory_province = yes
+						xorme_not_under_construction = yes
+					}
+					xorme_ai_build_manufactory_buildings_effect = { manufactory = yes }
+	                    PREV = {
+	                        subtract_variable = {
+	                            which = check_loop_m
+	                            value = 1
+	                        }
+	                    }
+               		}
+				change_variable = {
+            		which = check_loop_m
+                	value = 1
+                }
+            }
+            set_variable = {
+                which = check_loop_m
+                value = 0
+            }
+			add_country_modifier = {
+				name = xorme_ai_buildings_cooldown_2
+				duration = 666
+			}
+		}
+
+		ai_will_do = {
+			factor = 100.0
+		}
+	}
+}

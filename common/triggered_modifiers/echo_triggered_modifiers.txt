@@ -482,3 +482,53 @@ African_Slave_Trade_Western = {
 	global_trade_goods_size_modifier = 0.1
 	global_tariffs = 0.1
 }
+
+xorme_ai_great_power = {
+	potential = {
+		ai = yes
+		NOT = { primitives = yes }
+		NOT = { government = native }
+		OR = {
+			is_great_power = yes
+			OR = {
+				AND = {
+					NOT = { is_year = 1500 }
+					total_development = 175
+				}
+				AND = {
+					is_year = 1500
+					NOT = { is_year = 1600 }
+					total_development = 300
+				}
+				AND = {
+					is_year = 1600
+					total_development = 600
+				}
+			}
+		}
+	}
+
+	trigger = {
+		always = yes
+	}
+	global_tax_income = 24
+	national_focus_years = -10	
+	technology_cost = -0.05
+}
+
+xorme_ai_valid_for_fort_script = {
+	potential = {
+		ai = yes
+		NOT = { primitives = yes }
+		NOT = { government = native }
+		NOT = { has_country_modifier = xorme_ai_build_fort_cooldown }
+	}
+
+	trigger = {
+		is_in_deficit = no
+		is_at_war = no
+		treasury = 350
+		NOT = { num_of_loans = 1 }
+	}
+
+}
