@@ -1,0 +1,115 @@
+X_CRI_decree_1 = {
+	cost = 10
+	duration = 3650
+	trigger = {
+	}
+	potential = {
+	}
+	modifier = {
+		build_cost = -0.1
+	}
+	effect = {	
+	}
+	removed_effect = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+X_CRI_decree_2 = {
+	cost = 10
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		loot_amount = 0.25
+		global_regiment_cost = -0.05
+	}
+	effect = {	
+	}
+	removed_effect = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+X_CRI_decree_3 = {
+	cost = 10
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		idea_cost = -0.1
+	}
+	effect = {	
+	}
+	removed_effect = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+X_CRI_decree_4 = {
+	cost = 10
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		global_tax_modifier = 0.1
+	}
+	effect = {	
+	}
+	removed_effect = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+X_CRI_decree_5 = {
+	cost = 10
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		core_creation = -0.1
+	}
+	effect = {	
+	}
+	removed_effect = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+X_CRI_decree_6 = {
+	cost = 10
+	duration = 3650
+	potential = {
+	}
+	trigger = {
+	}
+	modifier = {
+		diplomatic_annexation_cost = -0.10
+		diplomatic_reputation = 1
+	}
+	effect = {	
+	}
+	removed_effect = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

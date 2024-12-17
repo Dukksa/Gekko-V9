@@ -1602,134 +1602,25 @@ on_chinese_empire_dismantled = {
 # When a nation gains the Mandate of Heaven (becomes the Emperor of China)
 # FROM = Old Emperor, ROOT = New Emperor
 on_mandate_of_heaven_gained = {
-	save_global_event_target_as = EmperorOfChina
-	if = {
-		limit = {
-			technology_group = nomad_group
-		}
-		change_technology_group = chinese
-		change_unit_type = chinese
+	###X###
+	#Removed all actions, replaced with below
+	add_government_reform = X_CRI_great_tatar_state_reform
+	set_variable = {
+		which = X_CRI_celestial_empire_reforms_variable
+		value = 0
 	}
-	if = {
-		limit = { 
-			has_dlc = "Domination" 
-			NOT = { primary_culture = mongol }
-			NOT = { primary_culture = chahar }
-			NOT = { primary_culture = khalkha }
-			NOT = { primary_culture = oirats }
-		}
-		swap_non_generic_missions = yes 
-	}
-	if = {
-		limit = {
-			OR = {
-				NOT = { government = monarchy }
-				government = tribal
-			}
-		}
-		change_government_to_monarchy = yes
-	}
-	add_government_reform = celestial_empire
-	set_mandate = 60
-	set_meritocracy = 60
-	add_country_modifier = {
-		name = new_mandate_holder
-		duration = 9125
-	}
-	1816 = {
-		if = {
-			limit = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
-			}
-			add_core = root
-		}
-	}
-	1821 = {
-		if = {
-			limit = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
-			}
-			add_core = root
-		}
-	}
-	667 = {
-		if = {
-			limit = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
-			}
-			add_core = root
-		}
-	}
-	china_superregion = {
-		limit = {
-			NOT = { is_core = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	if = {
-		limit = {
-			has_dlc = "Mandate of Heaven"
-		}
-		remove_faction = temples
-		remove_faction = enuchs
-		remove_faction = bureaucrats
-	}
-	if = {
-		limit = {
-			has_country_modifier = lost_mandate_of_heaven
-		}
-		remove_country_modifier = lost_mandate_of_heaven
-	}
-	country_event = { #Reforming the Bureaucracy
-		id = china_events.31
-		days = 365
-	}
-	country_event = {
-		id = china_events.32 #Records of the last Empire
-		days = 183
-	}
-	country_event = {
-		id = celestial_empire_events.2
-		days = 1825
-	}
+	set_mandate = 50
+	set_meritocracy = 100
+	#######
 }
 
 # When a nation loses the Mandate of Heaven
 # FROM = New Emperor, ROOT = Old Emperor
 on_mandate_of_heaven_lost = {
-	remove_government_reform = celestial_empire
-	set_government_rank = 2
-	add_country_modifier = {
-		name = lost_mandate_of_heaven
-		duration = 7300	# 20 years
-	}
-	if = {
-		limit = { has_dlc = "Mandate of Heaven" }
-		swap_non_generic_missions = yes 
-	}
-	add_stability = -2
-	china_superregion = {
-		limit = {
-			is_permanent_claim = ROOT
-		}
-		if = {
-			limit = { is_claim = ROOT}
-			remove_claim = ROOT
-		}
-	}
-	if = {
-		limit = {
-			has_country_modifier = new_mandate_holder
-		}
-		remove_country_modifier = new_mandate_holder
-	}
-	if = {
-		limit = { has_country_modifier = jap_era_tranquil_sun_modifier } 
-		remove_country_modifier = jap_era_tranquil_sun_modifier 
-	}
+	###X###
+	#Removed all actions, replaced with below
+	remove_government_reform = X_CRI_great_tatar_state_reform
+	#######
 }
 
 on_embrace_revolution = {

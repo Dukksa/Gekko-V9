@@ -24,7 +24,7 @@ X_CRI_slot_1 = {
 			1322 = {
 				trade_share = {
 					country = ROOT
-					share = 15
+					share = 45
 				}
 			}
 			custom_trigger_tooltip = { 
@@ -53,7 +53,7 @@ X_CRI_slot_1 = {
 			}
 		}
 		effect = {
-			crimea_area = {
+			gazaria_area = {
 				add_local_autonomy = -10
 				add_base_tax = 1
 			}
@@ -76,6 +76,13 @@ X_CRI_slot_1 = {
 		trigger = {
 			stability = 3
 			legitimacy_equivalent = 75
+			custom_trigger_tooltip = {
+				tooltip = X_CRI_reform_1_passed_tt
+				check_variable = {
+					which = X_CRI_celestial_empire_reforms_variable
+					value = 1
+				}
+			}
 			if = {
 				limit = { exists = GOL }	
 				OR = {
@@ -96,7 +103,7 @@ X_CRI_slot_1 = {
 			else = {
 				army_size_percentage = 1
 				num_of_owned_provinces_with = {
-					value = 23
+					value = 35
 					region = crimea_region
 				}
 			}
@@ -110,8 +117,8 @@ X_CRI_slot_1 = {
 				limit = { NOT = { has_completed_all_reforms_trigger = yes } }
 				add_reform_progress_small_effect = yes
 			}
-			change_dip = 1
-			change_mil = 1
+			add_mandate = 10
+			X_improve_ruler_stats_effect = { all = yes all_amount = 2 }
 			custom_tooltip = X_CRI_mission_9_tt
 			hidden_effect = {
 				every_owned_province = {
@@ -167,11 +174,11 @@ X_CRI_slot_2 = {
         required_missions = { X_CRI_mission_3 }
 		position = 2
 		provinces_to_highlight = {
-			province_id = 284
+			province_id = 6001
 		}
 		trigger = {
 			num_of_light_ship = 20
-			2410 = {
+			6001 = {
 				owned_by = ROOT
 				X_has_latest_building_trigger = { sailors = yes builder = ROOT }
 			}
@@ -182,12 +189,24 @@ X_CRI_slot_2 = {
 				trade_goods = slaves
 				amount = 8
 			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
 		}
 		effect = {
 			add_navy_tradition = 20
 			create_admiral = { tradition = 50 }
-			2410 = {
+			6001 = {
 				change_trade_goods = slaves
+			}
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 10
+			}
+			change_estate_land_share = {
+				estate = estate_burghers
+				share = -10
 			}
 		}
 	}
@@ -197,7 +216,7 @@ X_CRI_slot_2 = {
         required_missions = { X_CRI_mission_6 }
 		position = 3
 		trigger = {
-			284 = { X_has_latest_building_trigger = { tax = yes builder = ROOT } }
+			6001 = { X_has_latest_building_trigger = { tax = yes builder = ROOT } }
 			if = {
 				limit = { exists = TUR }
 				OR = {
@@ -230,7 +249,7 @@ X_CRI_slot_2 = {
 				name = X_CRI_rights_of_the_khan_cmod
 				duration = -1
 			}
-			284 = {
+			6001 = {
 				if = {
 					limit = { has_building = cathedral }
 					add_base_tax = 4
@@ -299,6 +318,10 @@ X_CRI_slot_3 = {
 				estate = estate_nomadic_tribes
 				loyalty = 60
 			}
+			estate_loyalty = {
+				estate = estate_dhimmi
+				loyalty = 60
+			}
 			284 = { X_has_latest_building_trigger = { fort = yes builder = ROOT } }
 		}
 		effect = {
@@ -307,7 +330,7 @@ X_CRI_slot_3 = {
 				add_base_production = 2
 				add_base_manpower = 2
 			}
-			284 = {
+			6213 = {
 				rename_capital = "Eski Qirim"
 			}
 			if = {
@@ -352,6 +375,7 @@ X_CRI_slot_3 = {
 				}
 				set_capital = 284
 			}
+			country_event = { id = X_CRI_events.6 }
 		}
 	}
 	#Crimean Slave Trade
@@ -402,11 +426,21 @@ X_CRI_slot_3 = {
 				}
 				custom_tooltip = MONOPOLY_INCOME_SLAVES_DESC
 			}
-			2447 = {
+			6213 = {
 				change_trade_goods = slaves
 				X_center_of_trade_effect = { cost_equivalency_max_lvl_2 = yes }
-			}	
-			add_treasury = 500
+				rename_capital = "Qarasubazar"
+			}
+			if = { 
+				limit = { 
+					has_estate = estate_nomadic_tribes
+					has_estate = estate_burghers
+				} 
+				set_estate_privilege = X_estate_burghers_privilege_1
+			}
+			else = { 
+				add_treasury = 500
+			}
 		}
 	}
 	#Great Raid of Moscow
@@ -568,14 +602,14 @@ X_CRI_slot_4 = {
         required_missions = { X_CRI_mission_1 }
 		position = 2
 		trigger = {
-			284 = {
+			6002 = {
 				owned_by = ROOT
 				province_has_current_tech_fort_trigger = yes
 				num_of_times_improved_by_owner = 5
 			}
 		}
 		effect = {
-			284 = {
+			6002 = {
 				add_base_manpower = 1
 				add_province_modifier = {
 					name = X_CRI_trench_gate_pmod
@@ -655,7 +689,10 @@ X_CRI_slot_4 = {
 							any_owned_province = {
 								OR = {
 									has_terrain = steppe
-									region = ruthenia_region
+									AND = {
+										region = ruthenia_region
+										X_flatland_terrain_trigger = yes
+									}
 								}
 							}
 						}
@@ -694,6 +731,10 @@ X_CRI_slot_5 = {
 		trigger = {
 			calc_true_if = {
 				desc = X_CRI_mission_12_tt
+				odessa_area = {
+					type = all
+					country_or_subject_holds = ROOT
+				}
 				yedisan_area = {
 					type = all
 					country_or_subject_holds = ROOT		
@@ -718,7 +759,7 @@ X_CRI_slot_5 = {
 					type = all
 					country_or_subject_holds = ROOT		
 				}
-				amount = 15
+				amount = 20
 			}
 		}
 		effect = {
@@ -900,7 +941,7 @@ X_CRI_slot_5 = {
 					cede_province = VOL
 				}
 				create_subject = {
-					subject_type = march
+					subject_type = tributary_state
 					subject = VOL
 				}
 				VOL = {
@@ -1059,4 +1100,3 @@ X_CRI_slot_5 = {
 		}
 	}
 }
-	

@@ -1072,6 +1072,9 @@ tribal = {
 	reform_levels = {
 		tribal_administration = {
 			reforms = {
+				###X###
+				X_CRI_great_tatar_state_reform
+				#######
 				steppe_horde
 				tribal_federation
 				tribal_despotism

@@ -1,5 +1,5 @@
 government = tribal
-add_government_reform = steppe_horde
+add_government_reform = X_CRI_great_tatar_state_reform
 technology_group = nomad_group
 religion = sunni
 primary_culture = crimean
@@ -8,6 +8,7 @@ religious_school = maliki_school
 national_focus = MIL
 ###X###
 set_government_rank = 2
+set_emperor_of_china = CRI
 add_truce_with = GEN
 #######
 

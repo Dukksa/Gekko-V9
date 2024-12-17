@@ -12,7 +12,12 @@ X_CRI_great_tatar_state_reform = {
 	maintain_dynasty = yes
 	allow_force_tributary = no
 	lock_level_when_selected = yes
-	has_meritocracy = yes
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+		factions = {
+		}
+	}
 	
 	modifiers = {
 		cav_to_inf_ratio = 0.50

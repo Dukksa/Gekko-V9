@@ -1,0 +1,246 @@
+X_CRI_reform_1 = {
+	empire = celestial_empire
+	emperor = {
+		meritocracy = 0.5
+		imperial_mandate = 0.1
+	}
+	on_effect = {
+		hidden_effect = {
+			change_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+	off_effect = {
+		hidden_effect = {
+			subtract_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+}
+
+X_CRI_reform_2 = {
+	empire = celestial_empire
+	emperor = {
+		stability_cost_modifier = -0.2
+		monarch_admin_power = 1
+	}
+	on_effect = {
+		custom_tooltip = X_CRI_reform_2_tt
+		hidden_effect = {
+			change_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+	off_effect = {
+		custom_tooltip = X_CRI_reform_2_tt2
+		hidden_effect = {
+			subtract_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+}
+
+X_CRI_reform_3 = {
+	empire = celestial_empire
+	on_effect = {
+		custom_tooltip = X_CRI_reform_3_tt
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					has_terrain = steppe
+					owner = { is_emperor_of_china = yes }
+				}
+				add_province_modifier = {
+					name = X_CRI_reform_3_pmod
+					duration = -1
+				}
+			}
+			change_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+	off_effect = {
+		custom_tooltip = X_CRI_reform_3_tt2
+		hidden_effect = {
+			every_province = {
+				limit = { has_province_modifier = X_CRI_reform_3_pmod }
+				remove_province_modifier = X_CRI_reform_3_pmod
+			}
+			subtract_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+}
+
+X_CRI_reform_4 = {
+	empire = celestial_empire
+	emperor = {
+		merchants = 1
+		trade_efficiency = 0.1
+		burghers_loyalty_modifier = 0.05
+	}
+	on_effect = {
+		hidden_effect = {
+			change_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+	off_effect = {
+		hidden_effect = {
+			subtract_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+}
+
+X_CRI_reform_5 = {
+	empire = celestial_empire
+	emperor = {
+		state_maintenance_modifier = -0.25
+		nomadic_tribes_loyalty_modifier = 0.05
+	}
+	on_effect = {
+		hidden_effect = {
+			change_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+	off_effect = {
+		hidden_effect = {
+			subtract_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+}
+
+X_CRI_reform_6 = {
+	empire = celestial_empire
+	emperor = {
+		adm_advisor_cost = -0.1
+		church_loyalty_modifier = 0.05
+	}
+	on_effect = {
+		custom_tooltip = X_CRI_reform_6_tt
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					religion_group = christian
+					owner = { is_emperor_of_china = yes }
+				}
+				add_province_modifier = {
+					name = X_CRI_reform_6_pmod
+					duration = -1
+				}
+			}
+			change_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+	off_effect = {
+		custom_tooltip = X_CRI_reform_6_tt2
+		hidden_effect = {
+			every_province = {
+				limit = { has_province_modifier = X_CRI_reform_6_pmod }
+				remove_province_modifier = X_CRI_reform_6_pmod
+			}
+			subtract_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+}
+
+X_CRI_reform_7 = {
+	empire = celestial_empire
+	emperor = {
+		interest = -0.5
+		dhimmi_loyalty_modifier = 0.05
+		
+	}
+	on_effect = {
+		hidden_effect = {
+			change_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+	off_effect = {
+		hidden_effect = {
+			subtract_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+}
+
+X_CRI_reform_8 = {
+	empire = celestial_empire
+	emperor = {
+		years_of_nationalism = -5
+		manpower_in_own_culture_provinces = 0.2
+		manpower_in_accepted_culture_provinces = 0.2
+		manpower_in_culture_group_provinces = 0.2
+	}
+	on_effect = {
+		custom_tooltip = X_CRI_reform_8_tt
+		hidden_effect = {
+			change_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+			every_country = {
+				limit = { is_emperor_of_china = yes }
+				change_tag = GLH
+				if = {
+					limit = { owns = 466 }
+					set_capital = 466
+				}
+				if = {
+					limit = { NOT = { government_rank = 3 } }
+					set_government_rank = 3
+				}
+				country_event = { id = ideagroups.1 }
+				every_province = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = PREV }
+						culture_group = tartar
+					}
+					add_permanent_claim = PREV
+				}
+			}
+		}
+	}
+	off_effect = {
+		hidden_effect = {
+			subtract_variable = {
+				which = X_CRI_celestial_empire_reforms_variable
+				value = 1
+			}
+		}
+	}
+}

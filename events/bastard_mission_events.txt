@@ -457,6 +457,28 @@ country_event = {
 	}
 }
 
+#Palace at Bagçasaray
+country_event = {
+	id = X_CRI_events.6
+	title = X_CRI_events.6.t
+	desc = X_CRI_events.6.d1
+	picture = GREAT_BUILDING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = X_CRI_mission_2_completed_cflag
+	}
+	option = {
+		name = X_CRI_events.6.a
+		284 = {
+			add_great_project = {
+				type = X_CRI_hansaray
+				instant = no
+			}
+		}
+		custom_tooltip = X_CRI_event_6_tt
+	}
+}
+
 #Genoa Cedes Gazaria
 country_event = {
 	id = X_CRI_events.7
