@@ -5,7 +5,7 @@ graphical_culture = westerngfx
 colonial_parent = HSA
 random_nation_chance = 0
 
-color = { 26  141  87 }
+color = { 1  12  22 }
 
 historical_idea_groups = {
 	administrative_ideas
