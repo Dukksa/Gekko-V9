@@ -20,6 +20,22 @@ add_truce_with = ROT
 add_truce_with = SWI
 add_accepted_culture = slovene
 
+	infantry = 76 # Salzburg
+	infantry = 76
+	infantry = 76
+	infantry = 76
+	infantry = 76
+	infantry = 76
+	infantry = 76
+	infantry = 76
+	infantry = 76
+	infantry = 76
+	infantry = 76
+	cavalry = 76
+	cavalry = 76
+	cavalry = 76
+	cavalry = 76
+
 1395.8.29 = {
 	monarch = {
 		name = "Albrecht IV"

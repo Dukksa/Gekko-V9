@@ -16,7 +16,323 @@ WoC_austria_1_germany = {
 				tag = AUH
 			}
 		}
+		NOT = { has_country_flag = hab_hre_branch }
+		NOT = { has_country_flag = hab_germany_branch }
+	}
+
+	hab_branching3 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { hab_secure_electors } 
+
+		trigger = {  
+			custom_trigger_tooltip = { tooltip = HAB_this_is_a_branching_mission always = no }
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_this_is_a_branching_mission
+		} 
+	}
+
+	hab_branching4 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { hab_branching3 } 
+
+		trigger = {  
+			custom_trigger_tooltip = { tooltip = HAB_this_is_a_branching_mission always = no }
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_this_is_a_branching_mission
+		} 
+	}
+}
+WoC_austria_1_holy_roman_empire = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = { 
+		has_dlc = "Winds of Change"
+		OR = {
+			tag = HAB
+			AND = {
+				was_tag = HAB
+				tag = AUH
+			}
+		}
+		has_country_flag = hab_hre_branch
 	} 
+
+	hab_imperial_borders = {
+		icon = the_imperial_border
+		position = 2
+		required_missions = { hab_secure_electors } 
+		provinces_to_highlight = {
+            OR = {
+                AND = {
+                    owner = { is_emperor = yes }
+                    root = { is_emperor = no }
+                }
+                AND = {
+                    is_part_of_hre = yes
+                    owner = {
+						if = {
+							limit = {
+								is_part_of_hre = yes
+								is_subject = yes
+                                overlord = { is_part_of_hre = no }
+							}
+							is_part_of_hre = yes
+						}
+						else_if = {
+							limit = {
+								is_subject = no
+							}
+							is_part_of_hre = no
+						}
+						else = {
+							overlord = { is_part_of_hre = no }
+						}
+                    }
+                }
+            }
+        }
+		trigger = {
+			not_in_mission_preview_mode = { key = HAB }
+			is_emperor = yes
+			custom_trigger_tooltip = {
+				tooltip = no_hre_province_owned_by_non_hre_member_or_overlord_trigger
+				europe = {
+					type = all
+					OR = {
+						is_part_of_hre = no
+						AND = {
+							is_part_of_hre = yes
+							owner = {
+								OR = {
+									AND = {
+										is_part_of_hre = yes
+										OR = {
+											is_subject = no
+											AND = {
+												is_subject = yes
+												overlord = { is_part_of_hre = yes }
+											}
+										}
+									}
+									AND = {
+										is_part_of_hre = no
+										is_subject = yes
+										overlord = { is_part_of_hre = yes }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_imperial_influence = 15
+			if = {
+				limit = {
+					has_dlc = "The Cossacks"
+				}
+				add_dip_power = 100
+				custom_tooltip = emp_hab_imperial_border_effect_tooltip
+				custom_tooltip = SEPERATOR_TOOLTIP
+				hidden_effect = {
+					every_country = {
+						limit = {
+							is_part_of_hre = yes
+							NOT = { is_rival = root }
+							NOT = { root = { is_rival = prev } }
+						}
+						add_trust = {
+							who = root
+							value = 10
+						}
+					}
+				}
+			}
+			else = { add_dip_power = 200 }
+
+			custom_tooltip = HAB_EVERY_IMPERIAL_CAPITAL_GAINS_FOLLOWING_MODIFIER
+			tooltip = {
+				capital_scope = {
+					add_province_modifier = {
+						name = hab_capitals_of_the_empire
+						duration = 7300
+					}
+				}
+			}
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					capital_scope = {
+						add_province_modifier = {
+							name = hab_capitals_of_the_empire
+							duration = 7300
+						}
+					}
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					capital_scope = {
+						add_province_modifier = {
+							name = hab_capitals_of_the_empire
+							duration = 7300
+						}
+					}
+				}
+			}
+		}
+	}
+
+	hab_imperial_capitals = {
+		icon = imperial_capitals
+		position = 3
+		required_missions = { hab_imperial_borders } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owner = { is_emperor = yes }
+					root = { is_emperor = no }
+				}
+				AND = {
+					continent = europe
+					owned_by = root
+					development = 20
+					OR = {
+						NOT = { development = 30 }
+						is_part_of_hre = no
+					}
+					NOT = {
+						ROOT = {
+							num_of_owned_provinces_with = {
+								value = 5
+								development = 30
+								is_part_of_hre = yes
+							}
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = HAB }
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				is_emperor = yes
+				num_of_owned_provinces_with = {
+					value = 5
+					development = 25
+					num_of_buildings_in_province = 3
+					is_part_of_hre = yes
+				}
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 5
+					development = 25
+					num_of_buildings_in_province = 3
+				}
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = { amount = 25 }
+			add_country_modifier = {
+				name = hab_flourishing_in_empire
+				duration = 7300
+			}
+			custom_tooltip = HAB_5_RANDOM_PROVINCES_THAT_MEET_REQUIREMENT_GAIN
+			tooltip = {
+				add_province_modifier = {
+					name = hab_imperial_cities
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					for = {
+						amount = 5
+						effect = "
+							random_owned_province = {
+								limit = {
+									is_part_of_hre = yes
+									development = 25
+									num_of_buildings_in_province = 3
+									NOT = {
+										has_province_modifier = hab_imperial_cities
+									}
+								}
+								add_province_modifier = {
+									name = hab_imperial_cities
+									duration = -1
+								}
+								add_or_upgrade_production_building = yes
+							}
+						"
+					}
+				}
+				else = {
+					for = {
+						amount = 5
+						effect = "
+							random_owned_province = {
+								limit = {
+									development = 25
+									num_of_buildings_in_province = 3
+									NOT = {
+										has_province_modifier = hab_imperial_cities
+									}
+								}
+								add_province_modifier = {
+									name = hab_imperial_cities
+									duration = -1
+								}
+								add_or_upgrade_production_building = yes
+							}
+						"
+					}
+				}
+			}
+		}
+	}
+}
+WoC_austria_1_germany = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = { 
+		has_dlc = "Winds of Change"
+		OR = {
+			tag = HAB
+			AND = {
+				was_tag = HAB
+				tag = AUH
+			}
+		}
+		has_country_flag = hab_germany_branch
+	}
 
 	hab_switzerland = {
 		icon = consolidate_switzerland
@@ -132,7 +448,6 @@ WoC_austria_1_germany = {
 		} 
 	}
 }
-
 WoC_austria_1_1 = {
 	slot = 1
 	generic = no
@@ -553,6 +868,22 @@ WoC_austria_2 = {
 			num_of_generals = 1
 		}
 		effect = {
+			if = {
+				limit = {
+					ai = yes
+				}
+				random_list = {
+					50 = { set_country_flag = hab_hre_branch }
+					10 = { set_country_flag = hab_germany_branch }
+				}
+				swap_non_generic_missions = yes
+			}
+			else = {
+				enable_branching_mission_review_without_ai = {
+					key = HAB
+				}
+			}
+			
 			bohemia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -599,6 +930,353 @@ WoC_austria_2 = {
 }
 
 
+WoC_austria_2_branching = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = { 
+		has_dlc = "Winds of Change"
+		OR = {
+			tag = HAB
+			AND = {
+				was_tag = HAB
+				tag = AUH
+			}
+		}
+		NOT = { has_country_flag = hab_hre_branch }
+		NOT = { has_country_flag = hab_germany_branch }
+	} 
+
+	hab_branching1 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { hab_secure_electors } 
+		trigger = {  
+			custom_trigger_tooltip = { tooltip = HAB_this_is_a_branching_mission always = no }
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_this_is_a_branching_mission
+		} 
+	}
+
+	hab_branching6 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = {
+			hab_branching2
+			hab_branching1
+			hab_branching3
+		}
+		trigger = {  
+			custom_trigger_tooltip = { tooltip = HAB_this_is_a_branching_mission always = no }
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_this_is_a_branching_mission
+		} 
+	}
+}
+
+WoC_austria_2_holy_roman_empire = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = { 
+		has_dlc = "Winds of Change"
+		OR = {
+			tag = HAB
+			AND = {
+				was_tag = HAB
+				tag = AUH
+			}
+		}
+		has_country_flag = hab_hre_branch
+	} 
+
+	hab_a_holy_empire = {
+		icon = holy_state
+		position = 2
+		required_missions = { hab_secure_electors } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owner = { is_emperor = yes }
+					root = { is_emperor = no }
+				}
+				AND = {
+					owner = {
+						is_part_of_hre = yes
+						NOT = { religion = root }
+					}
+					hre_religion_locked = no
+				}
+			}
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = HAB }
+			is_emperor = yes
+			if = {
+				limit = {
+					has_dlc = "Art of War"
+				}
+				OR = {
+					hre_religion_locked = yes
+					AND = {
+						custom_trigger_tooltip = {
+							tooltip = emp_bav_center_of_counter_reformation_tooltip2
+							had_global_flag = {
+								flag = reformation_started
+								days = 18250
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = emp_hab_empire_united_in_religion_trigger_tooltip
+							NOT = {
+								any_country = {
+									is_part_of_hre = yes
+									NOT = { religion = root }
+								}
+							}
+						}
+					}
+				}
+				is_all_concessions_in_council_taken = yes
+			}
+			else = {
+				OR = {
+					AND = {
+						custom_trigger_tooltip = {
+							tooltip = emp_bav_center_of_counter_reformation_tooltip2
+							had_global_flag = {
+								flag = reformation_started
+								days = 18250
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = emp_hab_empire_united_in_religion_trigger_tooltip
+							NOT = {
+								any_country = {
+									is_part_of_hre = yes
+									NOT = { religion = root }
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_dlc = "Emperor"
+						}
+						is_all_concessions_in_council_taken = yes
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = catholic
+				}
+				add_papal_influence = 25
+				add_country_modifier = {
+					name = hab_empire_united_in_religion_mod_catholic
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					religion = protestant
+					has_dlc = "Common Sense"
+				}
+				add_church_power = 100
+				add_country_modifier = {
+					name = hab_empire_united_in_religion_mod_protestant
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					religion = reformed
+					has_dlc = "Wealth of Nations"
+				}
+				add_fervor = 100
+				add_country_modifier = {
+					name = hab_empire_united_in_religion_mod_reformed
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = hab_empire_united_in_religion_mod_generic
+					duration = -1
+				}
+			}
+			custom_tooltip = emp_hab_empire_united_in_religion_effect_remove_tooltip
+
+			custom_tooltip = SEPERATOR_TOOLTIP
+
+			custom_tooltip = HAB_ALL_SAME_FAITH_NATIONS_GAIN_FOLLOWING
+			tooltip = {
+				add_country_modifier = {
+					name = hab_maintaining_the_imperial_religion
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						is_part_of_hre = yes
+						religion = ROOT
+					}
+					add_country_modifier = {
+						name = hab_maintaining_the_imperial_religion
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+
+	hab_true_holy_roman_emperor = {
+		icon = switzerland_and_the_empire
+		position = 3
+		required_missions = { 
+			hab_a_holy_empire 
+			hab_imperial_ascendancy
+			hab_imperial_borders
+		} 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owner = { is_emperor = yes }
+					root = { is_emperor = no }
+				}
+				AND = {
+					is_part_of_hre = yes
+					owner = {
+						OR = {
+							is_part_of_hre = no
+							AND = {
+								is_subject = yes
+								overlord = { is_part_of_hre = no }
+							}
+						}
+					}
+				}
+				owner = {
+					is_part_of_hre = yes
+					NOT = {
+						has_opinion = {
+							who = root
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = HAB }
+			is_emperor = yes
+			OR = {
+				hre_reform_passed = emperor_reichskrieg
+				if = {
+					limit = {
+						has_dlc = "Emperor"
+					}
+					hre_reform_passed = emperor_privilegia_de_non_appelando
+				}
+				else = {
+					hre_reform_passed = privilegia_de_non_appelando
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = emp_hab_empire_pass_reforms_trigger_tooltip
+				NOT = {
+					any_country = {
+						is_part_of_hre = yes
+						NOT = {
+							has_opinion = {
+								who = root
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = no_hre_province_owned_by_non_hre_member_or_overlord_trigger
+				europe = {
+					type = all
+					OR = {
+						is_part_of_hre = no
+						AND = {
+							is_part_of_hre = yes
+							owner = {
+								is_part_of_hre = yes
+								OR = {
+									is_subject = no
+									AND = {
+										is_subject = yes
+										overlord = { is_part_of_hre = yes }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}
+
+			custom_tooltip = SEPERATOR_TOOLTIP
+
+			complex_dynamic_effect = {
+				first_custom_tooltip = HAB_IF_CENTRALIZATION
+				first_limit = "
+					OR = {
+						hre_reform_passed = privilegia_de_non_appelando
+						hre_reform_passed = emperor_privilegia_de_non_appelando
+					}
+				"
+				first_effect = "
+					add_prestige_or_monarch_power = { amount = 15 }
+
+					custom_tooltip = SEPERATOR_TOOLTIP
+
+					custom_tooltip = HAB_MODIFY_STRONG_DUCHIES
+					set_country_flag = hab_upgraded_strong_duchies
+				"
+				second_custom_tooltip = HAB_IF_DECENTRALIZED
+				second_limit = "
+					hre_reform_passed = emperor_reichskrieg
+				"
+				second_effect = "
+					add_adm_power = 50
+					add_dip_power = 50
+					add_mil_power = 50
+
+					custom_tooltip = SEPERATOR_TOOLTIP
+
+					custom_tooltip = HAB_UNLOCK_IMPERIAL_WARLEADER_PRIVILEGE
+					set_country_flag = hab_imperial_warleader_flag
+				"
+			}
+		}
+	}
+}
+
 WoC_austria_2_germany = {
 	slot = 2
 	generic = no
@@ -616,6 +1294,7 @@ WoC_austria_2_germany = {
 				tag = AUH
 			}
 		}
+		has_country_flag = hab_germany_branch
 	} 
 
 	hab_bavaria = {
@@ -1424,6 +2103,197 @@ WoC_austria_2_1 = {
 	}
 }
 
+WoC_austria_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = { 
+		has_dlc = "Winds of Change"
+		OR = {
+			tag = HAB
+			AND = {
+				was_tag = HAB
+				tag = AUH
+			}
+		}
+		NOT = { has_country_flag = hab_hre_branch }
+		NOT = { has_country_flag = hab_germany_branch }
+	} 
+
+	hab_branching2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { hab_secure_electors } 
+		trigger = {  
+			custom_trigger_tooltip = { tooltip = HAB_this_is_a_branching_mission always = no }
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_this_is_a_branching_mission
+		} 
+	}
+
+	hab_branching5 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { hab_branching2 } 
+		trigger = {  
+			custom_trigger_tooltip = { tooltip = HAB_this_is_a_branching_mission always = no }
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_this_is_a_branching_mission
+		} 
+	}
+}
+
+WoC_austria_3_holy_roman_empire = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = { 
+		has_dlc = "Winds of Change"
+		OR = {
+			tag = HAB
+			AND = {
+				was_tag = HAB
+				tag = AUH
+			}
+		}
+		has_country_flag = hab_hre_branch
+	} 
+
+	hab_imperial_ascendancy = {
+		icon = imperial_ascendancy
+		position = 2
+		required_missions = { hab_secure_electors } 
+		provinces_to_highlight = {
+			owner = {
+				NOT = { tag = root }
+				NOT = { is_subject_of = ROOT }
+				OR = {
+					AND = {
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							value = 10
+							continent = europe
+						}
+						is_part_of_hre = yes
+					}
+					is_emperor = yes
+				}
+			}
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = HAB }
+			is_emperor = yes
+			OR = {
+				hre_reform_passed = emperor_privilegia_de_non_appelando
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = HAB_CONTAIN_IMPERIAL_PRINCES_TT
+						NOT = {
+							any_country = {
+								NOT = { tag = root }
+								NOT = { is_subject_of = ROOT }
+								is_part_of_hre = yes
+								NOT = {
+									has_opinion = {
+										who = ROOT
+										value = 100
+									}
+								}
+								num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+									value = 10
+									is_part_of_hre = yes
+								}
+							}
+						}
+					}
+					calc_true_if = {
+						desc = emp_hab_no_one_to_threaten_us_trigger2_tooltip
+						amount = 10
+						all_country = {
+							has_reform = free_city
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			add_country_modifier = {
+				name = hab_ascendancy_in_empire
+				duration = 7300
+			}
+
+			custom_tooltip = SEPERATOR_TOOLTIP
+
+			custom_tooltip = HAB_ALL_HRE_NATIONS_GAIN_50_MANA
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					add_dip_power = 50
+					add_mil_power = 50
+					add_adm_power = 50
+				}
+			}
+		}
+	}
+
+	hab_a_roman_empire = {
+		icon = a_roman_empire
+		position = 3
+		required_missions = { hab_imperial_ascendancy } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owner = { is_emperor = yes }
+					root = { is_emperor = no }
+				}
+				AND = {
+					province_id = 118
+					OR = {
+						is_part_of_hre = no
+						owner = { is_part_of_hre = no }
+					}
+				}
+			}
+		}
+		trigger = {
+			not_in_mission_preview_mode = { key = HAB }
+			is_emperor = yes
+			118 = {
+				is_part_of_hre = yes
+				owner = {
+					is_part_of_hre = yes
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = HAB_BUFF_RELIGIOUS_DIPLOMATS
+			set_country_flag = hun_empower_religious_diplomats
+
+			custom_tooltip = SEPERATOR_TOOLTIP
+
+			add_country_modifier = {
+				name = hab_empire_has_rome
+				duration = -1
+			}
+			custom_tooltip = emp_hab_empire_united_in_religion_effect_remove_tooltip
+		}
+	}
+}
+
 WoC_austria_3_germany = {
 	slot = 3
 	generic = no
@@ -1441,7 +2311,8 @@ WoC_austria_3_germany = {
 				tag = AUH
 			}
 		}
-	} 
+		has_country_flag = hab_germany_branch
+	}
 
 	hab_brandenburg = {
 		icon = electorate_of_brandenburg
