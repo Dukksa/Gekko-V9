@@ -510,7 +510,7 @@ country_decisions = {
 			factor = 0
 		}
 	}
-	h_form_texas = {
+	h_form_lusitania = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = became_dominion }
@@ -534,10 +534,10 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			NOT = { exists = TEX }
+			NOT = { exists = LUS }
 		}
 		effect  = {
-			change_tag = TEX
+			change_tag = LUS
 			remove_non_electors_emperors_from_empire_effect = yes
 			add_government_reform = h_reform_dominion
 			if = {
@@ -555,7 +555,7 @@ country_decisions = {
 			factor = 0
 		}
 	}	
-	h_form_cuba = {
+	h_form_freiland = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = became_dominion }
@@ -579,10 +579,10 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			NOT = { exists = CUB }
+			NOT = { exists = FRE }
 		}
 		effect  = {
-			change_tag = CUB
+			change_tag = FRE
 			remove_non_electors_emperors_from_empire_effect = yes
 			add_government_reform = h_reform_dominion
 			if = {

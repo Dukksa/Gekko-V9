@@ -4035,7 +4035,7 @@ CUB_ideas = { #Cuba
 	}
 	
 	trigger = {
-		tag = CUB
+		tag = FRE
 	}
 	free = yes
 	
@@ -4188,7 +4188,7 @@ BEO_ideas = { #La Plata - Beornia
 	}
 }
 
-TEX_ideas = { #Texas
+TEX_ideas = { #Texas - Lusitania
 	start = {
 		global_tax_modifier = 0.2
 		cavalry_cost = -0.1
@@ -4197,7 +4197,7 @@ TEX_ideas = { #Texas
 		leader_land_shock = 1
 	}
 	trigger = {
-		tag = TEX
+		tag = LUS
 	}
 	free = yes
 	lone_star_state = {
