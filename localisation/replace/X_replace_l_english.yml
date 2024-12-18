@@ -8,7 +8,7 @@
  ENACT_DECREE_NOT_EMPEROR:0 "Only the Great Khan can enact Yarlig.
  ENACT_DECREE_NOT_ENOUGH_MERITOCRACY:0 "Enacting this Decree requires $MERITOCRACYREQUIRED$ Horde Unity, you only have $CURRENTMERITOCRACY$."
  YEARLY_MERITOCRACY:0 "Yearly Horde Unity"
- MERITOCRACY_IRO:0 "§YHorde Unity§!\nHorde Unity changes by $CHANGE$ every year due to:\n$WHY$"
+ YOU_MERITOCRACY_IRO:0 "§YHorde Unity§!\nHorde Unity changes by $CHANGE$ every year due to:\n$WHY$"
  YOU_MERITOCRACY_DRO:1 "Horde Unity is a measure of the how much support a Khan has from the tribes. The higher it is, the more unified the nation, thus the more efficient our nation will run!\nIt can be increased through Strengthening Government, ideas, policies or events.\nThis level of Horde Unity gives the following effects:"
  THEY_MERITOCRACY_DRO:0 "Horde Unity is a measure of the how much support a Khan has from the tribes. The higher it is, the more unified their nation, thus the more efficient it will run!\nThis level of Horde Unity gives the following effects:"
  STR_MERITOCRACY:0 "gain $VAL|G$ Horde Unity"

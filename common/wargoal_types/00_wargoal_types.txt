@@ -3504,3 +3504,91 @@ BUR_burgundian_campaign = {
 
 	war_name = BURGUNDIAN_CAMPAIGN_NAME
 }
+
+X_CRI_war_goal_1 = { #Crush the Tatar Yoke
+	type = superiority
+	attacker = {
+		badboy_factor = 1.0
+		prestige_factor = 1.0
+		peace_cost_factor = 1.0
+		required_treaty_to_take_provinces = {
+			X_CRI_peace_treaty_1
+		}
+		peace_options = {
+			X_CRI_peace_treaty_1
+			po_demand_provinces
+		}
+		prov_desc = ALL_PROVS
+	}
+	defender = {
+		badboy_factor = 1.0
+		prestige_factor = 1.0
+		peace_cost_factor = 1.0
+		required_treaty_to_take_provinces = {
+			X_CRI_peace_treaty_2
+		}
+		peace_options = { 
+			X_CRI_peace_treaty_2
+			po_demand_provinces
+		}
+		prov_desc = ALL_PROVS
+	}
+	war_name = X_CRI_war_name_1
+}
+
+X_CRI_war_goal_2 = { #Harvest the Steppe
+	type = superiority
+	attacker = {
+		badboy_factor = 1.0
+		prestige_factor = 1.0
+		peace_cost_factor = 1.0
+		required_treaty_to_take_provinces = {
+			X_CRI_peace_treaty_3
+		}
+		peace_options = {
+			X_CRI_peace_treaty_3
+			po_demand_provinces
+			po_become_vassal
+			po_become_tributary_state
+		}
+		prov_desc = ALL_PROVS
+	}
+	defender = {
+		badboy_factor = 1.0
+		prestige_factor = 1.0
+		peace_cost_factor = 1.0
+		peace_options = { 
+			po_demand_provinces
+		}
+		prov_desc = ALL_PROVS
+	}
+	war_name = X_CRI_war_name_2
+}
+
+X_CRI_war_goal_3 = { #Claim Genghisid Legacy
+	type = take_capital
+	attacker = {
+		badboy_factor = 1.0
+		prestige_factor = 1.0
+		peace_cost_factor = 0.5
+		required_treaty_to_take_provinces = {
+			X_CRI_peace_treaty_4
+		}
+		peace_options = {
+			X_CRI_peace_treaty_4 
+			po_demand_provinces
+		}
+		prov_desc = ALL_PROVS
+	}
+	defender = {
+		badboy_factor = 1.0
+		prestige_factor = 1.0
+		peace_cost_factor = 1.0
+		peace_options = {
+			X_CRI_peace_treaty_2
+			po_demand_provinces
+		}
+		prov_desc = ALL_PROVS
+	}
+	war_name = X_CRI_war_name_3
+}

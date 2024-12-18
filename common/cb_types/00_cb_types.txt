@@ -2269,3 +2269,50 @@ cb_burgundian_campaign = {
 
 	war_goal = BUR_burgundian_campaign
 }
+
+#crimea shit
+X_CRI_cb_1 = { #Crush the Tatar Yoke
+	valid_for_subject = no
+	prerequisites = {
+		religion_group = christian
+		NOT = { culture_group = tartar }
+		is_neighbor_of = FROM
+		FROM = { is_emperor_of_china = yes }
+	}
+	war_goal = X_CRI_war_goal_1
+}
+
+X_CRI_cb_2 = { #Harvest the Steppe
+	valid_for_subject = no
+	prerequisites = {
+		is_emperor_of_china = yes
+		is_neighbor_of = FROM
+		FROM = { 
+			religion_group = christian
+			is_subject = no
+		}
+	}
+	war_goal = X_CRI_war_goal_2
+}
+
+X_CRI_cb_3 = { #Claim Genghisid Legacy
+	valid_for_subject = no
+	prerequisites = {
+		ai = no
+		is_neighbor_of = FROM
+		culture_group = tartar
+		NOT = { religion_group = christian }
+		NOT = { truce_with = FROM }
+		FROM = { 
+			is_emperor_of_china = yes
+			NOT = { is_in_war = { casus_belli = X_CRI_cb_3 } }
+			NOT = { 
+				check_variable = {
+					which = X_CRI_celestial_empire_reforms_variable
+					value = 8
+				}
+			}
+		}
+	}
+	war_goal = X_CRI_war_goal_3
+}

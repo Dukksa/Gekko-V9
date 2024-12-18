@@ -4,33 +4,8 @@ estate_nomadic_tribes = {
 	# If true, country will get estate
 	trigger = {
 		OR = {
-			has_dlc = "The Cossacks"
-			has_dlc = "King of Kings"
-		}
-		NOT = { has_government_attribute = disables_estate_nomadic_tribes }
-		NOT = { has_disabled_estate = { estate = estate_nomadic_tribes } }
-		OR = { 
-			has_country_modifier = enable_estate_nomadic_tribes_modifier 
-			has_country_flag = turkoman_unlocked_tribes
-			has_government_attribute = enables_estate_nomadic_tribes
-			has_enabled_estate = { estate = estate_nomadic_tribes }
-			AND = {
-				OR = {
-					AND = {
-						is_nomad = yes
-						is_colonial_nation = no
-					}
-					has_unlocked_estate = { estate = estate_nomadic_tribes }
-				}
-				NOT = { has_government_attribute = is_merchant_republic }
-				NOT = { government = native }
-				NOT = { has_reform = siberian_tribe }
-				NOT = { has_reform = veche_republic }
-				NOT = { has_government_attribute = is_pirate_republic_reform }
-				NOT = { has_reform = cossacks_reform }
-				NOT = { has_reform = celestial_empire }
-				NOT = { has_reform = revolutionary_empire_reform }
-			}
+			is_nomad = yes
+			is_emperor_of_china = yes
 		}
 	}
 
@@ -115,7 +90,6 @@ estate_nomadic_tribes = {
 		estate_nomadic_tribes_military_service
 		estate_nomadic_tribes_ensure_tribal_loyalty
 		estate_nomadic_tribes_secured_succession
-		estate_tribes_right_of_counsel
 	}
 
 	agendas = {

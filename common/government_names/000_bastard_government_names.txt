@@ -21,3 +21,21 @@ gov_dominion = {
 		has_reform = h_reform_dominion
 	}
 }
+
+X_CRI_great_tatar_state_government = {
+	rank = {
+		1 = X_CRI_great_tatar_state
+		2 = X_CRI_great_tatar_state
+		3 = X_CRI_great_tatar_state
+	}
+
+	ruler_male = {
+		1 = X_CRI_great_khan
+		2 = X_CRI_great_khan
+		3 = X_CRI_great_khan
+	}
+
+	trigger = {
+		has_reform = X_CRI_great_tatar_state_reform
+	}
+}
