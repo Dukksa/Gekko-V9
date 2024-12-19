@@ -19,7 +19,10 @@ pol_struggle_for_royal_power_disaster = {
 	can_stop = {
 		OR = {
 			has_any_disaster = yes
-			NOT = { has_reform = polish_elective_monarchy } 
+			AND = {
+				NOT = { has_reform = polish_elective_monarchy }
+				NOT = { has_reform = polish_great_sejm }
+			} 
 			NOT = { current_age = age_of_absolutism }
 		}
 	}
@@ -34,6 +37,7 @@ pol_struggle_for_royal_power_disaster = {
 			OR = { 
 				has_reform = elective_monarchy
 				has_reform = polish_elective_monarchy
+				has_reform = polish_great_sejm
 			}
 		}
 		modifier = {
