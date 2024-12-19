@@ -245,7 +245,6 @@ ME_bur_1 = {
 				name = me_bur_to_tame_two_realms
 				duration = 5475
 			}
-			custom_tooltip = ME_BUR_BUFF_TOISON_DOR_INTERACTION
 		} 
 	}
 
@@ -277,8 +276,6 @@ ME_bur_1 = {
 		} 
 
 		effect = {  
-			custom_tooltip = ME_BUR_UNLOCK_BOCK_CONDITIONAL_MODIFIER
-			custom_tooltip = " "
 			94 = {
 				add_or_upgrade_fort_building = yes
 			}
@@ -294,67 +291,6 @@ ME_lot_1 = {
 	potential = { 
 		tag = LOT 
 	} 
-
-	ME_lot_aachen_palace = {
-		icon = versailles_palace
-		position = 9
-		required_missions = {
-			ME_bur_the_bock
-			ME_bur_age_of_new_heroes
-		}
-
-		provinces_to_highlight = {
-			province_id = 1878
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { development = 25 }
-				if = {
-					limit = {
-						has_dlc = "Leviathan"
-					}
-				}
-			}
-		}
-
-		trigger = {  
-			1878 = {
-				owned_by = ROOT
-				development = 25
-			}
-		} 
-
-		effect = {  
-			if = {
-				limit = {
-					has_dlc = "Leviathan"
-				}
-				country_event_with_option_insight = {
-					id = ME_Burgundy_Events.17
-					option_1 = "
-						custom_tooltip = ME_BUR_BUFF_AACHEN_MILITARY
-					"
-					option_2 = "
-						custom_tooltip = ME_BUR_BUFF_AACHEN_DIPLOMACY
-					"
-					option_3 = "
-						custom_tooltip = ME_BUR_BUFF_AACHEN_CULTURE
-					"
-				}
-			}
-			else = {
-				add_adm_power = 100
-
-				custom_tooltip = SEPERATOR_TOOLTIP
-
-				1878 = {
-					add_province_modifier = {
-						name = me_bur_aachen_palace
-						duration = -1
-					}
-				}
-			}
-		}  
-	}
 
 	ME_lot_spread_frankish_culture = {
 		icon = league_of_the_public_weal
@@ -508,8 +444,6 @@ ME_bur_2 = {
 		} 
 
 		effect = {  
-			custom_tooltip = ME_BUR_LOCK_NED_FRA
-			custom_tooltip = " "
 			complex_dynamic_effect = {
 				first_custom_tooltip = ME_BUR_IF_CONQUEST
 				first_limit = "
@@ -754,7 +688,6 @@ ME_bur_2 = {
 			custom_tooltip = " "
 			custom_tooltip = ME_BUR_BUFF_NOBILITY_IN_OFFICER_CORPS
 			custom_tooltip = " "
-			custom_tooltip = ME_BUR_BUFF_SUPPORT_OF_KNIGHTS
 			hidden_effect = {
 				if = {
 					limit = {
@@ -796,10 +729,6 @@ ME_bur_2 = {
 			}
 			custom_tooltip = " "
 			custom_tooltip = ME_BUR_RENAME_NOBLES_TO_PALADINS
-			custom_tooltip = " "
-			custom_tooltip = ME_BUR_MODIFY_GOLDEN_FLEECE_PRIVILEGE
-			custom_tooltip = " "
-			custom_tooltip = ME_BUR_GAIN_AT_PER_BATTLE_WON
 		} 
 	}
 }
@@ -940,34 +869,6 @@ ME_bur_3 = {
 				skill = 3
 				cost_multiplier = 0.75
 			}
-			custom_tooltip = " "
-			custom_tooltip = ME_BUR_UNLOCK_SWISS_MERCENARIES
-			custom_tooltip = " "
-			custom_tooltip = ME_BUR_EXPAND_THE_FORTIFICATIONS_GRANTS_BONUSES_IN_SWISS_PROVINCES
-			hidden_effect = {
-				every_owned_province = {
-					if = {
-						limit = {
-							has_province_modifier = estate_nobles_development_of_castles_ramparts_mod
-						}
-						remove_province_modifier = estate_nobles_development_of_castles_ramparts_mod
-						add_province_modifier = {
-							name = me_bur_expand_the_ramparts_buffed
-							duration = -1
-						}
-					}
-					if = {
-						limit = {
-							has_province_modifier = estate_nobles_development_of_castles_mod
-						}
-						remove_province_modifier = estate_nobles_development_of_castles_mod
-						add_province_modifier = {
-							name = me_bur_expand_the_fortifications_buffed
-							duration = -1
-						}
-					}
-				}
-			}
 		} 
 	}
 
@@ -1049,8 +950,6 @@ ME_bur_3 = {
 		effect = {
 			change_government_reform_progress = 75
 			custom_tooltip = " "
-			custom_tooltip = ME_BUR_NEXT_3_GOV_REFORMS_GRANT_ADM_POWER
-			custom_tooltip = " "
 			add_estate_influence_modifier = {
 				estate = estate_nobles
 				desc = EST_VAL_NEW_BURGUNDIAN_LAWS
@@ -1068,13 +967,6 @@ ME_bur_3 = {
 				desc = EST_VAL_NEW_BURGUNDIAN_LAWS
 				influence = -10
 				duration = 7300
-			}
-			hidden_effect = {
-				set_country_flag = me_bur_reforms_grant_adm_skill_flag
-				set_variable = {
-					which = BurReformsAddAdmSkill
-					value = 3
-				}
 			}
 		} 
 	}
@@ -1147,8 +1039,6 @@ ME_bur_3 = {
 		} 
 
 		effect = {
-			custom_tooltip = ME_BUR_BUFF_PATRONAGE_OF_ARTS_PRIVILEGE
-			custom_tooltip = " "
 			capital_scope = {
 				add_prosperity = 100
 			}
@@ -1410,43 +1300,6 @@ ME_bur_4 = {
 					add_base_production = 2
 				}
 			}
-
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			custom_tooltip = BUR_EVERY_LOMBARD_PROVINCE_THAT_HAS_A_MERCENARY_COMPANY_GAINS_DEVELOPMENT
-
-			hidden_effect = {
-				if = {
-					limit = {
-						104 = {
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					104 = {
-						add_base_tax = 1
-					}
-				}
-				if = {
-					limit = {
-						4728 = {
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					4728 = {
-						add_base_tax = 1
-					}
-				}
-				if = {
-					limit = {
-						1862 = {
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					1862 = {
-						add_base_tax = 1
-					}
-				}
-			}
 		} 
 	}
 
@@ -1647,8 +1500,6 @@ ME_bur_4 = {
 				name = BUR_european_model_court
 				duration = -1
 			}
-
-			custom_tooltip = ME_BUR_RECRUIT_ADVISOR_UNLOCKED
 		} 
 	}
 }
@@ -1815,20 +1666,10 @@ ME_bur_5 = {
 
 		effect = {  
 			112 = {
-				if = {
-					limit = {
-						has_dlc = "Leviathan"
-					}
-					set_country_flag = lan_allow_access_to_venetian_arsenal_flag
-					custom_tooltip = BUR_UNLOCKS_VENETIAN_ARSENAL_GREAT_PROJECT
 
-					custom_tooltip = SEPERATOR_TOOLTIP
-				}
-				else = {
-					add_base_manpower = 2
-					add_base_production = 2
-					add_base_tax = 2
-				}
+				add_base_manpower = 2
+				add_base_production = 2
+				add_base_tax = 2
 
 				add_unit_construction = {
 					type = galley
@@ -1889,9 +1730,6 @@ ME_bur_5 = {
 
 		effect = {  
 			custom_tooltip = ME_BUR_NO_MORE_POOR_UNIFORMS
-			custom_tooltip = " "
-			custom_tooltip = ME_BUR_UNLOCK_BURGUNDIAN_FASHION_BURGHERS_PRIVILEGE
-			
 		} 
 	}
 }
@@ -1981,11 +1819,6 @@ ME_lot_5 = {
 		} 
 
 		effect = {  
-			custom_tooltip = LOT_UNLOCK_PALADIN_GUARD_MERC_COMPANY
-			set_country_flag = lot_paladin_guard_unlocked_flag
-
-			custom_tooltip = SEPERATOR_TOOLTIP
-
 			change_mil = 1
 
 			custom_tooltip = SEPERATOR_TOOLTIP

@@ -161,10 +161,10 @@ country_event = {
 	option = {
 		name = ME_Burgundy_Events.2.b
 		
-		ME_give_claims = {
+		give_claims = {
 			area = ile_de_france_area
 		}
-		ME_give_claims = {
+		give_claims = {
 			area = champagne_area
 		}
 		
@@ -234,10 +234,6 @@ country_event = {
 		}
 		
 		add_prestige_or_monarch_power = { amount = 10 }
-		add_opinion = {
-			who = FROM
-			modifier = BUR_granted_knight_title
-		}
 		custom_tooltip = " "
 		add_ruler_modifier = {
 			name = me_bur_granted_knighthood
@@ -246,308 +242,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = ME_Burgundy_Events.5
-	title = ME_Burgundy_Events.5.t
-	desc = ME_Burgundy_Events.5.d
-	picture = GOOD_WITH_MONARCH_eventPicture
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		hidden_effect = {
-			save_event_target_as = event_prev
-			ME_sale_pick_target = {
-				scale = prestige
-				id = fashion_bur
-				amount = "2"
-				name = prestige
-				global_trigger = "
-					religion_group = christian
-					capital_scope = {
-						continent = europe
-					}
-				"
-				prioritize_player = yes
-			}
-			ME_sale_pick_target = {
-				scale = total_development
-				id = fashion_bur
-				amount = "2"
-				name = dev
-				global_trigger = "
-					religion_group = christian
-					capital_scope = {
-						continent = europe
-					}
-					NOT = { alliance_with = ROOT }
-				"
-				prioritize_player = yes
-			}
-			ME_sale_pick_target = {
-				scale = total_development
-				id = fashion_bur
-				amount = "2"
-				name = dev_ally
-				global_trigger = "
-					religion_group = christian
-					capital_scope = {
-						continent = europe
-					}
-					alliance_with = ROOT
-				"
-				prioritize_player = yes
-			}
-			ME_sale_setup_variable = {
-				id = fashion_bur
-				num = 1
-				what = years_of_income
-				name = dev
-				extra = "
-					bur_add_effect_from_selling_fashion_efficiency = yes
-				"
-			}
-			ME_sale_setup_variable = {
-				id = fashion_bur
-				num = 2
-				what = years_of_income
-				name = dev
-				extra = "
-					bur_add_effect_from_selling_fashion_efficiency = yes
-				"
-			}
-			ME_sale_setup_variable = {
-				id = fashion_bur
-				num = 1
-				what = years_of_income
-				name = prestige
-				extra = "
-					bur_add_effect_from_selling_fashion_efficiency = yes
-				"
-			}
-			ME_sale_setup_variable = {
-				id = fashion_bur
-				num = 2
-				what = years_of_income
-				name = prestige
-				extra = "
-					bur_add_effect_from_selling_fashion_efficiency = yes
-				"
-			}
-			ME_sale_setup_variable = {
-				id = fashion_bur
-				num = 1
-				what = years_of_income
-				name = dev_ally
-				extra = "
-					bur_add_effect_from_selling_fashion_efficiency = yes
-				"
-			}
-			ME_sale_setup_variable = {
-				id = fashion_bur
-				num = 2
-				what = years_of_income
-				name = dev_ally
-				extra = "
-					bur_add_effect_from_selling_fashion_efficiency = yes
-				"
-			}
-		}
-	}
-	
-	option = {
-		name = ME_Burgundy_Events.5.a
-		
-		ai_chance = { factor = 1 }
-		
-		trigger = {
-			ME_sale_exists = {
-				id = fashion_bur
-				num = 1
-				name = dev
-			}
-		}
-		
-		ME_sale_effect_and_cost = {
-			name = dev
-			id = fashion_bur
-			num = 1
-			effect = "
-				bur_sell_fashion_effect = yes
-			"
-			event = ME_Burgundy_Events.6
-		}
-	}
-	
-	option = {
-		name = ME_Burgundy_Events.5.b
-		
-		ai_chance = { factor = 1 }
-		
-		trigger = {
-			ME_sale_exists = {
-				id = fashion_bur
-				num = 2
-				name = dev
-			}
-		}
-		
-		ME_sale_effect_and_cost = {
-			name = dev
-			id = fashion_bur
-			num = 2
-			effect = "
-				bur_sell_fashion_effect = yes
-			"
-			event = ME_Burgundy_Events.6
-		}
-	}
-	
-	option = {
-		name = ME_Burgundy_Events.5.c
-		
-		ai_chance = { factor = 1 }
-		
-		trigger = {
-			ME_sale_exists = {
-				id = fashion_bur
-				num = 1
-				name = dev_ally
-			}
-		}
-		
-		ME_sale_effect_and_cost = {
-			name = dev_ally
-			id = fashion_bur
-			num = 1
-			effect = "
-				bur_sell_fashion_effect = yes
-			"
-			event = ME_Burgundy_Events.6
-		}
-	}
-	
-	option = {
-		name = ME_Burgundy_Events.5.e
-		
-		ai_chance = { factor = 1 }
-		
-		trigger = {
-			ME_sale_exists = {
-				id = fashion_bur
-				num = 2
-				name = dev_ally
-			}
-		}
-		
-		ME_sale_effect_and_cost = {
-			name = dev_ally
-			id = fashion_bur
-			num = 2
-			effect = "
-				bur_sell_fashion_effect = yes
-			"
-			event = ME_Burgundy_Events.6
-		}
-	}
-	
-	option = {
-		name = ME_Burgundy_Events.5.f
-		
-		ai_chance = { factor = 1 }
-		
-		trigger = {
-			ME_sale_exists = {
-				id = fashion_bur
-				num = 1
-				name = prestige
-			}
-		}
-		
-		ME_sale_effect_and_cost = {
-			name = prestige
-			id = fashion_bur
-			num = 1
-			effect = "
-				bur_sell_fashion_effect = yes
-			"
-			event = ME_Burgundy_Events.6
-		}
-	}
-	
-	option = {
-		name = ME_Burgundy_Events.5.g
-		
-		ai_chance = { factor = 1 }
-		
-		trigger = {
-			ME_sale_exists = {
-				id = fashion_bur
-				num = 2
-				name = prestige
-			}
-		}
-		
-		ME_sale_effect_and_cost = {
-			name = prestige
-			id = fashion_bur
-			num = 2
-			effect = "
-				bur_sell_fashion_effect = yes
-			"
-			event = ME_Burgundy_Events.6
-		}
-	}
-	
-	option = {
-		name = ME_Burgundy_Events.5.h
-		
-		ai_chance = { factor = 1 }
-		
-	}
-	
-	after = {
-		ME_sale_cleanup = {
-			id = fashion_bur
-		}
-	}
-}
-
-country_event = {
-	id = ME_Burgundy_Events.6
-	title = ME_Burgundy_Events.6.t
-	desc = ME_Burgundy_Events.6.d
-	picture = GOOD_WITH_MONARCH_eventPicture
-	
-	is_triggered_only = yes
-	major = yes
-	major_trigger = {
-		tag = event_target:event_prev
-	}
-	
-	option = {
-		name = ME_Burgundy_Events.6.a
-		
-		ai_chance = { factor = 1 }
-		ME_sale_purchase = {
-			id = fashion_bur
-			effect = "
-				bur_sell_fashion_effect = yes
-			"
-		}
-	}
-	
-	option = {
-		name = ME_Burgundy_Events.6.b
-		
-		ai_chance = { factor = 0 }
-		
-		add_opinion = {
-			who = FROM
-			modifier = NED_did_not_buy
-		}
-	}
-}
 
 country_event = {
 	id = ME_Burgundy_Events.10
@@ -715,7 +409,7 @@ country_event = {
 }
 
 province_event = {
-	id = ME_Burgundy_Events.18
+	id = ME_Burgundy_Events.18 # regular jousting
 	title = ME_Burgundy_Events.18.t
 	desc = ME_Burgundy_Events.18.d
 	picture = GOOD_WITH_MONARCH_eventPicture
@@ -739,11 +433,6 @@ province_event = {
 	mean_time_to_happen = {
 		months = 24
 	}
-
-	immediate = {
-		clr_country_flag = me_lot_jousting_cooldown_flag
-		set_country_flag = me_lot_jousting_cooldown_flag
-	}
 	
 	option = {
 		name = ME_Burgundy_Events.18.a
@@ -754,9 +443,13 @@ province_event = {
 			name = me_lot_jousting_hold_in_province
 			duration = 3650
 		}
+		
+		owner = {
+			clr_global_flag = me_lot_jousting_cooldown_flag
+			set_global_flag = me_lot_jousting_cooldown_flag
+		}
 	}
 }
-
 country_event = {
 	id = ME_Burgundy_Events.19
 	title = ME_Burgundy_Events.19.t
@@ -770,17 +463,20 @@ country_event = {
 		
 		ai_chance = { factor = 1 }
 		
-		custom_tooltip = ME_BUR_BUFF_MECHANIC_CAVALRY
-		set_country_flag = me_bur_golden_fleece_cav_buff_flag
+		add_country_modifier = {
+			name = ME_lot_cav
+			duration = -1
+		}
 	}
 	
 	option = {
 		name = ME_Burgundy_Events.19.b
 		
 		ai_chance = { factor = 1 }
-		
-		custom_tooltip = ME_BUR_BUFF_MECHANIC_LEVIES
-		set_country_flag = me_bur_golden_fleece_manpower_buff_flag
+		add_country_modifier = {
+			name = ME_lot_manpower
+			duration = -1
+		}
 	}
 }
 

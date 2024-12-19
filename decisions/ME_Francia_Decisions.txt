@@ -1,0 +1,54 @@
+country_decisions = {
+	BUR_establish_east_francia = {
+		major = yes
+		potential = {
+			has_country_flag = bur_unlock_east_francia_decision
+			NOT = { has_country_flag = bur_established_east_francia }
+			tag = LOT
+			always = no
+		}
+		allow = {
+			NOT = {
+				exists = GER
+			}
+		}
+		effect = {
+			north_german_region = {
+				limit = {
+					owned_by = ROOT
+					NOT = {
+						area = lower_rhineland_area
+						area = north_rhine_area
+					}
+				}
+				cede_province = GER
+				add_core = GER
+			}
+			south_german_region = {
+				limit = {
+					owned_by = ROOT
+					NOT = {
+						area = romandie_area
+						area = switzerland_area
+						area = alsace_area
+						area = upper_rhineland_area
+						area = palatinate_area
+					}
+				}
+				cede_province = GER
+				add_core = GER
+			}
+			create_subject = {
+				subject_type = carolingian_brother_union
+				subject = GER
+			}
+			GER = {
+				override_country_name = EAST_FRANCIA
+			}
+			set_country_flag = bur_established_east_francia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

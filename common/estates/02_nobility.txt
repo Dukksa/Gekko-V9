@@ -205,6 +205,12 @@ estate_nobles = {
 	
 	#Alternative naming of estates
 	custom_name = {
+		desc = estate_paladins
+        trigger = {
+            mission_completed = ME_bur_age_of_new_heroes
+        }
+	}
+	custom_name = {
 		desc = estate_mamluks
 		trigger = {
 			tag = MAM
@@ -523,6 +529,7 @@ estate_nobles = {
 		estate_nobles_four_class_system
 		estate_nobles_hungarian_nobility_privileges
 		estate_nobles_austrian_nobility_privileges
+		ME_lot_frankish_culture
 	}
 
 	agendas = {

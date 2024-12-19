@@ -4285,6 +4285,17 @@ on_province_culture_converted = {
 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
 	on_province_culture_change_effect = yes
 	on_province_culture_converted_effect = yes
+	if = {
+        limit = {
+            has_province_modifier = me_lot_restore_frankish_culture_mododifier
+            OR = {
+                culture = frankish
+                NOT = { culture_group = germanic }
+                NOT = { culture_group = french }
+            }
+        }
+        remove_province_modifier = me_lot_restore_frankish_culture_mododifier
+    }
 }
 
 # province, general conversion through effects
@@ -4397,6 +4408,23 @@ on_province_owner_change = {
 			duration = 7300
 		}
 	}
+
+	if = {
+        limit = {
+            owner = {
+                has_country_flag = me_lot_buff_culture_conversion_flag
+            }
+            OR = {
+                culture_group = germanic
+                culture_group = french
+            }
+            NOT = { culture = frankish }
+        }
+		add_province_modifier = {
+			name = me_lot_restore_frankish_culture_mododifier
+			duration = -1
+		}
+    }
 
 	if = {
 		limit = {

@@ -4547,6 +4547,10 @@ on_completed_agenda_effect_estate_nobles = {
 		limit = { has_government_attribute = theocratic_monarchy_mechanic }
 		change_statists_vs_orangists = 0.05
 	}
+	if = {
+		limit = { has_country_flag = me_bur_buffed_noble_agendas_flag }
+		add_yearly_manpower = 0.2
+	}
 }
 on_completed_agenda_effect_estate_brahmins = {
 	if = {

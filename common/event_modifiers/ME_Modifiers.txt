@@ -2683,8 +2683,8 @@ me_bur_aachen_palace = {
 }
 
 lot_buff_frankish_provinces_modifier = {
-	local_tax_modifier = 0.2
-	local_build_cost = -0.1
+	local_tax_modifier = 0.1
+	local_build_cost = -0.05
 }
 
 me_lot_jousting_hold_in_province = {
@@ -2717,4 +2717,13 @@ bur_carolingian_realm_buffs = {
 
 bur_no_diplomatic_upkeep = {
 	diplomatic_upkeep = 1
+}
+
+ME_lot_cav = {
+	cav_to_inf_ratio = 0.25
+	cavalry_cost = 0.1
+}
+
+ME_lot_manpower = {
+	manpower_recovery_speed = 0.15
 }

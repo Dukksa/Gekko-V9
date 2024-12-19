@@ -535,6 +535,7 @@ emp_burgundy_3 = {
 		}
 		
 		effect = {
+			give_claims = { area = east_frisia_area }
 			add_prestige_or_monarch_power = { amount = 20 }
 			1269 = {
 				add_trade_modifier = {

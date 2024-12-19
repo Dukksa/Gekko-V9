@@ -188,10 +188,6 @@
  ME_BUR_UNLOCK_BURGUNDIAN_FASHION_BURGHERS_PRIVILEGE: "We will unlock the §YSelling Burgundian Clothing§! Bourgeoisie Privilege, allowing us to sell our clothing to different courts in Europe, as well as granting us §G+25.0%§! Art Selling Efficiency."
  ME_BUR_UNLOCKS_SELL_CLOTHES_DIPLO_ACTION: "Unlocks the §YExporting Burgundian Fashion§! Diplomatic Action against Christian European countries.\n\nIf we are allied with @ENG §YEngland§! or @GBR §YGreat Britain§!, we will also gain an extra §G+25.0%§! Art Selling Efficiency."
  ME_BUR_SELL_FASHION_INSIGHT: "We will be able to sell our fashion to other countries, chosen from amongst the most prestigious, most powerful and our allies."
- ME_sale_fashion_bur_purchase_tt: "We will pay @[event_prev.GetTag] §Y[event_prev.GetName]§! §G[ME_sale_cost_fashion_bur.GetValue]§! ¤"
- ME_BUR_USED_TOURNAMENT_INTERACTION_10_TIMES: "Has used the §YHold Tournament Between the Order§! at least §Y10§! times. (§Y[MeBurTournamentCount.GetValue]§!/§Y10§!)."
- ME_BUR_USED_TOURNAMENT_INTERACTION_15_TIMES: "Has used the §YHold Tournament Between the Order§! at least §Y15§! times. (§Y[MeBurTournamentCount.GetValue]§!/§Y15§!)."
- ME_BUR_USED_TOURNAMENT_INTERACTION_25_TIMES: "Has used the §YHold Tournament Between the Order§! at least §Y25§! times. (§Y[MeBurTournamentCount.GetValue]§!/§Y25§!)."
  ME_BUR_RECRUIT_ADVISOR_UNLOCKED: "We will unlock decisions to recruit §YGreat Men§! into our court, allowing us to get any Advisor we want."
  ME_BUR_REDUCE_PENALTY_OF_ADVISOR_PRIVILEGES: "The §YStability Cost§! Penalty from the Advisor Estate Privileges will be §YRemoved§!."
  ME_BUR_CALLED_AT_LEAST_ONE_MEETING: "Has used the §YAssemble the Council of War§! Government Interaction at least once."
@@ -319,6 +315,8 @@
  me_lot_forever_chivalrous: "Forever Chivalrous"
  me_lot_jousting_hold_in_province: "Jousting Tournament"
  bur_carolingian_realm_buffs: "Carolingian Brother Union"
+ ME_lot_manpower: "Support of the knights"
+ ME_lot_cav: "Support of the knights"
 
  EST_VAL_NEW_BURGUNDIAN_LAWS: "New Burgundian Laws"
  BUR_may_not_be_available: "This option might not be available if @CHP§Y[CHP.GetName]§! exists."
@@ -356,18 +354,7 @@
  
  ME_Burgundy_Events.5.t: "Europe's Finest Fashion"
  ME_Burgundy_Events.5.d: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a sagittis nisi. Vivamus nec turpis aliquam mi facilisis gravida vitae sit amet magna. Quisque cursus porttitor volutpat. In in eros non nunc sollicitudin placerat sit amet non arcu. Aenean leo leo, fermentum vel congue ac, ornare ac velit. Donec ac massa sit amet enim interdum ornare. Ut eget mauris luctus, feugiat purus pretium, molestie purus. Aliquam erat volutpat. Nulla eu erat non enim bibendum aliquet vitae in metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae ex non odio semper tristique a ut ex. Phasellus tempus eu lectus ultricies euismod. Duis ullamcorper, lectus sit amet lacinia feugiat, purus enim volutpat justo, eget blandit libero dolor non quam. Sed dui metus, eleifend ac orci placerat, imperdiet facilisis sapien. Quisque maximus urna vel magna aliquam mollis."
- ME_Burgundy_Events.5.a: "§Y[art_ned_dev_1.GetName]§! will be our target."
- ME_Burgundy_Events.5.b: "We will stylize the court of §Y[art_ned_dev_2.GetName]§!."
- ME_Burgundy_Events.5.c: "§Y[art_ned_dev_ally_1.GetName]§! are our friends and will certainly be interested."
- ME_Burgundy_Events.5.e: "Let us ask §Y[art_ned_dev_ally_2.GetName]§!."
- ME_Burgundy_Events.5.f: "The Nobility of §Y[art_ned_prestige_1.GetName]§! would certainly enjoy our fashion."
- ME_Burgundy_Events.5.g: "§Y[art_ned_prestige_2.GetName]§! will surely be interested."
- ME_Burgundy_Events.5.h: "We don't need anything."
  
- ME_Burgundy_Events.6.t: "Purchase Offer"
- ME_Burgundy_Events.6.d: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a sagittis nisi. Vivamus nec turpis aliquam mi facilisis gravida vitae sit amet magna. Quisque cursus porttitor volutpat. In in eros non nunc sollicitudin placerat sit amet non arcu. Aenean leo leo, fermentum vel congue ac, ornare ac velit. Donec ac massa sit amet enim interdum ornare. Ut eget mauris luctus, feugiat purus pretium, molestie purus. Aliquam erat volutpat. Nulla eu erat non enim bibendum aliquet vitae in metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae ex non odio semper tristique a ut ex. Phasellus tempus eu lectus ultricies euismod. Duis ullamcorper, lectus sit amet lacinia feugiat, purus enim volutpat justo, eget blandit libero dolor non quam. Sed dui metus, eleifend ac orci placerat, imperdiet facilisis sapien. Quisque maximus urna vel magna aliquam mollis."
- ME_Burgundy_Events.6.a: "We will accept!"
- ME_Burgundy_Events.6.b: "No need to."
 
  ME_Burgundy_Events.14.t: "The Fate of the Netherlands"
  ME_Burgundy_Events.14.d: "The Low Countries have been quite autonomous and rebellious from our rule for quite a while. With our recent reforms, we can now pass a final verdict as to how they will be governed in the future."
@@ -486,6 +473,9 @@
 
  BUR_form_francia_title: "Form Francia"
  BUR_form_francia_desc: " "
+
+ BUR_establish_east_francia_title: "Establish East Francia"
+ BUR_establish_east_francia_desc: " "
 
  #Merc Companies:
  me_lot_paladins: "Paladin Guard"
