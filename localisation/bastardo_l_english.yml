@@ -523,5 +523,12 @@ black_chamber_act_2:0 "The Black Chamber Act II"
  eco_golden_era: "Eco Golden Era"
  eco_golden_era_desc: "You  Can Start Your Eco Golden Era"
 
-#gov reform cooldown
-one_v_one_gov_reform_switch_cooldown_tt: "Cannot switch Goverment Reform for §Y3§! years."
+#colonial naval doctrines
+ colony_doctrine_numero_uno: "Transport Focus"
+ colony_doctrine_numero_uno_desc: "We need to get our troops wherever the fuck we want as fast as possible"
+ colony_doctrine_numero_dos: "Sailor Focus"
+ colony_doctrine_numero_dos_desc: "All good navies have good sailors so we should focus on getting more sailors instead"
+ colony_doctrine_numero_tres: "Trade Focus"
+ colony_doctrine_numero_tres_desc: "Ha ha tradeships in new world go brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
+ colony_doctrine_numero_quatro: "Heavy Focus"
+ colony_doctrine_numero_quatro_desc: "Get us more Heavy Metal so we can fight better on our Heavy Ships"

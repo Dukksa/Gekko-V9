@@ -126,6 +126,7 @@ in_capital_state = {
 coastal = {
 	supply_limit_modifier = 0.5
 	province_trade_power_modifier = 0.25
+	local_has_geobukseon = yes
 }
 
 seat_in_parliament = {
@@ -878,7 +879,6 @@ navy_tradition = {
 	sailors_recovery_speed = 0.2
 	burghers_loyalty_modifier = 0.05
 	vaisyas_loyalty_modifier = 0.05
-	allowed_geobukseon_fraction = 0.5
 	allowed_galleass_fraction = 0.5
 }
 
@@ -2114,8 +2114,11 @@ mamluks_regiment = {
 }
 
 geobukseon_ship = {
-	#ship_durability = 0.1
-	galley_power = 0.1
+	movement_speed_onto_off_boat_modifier = 0.5
+	movement_speed_in_fleet_modifier = 1
+	can_transport_units = yes
+	galley_cost = -0.9
+	galley_power = -9
 }
 
 man_of_war_ship = {

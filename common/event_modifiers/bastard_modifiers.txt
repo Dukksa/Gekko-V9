@@ -131,3 +131,10 @@ persia_united = {
 	core_creation = -0.25
 	global_tax_income = 48
 }
+
+fuck_you_no_switching_mid_war = {
+	naval_morale_constant = -1
+	heavy_ship_power = -0.2
+	light_ship_power = -0.2
+	galley_power = -0.2
+}
