@@ -1817,6 +1817,9 @@ country_event = {
 	
 	option = {
 		name = flavor_pol.18.a
+		ai_chance = { 
+			factor = 75
+		}
 		define_ruler = {
 			adm = 3
 			dip = 3
@@ -2045,7 +2048,6 @@ country_event = {
 		remove_estate_privilege = estate_nobles_pacta_conventa
 		clr_country_flag = librium_veto
 		clr_country_flag = pol_pact_conventa_flag
-		complete_mission = plc_golden_liberty
 	}
 }
 

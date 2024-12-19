@@ -54,48 +54,28 @@ country_event = {
 			hidden_effect = { add_ruler_personality_ancestor = { key = well_connected } }
 		}
 		add_yearly_manpower = -4
-
-		if = {
+		random_owned_province = {
 			limit = {
-				owns = 245		# Yorkshire
-				245 = {
+				region = british_isles_region
+				OR = {
+					NOT = {
+						root = {
+							any_owned_province = {
+								region = british_isles_region
+								NOT = { units_in_province = 1 }
+							}
+						}
+					}
 					NOT = { units_in_province = 1 }
 				}
 			}
-			245 = {
-				add_province_modifier = {
-					name = wotr_local_support_for_york
-					duration = 3650
-				}
-				spawn_rebels = {
-					type = pretender_rebels
-					size = 3
-					leader = "Richard"
-					leader_dynasty = "York"
-					win = yes
-				}
+			add_province_modifier = {
+				name = wotr_local_support_for_york
+				duration = 3650
 			}
-		}
-		else = {
-			random_owned_province = {
-				limit = {
-					region = british_isles_region
-					OR = {
-						NOT = {
-							root = {
-								any_owned_province = {
-									region = british_isles_region
-									NOT = { units_in_province = 1 }
-								}
-							}
-						}
-						NOT = { units_in_province = 1 }
-					}
-				}
-				add_province_modifier = {
-					name = wotr_local_support_for_york
-					duration = 3650
-				}
+			custom_tooltip = " "
+			custom_tooltip = "The Rebels will occupy a random province of ours"
+			hidden_effect = {
 				spawn_rebels = {
 					type = pretender_rebels
 					size = 3
@@ -132,47 +112,28 @@ country_event = {
 			hidden_effect = { add_ruler_personality_ancestor = { key = tactical_genius } }
 		}
 		add_yearly_manpower = -4
-		if = {
+		random_owned_province = {
 			limit = {
-				owns = 244		# Lancashire
-				244 = {
+				region = british_isles_region
+				OR = {
+					NOT = {
+						root = {
+							any_owned_province = {
+								region = british_isles_region
+								NOT = { units_in_province = 1 }
+							}
+						}
+					}
 					NOT = { units_in_province = 1 }
 				}
 			}
-			244 = {
-				add_province_modifier = {
-					name = wotr_local_support_for_lancaster
-					duration = 3650
-				}
-				spawn_rebels = {
-					type = pretender_rebels
-					size = 3
-					leader = "Edward"
-					leader_dynasty = "Lancaster"
-					win = yes
-				}
+			add_province_modifier = {
+				name = wotr_local_support_for_lancaster
+				duration = 3650
 			}
-		}
-		else = {
-			random_owned_province = {
-				limit = {
-					region = british_isles_region
-					OR = {
-						NOT = {
-							root = {
-								any_owned_province = {
-									region = british_isles_region
-									NOT = { units_in_province = 1 }
-								}
-							}
-						}
-						NOT = { units_in_province = 1 }
-					}
-				}
-				add_province_modifier = {
-					name = wotr_local_support_for_lancaster
-					duration = 3650
-				}
+			custom_tooltip = " "
+			custom_tooltip = "The Rebels will occupy a random province of ours"
+			hidden_effect = {
 				spawn_rebels = {
 					type = pretender_rebels
 					size = 3
@@ -184,6 +145,7 @@ country_event = {
 		}
 	}
 }
+
 
 
 ########################################

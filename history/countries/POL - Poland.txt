@@ -8,6 +8,7 @@ historical_rival = TEU
 capital = 262 # Krakow
 add_accepted_culture = ruthenian
 add_truce_with = HUN
+set_country_flag = pol_pact_conventa_flag
 
 1444.10.1 = {
 	set_estate_privilege = estate_nobles_golden_liberty
