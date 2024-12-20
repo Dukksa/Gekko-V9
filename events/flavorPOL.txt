@@ -1534,6 +1534,7 @@ country_event = {
 			}
 			remove_estate_privilege = estate_nobles_pacta_conventa
 		}
+		add_government_reform = polish_autocratic_monarchy
 	}
 }
 
