@@ -11,7 +11,7 @@ tags={
 	"New Nations"
 	"Events"
 }
-name="Gekko V9 (bastard x gecko)"
+name="Gecko V9 (bastard x gecko)"
 picture="thumbnail.png"
 supported_version="v1.37.*"
 remote_file_id="3275925261"
