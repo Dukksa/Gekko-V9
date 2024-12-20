@@ -1,0 +1,106 @@
+po_split_ottomans = {
+	
+	category = 6 
+	power_projection = no 
+	power_cost_base = 0 
+	prestige_base = 0.5
+	ae_base = 0
+	warscore_cost = {
+		all_provinces = 0
+		no_provinces = 40.0 
+		owner_keeps = 0.0 
+		conquered = 0.0 
+		returned_core = 0.0 
+		released_nation = 0.0 
+		cancelled_subject = 0.0 
+		concede_colonial_region = 0.0 
+	}
+	warscore_cap = 40
+	requires_demand_independence = yes 
+	is_make_subject = no 
+	requires_is_allowed = yes 
+	
+	is_visible = { 
+		always = yes
+	}
+	is_allowed = { 
+		always = yes
+	}
+	effect = { 
+		add_papal_influence = 100
+		FROM = {
+			every_owned_province = {
+				limit = {
+					continent = europe
+					NOT = {
+						region = anatolia_region
+					}
+					
+				}
+				random_core_country = {
+					limit = {
+						NOT = { tag = FROM }
+						exists = no
+					}
+					save_event_target_as = tur_cede
+				}
+				if = {
+					limit = {
+						is_core = event_target:tur_cede
+					}
+					cede_province = event_target:tur_cede
+					remove_core = FROM
+				}
+				event_target:tur_cede = { #There is probably a better way to do this, but can't figure it out rn
+					set_country_flag = me_bur_freed_nation
+				}
+			}
+			every_owned_province = {
+				limit = {
+					continent = europe
+					NOT = {
+						region = anatolia_region
+					}
+				}
+				random_core_country = { 
+					limit = {
+						NOT = { tag = FROM }
+					}
+					save_event_target_as = tur_cede
+				}
+				cede_province = event_target:tur_cede
+				remove_core = FROM
+			}
+			every_known_country = {
+				limit = {
+					has_country_flag = me_bur_freed_nation
+				}
+				change_primary_culture = ROOT
+				define_ruler = {
+					max_random_adm = 4
+					max_random_mil = 4
+					max_random_dip = 4
+					culture = ROOT
+					religion = ROOT
+					dynasty = ROOT
+					claim = 60
+				}
+				change_religion = ROOT
+				add_truce_with = TUR
+				TUR = {
+					add_truce_with = PREV
+				}
+				clr_country_flag = me_bur_freed_nation
+			}
+		}
+	}
+	ai_weight = { 
+		export_to_variable = {
+			variable_name = ai_value 
+			value = 10000
+		}
+		limit = {
+			always = yes
+		}
+	}
+}

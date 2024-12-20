@@ -457,11 +457,6 @@ ME_bur_2 = {
 				first_effect = "
 					add_legitimacy_or_reform_progress = { amount = 10 }
 					add_splendor = 500
-					add_government_power = {
-						mechanic_type = golden_fleece_mechanic
-						power_type = golden_fleece_support
-						value = 15
-					}
 				"
 				second_custom_tooltip = ME_BUR_IF_TRIER_NEGOTIATIONS
 				second_limit = "
@@ -482,7 +477,6 @@ ME_bur_2 = {
 						id = ME_Burgundy_Events.3
 					}
 					custom_tooltip = ME_BUR_IF_EMPEROR_ACCEPTS
-					change_tag = LOT
 					add_splendor = 200
 					custom_tooltip = ME_BUR_CANNOT_DECLARE_WAR_ON_HRE
 					set_in_empire = yes

@@ -1,0 +1,74 @@
+X_CRI_peace_treaty_3 = { #Harvest the Steppe
+	category = 6 
+	power_projection = humiliated_rival
+	power_cost_base = 1.0 
+	prestige_base = 0.1
+	ae_base = 0.0
+	warscore_cost = {
+		all_provinces = 0.15 
+		no_provinces = 0.0
+		owner_keeps = 0.0 
+		conquered = 0.0 
+		returned_core = 0.0 
+		released_nation = 0.0 
+		cancelled_subject = 0.0 
+		concede_colonial_region = 0.0 
+	}
+	requires_is_allowed = yes
+	effect = {
+		set_variable = {
+			which = X_CRI_peace_treaty_3_variable_1
+			value = 0
+		}
+		set_variable = {
+			which = X_CRI_peace_treaty_3_variable_2
+			value = 0
+		}
+		export_to_variable = {
+			which = X_CRI_peace_treaty_3_variable_1
+			value = total_development
+			who = FROM
+		}
+		export_to_variable = {
+			which = X_CRI_peace_treaty_3_variable_2
+			value = total_development
+			who = FROM
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = X_CRI_peace_treaty_3_variable_1
+					value = 501
+				}
+			}
+			set_variable = {
+				which = X_CRI_peace_treaty_3_variable_1
+				value = 500
+			}
+		}
+		for_variable_amount = {
+			variable = X_CRI_peace_treaty_3_variable_1
+			effect = "
+				add_mandate = 0.2
+			"
+		}
+		for_variable_amount = {
+			variable = X_CRI_peace_treaty_3_variable_2
+			effect = "
+				add_manpower = 0.10
+				add_treasury = 2
+				FROM = {
+					add_manpower = -0.10
+					add_treasury = -2
+				}
+			"
+		}
+	}
+	ai_weight = { 
+		export_to_variable = {
+			variable_name = ai_value 
+			value = 1
+		}
+		limit = { always = no }
+	}
+}
