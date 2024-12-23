@@ -277,7 +277,7 @@ X_VEN_innovative_tactics_cmod = {
 }
 
 X_VEN_galilean_ballistics_cmod = {
-	artillery_fire = 0.5
+	artillery_fire = 0.25
 }
 
 X_VEN_magistrato_al_sal_cmod = {

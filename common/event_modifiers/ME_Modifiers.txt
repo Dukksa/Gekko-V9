@@ -372,7 +372,7 @@ Ducal_PRU_peaceful = {
 # ME_England_Great_Britain_Modifiers
 ###################################
 eng_longbowmen = {
-	infantry_fire = 0.1
+	infantry_fire = 0.05
 }
 ENG_defense = {
 	local_defensiveness = 0.25

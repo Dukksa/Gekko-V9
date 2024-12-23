@@ -47,7 +47,7 @@ berber_fury = {
 
 gc_mor_italy = {
 	global_manpower_modifier = 0.1
-	artillery_fire = 0.5
+	artillery_fire = 0.25
 }
 
 fertile_crescent = {
@@ -199,7 +199,7 @@ X_VEN_innovative_tactics_cmod = {
 }
 
 X_VEN_galilean_ballistics_cmod = {
-	artillery_fire = 0.5
+	artillery_fire = 0.25
 }
 
 X_VEN_magistrato_al_sal_cmod = {
@@ -226,7 +226,7 @@ X_VEN_new_advisement_cmod = {
 }
 
 X_VEN_venetian_marines_cmod = {
-	discipline = 0.1
+	discipline = 0.05
 	is_marine_modifier = yes
 }
 

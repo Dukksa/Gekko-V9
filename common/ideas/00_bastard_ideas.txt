@@ -1640,7 +1640,7 @@ POR_ideas = {
 	}
 	por_royal_military_academy = {
 		defensiveness = 0.1
-		artillery_fire = 0.5
+		artillery_fire = 0.25
 	}
 }
 SPA_ideas = {
