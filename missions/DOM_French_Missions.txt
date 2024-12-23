@@ -5137,6 +5137,14 @@ french_missions_5_normal = {
 						}
 						add_permanent_claim = ROOT 
 					}
+					torino_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+							NOT = { is_core = ROOT }
+							is_empty = no
+						}
+						add_permanent_claim = ROOT
+					}
 					if = {
 						limit = {
 							exists = NAP
