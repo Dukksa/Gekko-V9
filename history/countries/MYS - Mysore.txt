@@ -1,0 +1,43 @@
+government = monarchy
+add_government_reform = nayankara_reform
+government_rank = 1
+primary_culture = kannada
+religion = hinduism
+technology_group = indian
+capital = 533	# Mysore
+fixed_capital = 533 # Cannot move capital away from this province & no power cost to move to it
+historical_rival = BAH
+historical_rival = VIJ
+historical_rival = YOR
+
+#Ummatur Cheifs:
+#Very independent feudatories of Vijayanagara, often ignoring the empire or in rebelion against it
+#Have not been able to find specific ummatur rulers
+
+change_estate_land_share = {
+	estate = estate_brahmins
+	share = 2
+}
+change_estate_land_share = {
+	estate = estate_jains
+	share = 2
+}
+change_estate_land_share = {
+	estate = estate_maratha
+	share = 2
+}
+change_estate_land_share = {
+	estate = estate_vaisyas
+	share = 2
+}
+
+
+1424.11.11 = {
+	monarch = {
+		name = "Ganga Raja"
+		dynasty = "Ummatur"
+		ADM = 3
+		DIP = 3
+		MIL = 4
+	}
+}

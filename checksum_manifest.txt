@@ -1,9 +1,4 @@
 directory = {
-	name = "history"
-	sub_directories = yes
-	file_extension = ".txt"
-}
-directory = {
 	name = "map"
 	sub_directories = no
 	file_extension = ".txt"
