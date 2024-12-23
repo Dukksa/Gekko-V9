@@ -1,8 +1,15 @@
-#Manipur
+#Mysore
 vassal = {
-	first = TAU
-	second = MLB
-	start_date = 1560.2.1
+	first = MYS
+	second = MAB
+	start_date = 1443.1.1
+	end_date = 1596.1.1
+}
+
+vassal = {
+	first = MYS
+	second = KOC
+	start_date = 1443.1.1
 	end_date = 1596.1.1
 }
 
@@ -17,7 +24,7 @@ vassal = {
 vassal = {
 	first = AFG
 	second = LDK
-	start_date = 1752.1.1
+	start_date = 1443.1.1
 	end_date = 1809.1.1
 }
 
@@ -167,12 +174,6 @@ vassal = {
 }
 
 #Jaffna
-vassal = {
-	first = VIJ
-	second = JFN
-	start_date = 1432.1.1
-	end_date = 1450.1.1
-}
 
 vassal = {
 	first = CEY
@@ -274,7 +275,7 @@ vassal = {
 	first = NED
 	second = VND
 	start_date = 1729.1.1 # Travancore expands with Dutch aid
-	end_date = 1739.1.1 # Travancore-Dutch War
+	end_date = 1739.1.1 # Travancore�Dutch War
 }
 
 vassal = {
@@ -434,12 +435,26 @@ vassal = {
 }
 
 #Hadoti (Bundi & Kota)
-#vassal = {
-#	first = MER
-#	second = HAD
-#	start_date = 1444.1.1
-#	end_date = 1456.1.1
-#}
+vassal = {
+	first = MER
+	second = HAD
+	start_date = 1444.1.1
+	end_date = 1456.1.1
+}
+
+vassal = {
+	first = MER
+	second = NGA
+	start_date = 1444.1.1
+	end_date = 1456.1.1
+}
+
+vassal = {
+	first = MER
+	second = DHU
+	start_date = 1444.1.1
+	end_date = 1456.1.1
+}
 
 vassal = {
 	first = MER
@@ -447,6 +462,8 @@ vassal = {
 	start_date = 1519.1.1
 	end_date = 1543.1.1
 }
+
+
 
 vassal = {
 	first = MUG
@@ -509,21 +526,21 @@ vassal = {
 }
 
 #Bahlul Lodi's Punjabi Domain
-vassal = {
-	first = DLH
-	second = SRH
-	start_date = 1443.1.1
-	end_date = 1451.4.20
-}
+#vassal = {
+#	first = DLH
+#	second = SRH
+#	start_date = 1443.1.1
+#	end_date = 1451.4.20
+#}
 
 #Bikaner
 
-vassal = {
-	first = DLH
-	second = JAN
-	start_date = 1414.1.1
-	end_date = 1465.1.1
-}
+#vassal = {
+#	first = DLH
+#	second = JAN
+#	start_date = 1414.1.1
+#	end_date = 1465.1.1
+#}
 
 vassal = {
 	first = MUG

@@ -21,11 +21,11 @@ discovered_by = chinese
 extra_cost = 16
 center_of_trade = 2
 
-#add_province_triggered_modifier=conquest_of_delhi
-#add_permanent_province_modifier = {
-  #  name = critical_province
- #   duration = -1
-#}
+add_province_triggered_modifier=conquest_of_delhi
+add_permanent_province_modifier = {
+    name = critical_province
+    duration = -1
+}
 
 1414.1.1 = { remove_core = MUL }
 1517.11.21 = { unrest = 8 } #Afghan factionalism
