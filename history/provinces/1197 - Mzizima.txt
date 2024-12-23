@@ -4,7 +4,9 @@
 culture = swahili
 religion = shamanism #Fetishism
 capital = "Mzizima"
-
+owner = ZAN
+controller = ZAN
+add_core = ZAN
 base_manpower = 1
 trade_goods = gems #Pearls - a general export of the Swahili coast
 hre = no

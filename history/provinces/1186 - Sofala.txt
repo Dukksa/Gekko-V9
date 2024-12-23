@@ -4,6 +4,9 @@
 culture = nguni
 religion = sunni
 capital = "Sofala"
+owner = SFA
+controller = SFA
+add_core = SFA
 
 base_manpower = 1
 trade_goods = gold

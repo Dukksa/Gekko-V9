@@ -1,10 +1,11 @@
 #1204 - Lamu
 
-
 culture = swahili
 religion = sunni
 capital = "Lamu"
-
+owner = ZAN
+controller = ZAN
+add_core = ZAN
 base_manpower = 1
 trade_goods = ivory
 hre = no

@@ -4,7 +4,9 @@
 culture = swahili
 religion = shamanism #Fetishism
 capital = "Bagamayo"
-
+owner = ZAN
+controller = ZAN
+add_core = ZAN
 base_manpower = 1
 trade_goods = ivory
 hre = no

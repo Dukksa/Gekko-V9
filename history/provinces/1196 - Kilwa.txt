@@ -3,7 +3,9 @@
 culture = swahili
 religion = sunni
 capital = "Kilwa Kisiwani"
-
+owner = ZAN
+controller = ZAN
+add_core = ZAN
 base_manpower = 1
 trade_goods = gold
 hre = no

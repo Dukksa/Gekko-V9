@@ -4,7 +4,9 @@
 culture = nyasa
 religion = sunni
 capital = "Quelimane"
-
+owner = SFA
+controller = SFA
+add_core = SFA
 base_manpower = 1
 trade_goods = ivory
 hre = no

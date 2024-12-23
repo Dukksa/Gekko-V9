@@ -1,10 +1,11 @@
 #1195 - Mozambique
 
-
 culture = swahili
 religion = sunni
 capital = "Mozambique"
-
+add_core = ZAN
+owner = ZAN
+controller = ZAN
 base_manpower = 1
 trade_goods = ivory
 hre = no
