@@ -459,7 +459,7 @@ province;red;green;blue;x;x
 458;65;52;192;Kokand;x
 459;193;54;255;Taraz;x
 460;65;56;0;Uzkend;x
-#461;193;58;64;Zhetysu;x
+461;193;58;64;Zhetysu;x
 462;66;60;128;Mingrelia;x
 463;194;62;192;Circassia;x
 464;66;64;255;Astrakhan;x
@@ -1169,7 +1169,7 @@ province;red;green;blue;x;x
 1168;206;217;77;Nsoyo;x
 1169;175;62;173;Mayombe;x
 1170;48;64;32;Kongo;x
-#1171;176;66;79;Ndongo;x
+1171;176;66;79;Ndongo;x
 1172;48;68;126;Benguela;x
 1173;176;70;173;Namibia;x
 1174;48;172;32;Angra Pequena;x
@@ -5213,10 +5213,10 @@ province;red;green;blue;x;x
 6115;138;175;39;Sifilke;x
 6116;126;132;60;Tarsus;x
 6117;134;26;116;Sis;x
-6120;42;191;124;X Boeotia;x
-6121;51;142;44;X Chania;x
-6122;21;112;84;X Samos;x
-6123;52;42;90;X Lemnos;x
+6120;42;191;124;XMP Boeotia;x #XMP
+6121;51;142;44;XMP Chania;x #XMP
+6122;21;112;84;XMP Samos;x #XMP
+6123;52;42;90;XMP Lemnos;x #XMP
 6124;255;30;187;Padua;x
 6125;72;0;255;Senigallia;x
 6126;88;255;66;Apulia;x

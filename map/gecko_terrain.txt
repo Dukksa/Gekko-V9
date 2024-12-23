@@ -26,7 +26,7 @@ categories =  {
 		sound_type = sea
 		is_water = yes
 		inland_sea = yes
-		
+
 		movement_cost = 1.0
 		
 		terrain_override = {
@@ -80,7 +80,7 @@ categories =  {
 			
 			115 117 118 121 1862
 			
-			361
+			
 			916 917 920 925 930 2532
 			
 			584 600 
@@ -143,13 +143,11 @@ categories =  {
 			6099 6100
 			6102 6103 6108 6109 6101 1771 2970 6104 #gcbohemia
 			254 #poznan #smeev
-			114 6050 4730 112 4736 4737 2982 5775 6125 #gc italy
+			114 6050 4730 112 4736 4737 2982 5775 #gc italy
 			4708 4760 4709 4760 6186 2956 2996 46 47 1857 1775 13 5005 4149 5006 4142 15 5007 5003 1984 5004 54 4771 55 1931 6164 6167 6166 6165 6168 #gc germany
 			6187 6188 6189 
 			6182 6180 6183 6185 6191 168 4385 237 6190
 			4769 6196 6197 6199 6202 91 99 95 96 4770 4381 #gc netherlands
-			149 1764 #gc ottos
-			219 6209 217 4551 2751 #spain
 			}		
 	}
 	
@@ -242,12 +240,12 @@ categories =  {
 			 # 1.30 Greece and Bulgaria
 			2956 4707 4715 4744 #Germany
 			4761 1770 #Austria
-
+			137 4753 # Balkans
 			#4764 # Salins
 			4788 4789
 			111
-			4237 156 4239 #gecko change
-			6105
+			4237 #gecko change
+
 		}
 	}
 
@@ -320,10 +318,9 @@ categories =  {
 			 193 4764 #gcburgundy
 			#gcfrance
 			6112 #gcbohemia
-			6159 6160 6161 6162 6163 6177 6178 6179 6204 6205 6206 6208 #gc germany
+			6159 6160 6161 6162 6163 6177 6178 6179 #gc germany
 			6201 6203 6200 #gc netherlands
-			2750 4703
-
+			149 #gc ottos
 		}
 	}
 	
@@ -334,9 +331,9 @@ categories =  {
 		sound_type = mountains
 
 		movement_cost = 1.0
-		defence = 2
-		local_defensiveness = 0.2
-		local_development_cost = 0.1
+		defence = 1
+		local_defensiveness = 0.35
+		local_development_cost = 0.15
 		combat_width = -0.1
 		nation_designer_cost_multiplier = 0.75
 		supply_limit = 4
@@ -398,12 +395,9 @@ categories =  {
 			
 			5777 5778
 			6135 6140 432 4334 #gc persia
-			1127 226 1751 #gc morocco
+			4563 1127 335 #gc morocco
 			1934 #gc italy
-			6171 6173 165 #gc switzerland
-			2410
-			387 4279 #Tihama al yemen
-			1215
+			165 #gc switzerland
 		}
 	}
 
@@ -430,7 +424,7 @@ categories =  {
 		
 		terrain_override = {
 			2666 # North America
-			213 218 #Spain
+			213 218 219 #Spain
 			526 #India
 			417 4341 #Iran
 			2386 593 2376 2391 2394  #Sout East Asia
@@ -475,10 +469,8 @@ categories =  {
 			4340 #persia #smeev
 			6157 6156 6155 426 #persia #smeev
 			4238 #gcbohemia
-			6120
-			 1867 4720 6170 4721 6169 1869 #gcswitzerland
-			137 4753 # Balkans
-			4968
+			6120 #xmp
+			6171 1867 4720 6170 4721 6169 1869 #gcswitzerland
 		}
 	}
 
@@ -572,15 +564,15 @@ categories =  {
 			
 			4204 4207 4208 4221 4223 #Greater China
 			
-			512 513 2064 2066 2086
+			512 513 514 2064 2066 2086
 			867 2844
 			2490
-		    355 1115 2244 2271 2272 2767 2773
+			350 355 1115 2244 2271 2272 2767 2773
 			1176
 			2119 2120 711 2123 2191 706 707 701 709 720 2193 2747 
 			860 2618
 			#gecko 
-			#6017 6020 6023 6024 6025 6026 6019 1228 6021
+			6017 6020 6023 6024 6025 6026 6019 1228 6021
 		}
 	}
 	
@@ -591,19 +583,19 @@ categories =  {
 		sound_type = desert
 
 		movement_cost = 1.0
-		local_development_cost = 0.1
+		local_development_cost = 0.30
 		nation_designer_cost_multiplier = 0.9		
 		supply_limit = 4
 
 		terrain_override = {
 			792 793 796 805 806 2821 2822 2840 2841
 			2324
-			1212 1230 1232 2315 2320 2321 2765 2786 2788 2789
+			1212 1215 1230 1232 2315 2320 2321 2765 2786 2788 2789
 			1174 #Angra Pequena
 			865 866 
 			1206 1209 2024 2790 2793
 			782 
-			389 395 396 397 398 399 400 401 402 1099 2329 2331 2333 2340 2341 2342 2347 4269 4278 4283 4284 #Arabia
+			389 394 395 396 397 398 399 400 401 402 1099 2329 2331 2333 2340 2341 2342 2347 4269 4278 4283 4284 #Arabia
 			4286
 		}	
 	}
@@ -621,7 +613,7 @@ categories =  {
 		terrain_override = {
 			957 962 2554 2561 2578 #n am
 			
-			285
+
 			487 492 497 498 499 500 501 502
 			982 
 			
@@ -636,7 +628,7 @@ categories =  {
 			653 655 656 2699 2700 654 4349 4350 4351 4352 4353 4354 4355 4356 #Philippines
 			642 643 644 648 649 650 2713 2714 2716 2717 2718 2725 #Moluccas & Sulawesi
 			1015 4193 #Japan
-
+			387 4279 #Tihama al yemen
 			6122
 			163 #removed from highlands
 			6158
@@ -661,8 +653,8 @@ categories =  {
 			1748 2754
 			225
 			2297 327 2313 411 2199 2208 464 4314 2300 4308 4309 #Turkey and Caucasus
-			420 421 425 2203 2307 #Caucasus
-			428  454 442 441 1973 444 450 453 2213 2214 2215 2227 2228 4343 4337 #Iran, Transoxiana & Balkh
+			420 421 425 2203 2307 4307 #Caucasus
+			428  454 442 441 1973 444 446 450 453 2213 2214 2215 2227 2228 4343 4337 #Iran, Transoxiana & Balkh
 			504 505 519 528 541 569 2031 2051 2052 2053 2054 2065 2067 2072
 			 2999
 			751 752 753 790 799 858 882 2476 2498 2614 2620 2643 2668 2842 2854 2865 
@@ -688,14 +680,15 @@ categories =  {
 			4628 4630 # new provinces Mesoamerica 1.28
 			2797 4319 1231 1234 2322 1220 4033 #smeev nile provinces
 			6018 6022 6030 #aba new nile provinces
+			324 #Karaman
+			1751 #Sebtah
+			226 #Gibraltar
 			6114 6115 6116 #bunker mod merge
+			361
 			6127 6128 6129 6130 6132
 			6139 6144 #gc persia
 			6192 6195
 			381 #Ajloun
-			6117 # sis
-			4563 335 4561 #sale
-			4969 4965
 		}
 	}
 
@@ -745,14 +738,15 @@ categories =  {
 			2986 4391 #Italy & France
 			4406 4398 # Burma
 			4422 4436 4464 #Central India
-			4566 4553 # new provinces 1.28
+			4561 4566 4553 # new provinces 1.28
 			4701 4699 4780 # 1.30 Greece and Bulgaria
 			1798 1799 #smeev change
 			#405 #smeev change
-			6113 #bunker mod merge
-			324 #Karaman
+			6113 6117 #bunker mod merge
 			6121
-			 4311 4312 4315 4307 4702 4705 4779 #otto terrain changes
+			156 #Temes 
+			4239 #Belgrade
+			2750 4703 4311 4312 4315 4307 4702 4705 4779 #otto terrain changes
 		}
 	}
 
@@ -806,7 +800,7 @@ categories =  {
 
 			284 1974 2412 2413 286 2414 287 2447 283 2406 282 1756 6000 6001 6002 6003 6004 6005 6006 6007 6008 6009 6010 6011 6012 6013 6014 6015 6016
 			
-			301 300 1778 304 303 2415 302 2408 299 2409 291 2411 467 
+			301 300 1778 304 303 2415 302 2408 299 2409 285 291 2411 467 
 			1081 473 2421 1971 288 468 2418 2419 474 2366 1965 1082 475 2441 2359
 			2360 478 2355 2422
 			
@@ -838,7 +832,6 @@ categories =  {
 			4664 4665 4674 4666 4667 4673 4675 4672 4671 4668 4683
 			1225 #nubia
 			1943 #Bratslav
-			6213
 		}	
 	}	
 	Oasis = {
@@ -855,18 +848,15 @@ categories =  {
 	
 	
 		terrain_override = {
-			#Maghreb
-			350 2457 2456 352 2450 2448 4567 2449 5826 5825
-			#Sahel
-			5823 1128 5807
-			#Egypt
-			6023 6024 6025 6026 2318 4323 1233
-			#Arabia
-			394 404
-			#Persia
-			2221 445 446
-			#India
-			514
+			4285 403 4287
+			5807
+			1128
+			5823
+			2121
+			445
+			4275
+			404
+			739 461 2124 710 2192 715 712 4209
 		}
 	}
 }
