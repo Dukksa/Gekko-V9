@@ -226,7 +226,7 @@ hin_slot_2 = {
 				development = 35
 			}
 			num_of_owned_provinces_with = {
-				value = 80
+				value = 40
 				region = hindusthan_region
 				has_building = courthouse
 			}
@@ -244,7 +244,7 @@ hin_slot_2 = {
 						has_building = furnace
 					}
 				}
-				amount = 10
+				amount = 30
 			}
 		}
 		effect = {
