@@ -12,7 +12,7 @@ base_production = 4
 base_manpower = 3
 is_city = yes
 add_rajputs_or_marathas_or_nobles_effect = yes
-add_core = BAH
+
 add_core = BIJ
 add_core = AHM
 discovered_by = indian
