@@ -261,6 +261,12 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 	
+	spriteType = {
+		name = "GFX_religion_overlay_shinto_bg"
+		texturefile = "gfx/interface/religion_overlay_shinto_bg.dds"
+		loadType = "INGAME"
+	}
+	
 	###X###
 	spriteType = {
 		name = "GFX_X_westernization_vs_isolation_bg"
@@ -338,6 +344,18 @@ spriteTypes = {
 		texturefile = "gfx//interface//country_religion_view_fervor_bg.dds"
 		loadType = "INGAME"
 	}		
+	### New Fervor Container ###
+	spriteType = {
+		name = "GFX_fervor_container_bg"
+		texturefile = "gfx//interface//defender_of_the_faith/fervor/fervor_buttons_container.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_fervor_container_bg_s"
+		texturefile = "gfx//interface//defender_of_the_faith/fervor/fervor_buttons_container_s.dds"
+		loadType = "INGAME"
+	}
 		
 	spriteType = {
 		name = "GFX_country_religion_view_allreligion_bg"
