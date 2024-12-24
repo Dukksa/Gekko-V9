@@ -968,6 +968,7 @@ kongo={
 
 cape_of_good_hope={
 	location=1460
+	color = { 33 137 217 }
 	outgoing={
 		name="ivory_coast"
 		path={
@@ -1303,7 +1304,7 @@ kiev = {
 moscow = {
 	location = 295
 	inland = yes
-	#color = { 97 126 37 }
+	color = { 134 111 98 }
 	outgoing = {
 		name = "novgorod"
 		path = {
@@ -1362,6 +1363,7 @@ novgorod={
 }
 ragusa={
 	location=137
+	color = { 101 89 63 }
 	outgoing={
 		name="wien"
 		path={
@@ -1459,7 +1461,7 @@ tunis={
 #}
 krakow={
 	location=262
-	
+	color = { 104 128 104}
 	outgoing={
 		name="wien"
 		path={
