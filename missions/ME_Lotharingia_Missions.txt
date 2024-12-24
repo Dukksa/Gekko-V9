@@ -557,11 +557,6 @@ ME_bur_2 = {
 					custom_tooltip = ME_BUR_UNLOCK_GRAND_GERMAN_CAMPAIGNS
 					set_country_flag = me_bur_grand_campaigns_flag
 					custom_tooltip = \" \"
-					add_government_power = {
-						mechanic_type = golden_fleece_mechanic
-						power_type = golden_fleece_support
-						value = 25
-					}
 					give_claims = {
 						region = north_german_region
 					}
@@ -584,10 +579,6 @@ ME_bur_2 = {
 								is_part_of_hre = yes
 							}
 							add_prestige_or_monarch_power = { amount = 10 }
-							add_opinion = {
-								who = ROOT
-								modifier = BUR_restoration_of_chivalric_legacy
-							}
 						}
 					}
 				"

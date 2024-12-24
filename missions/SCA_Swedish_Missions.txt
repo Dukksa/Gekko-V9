@@ -3290,6 +3290,7 @@ swe_religion_mission_slot = {
 					stat = dip
 					amount = 1
 				}
+				
 			}
 			add_estate_loyalty = {
 				estate = estate_church

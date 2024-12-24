@@ -3055,6 +3055,65 @@ for = {
 	}
 }
 
+add_prestige_or_monarch_power = {
+    tooltip = {
+        add_prestige = $amount$
+    }
+    custom_tooltip = ME_ADD_PRESTIGE_OR_MONARCHPOWER
+    hidden_effect = {
+        for = {
+            amount = $amount$
+            effect = "
+                if = {
+                    limit = {
+                        NOT = { prestige = 100 }
+                    }
+                    add_prestige = 1
+                }
+                else = {
+                    add_adm_power = 1
+                    add_dip_power = 1
+                    add_mil_power = 1
+                }
+            "
+        }
+    }
+}
+
+add_stat_or_monarch_power = {
+    tooltip = {
+        change_$stat$ = $amount$
+    }
+    custom_tooltip = ADD_STAT_OR_POWER_$stat$
+    hidden_effect = {
+		set_variable = {
+			which = ForLoopCounter
+			value = $amount$
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = ForLoopCounter
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { $stat$ = 6 }
+				}
+				change_$stat$ = 1
+			}
+			else = {
+				add_$stat$_power = 100
+			}
+			subtract_variable = {
+				which = ForLoopCounter
+				value = 1
+			}
+		}
+    }
+}
+
 for_variable_amount = {
     set_variable = {
         which = ForLoopCounter
