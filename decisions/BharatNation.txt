@@ -1,11 +1,11 @@
 country_decisions = {
 
-	hindustan_nation_dravidian = {
+	bharat_nation_dravidian = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_india_flag }
+			was_never_end_game_tag_trigger = yes
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -14,8 +14,12 @@ country_decisions = {
 			NOT = { exists = HIN }
 			NOT = { tag = MUG }
 			culture_group = dravidian
-			religion_group = muslim
-
+			OR = {
+				religion_group = dharmic
+				religion = buddhism #Theravada
+				religion = vajrayana
+				religion = mahayana
+			}
 			NOT = { has_reform = steppe_horde }
 			OR = {
 				ai = no
@@ -82,39 +86,39 @@ country_decisions = {
 			owns_core_province = 4503 #Mansura
 		}
 		effect = {
+			change_tag = BHA
+			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			set_government_rank = 3
-			change_tag = HIN
-			swap_non_generic_missions = yes
 			bengal_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			hindusthan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			west_india_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			deccan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			coromandel_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			add_prestige = 10
 			set_country_flag = formed_india_flag
@@ -129,21 +133,26 @@ country_decisions = {
 		ai_importance = 50
 	}
 
-	hindustan_nation_western_aryan = {
+	bharat_nation_western_aryan = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_india_flag }
+			was_never_end_game_tag_trigger = yes
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			#NOT = { exists = BHA }
-			NOT = { exists = HIN }
+			NOT = { exists = BHA }
+			#NOT = { exists = HIN }
 			NOT = { tag = MUG }
 			culture_group = western_aryan
-			religion_group = muslim
+			OR = {
+				religion_group = dharmic
+				religion = buddhism #Theravada
+				religion = vajrayana
+				religion = mahayana
+			}
 			NOT = { has_reform = steppe_horde }
 			OR = {
 				ai = no
@@ -210,7 +219,7 @@ country_decisions = {
 			owns_core_province = 4503 #Mansura
 		}
 		effect = {
-			change_tag = HIN
+			change_tag = BHA
 			remove_non_electors_emperors_from_empire_effect = yes
 			swap_non_generic_missions = yes
 			set_government_rank = 3
@@ -218,31 +227,31 @@ country_decisions = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			hindusthan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			west_india_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			deccan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			coromandel_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			set_country_flag = formed_india_flag
 			add_prestige = 10
@@ -257,21 +266,26 @@ country_decisions = {
 		ai_importance = 50
 	}
 
-	hindustan_nation_hindusthani = {
+	bharat_nation_hindusthani = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_india_flag }
+			was_never_end_game_tag_trigger = yes
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			#NOT = { exists = BHA }
-			NOT = { exists = HIN }
+			#NOT = { exists = HIN }
+			NOT = { exists = BHA }
 			NOT = { tag = MUG }
-			religion_group = muslim
 			culture_group = hindusthani
+			OR = {
+				religion_group = dharmic
+				religion = buddhism #Theravada
+				religion = vajrayana
+				religion = mahayana
+			}
 			NOT = { has_reform = steppe_horde }
 			OR = {
 				ai = no
@@ -338,39 +352,39 @@ country_decisions = {
 			owns_core_province = 4503 #Mansura
 		}
 		effect = {
-			change_tag = HIN
-			remove_non_electors_emperors_from_empire_effect = yes
+			change_tag = BHA
 			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
 			set_government_rank = 3
 			bengal_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			hindusthan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			west_india_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			deccan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			coromandel_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			set_country_flag = formed_india_flag
 			add_prestige = 10
@@ -385,22 +399,26 @@ country_decisions = {
 		ai_importance = 50
 	}
 
-	hindustan_nation_eastern_aryan = {
+	bharat_nation_eastern_aryan = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_india_flag }
+			was_never_end_game_tag_trigger = yes
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			#NOT = { exists = BHA }
-			NOT = { exists = HIN }
+			NOT = { exists = BHA }
+			#NOT = { exists = HIN }
 			NOT = { tag = MUG }
-			religion_group = muslim
 			culture_group = eastern_aryan
-
+			OR = {
+				religion_group = dharmic
+				religion = buddhism #Theravada
+				religion = vajrayana
+				religion = mahayana
+			}
 			NOT = { has_reform = steppe_horde }
 			OR = {
 				ai = no
@@ -467,39 +485,39 @@ country_decisions = {
 			owns_core_province = 4503 #Mansura
 		}
 		effect = {
-			change_tag = HIN
-			remove_non_electors_emperors_from_empire_effect = yes
+			change_tag = BHA
 			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
 			set_government_rank = 3
 			bengal_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			hindusthan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			west_india_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			deccan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			coromandel_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			set_country_flag = formed_india_flag
 			add_prestige = 10
@@ -514,22 +532,26 @@ country_decisions = {
 		ai_importance = 50
 	}
 	
-	
-	hindustan_nation_central_indic = {
+	bharat_nation_central_indic = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_india_flag }
+			was_never_end_game_tag_trigger = yes
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			#NOT = { exists = BHA }
-			NOT = { exists = HIN }
+			NOT = { exists = BHA }
+			#NOT = { exists = HIN }
 			NOT = { tag = MUG }
-			religion_group = muslim
 			culture_group = central_indic
+			OR = {
+				religion_group = dharmic
+				religion = buddhism #Theravada
+				religion = vajrayana
+				religion = mahayana
+			}
 			NOT = { has_reform = steppe_horde }
 			OR = {
 				ai = no
@@ -596,39 +618,39 @@ country_decisions = {
 			owns_core_province = 4503 #Mansura
 		}
 		effect = {
-			change_tag = HIN
-			remove_non_electors_emperors_from_empire_effect = yes
+			change_tag = BHA
 			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
 			set_government_rank = 3
 			bengal_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			hindusthan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			west_india_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			deccan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			coromandel_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HIN
+				add_permanent_claim = BHA
 			}
 			set_country_flag = formed_india_flag
 			add_prestige = 10
