@@ -957,7 +957,7 @@ crimea_area = { #4
 	284 6001 6002
 }
 
-simferopol_area = { #4
+gazaria_area = { #4
 	285 2410 2447 6000
 }
 
@@ -1196,7 +1196,7 @@ northern_greece_area = { #3 #Northern Greece
 	142 144 4699 4698
 }
 
-XMP_central_greece_area = { #Central Greece and Thessaly #XMP: Now Central Greece
+X_central_greece_area = { #Central Greece and Thessaly #XMP: Now Central Greece
 	146 3003 147 6120
 }
 

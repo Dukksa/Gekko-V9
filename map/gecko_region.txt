@@ -291,7 +291,7 @@ crimea_region = {
 		zaporizhia_area
 		yedisan_area
 		azov_area
-		simferopol_area
+		gazaria_area
 		odessa_area
 		#mariupol_area
 		stavropol_area
@@ -313,7 +313,7 @@ balkan_region = {
 		albania_area
 		silistria_area
 		slavonia_area
-		XMP_central_greece_area
+		X_central_greece_area
 	}
 }
 
