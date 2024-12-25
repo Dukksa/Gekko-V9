@@ -17,10 +17,9 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		tag = MER
 		is_year = 1446
 		not = { is_year = 1452 }
-		tag = MER
-		
 	}
 	
 	mean_time_to_happen = {
@@ -46,11 +45,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		is_year = 1455
-		NOT = { is_year = 1490 }
-		always = no
 		TAG = MER
 		NOT = { exists = MAW }
+		is_year = 1455
+		NOT = { is_year = 1490 }
 		owns = 514
 		num_of_cities = 3
 	}
@@ -113,9 +111,8 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		NOT = { is_year = 1460 }
 		tag = MER
-		
+		NOT = { is_year = 1460 }
 		owns_core_province = 2067
 	}
 	
@@ -158,10 +155,9 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		tag = MER
 		is_year = 1480
 		not = { is_year = 1550 }
-		tag = MER
-		
 	}
 	
 	mean_time_to_happen = {
@@ -186,7 +182,7 @@ country_event = {
 	trigger = {
 		is_year = 1460
 		NOT = { is_year = 1470 }
-		always = no
+		always = no #Gecko change
 		tag = MER
 		has_ruler = "Kumbhakarna Singh"
 		
