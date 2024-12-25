@@ -392,3 +392,8 @@ gecko_marathas_subdued = {
 	cavalry_power = 0.1
 	cavalry_cost = -0.1
 }
+
+#oirat 
+mongol_consolidation = {
+	trade_value_modifier = 0.1
+}
