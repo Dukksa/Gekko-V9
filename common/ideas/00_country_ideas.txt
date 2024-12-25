@@ -12179,12 +12179,12 @@ KLE_ideas = {
 
 DLH_ideas = {
 	start = {
-		cavalry_power = 0.10
-		global_manpower_modifier = 0.10
+		cavalry_power = 0.15
+		global_manpower_modifier = 0.15
 	}
 	
 	bonus = {
-		development_cost = -0.05
+		development_cost = -0.1
 	}
 	
 	trigger = {
@@ -12193,15 +12193,14 @@ DLH_ideas = {
 	free = yes
 	
 	dlh_expansionism = {
-		core_creation = -0.10
-	}
-	dlh_textile_innovation = {
-		production_efficiency = 0.10
+		core_creation = -0.20
 	}
 	dlh_reconquest = {
 		land_morale = 0.1
 	}
-	
+	dlh_textile_innovation = {
+		production_efficiency = 0.10
+	}
 	dlh_afghan_nobility = {
 		infantry_power = 0.1
 	}
@@ -12217,10 +12216,11 @@ DLH_ideas = {
 	}
 }
 
+
 BHA_ideas = {
 	start = {
-		stability_cost_modifier = -0.1
-		state_maintenance_modifier = -0.15
+		governing_capacity_modifier = 0.1
+		global_manpower_modifier = 0.2
 	}
 	bonus = {
 		years_of_nationalism = -5
@@ -12232,10 +12232,10 @@ BHA_ideas = {
 	free = yes
 
 	bha_modernized_war_elephants = {
-		cavalry_power = 0.15
+		infantry_power = 0.15
 	}
 	bha_united_india = {
-		num_accepted_cultures = 2
+		num_accepted_cultures = 3
 	}
 	bha_sanskrit_golden_age = {
 		technology_cost = -0.05
@@ -12244,20 +12244,20 @@ BHA_ideas = {
 		discipline = 0.05
 	}
 	bha_ganga = {
-		tolerance_own = 2
+		land_morale = 0.10
 	}
 	bha_brahmin_administration = {
 		administrative_efficiency = 0.05
 	}
 	bha_rocketry = {
-		artillery_power = 0.1
+		artillery_power = 0.15
 	}
 }
 
 HIN_ideas = {
 	start = {
 		governing_capacity_modifier = 0.1
-		global_manpower_modifier = 0.15
+		global_manpower_modifier = 0.2
 	}
 	bonus = {
 		discipline = 0.05
@@ -12280,13 +12280,13 @@ HIN_ideas = {
 		land_morale = 0.10
 	}
 	hin_gunpowder_empire = {
-		fire_damage = 0.10
+		fire_damage = 0.20
 	}
 	hin_sufism = {
 		global_missionary_strength = 0.02
 	}
 	hin_industrialization = {
-		development_cost = -0.05
+		development_cost = -0.1
 	}
 }
 
@@ -12349,16 +12349,17 @@ BNG_ideas = {
 		army_tradition = 0.5
 	}
 	bng_clearing_the_delta = {
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 	bng_attract_sufis = {
 		idea_cost = -0.1
+		land_morale = 0.1
 	}
 	bng_conquest_of_the_gangetic_plain = {
 		leader_land_shock = 1
 	}
 	bng_rupees = {
-		global_tax_modifier = 0.1
+		global_tax_modifier = 0.15
 	}
 	bng_bengali_industrialization = {
 		global_trade_goods_size_modifier = 0.1
