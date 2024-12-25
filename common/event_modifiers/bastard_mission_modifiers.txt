@@ -343,3 +343,52 @@ bukharan_slave_trade = {
 bastard_ned_formed = {
 	all_power_cost = -0.1
 }
+
+#mysore
+gecko_cannon_foundries = {
+	artillery_power = 0.05
+	army_tradition = 0.25
+}
+
+gecko_mysorean_rockets = {
+	artillery_fire = 0.25
+}
+
+gecko_cannon_institute = {
+	mil_tech_cost_modifier = -0.1
+	idea_cost = -0.05
+}
+
+gecko_handheld_rockets = {
+	infantry_fire = 0.25
+}
+
+gecko_mysore_encourage_production = {
+	production_efficiency = 0.10
+}
+
+gecko_mysore_expand_ports = {
+	global_trade_power = 0.1
+}
+
+gecko_mysore_navy = {
+	naval_morale = 0.1
+}
+
+gecko_mysore_industrial_expansion = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+gecko_south_indian_empire = {
+	prestige = 1
+	governing_capacity_modifier = 0.10
+}
+
+gecko_entrepreneural_spirit = {
+	trade_efficiency = 0.1
+}
+
+gecko_marathas_subdued = {
+	cavalry_power = 0.1
+	cavalry_cost = -0.1
+}

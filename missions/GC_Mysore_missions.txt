@@ -1,0 +1,731 @@
+gc_mysore_branch_1 = {
+    slot = 1
+    generic = no
+    ai = no
+    potential = {
+        OR = {
+            tag = MYS
+        }
+    }
+
+    gc_mysore_mission_1 = {
+        icon = mission_cannons_firing
+        required_missions = {  }
+        position = 1
+
+        provinces_to_highlight = { 
+            OR = {
+
+            }
+        }
+
+        trigger = {
+            mil_tech = 7
+            num_of_artillery = 10
+        }
+
+        effect = {
+            change_innovativeness = 5
+            add_country_modifier = {
+                name = "gecko_cannon_foundries"
+                duration = -1
+            }
+        }
+    }
+    gc_mysore_mission_2 = {
+        icon = mission_asian_cannon
+        required_missions = { gc_mysore_mission_1 }
+        position = 2
+
+        provinces_to_highlight = { 
+            OR = {
+
+            }
+        }
+
+        trigger = {
+            mil_tech = 13
+            num_of_artillery = 27
+            stability = 1
+        }
+
+        effect = {
+            add_army_tradition = 20
+            add_country_modifier = {
+                name = "gecko_mysorean_rockets"
+                duration = -1
+            }
+        }
+    }
+    gc_mysore_mission_3 = {
+        icon = mission_found_the_city_of_agra
+        required_missions = { gc_mysore_mission_2 }
+        position = 3
+
+        provinces_to_highlight = { 
+            OR = {
+
+            }
+        }
+
+        trigger = {
+            university = 5
+            mil_tech = 18
+            has_global_modifier_value = {
+				which = artillery_power
+				value = 0.30
+			}
+        }
+
+        effect = {
+            change_innovativeness = 10
+            add_country_modifier = {
+                name = "gecko_cannon_institute"
+                duration = -1
+            }
+        }
+    }
+    gc_mysore_mission_4 = {
+        icon = mission_new_army
+        required_missions = { gc_mysore_mission_3 }
+        position = 5
+
+        provinces_to_highlight = { 
+            OR = {
+
+            }
+        }
+
+        trigger = {
+            mil_tech = 22
+            army_professionalism = 0.30
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = "gecko_handheld_rockets"
+                duration = -1
+            }
+        }
+    }
+} #End Branch 1
+
+gc_mysore_branch_2 = {
+    slot = 2
+    generic = no
+    ai = no
+    potential = {
+        OR = {
+            tag = MYS
+        }
+    }
+
+    gc_mysore_mission_5 = {
+        icon = mission_marathi_fiefs
+        required_missions = { gc_mysore_mission_8 }
+        position = 2
+
+       provinces_to_highlight = {
+			OR = {
+				province_id = 2030
+                province_id = 4429
+                province_id = 530
+                province_id = 2089
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+        trigger = {
+            2030  = { country_or_non_sovereign_subject_holds = ROOT }
+            4429  = { country_or_non_sovereign_subject_holds = ROOT }
+            530  = { country_or_non_sovereign_subject_holds = ROOT }
+            2089  = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+
+        effect = {
+            add_army_tradition = 10
+            add_country_modifier = {
+                name = "gecko_marathas_subdued"
+                duration = 5475
+            }
+        }
+    }
+    gc_mysore_mission_6 = {
+        icon = mission_advance_to_kalyana
+        required_missions = { 
+            gc_mysore_mission_5
+            gc_mysore_mission_9
+        }
+        position = 3
+
+        provinces_to_highlight = {
+			OR = {
+				area = maidan_area
+				area = golconda_area
+                area = desh_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+        trigger = {
+            desh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			maidan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			golconda_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+        }
+
+        effect = {
+            berar_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            ahmednagar_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            telingana_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            529 = {
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+    gc_mysore_mission_7 = {
+        icon = mission_invade_maharashtra
+        required_missions = { gc_mysore_mission_6 }
+        position = 4
+
+        provinces_to_highlight = {
+			OR = {
+                province_id = 529
+				area = telingana_area
+				area = ahmednagar_area
+				area = berar_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+        trigger = {
+            529 = {
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+            telingana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			ahmednagar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			berar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+        }
+
+        effect = {
+            add_army_professionalism = 0.05
+        }
+    }
+} #End Branch 2
+
+gc_mysore_branch_3 = {
+    slot = 3
+    generic = no
+    ai = no
+    potential = {
+        OR = {
+            tag = MYS
+        }
+    }
+
+    gc_mysore_mission_8 = {
+        icon = mission_city_of_victory_bah
+        required_missions = {  }
+        position = 1
+
+        provinces_to_highlight = { 
+            OR = {
+                province_id = 541
+			}
+			NOT = { owned_by = ROOT }
+        }
+
+        trigger = {
+            owns = 541
+        }
+
+        effect = {
+            if = {
+				limit = {
+					NOT = { capital = 541 }
+				}
+				country_event = { id = bah_mission_events.1 }
+				541 = {
+					add_loot_from_rich_province_general_effect = {
+						LOOTER = ROOT
+					}
+				}
+				tooltip = {
+					541 = {
+						add_base_tax = -2
+						add_base_production = -2
+						add_base_manpower = -2
+					}
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+						add_base_manpower = 2
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "spoils_of_vijayanagar"
+				duration = 7300
+			}
+            raichur_doab_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            rayalaseema_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            madura_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            tanjore_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            2030 = {
+				add_permanent_claim = ROOT
+			}
+            4429 = {
+				add_permanent_claim = ROOT
+			}
+            530 = {
+				add_permanent_claim = ROOT
+			}
+            2089 = {
+				add_permanent_claim = ROOT
+			}
+            2085 = {
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+    gc_mysore_mission_9 = {
+        icon = mission_southern_frontier
+        required_missions = { gc_mysore_mission_8 }
+        position = 2
+
+        provinces_to_highlight = { 
+            OR = {
+                area = rayalaseema_area
+                area = raichur_doab_area
+			}
+			NOT = { owned_by = ROOT }
+        }
+
+        trigger = {
+            rayalaseema_area = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            raichur_doab_area = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+        }
+
+        effect = {
+            maidan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            golconda_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            desh_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+    gc_mysore_mission_10 = {
+        icon = mission_recover_konkan_ports
+        required_missions = { gc_mysore_mission_13 }
+        position = 3
+
+        provinces_to_highlight = { 
+            OR = {
+                area = south_carnatic_area
+			}
+			NOT = { owned_by = ROOT }
+        }
+
+        trigger = {
+            south_carnatic_area = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+        }
+
+        effect = {
+            andhra_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            north_carnatic_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+    gc_mysore_mission_11 = {
+        icon = mission_conquer_andhra_vij
+        required_missions = { gc_mysore_mission_10 }
+        position = 4
+
+        provinces_to_highlight = { 
+            OR = {
+                area = north_carnatic_area
+                area = andhra_area
+			}
+			NOT = { owned_by = ROOT }
+        }
+
+        trigger = {
+            andhra_area = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            andhra_area = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+        }
+
+        effect = {
+            add_prestige = 10
+            add_mercantilism = 5
+        }
+    }
+    gc_mysore_mission_12 = {
+        icon = mission_indian_empire
+        required_missions = {
+            gc_mysore_mission_11 
+            gc_mysore_mission_7
+            gc_mysore_mission_15
+            }
+        position = 5
+
+        provinces_to_highlight = { 
+            OR = {
+
+            }
+        }
+
+        trigger = {
+
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = "gecko_south_indian_empire"
+                duration = -1
+            }
+        }
+    }
+} #End Branch 3
+
+gc_mysore_branch_4 = {
+    slot = 4
+    generic = no
+    ai = no
+    potential = {
+        OR = {
+            tag = MYS
+        }
+    }
+
+    gc_mysore_mission_13 = {
+        icon = mission_secure_the_malabar_coast
+        required_missions = { gc_mysore_mission_8 }
+        position = 2
+
+        provinces_to_highlight = { 
+            OR = {
+                area = tanjore_area
+                area = madura_area
+                province_id = 2085
+			}
+			NOT = { owned_by = ROOT }
+        }
+
+        trigger = {
+            tanjore_area = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            madura_area = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            2085 = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+        }
+
+        effect = {
+            lanka_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            south_lanka_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+            south_carnatic_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+    gc_mysore_mission_14 = {
+        icon = mission_conquer_lanka
+        required_missions = {
+             gc_mysore_mission_13
+            }
+        position = 3
+
+        provinces_to_highlight = { 
+            OR = {
+                area = lanka_area
+                area = south_lanka_area
+			}
+			NOT = { owned_by = ROOT }
+        }
+
+        trigger = {
+            lanka_area = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            south_lanka_area = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+        }
+
+        effect = {
+            lanka_area = {
+                add_nationalism = -15
+            }
+            south_lanka_area = {
+                add_nationalism = -15
+            }
+        }
+    }
+    gc_mysore_mission_15 = {
+        icon = mission_coromandel_expansion
+        required_missions = { 
+            gc_mysore_mission_14 
+            gc_mysore_mission_18
+            }
+        position = 4
+
+        provinces_to_highlight = { #Highlight the province the trade node graphic is in
+            OR = {
+                province_id = 1340
+            }
+        }
+
+        trigger = {
+            1340 = {
+				trade_share = {
+                    country = MYS
+                    share = 50
+                }
+			}
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = "gecko_entrepreneural_spirit"
+                duration = 7300
+            }
+        }
+    }
+} #End Branch 4
+
+gc_mysore_branch_5 = {
+    slot = 5
+    generic = no
+    ai = no
+    potential = {
+        OR = {
+            tag = MYS
+        }
+    }
+
+    gc_mysore_mission_16 = {
+        icon = mission_dominate_persian_gulf
+        required_missions = {  }
+        position = 1
+
+        provinces_to_highlight = { 
+            OR = {
+
+            }
+        }
+
+        trigger = {
+            OR = {
+                workshop = 20
+                counting_house = 20
+            }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = "gecko_mysore_encourage_production"
+                duration = 7300
+            }
+        }
+    }
+    gc_mysore_mission_17 = {
+        icon = mission_coromandel_trade
+        required_missions = { gc_mysore_mission_16 }
+        position = 2
+
+        provinces_to_highlight = { 
+            OR = {
+
+            }
+        }
+
+        trigger = {
+            OR = {
+                marketplace = 10
+                trade_depot = 10
+                stock_exchange = 10
+            }
+            any_owned_province = {
+                province_has_center_of_trade_of_level = 3
+            }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = "gecko_mysore_expand_ports"
+                duration = 5475
+            }
+        }
+    }
+    gc_mysore_mission_18 = {
+        icon = mission_naval_dominance
+        required_missions = { gc_mysore_mission_17 }
+        position = 3
+
+        provinces_to_highlight = { 
+            OR = {
+
+            }
+        }
+
+        trigger = {
+            num_of_heavy_ship = 5
+            num_of_light_ship = 30
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = "gecko_mysore_navy"
+                duration = 7300
+            }
+        }
+    }
+    gc_mysore_mission_19 = {
+        icon = mission_have_manufactories
+        required_missions = { 
+            gc_mysore_mission_18 
+            gc_mysore_mission_15
+            }
+        position = 5
+
+        provinces_to_highlight = { 
+            OR = {
+
+            }
+        }
+
+        trigger = {
+            num_of_owned_provinces_with = {
+				value = 20
+				has_manufactory_trigger = yes
+			}
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = "gecko_mysore_industrial_expansion"
+                duration = 7300
+            }
+            add_years_of_income = 2
+        }
+    }
+} #End Branch 5
