@@ -1,0 +1,1765 @@
+namespace = bertus_limitation_menu
+
+country_event = {	#
+	id = bertus_limitation_menu.50000
+	title = bertus_limitation_menu.50000.t
+	desc = bertus_limitation_menu.50000.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#close
+		name = bertus_limitation_menu.50000.a
+		highlight = yes
+	}
+	option = {	#cheat engine
+		name = bertus_limitation_menu.50000.z
+		hidden_effect = {
+			country_event = {
+				id = bertus_limitation_menu.60000
+			}
+		}
+	}
+	option = {	#all but europe
+		name = bertus_limitation_menu.50000.b
+		country_event = {
+			id = bertus_limitation_menu.51000
+		}
+	}
+	option = {	#america
+		name = bertus_limitation_menu.50000.c
+		country_event = {
+			id = bertus_limitation_menu.52000
+		}
+	}
+	option = {	#asia
+		name = bertus_limitation_menu.50000.e
+		country_event = {
+			id = bertus_limitation_menu.54000
+		}
+	}
+	option = {	#africa
+		name = bertus_limitation_menu.50000.f
+		country_event = {
+			id = bertus_limitation_menu.55000
+		}
+	}
+	option = {	#europe
+		name = bertus_limitation_menu.50000.g
+		country_event = {
+			id = bertus_limitation_menu.56000
+		}
+	}
+	after = {
+	}
+}
+country_event = {	#all but europe
+	id = bertus_limitation_menu.51000
+	title = bertus_limitation_menu.51000.t
+	desc = bertus_limitation_menu.51000.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#all europe
+		name = bertus_limitation_menu.51000.a
+		hidden_effect = {
+			every_province = {
+				limit = { NOT = {continent = europe }}
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.51000.b
+		hidden_effect = {
+			every_province = {
+				limit = { NOT = {continent = europe }}
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.51000.c
+		hidden_effect = {
+			every_province = {
+				limit = { NOT = {continent = europe }}
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.51000.d
+		hidden_effect = {
+			every_province = {
+				limit = { NOT = {continent = europe }}
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.50000
+		}
+	}
+}
+country_event = {	#america
+	id = bertus_limitation_menu.52000
+	title = bertus_limitation_menu.52000.t
+	desc = bertus_limitation_menu.52000.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.50000
+		}
+	}
+	option = {	#all america
+		name = bertus_limitation_menu.52000.b
+		
+		country_event = {
+			id = bertus_limitation_menu.52100
+		}		
+	}
+	option = {	#north america
+		name = bertus_limitation_menu.52000.c
+		country_event = {
+			id = bertus_limitation_menu.52200
+		}		
+	}
+	option = {	#south america
+		name = bertus_limitation_menu.52000.d
+		country_event = {
+			id = bertus_limitation_menu.52300
+		}		
+	}
+	after = {
+	}
+}
+country_event = {	#all america
+	id = bertus_limitation_menu.52100
+	title = bertus_limitation_menu.52100.t
+	desc = bertus_limitation_menu.52100.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.52100.a
+		hidden_effect = {
+			every_province = {
+				limit = { OR = {continent = north_america continent = south_america} }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.52100.b
+		hidden_effect = {
+			every_province = {
+				limit = { OR = {continent = north_america continent = south_america} }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.52100.c
+		hidden_effect = {
+			every_province = {
+				limit = { OR = {continent = north_america continent = south_america} }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.52100.d
+		hidden_effect = {
+			every_province = {
+				limit = { OR = {continent = north_america continent = south_america} }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.52000
+		}
+	}
+}
+country_event = {	#america
+	id = bertus_limitation_menu.52200
+	title = bertus_limitation_menu.52200.t
+	desc = bertus_limitation_menu.52200.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.52000
+		}
+	}
+	option = {	#all north america
+		name = bertus_limitation_menu.52200.b
+		
+		country_event = {
+			id = bertus_limitation_menu.52210
+		}		
+	}
+	after = {
+	}
+}
+country_event = {	#north america
+	id = bertus_limitation_menu.52210
+	title = bertus_limitation_menu.52210.t
+	desc = bertus_limitation_menu.52210.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.52210.a
+		hidden_effect = {
+			every_province = {
+				limit = {continent = north_america }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.52210.b
+		hidden_effect = {
+			every_province = {
+				limit = {continent = north_america }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.52210.c
+		hidden_effect = {
+			every_province = {
+				limit = {continent = north_america }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.52210.d
+		hidden_effect = {
+			every_province = {
+				limit = {continent = north_america }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.52200
+		}
+	}
+}
+country_event = {	#south america
+	id = bertus_limitation_menu.52300
+	title = bertus_limitation_menu.52300.t
+	desc = bertus_limitation_menu.52300.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.52000
+		}
+	}
+	option = {	#all south america
+		name = bertus_limitation_menu.52300.b
+		
+		country_event = {
+			id = bertus_limitation_menu.52310
+		}		
+	}
+	after = {
+	}
+}
+country_event = {	#south america
+	id = bertus_limitation_menu.52310
+	title = bertus_limitation_menu.52310.t
+	desc = bertus_limitation_menu.52310.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.52310.a
+		hidden_effect = {
+			every_province = {
+				limit = {continent = south_america }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.52310.b
+		hidden_effect = {
+			every_province = {
+				limit = {continent = south_america }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.52310.c
+		hidden_effect = {
+			every_province = {
+				limit = {continent = south_america }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.53310.d
+		hidden_effect = {
+			every_province = {
+				limit = {continent = south_america }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.52300
+		}
+	}
+}
+
+country_event = {	#asia
+	id = bertus_limitation_menu.54000
+	title = bertus_limitation_menu.54000.t
+	desc = bertus_limitation_menu.54000.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.50000
+		}
+	}
+	option = {	#all asia
+		name = bertus_limitation_menu.54000.b
+		
+		country_event = {
+			id = bertus_limitation_menu.54100
+		}		
+	}
+	option = {	#tartary
+		name = bertus_limitation_menu.54000.f
+		
+		country_event = {
+			id = bertus_limitation_menu.54500
+		}		
+	}
+	option = {	#india
+		name = bertus_limitation_menu.54000.g
+		
+		country_event = {
+			id = bertus_limitation_menu.54600
+		}		
+	}
+	option = {	#middle east
+		name = bertus_limitation_menu.54000.h
+		
+		country_event = {
+			id = bertus_limitation_menu.54700
+		}		
+	}
+	after = {
+	}
+}
+country_event = {	#all asia
+	id = bertus_limitation_menu.54100
+	title = bertus_limitation_menu.54100.t
+	desc = bertus_limitation_menu.54100.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.54100.a
+		hidden_effect = {
+			every_province = {
+				limit = {continent = asia }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54100.b
+		hidden_effect = {
+			every_province = {
+				limit = {continent = asia }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54100.c
+		hidden_effect = {
+			every_province = {
+				limit = {continent = asia }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54100.d
+		hidden_effect = {
+			every_province = {
+				limit = {continent = asia }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.54000
+		}
+	}
+}
+
+country_event = {	#tartary
+	id = bertus_limitation_menu.54500
+	title = bertus_limitation_menu.54500.t
+	desc = bertus_limitation_menu.54500.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.54000
+		}
+	}
+	option = {	#all tartary
+		name = bertus_limitation_menu.54500.b
+		
+		country_event = {
+			id = bertus_limitation_menu.54510
+		}
+	}
+	after = {
+	}
+}
+country_event = {	#all tartary
+	id = bertus_limitation_menu.54510
+	title = bertus_limitation_menu.54510.t
+	desc = bertus_limitation_menu.54510.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.54510.a
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = tartary_superregion}
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54510.b
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = tartary_superregion}
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54510.c
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = tartary_superregion}
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54510.d
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = tartary_superregion}
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.54500
+		}
+	}
+}
+country_event = {	#india
+	id = bertus_limitation_menu.54600
+	title = bertus_limitation_menu.54600.t
+	desc = bertus_limitation_menu.54600.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.54000
+		}
+	}
+	option = {	#all india
+		name = bertus_limitation_menu.54600.b
+		
+		country_event = {
+			id = bertus_limitation_menu.54610
+		}
+	}
+	after = {
+	}
+}
+country_event = {	#all india
+	id = bertus_limitation_menu.54610
+	title = bertus_limitation_menu.54610.t
+	desc = bertus_limitation_menu.54610.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.54610.a
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = india_superregion}
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54610.b
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = india_superregion}
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54610.c
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = india_superregion}
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54610.d
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = india_superregion}
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.54600
+		}
+	}
+}
+country_event = {	#middle east
+	id = bertus_limitation_menu.54700
+	title = bertus_limitation_menu.54700.t
+	desc = bertus_limitation_menu.54700.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.54000
+		}
+	}
+	option = {	#all middle east
+		name = bertus_limitation_menu.54700.b
+		
+		country_event = {
+			id = bertus_limitation_menu.54710
+		}
+	}
+	after = {
+	}
+}
+country_event = {	#all middle east
+	id = bertus_limitation_menu.54710
+	title = bertus_limitation_menu.54710.t
+	desc = bertus_limitation_menu.54710.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.54710.a
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {superregion = persia_superregion region = arabia_region region = mashriq_region region = anatolia_region }}
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54710.b
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {superregion = persia_superregion region = arabia_region region = mashriq_region region = anatolia_region }}
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54710.c
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {superregion = persia_superregion region = arabia_region region = mashriq_region region = anatolia_region }}
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.54710.d
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {superregion = persia_superregion region = arabia_region region = mashriq_region region = anatolia_region }}
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.54700
+		}
+	}
+}
+country_event = {	#africa
+	id = bertus_limitation_menu.55000
+	title = bertus_limitation_menu.55000.t
+	desc = bertus_limitation_menu.55000.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.50000
+		}
+	}
+	option = {	#all africa
+		name = bertus_limitation_menu.55000.b
+		
+		country_event = {
+			id = bertus_limitation_menu.55100
+		}		
+	}
+	option = {	#northern africa
+		name = bertus_limitation_menu.55000.c
+		
+		country_event = {
+			id = bertus_limitation_menu.55200
+		}		
+	}
+	option = {	#western africa
+		name = bertus_limitation_menu.55000.d
+		
+		country_event = {
+			id = bertus_limitation_menu.55300
+		}		
+	}
+	option = {	#horn of africa
+		name = bertus_limitation_menu.55000.e
+		
+		country_event = {
+			id = bertus_limitation_menu.55500
+		}		
+	}
+	option = {	#southern africa
+		name = bertus_limitation_menu.55000.f
+		
+		country_event = {
+			id = bertus_limitation_menu.55400
+		}		
+	}
+	after = {
+	}
+}
+country_event = {	#all africa
+	id = bertus_limitation_menu.55100
+	title = bertus_limitation_menu.55100.t
+	desc = bertus_limitation_menu.55100.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.55100.a
+		hidden_effect = {
+			every_province = {
+				limit = {continent = africa }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55100.b
+		hidden_effect = {
+			every_province = {
+				limit = {continent = africa }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55100.c
+		hidden_effect = {
+			every_province = {
+				limit = {continent = africa }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55100.d
+		hidden_effect = {
+			every_province = {
+				limit = {continent = africa }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.55000
+		}
+	}
+}
+country_event = {	#northern africa
+	id = bertus_limitation_menu.55200
+	title = bertus_limitation_menu.55200.t
+	desc = bertus_limitation_menu.55200.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.55000
+		}
+	}
+	option = {	#all northern africa
+		name = bertus_limitation_menu.55200.b
+		
+		country_event = {
+			id = bertus_limitation_menu.55210
+		}
+	}
+	after = {
+	}
+}
+country_event = {	#all northern africa
+	id = bertus_limitation_menu.55210
+	title = bertus_limitation_menu.55210.t
+	desc = bertus_limitation_menu.55210.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.55210.a
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {region = maghreb_region region = egypt_region  }}
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55210.b
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {region = maghreb_region region = egypt_region  }}
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55210.c
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {region = maghreb_region region = egypt_region  }}
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55210.d
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {region = maghreb_region region = egypt_region  }}
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.55200
+		}
+	}
+}
+country_event = {	#western africa
+	id = bertus_limitation_menu.55300
+	title = bertus_limitation_menu.55300.t
+	desc = bertus_limitation_menu.55300.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.55000
+		}
+	}
+	option = {	#all western africa
+		name = bertus_limitation_menu.55300.b
+		
+		country_event = {
+			id = bertus_limitation_menu.55310
+		}
+	}
+	after = {
+	}
+}
+country_event = {	#all western africa
+	id = bertus_limitation_menu.55310
+	title = bertus_limitation_menu.55310.t
+	desc = bertus_limitation_menu.55310.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.55310.a
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {region = sahel_region region = niger_region region = guinea_region }}
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55310.b
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {region = sahel_region region = niger_region region = guinea_region }}
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55310.c
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {region = sahel_region region = niger_region region = guinea_region }}
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55310.d
+		hidden_effect = {
+			every_province = {
+				limit = {OR = {region = sahel_region region = niger_region region = guinea_region }}
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.55300
+		}
+	}
+}
+country_event = {	#southern africa
+	id = bertus_limitation_menu.55400
+	title = bertus_limitation_menu.55400.t
+	desc = bertus_limitation_menu.55400.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.55000
+		}
+	}
+	option = {	#all southern africa
+		name = bertus_limitation_menu.55400.b
+		
+		country_event = {
+			id = bertus_limitation_menu.55410
+		}
+	}
+	after = {
+	}
+}
+country_event = {	#all southern africa
+	id = bertus_limitation_menu.55410
+	title = bertus_limitation_menu.55410.t
+	desc = bertus_limitation_menu.55410.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.55410.a
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = southern_africa_superregion }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55410.b
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = southern_africa_superregion }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55410.c
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = southern_africa_superregion }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55410.d
+		hidden_effect = {
+			every_province = {
+				limit = {superregion = southern_africa_superregion }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.55400
+		}
+	}
+}
+country_event = {	#horn of africa
+	id = bertus_limitation_menu.55500
+	title = bertus_limitation_menu.55500.t
+	desc = bertus_limitation_menu.55500.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.55500.a
+		hidden_effect = {
+			every_province = {
+				limit = {region = horn_of_africa_region }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55500.b
+		hidden_effect = {
+			every_province = {
+				limit = {region = horn_of_africa_region }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55500.c
+		hidden_effect = {
+			every_province = {
+				limit = {region = horn_of_africa_region }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55500.d
+		hidden_effect = {
+			every_province = {
+				limit = {region = horn_of_africa_region }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.55000
+		}
+	}
+}
+country_event = {	#all horn of africa
+	id = bertus_limitation_menu.55510
+	title = bertus_limitation_menu.55510.t
+	desc = bertus_limitation_menu.55510.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.55510.a
+		hidden_effect = {
+			every_province = {
+				limit = {region = horn_of_africa_region }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55510.b
+		hidden_effect = {
+			every_province = {
+				limit = {region = horn_of_africa_region }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55510.c
+		hidden_effect = {
+			every_province = {
+				limit = {region = horn_of_africa_region }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.55510.d
+		hidden_effect = {
+			every_province = {
+				limit = {region = horn_of_africa_region }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.55500
+		}
+	}
+}
+country_event = {	#europe
+	id = bertus_limitation_menu.56000
+	title = bertus_limitation_menu.56000.t
+	desc = bertus_limitation_menu.56000.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.50000
+		}
+	}
+	option = {	#all europe
+		name = bertus_limitation_menu.56000.b
+		
+		country_event = {
+			id = bertus_limitation_menu.56100
+		}		
+	}
+	option = {	#ural
+		name = bertus_limitation_menu.56000.c
+		
+		country_event = {
+			id = bertus_limitation_menu.56200
+		}		
+	}
+	option = {	#russia
+		name = bertus_limitation_menu.56000.d
+		
+		country_event = {
+			id = bertus_limitation_menu.56300
+		}		
+	}
+	option = {	#pontic steppe
+		name = bertus_limitation_menu.56000.e
+		
+		country_event = {
+			id = bertus_limitation_menu.56400
+		}		
+	}
+	after = {
+	}
+}
+country_event = {	#all europe
+	id = bertus_limitation_menu.56100
+	title = bertus_limitation_menu.56100.t
+	desc = bertus_limitation_menu.56100.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.56100.a
+		hidden_effect = {
+			every_province = {
+				limit = {continent = europe }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56100.b
+		hidden_effect = {
+			every_province = {
+				limit = {continent = europe }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56100.c
+		hidden_effect = {
+			every_province = {
+				limit = {continent = europe }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56100.d
+		hidden_effect = {
+			every_province = {
+				limit = {continent = europe }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.56000
+		}
+	}
+}
+country_event = {	#ural
+	id = bertus_limitation_menu.56200
+	title = bertus_limitation_menu.56200.t
+	desc = bertus_limitation_menu.56200.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.56200.a
+		hidden_effect = {
+			every_province = {
+				limit = {region = ural_region }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56200.b
+		hidden_effect = {
+			every_province = {
+				limit = {region = ural_region }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56200.c
+		hidden_effect = {
+			every_province = {
+				limit = {region = ural_region }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56200.d
+		hidden_effect = {
+			every_province = {
+				limit = {region = ural_region }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.56000
+		}
+	}
+}
+country_event = {	#russia
+	id = bertus_limitation_menu.56300
+	title = bertus_limitation_menu.56300.t
+	desc = bertus_limitation_menu.56300.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.56300.a
+		hidden_effect = {
+			every_province = {
+				limit = {region = russia_region }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56300.b
+		hidden_effect = {
+			every_province = {
+				limit = {region = russia_region }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56300.c
+		hidden_effect = {
+			every_province = {
+				limit = {region = russia_region }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56300.d
+		hidden_effect = {
+			every_province = {
+				limit = {region = russia_region }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.56000
+		}
+	}
+}
+country_event = {	#Pontic Steppe
+	id = bertus_limitation_menu.56400
+	title = bertus_limitation_menu.56400.t
+	desc = bertus_limitation_menu.56400.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+	}
+	option = {	#
+		name = bertus_limitation_menu.56400.a
+		hidden_effect = {
+			every_province = {
+				limit = {region = crimea_region }
+				cede_province = ---
+				reset_natives_colonizable_province = yes
+				reset_native_ferocity_colonizable_province = yes
+				reset_native_hostileness_colonizable_province = yes
+				reset_development_bertus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56400.b
+		hidden_effect = {
+			every_province = {
+				limit = {region = crimea_region }
+				colonization_malus = yes
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56400.c
+		hidden_effect = {
+			every_province = {
+				limit = {region = crimea_region }
+				add_permanent_province_modifier = {
+					name = unrule_lands
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {	#
+		name = bertus_limitation_menu.56400.d
+		hidden_effect = {
+			every_province = {
+				limit = {region = crimea_region }
+				block_area_effect = yes
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bertus_limitation_menu.56000
+		}
+	}
+}
+country_event = {	# configuration
+	id = bertus_limitation_menu.60000
+	title = bertus_limitation_menu.60000.t
+	desc = bertus_limitation_menu.60000.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+    trigger = {	
+    }
+	
+	immediate = {
+		
+	}
+	option = {	#back
+		name = bertus_limitation_menu.back
+		highlight = yes
+		
+		country_event = {
+			id = bertus_limitation_menu.50000
+		}
+	}
+	option = {	#pvp boost
+		name = bertus_limitation_menu.60000.f
+		every_country = {
+			limit = {ai = no}
+			add_adm_tech = 14
+			add_dip_tech = 14
+			add_mil_tech = 14
+			add_treasury = 250000
+			change_government_reform_progress = 3000
+			add_country_modifier = {
+				name = cheat_engine_modifier
+				duration = 1825
+			}
+			add_country_modifier = {
+				name = limit_blocker_modifier
+				duration = -1
+			}
+		}
+		hidden_effect = {country_event = {id = bertus_limitation_menu.50000}}
+	}
+	after = {
+	}
+}

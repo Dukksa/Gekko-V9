@@ -89,9 +89,6 @@ can_move_trade_port = {
 	}
 }
 
-can_colonize_province = {
-}
-
 can_add_seat_in_parliament = {
 }
 

@@ -1,0 +1,65 @@
+
+block_area_effect = {
+	set_province_flag = cant_colonize_bertus_flag
+	add_permanent_province_modifier = {
+		name = bloqued_area_modifier
+		duration = -1
+	}
+}
+colonization_malus = {
+	add_permanent_province_modifier = {
+		name = colonizating_malus
+		duration = -1
+	}
+	add_permanent_province_modifier = {
+		name = colonizating_malus_2
+		duration = 74874
+	}
+	add_permanent_province_modifier = {
+		name = colonizating_malus_3
+		duration = 38374
+	}
+}
+reset_development_bertus = {
+	change_religion = ---
+	change_culture = ---
+	set_base_tax = 1
+	set_base_production = 1
+	set_base_manpower = 1
+}
+reset_natives_colonizable_province = {
+	random_list = {
+		40 = {change_native_size = 10}
+		60 = {change_native_size = 30}
+		80 = {change_native_size = 50}
+		40 = {change_native_size = 70}
+		20 = {change_native_size = 100}
+	}
+	random_list = {
+		50 = {change_native_size = 5}
+		50 = {change_native_size = 10}
+	}
+}
+reset_native_ferocity_colonizable_province = {
+	random_list = {
+		10 = {change_native_ferocity = 0.1}
+		40 = {change_native_ferocity = 0.3}
+		20 = {change_native_ferocity = 0.5}
+	}
+	random_list = {
+		50 = {change_native_ferocity = 0.1}
+		50 = {change_native_ferocity = 0.2}
+	}
+}
+reset_native_hostileness_colonizable_province = {
+	random_list = {
+		10 = {change_native_hostileness = 0.1}
+		20 = {change_native_hostileness = 0.4}
+		50 = {change_native_hostileness = 0.7}
+		1 = {change_native_hostileness = 1.0}
+	}
+	random_list = {
+		50 = {change_native_hostileness = 0.1}
+		50 = {change_native_hostileness = 0.2}
+	}
+}

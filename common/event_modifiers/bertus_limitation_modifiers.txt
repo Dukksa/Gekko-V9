@@ -1,0 +1,107 @@
+bloqued_area_modifier = {
+	min_local_autonomy = 50
+	trade_goods_size_modifier = -0.5
+	local_governing_cost = -0.25
+}
+unrule_lands_4 = {
+	min_local_autonomy = 10
+	local_development_cost = 0.05
+	local_build_cost = 0.05
+	trade_value_modifier = -0.10
+}
+unrule_lands_3 = {
+	min_local_autonomy = 10
+	local_development_cost = 0.05
+	local_build_cost = 0.05
+	trade_value_modifier = -0.10
+}
+unrule_lands_2 = {
+	min_local_autonomy = 10
+	local_development_cost = 0.05
+	local_build_cost = 0.05
+	trade_value_modifier = -0.10
+}
+unrule_lands_1 = {
+	min_local_autonomy = 10
+	local_development_cost = 0.05
+	local_build_cost = 0.05
+	trade_value_modifier = -0.10
+}
+unrule_lands = {
+	min_local_autonomy = 10
+	local_development_cost = 0.05
+	local_build_cost = 0.05
+	trade_value_modifier = -0.10
+}
+colonizating_malus = {
+	local_colonial_growth = -5
+	local_development_cost = 0.05
+	local_build_cost = 0.05
+}
+colonizating_malus_2 = {
+	local_colonial_growth = -5
+	local_development_cost = 0.05
+	local_build_cost = 0.05
+}
+colonizating_malus_3 = {
+	local_colonial_growth = -5
+	local_development_cost = 0.05
+	local_build_cost = 0.05
+}
+limit_blocker_modifier = {
+	capped_by_forcelimit = yes
+	trade_range_modifier = -0.5
+}
+cheat_engine_modifier = {
+	country_admin_power = 20
+	country_diplomatic_power = 20
+	country_military_power = 20
+	heir_chance = 1.0
+	monarch_admin_power = 3
+	monarch_diplomatic_power = 3
+	monarch_military_power = 3
+	imperial_authority_value = 10.0
+	build_time = -0.9
+	build_cost = -0.9
+	great_project_upgrade_cost = -0.9
+	development_cost = -0.5
+	global_monthly_devastation = -50.0
+	global_prosperity_growth = 50.0
+	inflation_reduction = 50.0
+	prestige = 10.0
+	monthly_splendor = 25.0
+	advisor_pool = 10
+	advisor_cost = -5.0
+	range = 5.0
+	colonists = 20
+	global_colonial_growth = 500.0
+	native_uprising_chance = -2.00
+	idea_cost = -0.9
+	stability_cost_modifier = -5.0
+	culture_conversion_cost = -0.9
+	global_regiment_recruit_speed = -0.9
+	global_regiment_cost = -0.9
+	global_ship_recruit_speed = -0.9
+	global_ship_cost = -0.9
+	manpower_recovery_speed = 500.0
+	sailors_recovery_speed = 500.0	
+	yearly_absolutism = 25.0
+	yearly_corruption = -5.0
+	legitimacy = 25.0
+	devotion = 10.0
+	republican_tradition = 10.0
+	horde_unity = 10.0
+	yearly_government_power = 5.0
+	improve_relation_modifier = 50.0
+	years_of_nationalism = -50.0
+	global_autonomy = -5.0
+	global_unrest = -100.0
+	ae_impact = -10.0
+	unjustified_demands = -5.0
+	province_warscore_cost = -1.0
+	administrative_efficiency = 5.0
+	core_creation = -0.9
+	promote_culture_cost = -0.90
+	global_missionary_strength = 11.0
+	missionaries = 10
+}

@@ -664,4 +664,26 @@ country_decisions = {
 			factor = 0
 		}
 	}
+
+	configuration_bertus_menu = {
+        color = { 166  0  0 }
+		potential = {
+			NOT = {has_global_flag = configuration_bertus_menu_flag}
+		}
+		allow = {
+			ai = no
+		}
+		
+		major = yes
+		effect = {
+			country_event = {
+				id = bertus_limitation_menu.50000
+			}
+			hidden_effect = {
+				set_global_flag = configuration_bertus_menu_flag
+			}
+		}
+		
+		ai_will_do = {factor = 0}
+	}
 }

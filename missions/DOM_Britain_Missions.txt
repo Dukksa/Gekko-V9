@@ -2947,7 +2947,7 @@ ENG_missions_5_1 = {
 		effect = {
 			add_adm_power = 100
 			add_country_modifier = {
-				name = gc_hun_strong_economy
+				name = gc_growing_economy
 				duration = 7300
 			}
 		}
