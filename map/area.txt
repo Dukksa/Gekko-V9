@@ -2036,7 +2036,7 @@ kongo_area = { #5
 }
 
 angola_namibia_area = { #5
-	1098 1167 1172  
+	1098 1167 1171 1172 
 }
 
 cape_of_good_hope_area = { #5
@@ -2283,15 +2283,15 @@ west_bengal_area = { #4
 }
 
 gird_area = { #5 #Gird and Hadoti
-	525 4465
+	525 528 740 4464 4465
 }
 
 baghelkhand_area = { #3
-	2097 4468
+	2097 2098 4468
 }
 
 bundelkhand_area = { #5
-	559 2059 4466 4467
+	559 2059 4459 4466 4467
 }
 
 gondwana_area = { #5
@@ -2455,7 +2455,7 @@ patan_area = { #4
 
 tapti_area = { #3
 	color = { 18 107 18 }
-	517 2036 4430
+	516 517 2036 4430
 }
 
 saurashtra_area = { #5
@@ -2812,7 +2812,7 @@ tunguska_area = { #5
 }
 
 central_siberia_area = { #5
-	1068 1070
+	1064 1067 1068 1070 2430
 }
 
 kara_area = { #5
@@ -2946,7 +2946,7 @@ uliastai_area = {#3
 
 jetysuu_area = { #5
 	color = { 56 37 169 }
-	459 2126 2368
+	459 461 2125 2126 2368
 }
 
 kashgaria_area = { #5 #Just Kashgar & Yarkand
@@ -4096,29 +4096,19 @@ trans_jordan_area = { }
 guatemala_area = { }
 
 X_unused_provinces_area = {
-	516
 	436
-	461
-	528
-	740
 	837 839
 	841 844 847 849
 	851 854
 	891
-	1064 1067
 	1998 1999
-	2098
-	2125
 	2403
-	2430
 	2638
 	2640 2649 
 	2653 2657 
 	2873
 	4166
 	4336
-	4459
-	4464
 	4576
 	4580
 	4606 
@@ -4239,5 +4229,5 @@ X_unused_provinces_area = {
 	6230 6231 6232 6233 6234 6235 6236 6237 6238 6239
 	6240 6241 6242 6243 6244 6245 6246 6247 6248 6249
 	6250 6251 6252 6253 6254
-	4959 4973 4975 1171
+	4959 4973 4975
 }
