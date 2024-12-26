@@ -1,12 +1,12 @@
 #1199 - Bagamoyo
 
-
-culture = swahili
-religion = shamanism #Fetishism
-capital = "Bagamayo"
 owner = ZAN
 controller = ZAN
 add_core = ZAN
+culture = swahili
+religion = shamanism #Fetishism
+capital = "Bagamayo"
+is_city = yes
 base_manpower = 1
 trade_goods = ivory
 hre = no

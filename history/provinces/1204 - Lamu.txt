@@ -1,16 +1,17 @@
 #1204 - Lamu
 
+owner = MLI
+controller = MLI
+add_core = MLI
 culture = swahili
 religion = sunni
 capital = "Lamu"
-owner = ZAN
-controller = ZAN
-add_core = ZAN
+is_city = yes
 base_manpower = 1
 trade_goods = ivory
 hre = no
-base_tax = 1
-base_production = 1
+base_tax = 3 
+base_production = 3
 add_local_autonomy = 35
 discovered_by = east_african
 discovered_by = indian

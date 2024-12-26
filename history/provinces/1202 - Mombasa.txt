@@ -1,24 +1,24 @@
 #1202 - Mombasa
 
-
+owner = MBA
+controller = MBA
+add_core = MBA
 culture = swahili
 religion = sunni
 capital = "Mombasa"
-owner = ZAN
-controller = ZAN
-add_core = ZAN
-base_manpower = 1
+is_city = yes
+base_manpower = 2
 trade_goods = ivory
 hre = no
-base_tax = 1
-base_production = 1
+base_tax = 5
+base_production = 5
 discovered_by = east_african
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = central_african
 extra_cost = 16
-center_of_trade = 1
+center_of_trade = 2
 
 1498.4.7 = { discovered_by = POR } # Vasco Da Gama
 1498.4.12 = { unrest = 3 } # Portuguese bombard Mombasa

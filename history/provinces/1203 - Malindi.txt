@@ -1,16 +1,17 @@
 #1203 - Malindi
 
+owner = MLI
+controller = MLI
+add_core = MLI
 culture = swahili
 religion = sunni
 capital = "Malindi"
-owner = ZAN
-controller = ZAN
-add_core = ZAN
-base_manpower = 1
+is_city = yes
+base_manpower = 2
 trade_goods = iron
 hre = no
-base_tax = 1
-base_production = 1
+base_tax = 4
+base_production = 4
 discovered_by = east_african
 discovered_by = indian
 discovered_by = muslim
