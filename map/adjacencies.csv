@@ -1,11 +1,12 @@
 From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
-1033;1031;sea;4225;-1;-1;-1;-1;Sakhalin-Peni'un'kur
-1034;1032;sea;1441;-1;-1;-1;-1;Kamchatka-Kurils 
-2154;1829;sea;1372;-1;-1;-1;-1;Xiamen-Kelang 
+4024;1103;sea;1454;-1;-1;-1;-1;Maroantsetra-Ile-Bourbon
+1103;1102;sea;1455;-1;-1;-1;-1;Ile-Bourbon-Mauritus
+1102;1101;sea;1455;-1;-1;-1;-1;Mauritus-Hollhavai
+1101;1248;sea;1621;-1;-1;-1;-1;Hollhavai-Maldives
+1248;4410;sea;1340;-1;-1;-1;-1;Maldives-Venad
 4022;4020;sea;1449;-1;-1;-1;-1;Iboina-Comoros 
 4049;4020;sea;1449;-1;-1;-1;-1;Comoros-Ibo
-2788;1099;sea;1446;-1;-1;-1;-1;Hafun-Suqutra
-366;347;sea;1471;-1;-1;-1;-1;Gran Canaria-Ifni
+
 321;2302;sea;1317;-1;-1;-1;-1;Cyprus-Icel
 321;378;sea;1317;-1;-1;-1;-1;Cyprus-Trablos
 320;319;sea;1319;-1;-1;-1;-1;Rhodes-Mentesha 
@@ -19,8 +20,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 6126;4174;sea;1310;-1;-1;-1;-1;Otranto-Durazzo
 320;163;sea;1319;-1;-1;-1;-1;Rhodes-Crete 
 
-235;87;sea;1271;-1;-1;-1;-1;Kent-Calais
-235;168;sea;1271;-1;-1;-1;-1;Kent-Rouen
 4624;2652;sea;1512;-1;-1;-1;-1;Guane-Ecab
 484;2536;sea;1505;-1;-1;-1;-1;Havana-Mayaimi
 982;981;sea;1491;-1;-1;-1;-1;Unamakik-Taqamkuk  
@@ -34,29 +33,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 492;4621;sea;1526;-1;-1;-1;-1;Boriken-Higuey 
 483;2654;sea;1524;-1;-1;-1;-1;Baracoa-Turks Islands 
 2654;489;sea;1516;-1;-1;-1;-1;Baracoa-Tortuga 
-2684;2683;sea;1351;-1;-1;-1;-1;Nias-Mentawai 
-2678;2679;sea;1360;-1;-1;-1;-1;Bangka-Belitung 
-2679;4802;sea;1360;-1;-1;-1;-1;Pontianak-Belitung
-2679;2706;sea;1360;-1;-1;-1;-1;Pontianak-Katapang
-2710;2714;sea;1359;-1;-1;-1;-1;Berau-Palu 
-2703;651;sea;1398;-1;-1;-1;-1;Lehad Datu-Sulu
-624;623;sea;1352;-1;-1;-1;-1;Banten-Tulungbewang 
-635;634;sea;1356;-1;-1;-1;-1;West Timor-Sumba 
-2696;2695;sea;1401;-1;-1;-1;-1;East Timor-Yamdena 
-2696;2725;sea;1409;-1;-1;-1;-1;Yamdena-Aru 
-2725;2724;sea;1409;-1;-1;-1;-1;Aru-Asmat 
-2722;2730;sea;1410;-1;-1;-1;-1;Daru-Awngthim 
-647;2718;sea;1409;-1;-1;-1;-1;FakFak-Ceram 
-645;647;sea;1401;-1;-1;-1;-1;Buru-Ceram 
-645;2717;sea;1399;-1;-1;-1;-1;Buru-Sula 
-2717;643;sea;1399;-1;-1;-1;-1;Sula-Poso 
-2714;4799;sea;1359;-1;-1;-1;-1;Palu-Sangkulirang 
-648;1245;sea;1400;-1;-1;-1;-1;Manokwari-Halmahera 
-651;4354;sea;1398;-1;-1;-1;-1;Zamboanga-Sulu 
-4350;656;sea;1395;-1;-1;-1;-1;Manila-Mindoro 
-5528;666;sea;1370;-1;-1;-1;-1;Zhanhjing-Kiungchow China
-1017;4651;sea;1376;-1;-1;-1;-1;Suo-Tsushima Korea-Japan
-2745;4651;sea;1376;-1;-1;-1;-1;Gyeongju-Tsushima Korea-Japan
+
+234;4385;sea;1272;-1;-1;-1;-1;Hampshire-Contentin
 247;4365;sea;1284;-1;-1;-1;-1;Cumbria-Mann
 333;4559;sea;1300;-1;-1;-1;-1;Majorca-Minorca
 2986;2455;sea;1302;-1;-1;-1;-1;Cagliari-Bizerte
@@ -65,18 +43,18 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 4560;333;sea;1295;-1;-1;-1;-1;Ibiza-Majorca
 6192;4560;sea;1295;-1;-1;-1;-1;Alicante-Ibiza
 366;4565;sea;1471;-1;-1;-1;-1;Canaries
-12;14;sea;1258;2980;1631;2975;1631;Sjaelland-Fyn
+12;14;sea;;2980;1631;2975;1631;Sjaelland-Fyn
 14;4142;sea;1258;2965;1635;2963;1641;Fyn-Aarhus
-14;4149;sea;1258;-1;-1;-1;-1;Fyn-Kolding
+14;4149;sea;;-1;-1;-1;-1;Fyn-Kolding
 14;1983;sea;1258;2975;1618;2978;1619;Fyn-Lolland
 12;1983;sea;1258;2983;1619;2986;1626;Sjaelland-Lolland
 123;124;sea;1307;3050;1286;3045;1284;Calabria-Messina
-151;316;sea;1320;3261;1343;3258;1344;Thrace-Bithynia
+151;316;sea;;3261;1343;3258;1344;Thrace-Bithynia
 911;945;sea;1662;1479;1656;1478;1650;Menominee-Michigan
-1;1930;sea;1928;3099;1736;3111;1740;Stockholm-�land
+1;1930;sea;1928;3099;1736;3111;1740;Stockholm-Åland
 4165;1981;sea;1257;-1;-1;-1;-1;G�inge-Bornholm
 3;25;sea;1255;-1;-1;-1;-1;Kalmar-Gotland
-1930;27;sea;1253;3131;1745;3140;1750;�land-Finland
+1930;27;sea;1253;3131;1745;3140;1750;Åland-Finland
 142;144;sea;1311;3115;1314;3121;1317;Janina-Corfu
 4699;1773;sea;1312;3141;1293;3141;1289;Janina-Achaea
 146;164;sea;1319;3180;1288;3185;1282;Athens-Naxos
@@ -100,11 +78,11 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 4891;983;sea;1491;1824;1654;1825;1658;Piktuk-Epagoitgnag
 997;981;sea;1493;1935;1781;1939;1773;Chisedek-Taqamkuk
 1050;4658;sea;1379;5014;1562;5017;1564;Deren-Nanghaer
-1215;387;sea;1330;3482;849;3484;853;Tajura-Mocha
+
 112;1774;sea;1308;2995;1432;2994;1434;Venice-Treviso
 54;4141;sea;1268;2945;1599;2943;1597;Stade-Dithmarschen
 1820;1021;sea;1391;4912;1219;4919;1223;Awa-Settsu
-5668;4193;sea;1387;4999;1357;5005;1351;Oshima-Mutsu -> Oshima-Aomori
+4131;4193;sea;1387;4999;1357;5005;1351;Oshima-Mutsu
 1032;1852;sea;4225;5099;1408;5073;1386;Kurils-Tokachi
 1199;1201;sea;1448;-1;-1;-1;-1;Bagamoyo-Zanzibar
 5781;127;sea;1298;-1;-1;-1;-1;Corte-Sardinia
@@ -152,20 +130,20 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 5004;6;sea;;-1;-1;-1;-1;Skane-Copenhagen
 6000;2447;sea;1324;-1;-1;-1;-1;Kerch-Matrika
 28;36;sea;1254;-1;-1;-1;-1;Nyland-Reval
-###XMP###
-147;3003;sea;1319;-1;-1;-1;-1;Salonica-Euboea #XMP
-145;6121;sea;1319;-1;-1;-1;-1;Morea-XMP Chania #XMP
-4779;6123;sea;1319;-1;-1;-1;-1;Gallipoli-XMP Lemnos #XMP
-6120;3003;sea;1319;-1;-1;-1;-1;XMP Boeotia-Euboea #XMP
-6122;318;sea;1319;-1;-1;-1;-1;XMP Samos-Sugla #XMP
-6122;164;sea;1319;-1;-1;-1;-1;XMP Samos-Naxos #XMP
-6121;164;sea;1319;-1;-1;-1;-1;XMP Chania-Naxos #XMP
-6122;320;sea;1319;-1;-1;-1;-1;XMP Samos-Rhodes #XMP
-6122;2348;sea;1319;-1;-1;-1;-1;XMP Samos-Chios #XMP
-2348;4700;sea;1319;-1;-1;-1;-1;XMP Chios-Lesbos #XMP
-6122;164;sea;1319;-1;-1;-1;-1;XMP Samos-Naxos #XMP
-164;320;sea;1319;-1;-1;-1;-1;Naxos-Rhodes #XMP
-4700;6123;sea;1319;-1;-1;-1;-1;Lesbos-XMP Lemnos #XMP
-#146;3003;sea;1319;3174;1294;3175;1294;Athens - Euboea #XMP removed
+###X###
+147;3003;sea;1319;-1;-1;-1;-1;Salonica-Euboea
+145;6121;sea;1319;-1;-1;-1;-1;Morea-Chania
+4779;6123;sea;1319;-1;-1;-1;-1;Gallipoli-Lemnos
+6120;3003;sea;1319;-1;-1;-1;-1;Boeotia-Euboea
+6122;318;sea;1319;-1;-1;-1;-1;Samos-Sugla
+6122;164;sea;1319;-1;-1;-1;-1;Samos-Naxos
+6121;164;sea;1319;-1;-1;-1;-1;Chania-Naxos
+6122;320;sea;1319;-1;-1;-1;-1;Samos-Rhodes
+6122;2348;sea;1319;-1;-1;-1;-1;Samos-Chios
+2348;4700;sea;1319;-1;-1;-1;-1;Chios-Lesbos
+6122;164;sea;1319;-1;-1;-1;-1;Samos-Naxos
+164;320;sea;1319;-1;-1;-1;-1;Naxos-Rhodes
+4700;6123;sea;1319;-1;-1;-1;-1;Lesbos-Lemnos
+#146;3003;sea;1319;3174;1294;3175;1294;Athens - Euboea
 #########
 -1;-1;;-1;-1;-1;-1;-1;-1;
