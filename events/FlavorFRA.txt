@@ -673,12 +673,12 @@ country_event = {
 	
 	trigger = {
 		OR = { 
+			mission_completed = fra_develop_trade
 			AND = { 
 				tag = FRA
 				is_year = 1649
 				NOT = { is_year = 1683 }
 			}
-			mission_completed = fra_develop_trade
 		}
 	}
 	

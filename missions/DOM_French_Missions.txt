@@ -1217,7 +1217,14 @@ french_missions_1_Continuation_a = {
 					clr_country_flag = FRA_supports_protestant_majority
 				}
 				else_if = { 	
-					limit = { has_country_flag = FRA_supports_catholic_majority }
+					limit = { has_country_flag = supports_french_moderates }
+					add_country_modifier = { 
+						name = fra_moderate_path_modifier
+						duration = -1 
+					}
+					clr_country_flag = supports_french_moderates
+				}
+				else = {
 					add_country_modifier = {
 						name = fra_catholic_supremacy_modifier
 						duration = -1
@@ -1227,13 +1234,6 @@ french_missions_1_Continuation_a = {
 						religion = ROOT 
 					}
 					clr_country_flag = FRA_supports_catholic_majority
-				}
-				else = {
-					add_country_modifier = { 
-						name = fra_moderate_path_modifier
-						duration = -1 
-					}
-					clr_country_flag = supports_french_moderates
 				}
 			}
 		}
@@ -3226,12 +3226,12 @@ french_missions_3_normal_continued = {
 			custom_tooltip = fra_merc_per_province_tt
 			if = { 
 				limit = { 
-					1269 = { highest_value_trade_node = yes }
+					96 = { highest_value_trade_node = yes }
 				}
 				hidden_effect = { 
 					every_owned_province = {
 						limit = { 
-							same_trade_node_as = 1269
+							same_trade_node_as = 96
 							province_has_center_of_trade_of_level = 1 
 						}
 						owner = { add_mercantilism = 1 }
@@ -3984,7 +3984,6 @@ french_missions_4_crusader_kings = {
 		provinces_to_highlight = { 
 			OR = { 
 				area = palestine_area 
-				area = trans_jordan_area 
 				area = syria_area 
 				area = aleppo_area 
 			}
@@ -3996,11 +3995,6 @@ french_missions_4_crusader_kings = {
 		trigger = { 
 			not_in_mission_preview_mode = { key = FRA }
 			palestine_area = { 
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT 
-				religion = catholic 
-			}
-			trans_jordan_area = { 
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT 
 				religion = catholic 
