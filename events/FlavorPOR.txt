@@ -1113,6 +1113,8 @@ country_event = {
 			}
 		}
 		add_prestige = 10
+		1248 = { cede_province = POR }
+		add_claim = 1248
 	}
 	option = {		# Glorious!
 		name = "flavor_por.EVTOPTB11"
@@ -1125,6 +1127,7 @@ country_event = {
 		}
 		ai_chance = { factor = 10 }
 		add_prestige = 10
+		1248 = { add_core = POR }
 	}
 }
 
