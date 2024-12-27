@@ -16,7 +16,6 @@ discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 8
-center_of_trade = 1
 
 
 1556.4.19 = { religion = protestant } # Ottheinrich converts the country to Calvinism
