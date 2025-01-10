@@ -7345,22 +7345,6 @@ thai_group = {
 			"Ch�u" "Nang Keo Phimpha" "Manora" "Souphutta" "Anousa" "Nokasat"
 		}	
 	}
-	shan = {
-		primary = SST
-		dynasty_names = { 
-			Bamaw Kale Ava Kengtung Yawnghwe "Mong Pawn" "Mong Mit" "Mong Kawng" Hsipaw Hsenwi "Mong Pai"
-		}
-		male_names = {
-			"Thadominbya" "Nga Nu" "Swasawke" "Tarabya" "Nga Nauk Hsan" "Minkhaung" "Thihathu" "Minhlange" 
-			"Kale Kyetaungnyo" "Minyekyawswa" "Narapati" "Thihathura" "Shwenankyawshin" "Thohanbwa" "Hkonmaing" 
-			"Mobye Narapati" "Sao Sit Pan Tu" "Sao Ai Awn" "Ai Wu Hsa" "Yi Hkam Hka" "Sao Hsam" "Sao Kham Mu" 
-			"Hpaya Kiao" "Sao Mong Hka" "Sao Hkam Tao" "Sao Mong Hkak" "Sao On" "Sao In Hkam" "Sao Awk" "Sao Mong Saik" 
-			"Sao Hsam Hpi" "Maung Nyo" "Sao Mong Sin" "Sao Mong Hsam" "Sao Kawng Tai" "Sao Maha Hkanan"
-		}
-		female_names = {
-			"Thou Umma" "Thin Bohme"
-		}
-	}
 	zhuang = {
 		primary = CGS
 		dynasty_names = { 
@@ -7394,6 +7378,22 @@ burman = {
 		}
 		female_names = {
 			"Yaza Dewi" "Atula Thiri" "Khin Myo Sit" "Khin Myat Hset" "Khin Ma Lat"
+		}
+	}
+	shan = {
+		primary = SST
+		dynasty_names = { 
+			Bamaw Kale Ava Kengtung Yawnghwe "Mong Pawn" "Mong Mit" "Mong Kawng" Hsipaw Hsenwi "Mong Pai"
+		}
+		male_names = {
+			"Thadominbya" "Nga Nu" "Swasawke" "Tarabya" "Nga Nauk Hsan" "Minkhaung" "Thihathu" "Minhlange" 
+			"Kale Kyetaungnyo" "Minyekyawswa" "Narapati" "Thihathura" "Shwenankyawshin" "Thohanbwa" "Hkonmaing" 
+			"Mobye Narapati" "Sao Sit Pan Tu" "Sao Ai Awn" "Ai Wu Hsa" "Yi Hkam Hka" "Sao Hsam" "Sao Kham Mu" 
+			"Hpaya Kiao" "Sao Mong Hka" "Sao Hkam Tao" "Sao Mong Hkak" "Sao On" "Sao In Hkam" "Sao Awk" "Sao Mong Saik" 
+			"Sao Hsam Hpi" "Maung Nyo" "Sao Mong Sin" "Sao Mong Hsam" "Sao Kawng Tai" "Sao Maha Hkanan"
+		}
+		female_names = {
+			"Thou Umma" "Thin Bohme"
 		}
 	}
 	mon = {
@@ -7811,6 +7811,46 @@ eastern_aryan = {
 			"Mangaldahi" "Sati Joymati" "Kuranganayani"
 			Ahiavadevi Bhogavati Dattadevi Devavati Durlabha Gandharavati Kuladevi Nayanadevi
 			Ratnavati Suvrata Syamadevi Vasumati Vijnanavati Vijnayavati Yajiyavati Yajnavati
+		}
+	}
+	gondi = {
+		primary = GDW
+		dynasty_names = {
+			"Chanda" "Raj Gondi" "Kherli" "Deogadhi" "Ballar Sahi" "Haihaya" "Gadhi"
+		}
+		male_names = {
+			"Narsingh Rai" "Arjuna Simha" "Sangrama Simha" "Daipat Simha" "Vir Narayana" "Chandra Sahi" "Hirde" 
+			"Madhukara Sahi" "Dhundya Ram Sah" "Krasna Sah" "Bir Sah" "Hiradi" "Ram Sah" "Nilkanth Sah" "Chanda" "Bahkt Buland" "Bhuma" "Lokba" "Babji" "Dhundya" "Kondya" "Ram" "Krasna"
+		}
+		female_names = {
+			"Durgavati" "Hirai" "Ratna Kuvar"
+		}
+	}
+	garjati = {
+		primary = GRJ
+		dynasty_names = {
+			"Nagavamsi" "Sankara" "Bhuyavamsha" "Gangabansi" "Bhanja" "Karan" "Keshari" "Suryavanshi" "Baghal"
+		}
+		male_names = {
+			"Haria" "Jugasai" "Pratapnayan" "Harirudra" "Anku" "Raghunath" "Biswambhar" "Raisingh" "Dusmant" 
+			"Pratap Deo" "Padman" "Khadag Rai" "Yuvaraj" "Birabar" "Harichandra" "Gopinath" "Raghuraj" "Haria" 
+			"Bishwanath" 
+			"Rai" "Sunder" "Krishna" "Barman" "Biwarta" "Jagannath" "Narayana" "Bebarta" "Chandra" "Damodar" "Jadunath" 
+			"Pradeep"
+		}
+		female_names = {
+			"Giriraj" "Suratarangini Devi" "Malavika Devi"
+		}
+	}
+	jharkhandi = {
+		primary = NGP
+		dynasty_names = { "Porohat" "Nagavamsi" "Raksel" "Munda" "Ho" "Bhuiyan" }
+		male_names = {
+			"Maharato" "Madhu Singh" "Durjan Sal" "Anant" "Medini" "Pratap" "Narendra Rudra" "Jaswant Singh" 
+			"Bahadur Singh" "Sheo Singh" "Ajit Singh" "Balbhadra Singh"
+		}
+		female_names = {
+			"Durgavati" "Hirai" "Ratna Kuvar"
 		}
 	}
 	bengali = {
@@ -8618,45 +8658,13 @@ dravidian = {
 
 central_indic = {
 	graphical_culture = indiangfx
+	z = {
 
-	gondi = {
-		primary = GDW
-		dynasty_names = {
-			"Chanda" "Raj Gondi" "Kherli" "Deogadhi" "Ballar Sahi" "Haihaya" "Gadhi"
+		dynasty_names = { z
 		}
-		male_names = {
-			"Narsingh Rai" "Arjuna Simha" "Sangrama Simha" "Daipat Simha" "Vir Narayana" "Chandra Sahi" "Hirde" 
-			"Madhukara Sahi" "Dhundya Ram Sah" "Krasna Sah" "Bir Sah" "Hiradi" "Ram Sah" "Nilkanth Sah" "Chanda" "Bahkt Buland" "Bhuma" "Lokba" "Babji" "Dhundya" "Kondya" "Ram" "Krasna"
+		male_names= { z
 		}
-		female_names = {
-			"Durgavati" "Hirai" "Ratna Kuvar"
-		}
-	}
-	garjati = {
-		primary = GRJ
-		dynasty_names = {
-			"Nagavamsi" "Sankara" "Bhuyavamsha" "Gangabansi" "Bhanja" "Karan" "Keshari" "Suryavanshi" "Baghal"
-		}
-		male_names = {
-			"Haria" "Jugasai" "Pratapnayan" "Harirudra" "Anku" "Raghunath" "Biswambhar" "Raisingh" "Dusmant" 
-			"Pratap Deo" "Padman" "Khadag Rai" "Yuvaraj" "Birabar" "Harichandra" "Gopinath" "Raghuraj" "Haria" 
-			"Bishwanath" 
-			"Rai" "Sunder" "Krishna" "Barman" "Biwarta" "Jagannath" "Narayana" "Bebarta" "Chandra" "Damodar" "Jadunath" 
-			"Pradeep"
-		}
-		female_names = {
-			"Giriraj" "Suratarangini Devi" "Malavika Devi"
-		}
-	}
-	jharkhandi = {
-		primary = NGP
-		dynasty_names = { "Porohat" "Nagavamsi" "Raksel" "Munda" "Ho" "Bhuiyan" }
-		male_names = {
-			"Maharato" "Madhu Singh" "Durjan Sal" "Anant" "Medini" "Pratap" "Narendra Rudra" "Jaswant Singh" 
-			"Bahadur Singh" "Sheo Singh" "Ajit Singh" "Balbhadra Singh"
-		}
-		female_names = {
-			"Durgavati" "Hirai" "Ratna Kuvar"
+		female_names = { z
 		}
 	}
 	female_names = {
