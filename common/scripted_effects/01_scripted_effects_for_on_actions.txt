@@ -882,16 +882,6 @@ crimean_succession_effect = {
 }
 
 slesvig_question_effect = {
-	if = {
-		limit = {
-			tag = SHL
-			NOT = { has_global_flag = death_of_adolf_of_slesvig } #
-			is_subject_of = DAN
-			SHL = {ai = yes}
-		}
-		DAN = { country_event = { id = flavor_dan.4 } } # Death of Adolf VIII
-		set_global_flag = death_of_adolf_of_slesvig
-	}
 }
 
 succession_culture_religion_effect = {
@@ -4267,32 +4257,6 @@ on_startup_dlc_cleanup_effect = {
 			ai_event_id = flavor_boh.14
 		}
 	}
-    if = {
-        limit = {
-            tag = HSN
-            has_dlc = "Winds of Change"
-			not_in_mission_preview_mode = { key = HSN }
-			NOT = {
-				mission_completed = hsn_fate_of_anatolia
-			}
-        }
-        enable_branching_mission_review_without_ai = {
-            key = HSN
-        }
-    }
-    if = {
-        limit = {
-            tag = HSN
-            has_dlc = "Winds of Change"
-			not_in_mission_preview_mode = { key = HSN2 }
-			NOT = {
-				mission_completed = hsn_sultan_shah
-			}
-        }
-        enable_branching_mission_review_without_ai = {
-            key = HSN2
-        }
-    }
 }
 
 on_dependency_gained_effect = {
