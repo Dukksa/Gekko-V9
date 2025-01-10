@@ -496,27 +496,27 @@ estate_burghers_indebted_to_burghers = {
 		}
 		hidden_effect = {
 			add_loan = {
-				fixed_interest = 1
+				fixed_interest = 2.5
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 1
+				fixed_interest = 2.5
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 1
+				fixed_interest = 2.5
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 1
+				fixed_interest = 2.5
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 1
+				fixed_interest = 2.5
 				duration = 60
 				estate_loan = yes
 			}
@@ -525,12 +525,12 @@ estate_burghers_indebted_to_burghers = {
 					has_country_flag = BYZ_buff_burgher_loans_flag
 				}
 				add_loan = {
-					fixed_interest = 1
+					fixed_interest = 2.5
 					duration = 60
 					estate_loan = yes
 				}
 				add_loan = {
-					fixed_interest = 1
+					fixed_interest = 2.5
 					duration = 60
 					estate_loan = yes
 				}
