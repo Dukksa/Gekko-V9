@@ -155,6 +155,7 @@ estate_maratha = {
 		estate_maratha_loyalty_privilege
 		estate_maratha_levies
 		estate_maratha_levies_for_muslims
+		estate_nobles_right_of_counsel
 		estate_maratha_monopoly_of_metals
 		estate_maratha_monopoly_of_livestock
 		estate_maratha_monopoly_of_gems
@@ -165,6 +166,7 @@ estate_maratha = {
 		estate_maratha_royal_court_tasks
 		estate_maratha_noble_promotion
 		estate_maratha_force_conscription
+		estate_nobles_noble_officer_right
 	}
 	
 	agendas = {
