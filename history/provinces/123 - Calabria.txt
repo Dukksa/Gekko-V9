@@ -12,6 +12,7 @@ base_manpower = 2
 capital = "Reggio di Calabria"
 is_city = yes 
 add_core = NAP
+center_of_trade = 1
 
 
 

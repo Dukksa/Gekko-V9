@@ -1008,6 +1008,20 @@ sicily_mission_4 = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
+				add_core = ROOT
+			}
+			apulia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			naples_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			add_yearly_sailors = 1
@@ -1061,13 +1075,6 @@ sicily_mission_4 = {
 			}
 		}
 		effect = {
-			apulia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			calabria_area = {
 				add_province_modifier = {
 					name = sic_calabrian_oil
