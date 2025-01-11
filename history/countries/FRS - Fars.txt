@@ -21,7 +21,7 @@ historical_rival = CHG
 add_sailors = 5000
 
 
-1427.9.11 = { leader = {	name = "Dukksa da Great"   	type = general	fire = 2	shock = 6	manuever = 3	siege = 3 } }
+1444.9.11 = { leader = {	name = "Dukksa da Great"   	type = general	fire = 2	shock = 6	manuever = 3	siege = 3 } }
 
 1442.1.1 = { #New Regent, taking over from Shaykh Muhibb al-Din Abu'l Khayr
 	religion = shiite

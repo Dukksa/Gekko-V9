@@ -70,7 +70,7 @@ gc_morocco_1 = {
 	}
 	gc_mor_saharan_route = {
 		icon = mission_saharan_route
-		required_missions = { gc_mor_imperial_cities }
+		required_missions = {}
 		
 		provinces_to_highlight = {
 			OR = {

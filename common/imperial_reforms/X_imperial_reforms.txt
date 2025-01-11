@@ -220,18 +220,59 @@ X_CRI_reform_8 = {
 					limit = { owns = 466 }
 					set_capital = 466
 				}
-				if = {
-					limit = { NOT = { government_rank = 3 } }
-					set_government_rank = 3
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			change_government_to_monarchy = yes
+			if = {
+				limit = {
+					has_custom_ideas = no
 				}
-				country_event = { id = ideagroups.1 }
-				every_province = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = PREV }
-						culture_group = tartar
-					}
-					add_permanent_claim = PREV
-				}
+				set_country_flag = formed_golden_horde_flag
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			crimea_region = {
+				add_permanent_claim = GLH
+			}
+			nogai_area = {
+				add_permanent_claim = GLH
+			}
+			lower_yik_area = {
+				add_permanent_claim = GLH
+			}
+			bashkiria_area = {
+				add_permanent_claim = GLH
+			}
+			kazan_area = {
+				add_permanent_claim = GLH
+			}
+			samara_area = {
+				add_permanent_claim = GLH
+			}
+			ural_area = {
+				add_permanent_claim = GLH
+			}
+			ishim_area = {
+				add_permanent_claim = GLH
+			}
+			yrtesh_area = {
+				add_permanent_claim = GLH
+			}
+			ob_area = {
+				add_permanent_claim = GLH
+			}
+			kazakhstan_area = {
+				add_permanent_claim = GLH
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
 			}
 		}
 	}
