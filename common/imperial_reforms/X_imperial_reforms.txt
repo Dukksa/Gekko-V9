@@ -1,5 +1,8 @@
 X_CRI_reform_1 = {
 	empire = celestial_empire
+	trigger = {
+		
+	}
 	emperor = {
 		meritocracy = 0.5
 		imperial_mandate = 0.1
@@ -24,6 +27,9 @@ X_CRI_reform_1 = {
 
 X_CRI_reform_2 = {
 	empire = celestial_empire
+	trigger = {
+		empire_of_china_reform_passed = X_CRI_reform_1
+	}
 	emperor = {
 		stability_cost_modifier = -0.2
 		monarch_admin_power = 1
@@ -50,6 +56,9 @@ X_CRI_reform_2 = {
 
 X_CRI_reform_3 = {
 	empire = celestial_empire
+	trigger = {
+		empire_of_china_reform_passed = X_CRI_reform_2
+	}
 	on_effect = {
 		custom_tooltip = X_CRI_reform_3_tt
 		hidden_effect = {
@@ -86,6 +95,9 @@ X_CRI_reform_3 = {
 
 X_CRI_reform_4 = {
 	empire = celestial_empire
+	trigger = {
+		empire_of_china_reform_passed = X_CRI_reform_3
+	}
 	emperor = {
 		merchants = 1
 		trade_efficiency = 0.1
@@ -111,6 +123,9 @@ X_CRI_reform_4 = {
 
 X_CRI_reform_5 = {
 	empire = celestial_empire
+	trigger = {
+		empire_of_china_reform_passed = X_CRI_reform_4
+	}
 	emperor = {
 		state_maintenance_modifier = -0.25
 		nomadic_tribes_loyalty_modifier = 0.05
@@ -135,6 +150,9 @@ X_CRI_reform_5 = {
 
 X_CRI_reform_6 = {
 	empire = celestial_empire
+	trigger = {
+		empire_of_china_reform_passed = X_CRI_reform_5
+	}
 	emperor = {
 		adm_advisor_cost = -0.1
 		church_loyalty_modifier = 0.05
@@ -175,6 +193,9 @@ X_CRI_reform_6 = {
 
 X_CRI_reform_7 = {
 	empire = celestial_empire
+	trigger = {
+		empire_of_china_reform_passed = X_CRI_reform_6
+	}
 	emperor = {
 		interest = -0.5
 		dhimmi_loyalty_modifier = 0.05
@@ -200,6 +221,9 @@ X_CRI_reform_7 = {
 
 X_CRI_reform_8 = {
 	empire = celestial_empire
+	trigger = {
+		empire_of_china_reform_passed = X_CRI_reform_7
+	}
 	emperor = {
 		years_of_nationalism = -5
 		manpower_in_own_culture_provinces = 0.2
@@ -227,7 +251,7 @@ X_CRI_reform_8 = {
 				limit = { NOT = { government_rank = 3 } }
 				set_government_rank = 3
 			}
-			change_government_to_monarchy = yes
+			
 			if = {
 				limit = {
 					has_custom_ideas = no
@@ -235,46 +259,47 @@ X_CRI_reform_8 = {
 				set_country_flag = formed_golden_horde_flag
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			crimea_region = {
-				add_permanent_claim = GLH
-			}
-			nogai_area = {
-				add_permanent_claim = GLH
-			}
-			lower_yik_area = {
-				add_permanent_claim = GLH
-			}
-			bashkiria_area = {
-				add_permanent_claim = GLH
-			}
-			kazan_area = {
-				add_permanent_claim = GLH
-			}
-			samara_area = {
-				add_permanent_claim = GLH
-			}
-			ural_area = {
-				add_permanent_claim = GLH
-			}
-			ishim_area = {
-				add_permanent_claim = GLH
-			}
-			yrtesh_area = {
-				add_permanent_claim = GLH
-			}
-			ob_area = {
-				add_permanent_claim = GLH
-			}
-			kazakhstan_area = {
-				add_permanent_claim = GLH
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+				crimea_region = {
+					add_permanent_claim = GLH
+				}
+				nogai_area = {
+					add_permanent_claim = GLH
+				}
+				lower_yik_area = {
+					add_permanent_claim = GLH
+				}
+				bashkiria_area = {
+					add_permanent_claim = GLH
+				}
+				kazan_area = {
+					add_permanent_claim = GLH
+				}
+				samara_area = {
+					add_permanent_claim = GLH
+				}
+				ural_area = {
+					add_permanent_claim = GLH
+				}
+				ishim_area = {
+					add_permanent_claim = GLH
+				}
+				yrtesh_area = {
+					add_permanent_claim = GLH
+				}
+				ob_area = {
+					add_permanent_claim = GLH
+				}
+				kazakhstan_area = {
+					add_permanent_claim = GLH
+				}
 			}
 		}
+		change_government_to_monarchy = yes
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		add_prestige = 25
 	}
 	off_effect = {
 		hidden_effect = {
