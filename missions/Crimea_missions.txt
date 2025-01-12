@@ -190,7 +190,7 @@ X_CRI_slot_2 = {
 				amount = 8
 			}
 			estate_loyalty = {
-				estate = estate_burghers
+				estate = estate_nomadic_tribes
 				loyalty = 60
 			}
 		}
@@ -201,11 +201,11 @@ X_CRI_slot_2 = {
 				change_trade_goods = slaves
 			}
 			add_estate_loyalty = {
-				estate = estate_burghers
+				estate = estate_nomadic_tribes
 				loyalty = 10
 			}
 			change_estate_land_share = {
-				estate = estate_burghers
+				estate = estate_nomadic_tribes
 				share = -10
 			}
 		}
