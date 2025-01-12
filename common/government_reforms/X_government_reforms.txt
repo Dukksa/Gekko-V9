@@ -7,7 +7,7 @@ X_CRI_great_tatar_state_reform = {
 			have_had_reform = X_CRI_great_tatar_state_reform
 		}
 	}
-	
+	nomad = yes
 	allow_normal_conversion = no
 	maintain_dynasty = yes
 	allow_force_tributary = no
