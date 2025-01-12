@@ -5814,10 +5814,8 @@ estate_action_CONTRIBUTE_WARRIORS_NOMADIC_TRIBES = {
 	
 	add_yearly_manpower = 2
 	estate_action_scaling_modifier = {
-	#estate = estate_nomadic_tribes
-	#	name = CONTRIBUTE_WARRIORS_NOMADIC_TRIBES
-	#	duration = 10950
-	#}
+		
+	}
 	add_estate_loyalty = {
 		estate = estate_nomadic_tribes
 		loyalty = -15
