@@ -736,6 +736,7 @@ estate_church_clerical_oversight = {
 	penalties = {
 	}
 	benefits = {
+		monthly_splendor = 3
 	}
 	conditional_modifier = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
@@ -751,9 +752,6 @@ estate_church_clerical_oversight = {
 			factor = 0
 			is_absolutism_active = yes
 		}
-	}
-	modifier = {
-		monthly_splendor = 3
 	}
 }	
 
@@ -1521,12 +1519,6 @@ estate_church_brahmins_at_court = {
 			}
 			mission_completed = mnd_khm_religion
 		}
-		else_if = {
-			limit = {
-				has_mission = mnd_khm_religion
-			}
-			mission_completed = mnd_siam_devaraja
-		}
 		else = {
 			has_estate_privilege = estate_church_brahmins_at_court
 		}
@@ -1536,7 +1528,6 @@ estate_church_brahmins_at_court = {
 		religion_group = eastern
 		OR = {
 			has_mission = mnd_khm_religion
-			has_mission = mnd_siam_devaraja
 			has_estate_privilege = estate_church_brahmins_at_court
 		}
 	}
@@ -2328,10 +2319,6 @@ estate_church_lands_of_riga = {
 	can_revoke = {
 		owns_core_province = 37
 		owns_core_province = 4241
-		if = {
-			limit = { has_mission = liv_handle_riga }
-			mission_completed = liv_handle_riga
-		}
 		NOT = { has_estate_privilege = estate_church_bishopric_of_dorpat }
 		NOT = { has_estate_privilege = estate_church_bishopric_of_osel_wiek }
 		NOT = { has_estate_privilege = estate_church_bishopric_of_courland }
@@ -3302,7 +3289,6 @@ estate_church_MAY_cocoa_monopoly = {
 		}
 	}
 	on_cooldown_expires = {
-		country_event = { id = flavor_may.9 }
 	}
 	ai_will_do = {
 		factor = 1

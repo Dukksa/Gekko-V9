@@ -1573,7 +1573,6 @@ estate_burghers_khmer_irrigation = {
 		OR = {
 			has_estate_privilege = estate_vaisyas_khmer_irrigation
 			mission_completed = mnd_khm_irrigation
-			mission_completed = sun_rice_production
 		}
 	}
 	is_valid = {
@@ -2245,7 +2244,6 @@ estate_burghers_polish_merchant_seal = {
 	is_valid = {
 		has_dlc = "Lions of the North"
 		OR = { 
-			mission_completed = pol_support_mercantile_class
 			has_estate_privilege = estate_burghers_the_great_privilege
 		}
 	}
