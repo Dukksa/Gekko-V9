@@ -1855,7 +1855,6 @@ eng_loyalty_to_catholocisim = {
 bad_french_forts = {
 	local_defender_dice_roll_bonus = -1
 	local_defensiveness = -0.15
-	local_garrison_growth = -0.9
 }
 
 gbr_unified_british_isles_culture = {	#Permanent until either Irish or Highlander get demoted
@@ -3919,7 +3918,7 @@ fortified_florida_modifier = {
 }
 
 spa_prepared_armada = {
-	naval_morale = 0.2
+	naval_morale = 0.075
 	number_of_cannons_modifier = 0.1
 }
 
