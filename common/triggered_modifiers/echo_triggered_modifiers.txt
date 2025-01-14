@@ -377,7 +377,7 @@ Merc_payments = {
 		}
 	}
 
-	mercenary_manpower = -0.5
+	mercenary_discipline = -0.05
 
 }
 
