@@ -2637,10 +2637,7 @@ dom_cas_missions_3_c = {
 				tooltip = spa_mayan_conquest_tooltip
 				central_america_region = {
 					type = all
-					OR = {
-						is_empty = yes
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 		}
@@ -3311,7 +3308,7 @@ dom_cas_missions_4_c = {
 				fire = 5
 				manuever = 6
 				siege = 1
-				name = "Hernán Cortés"
+				name = "Hernï¿½n Cortï¿½s"
 			}
 			490 = {
 				add_base_production = 3
