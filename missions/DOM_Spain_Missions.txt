@@ -2385,26 +2385,12 @@ dom_cas_missions_4 = {
 	
 	spa_fecho_imperio = {
 		icon = mission_imperial_spain
-		required_missions = { gc_cas_spa_italian_ambition_22 spa_new_capital }
+		required_missions = {  spa_new_capital }
 		position = 6
 		trigger = {
-			total_development = 2000 
-			if = { 
-				limit = { 
-					OR = { 
-						has_dlc = "Rights of Man" 
-						has_dlc = "Emperor" 
-					}
-				}
-				NOT = { great_power_rank = 2 }
-			}
-			if = { 
-				limit = { has_dlc = "Mandate of Heaven" }
-				OR = { 
-					in_golden_age = yes 
-					has_had_golden_age = yes 
-				}
-			}
+			total_own_and_non_tributary_subject_development = 2500
+			
+			
 		}
 		effect = {
 			add_country_modifier = {
