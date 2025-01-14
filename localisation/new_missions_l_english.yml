@@ -1544,7 +1544,7 @@
  colombia_holy_order_alternative_tooltip:0 "§Y25§! provinces owned by §Y[Root.GetName]§! or its subjects in §YColonial Colombia§! are §Y[Root.Religion.GetName]§!"
  mexico_holy_order_tooltip:0 "§Y5§! states owned by §Y[Root.GetName]§! or its subjects in the §YMexico§! region have an assigned Holy Order."
  mexico_holy_order_alternative_tooltip:0 "§Y25§! provinces owned by §Y[Root.GetName]§! or its subjects in the §YMexico§! region are §Y[Root.Religion.GetName]§!."
- cas_spice_islands_tooltip:0 "§Y[Root.GetName]§! has discovered all provinces in the §YMoluccas§! region."
+ cas_spice_islands_tooltip:0 "§Y[Root.GetName]§! has discovered all provinces in the §YCoromandel§! region."
  native_reductions_tooltip:0 "§Y15§! states owned by §Y[Root.GetName]§! or its subjects in §YNorth America§! and §YSouth America§! have an assigned Holy Order."
  native_reductions_alternative_tooltip:0 "§Y75§! provinces owned by §Y[Root.GetName]§! or its subjects in §YNorth America§! and §YSouth America§! are §Y[Root.Religion.GetName]§!."
  gc_cas_spa_potosi_title:0 "Potosi Silver"
