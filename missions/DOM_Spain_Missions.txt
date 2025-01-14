@@ -3630,7 +3630,7 @@ dom_cas_missions_5_c = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = cas_spice_islands_tooltip
-				moluccas_region = {
+				coromandel_region = {
 					type = all
 					has_discovered = ROOT
 				}
@@ -3653,12 +3653,8 @@ dom_cas_missions_5_c = {
 		position = 9
 		provinces_to_highlight = {
 			OR = {
-				area = mindanao_area
-				area = west_mindanao_area
-				area = visayas_area
-				area = palawan_area
-				area = luzon_area
-				area = southern_luzon_area
+				area = lanka_area
+				area = south_lanka_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
