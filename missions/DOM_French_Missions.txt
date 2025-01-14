@@ -86,79 +86,33 @@ french_missions_1 = {
 		provinces_to_highlight = { 
 			OR = { 
 				area = west_burgundy_area 
-				province_id = 88
-				province_id = 89
-				province_id = 1743
+				area = lorraine_area
+				area = bourgogne_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = { 
-			OR = { 
-				AND = { 
-					picardy_area = {
-						type = all 
-						OR = { 
-							province_id = 87 
-							country_or_non_sovereign_subject_holds = ROOT 
-						}
-					}
-					west_burgundy_area = { 
-						type = all 
-						country_or_non_sovereign_subject_holds = ROOT 
-					}
+			
+			AND = { 
+				lorraine_area = {
+					type = all 
+					country_or_non_sovereign_subject_holds = ROOT 
 				}
-				BUR = {
-					OR = { 
-						is_subject_of = ROOT 
-						alliance_with = ROOT 
-					}
-					AND = {
-						if = { 
-							limit = { is_subject_of = ROOT }
-							has_opinion = {
-								who = ROOT 
-								value = 125
-							}
-						}
-						else = {
-							has_opinion = {
-								who = ROOT 
-								value = 180
-							}
-						}
-						if = {
-							limit = { has_dlc = "Leviathan" }
-							trust = { who = FRA value = 75 }
-						}
-						else = { monthly_dip = 8 }
-						if = { 
-							limit = { is_subject_of = ROOT }
-							NOT = { liberty_desire = 10 }
-						}
-					}
+				bourgogne_area = {
+					type = all 
+					country_or_non_sovereign_subject_holds = ROOT 
+				}
+				west_burgundy_area = { 
+					type = all 
+					country_or_non_sovereign_subject_holds = ROOT 
 				}
 			}
+				
+			
 		}
 		effect = {
-			if = { 
-				limit = { 
-					has_dlc = "Emperor" 
-					BUR = { ai = yes }
-				} 
-				custom_tooltip = fra_if_bur_subject_and_emperor_dlc_tt
-				tooltip = { 
-					country_event = { id = incidents_bur_inheritance.501 } 
-				}
-				custom_tooltip = fra_alternatively_10_dev_spread_and_tt 
-				tooltip = { 
-					add_country_modifier = { 
-						name = fra_reintegration_of_burgundian_lands_modifier
-						duration = 7300
-					}
-				}
-				custom_tooltip = fra_complete_via_opinion_alliance_and_trust_tt
-			}
-			else = { 
+			
+			
 				custom_tooltip = fra_alternatively_10_dev_spread_and2_tt 
 				tooltip = { 
 					add_country_modifier = { 
@@ -166,34 +120,9 @@ french_missions_1 = {
 						duration = 7300
 					}
 				}
-			}
+			
 			hidden_effect = { 
-				if = {
-					limit = { 
-						BUR = { is_subject_of = ROOT } 
-						has_dlc = "Emperor"
-					}
-					country_event = { id = incidents_bur_inheritance.501 } 
-				}
-				else_if = { 
-					limit = { 
-						OR = {  
-							NOT = { has_dlc = "Emperor" } 
-							AND = { 
-								picardy_area = {
-									type = all 
-									OR = { 
-										province_id = 87 
-										country_or_non_sovereign_subject_holds = ROOT 
-									}
-								}
-								west_burgundy_area = { 
-									type = all 
-									country_or_non_sovereign_subject_holds = ROOT 
-								}
-							}
-						}
-					}
+			
 					add_country_modifier = { 
 						name = fra_reintegration_of_burgundian_lands_modifier
 						duration = 7300
@@ -202,7 +131,6 @@ french_missions_1 = {
 						limit = { 
 							OR = { 
 								area = west_burgundy_area 
-								area = picardy_area 
 								area = bourgogne_area 
 								area = lorraine_area 
 							}
@@ -217,7 +145,6 @@ french_missions_1 = {
 						limit = { 
 							OR = { 
 								area = west_burgundy_area 
-								area = picardy_area 
 								area = bourgogne_area 
 								area = lorraine_area 
 							}
@@ -232,7 +159,6 @@ french_missions_1 = {
 						limit = { 
 							OR = { 
 								area = west_burgundy_area 
-								area = picardy_area 
 								area = bourgogne_area 
 								area = lorraine_area 
 							}
@@ -247,7 +173,6 @@ french_missions_1 = {
 						limit = { 
 							OR = { 
 								area = west_burgundy_area 
-								area = picardy_area 
 								area = bourgogne_area 
 								area = lorraine_area 
 							}
@@ -262,7 +187,6 @@ french_missions_1 = {
 						limit = { 
 							OR = { 
 								area = west_burgundy_area 
-								area = picardy_area 
 								area = bourgogne_area 
 								area = lorraine_area 
 							}
@@ -277,7 +201,6 @@ french_missions_1 = {
 						limit = { 
 							OR = { 
 								area = west_burgundy_area 
-								area = picardy_area 
 								area = bourgogne_area 
 								area = lorraine_area 
 							}
@@ -292,7 +215,6 @@ french_missions_1 = {
 						limit = { 
 							OR = { 
 								area = west_burgundy_area 
-								area = picardy_area 
 								area = bourgogne_area 
 								area = lorraine_area 
 							}
@@ -307,7 +229,6 @@ french_missions_1 = {
 						limit = { 
 							OR = { 
 								area = west_burgundy_area 
-								area = picardy_area 
 								area = bourgogne_area 
 								area = lorraine_area 
 							}
@@ -322,7 +243,6 @@ french_missions_1 = {
 						limit = { 
 							OR = { 
 								area = west_burgundy_area 
-								area = picardy_area 
 								area = bourgogne_area 
 								area = lorraine_area 
 							}
@@ -337,7 +257,6 @@ french_missions_1 = {
 						limit = { 
 							OR = { 
 								area = west_burgundy_area 
-								area = picardy_area 
 								area = bourgogne_area 
 								area = lorraine_area 
 							}
@@ -348,14 +267,8 @@ french_missions_1 = {
 							30 = { add_base_manpower = 1 } 
 						}
 					}
-				}
-				else_if = { 
-					limit = { 
-						BUR = { alliance_with = ROOT }
-						has_dlc = "Emperor" 
-					}
-					BUR = { set_country_flag = fra_guaranteed_succession_flag } 
-				}
+				
+				
 			}
 		}
 	}
@@ -369,41 +282,7 @@ french_missions_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = { 
-			bourgogne_area = { 
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT 
-			}
-			if = {
-				limit = { ai = no }
-				OR = { 
-					is_emperor = yes 
-					NOT = { hre_size = 1 } 
-					emperor = { 
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = scornfully_insulted
-						}
-					}
-					emperor = { 
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = insulted
-						}
-					}
-				}
-				OR = { 
-					emperor = { is_rival = ROOT } 
-					military_strength = {
-						who = emperor
-						value = 2.0
-					}
-					power_projection = 80 
-				}
-			}
-			if = {
-				limit = { ai = yes }
-				grown_by_development = 150
-			}
+			government_rank = 3
 		}
 		effect = { 
 			country_event = { id = flavor_fra.102 } 
@@ -1090,7 +969,7 @@ french_missions_1_Continuation_a = {
 			NOT = { 
 				any_subject_country = { liberty_desire = 5 }
 			}
-			legitimacy_equivalent = 90 
+			#legitimacy_equivalent = 90 
 		}
 		effect = {
 			add_country_modifier = {
@@ -1558,8 +1437,8 @@ french_missions_2_charlemagne_path = {
 		trigger = { 
 			not_in_mission_preview_mode = { key = FRA_HRE }
 			is_emperor = yes 
-			imperial_influence = 50
-			legitimacy = 95
+			#imperial_influence = 50
+			#legitimacy = 95
 		}
 		effect = { 
 			country_event = { id = flavor_fra.201 } 
@@ -2169,7 +2048,7 @@ french_rev_missions_2 = {
 			}
 			else = { 
 				stability = 3 
-				legitimacy_equivalent = 90 
+				#legitimacy_equivalent = 90 
 			}
 			manpower_percentage = 0.75
 			OR = { 
@@ -3670,7 +3549,7 @@ french_missions_4_normal = {
 		required_missions = { fra_provencal_question } 
 		position = 2 
 		trigger = {
-			legitimacy = 95 
+			#legitimacy = 95 
 			stability = 3
 			PRO = { 
 				OR = { 
