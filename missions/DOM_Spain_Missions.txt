@@ -4143,42 +4143,7 @@ dom_cas_missions_5_c = {
 			}
 		}
 		effect = {
-			mindanao_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			west_mindanao_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			visayas_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			palawan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			luzon_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			southern_luzon_area = {
+			coromandel_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -4205,58 +4170,29 @@ dom_cas_missions_5_c = {
 			has_discovered = ROOT
 		}
 		trigger = {
-			southern_luzon_area = {
+			lanka_area = {
 				type = all
 				owned_by = ROOT
 			}
-			luzon_area = {
+			south_lanka_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mindanao_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			west_mindanao_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			visayas_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			palawan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 			224 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			224 = { change_trade_goods = cloves add_base_production = 3 } 
-			southern_luzon_area = {
+			lanka_area = {
 				limit = {
 					owned_by = ROOT
 				}
 				change_religion = ROOT
 			}
-			luzon_area = {
+			south_lanka_area = {
 				limit = {
 					owned_by = ROOT
 				}
 				change_religion = ROOT
-			}
-			if = {
-				limit = {
-					has_dlc = "Dharma"
-					656 = {
-						NOT = {
-							province_has_center_of_trade_of_level = 2
-						}
-					}
-				}
-				656 = {
-					add_center_of_trade_level = 1
-				}
 			}
 		}
 	}
