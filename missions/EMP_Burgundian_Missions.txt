@@ -126,10 +126,9 @@ emp_burgundy_1 = {
 				
 		trigger = {
 			adm_power = 300
+			dip_power = 300
+			mil_power = 300
 			crown_land_share = 20
-			monthly_adm = 9
-			monthly_dip = 9
-			monthly_mil = 9
 		}
 		effect = {
 			if = {
@@ -1324,83 +1323,7 @@ emp_burgundy_5 = {
 			}
 		}
 	}
-	emp_bur_feast_of_pheasants = {
-		icon = feast_of_pheasants
-		required_missions = { emp_bur_papal_relations }
-		provinces_to_highlight = {
-			is_capital = yes
-			NOT = { owned_by = root }
-			owner = {
-				OR = {
-					is_rival = TUR
-					TUR = { is_rival = prev }
-				}
-			}
-		}
-		trigger = {
-			OR = {
-				calc_true_if = {
-					desc = emp_bur_feast_of_pheasants_trigger_tooltip
-					all_ally = {
-						OR = {
-							is_rival = TUR
-							TUR = { is_rival = prev }
-						}
-					}
-					amount = 2
-				}
-				any_ally = {
-					if = {
-						limit = { has_dlc = "Common Sense" }
-						is_great_power = yes
-					}
-					else = { total_development = 300 }
-					is_rival = TUR
-				}
-				NOT = { exists = TUR }
-				TUR = { religion = ROOT }
-			}
-			has_regency = no
-		}
-		effect = {
-			if = {
-				limit = {
-					exists = TUR
-					NOT = { TUR = { religion = ROOT } }
-				}
-				custom_tooltip = emp_bur_feast_of_pheasants_effect_tooltip
-				hidden_effect = {
-					country_event = { id = new_flavour_bur.2 }
-					every_country = {
-						limit = {
-							religion = root
-							capital_scope = { continent = europe }
-							NOT = { tag = BUR }
-							has_opinion = {
-								who = root
-								value = 0
-							}
-							NOT = {
-								has_opinion = {
-									who = TUR
-									value = 50
-								}
-							}
-						}
-						country_event = { id = new_flavour_bur.1 }
-					}
-					TUR = {
-						country_event = { id = new_flavour_bur.3 }
-					}
-				}
-			}
-			else = {
-				add_dip_power = 100
-				add_mil_power = 100
-			}
-		}
-	}
-
+	
 	emp_bur_secure_succession = {
 		icon = secure_the_succession
 		required_missions = {  }
