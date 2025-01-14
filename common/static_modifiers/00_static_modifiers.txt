@@ -614,6 +614,9 @@ ai_nation = {
 	global_autonomy = -0.1
 	yearly_corruption = -0.1
 	diplomatic_upkeep = -2
+	global_tax_income = 24
+	national_focus_years = -10	
+	technology_cost = -0.05
 }
 
 
