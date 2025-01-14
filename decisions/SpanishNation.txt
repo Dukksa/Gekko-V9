@@ -35,7 +35,7 @@ country_decisions = {
 				AND = {
 					tag = CAS
 					VAL = {
-						NOT = { num_of_cities = 5 } #Keep this number the same as above. Original 17 +15, +5 with Spain update, +3 with Emperor update
+						NOT = { num_of_cities = 6 } #Keep this number the same as above. Original 17 +15, +5 with Spain update, +3 with Emperor update
 					}
 				}
 				AND = {
@@ -55,7 +55,7 @@ country_decisions = {
 			if = {
 				limit = {
 					tag = CAS
-					ARA = {
+					VAL = {
 						ai = yes
 					}
 				}
@@ -64,7 +64,7 @@ country_decisions = {
 			if = {
 				limit = {
 					tag = CAS
-					ARA = {
+					CAT = {
 						ai = yes
 					}
 				}
