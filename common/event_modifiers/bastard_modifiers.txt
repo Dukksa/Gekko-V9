@@ -112,6 +112,11 @@ provincial_investment_savannah = {
 provincial_investment_steppe = {
 	local_development_cost_modifier = -0.025
 }	
+Merc_payments_reneged = {
+	is_mercenary_modifier = yes
+	reinforce_speed = -0.75
+}
+
 imp_ambition_timer = {
 
 }

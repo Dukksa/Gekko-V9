@@ -376,9 +376,9 @@ Merc_payments = {
 			manpower_percentage = 0.1
 		}
 	}
-	mercenary_manpower = -0.1
-	reinforce_speed = -0.9
-	is_mercenary_modifier = yes
+
+	mercenary_manpower = -0.5
+
 }
 
 Control_African_Slave_Trade = {
