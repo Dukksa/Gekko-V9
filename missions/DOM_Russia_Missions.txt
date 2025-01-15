@@ -42,7 +42,7 @@ mos_rus_handle_succession = {
 			}
 			if = {
 				limit = { government = monarchy }
-				legitimacy = 80
+				#legitimacy = 80
 			}
 			NOT = { num_of_rebel_armies = 1 }
 			NOT = { num_of_rebel_controlled_provinces = 1 }
@@ -53,7 +53,7 @@ mos_rus_handle_succession = {
 					dynasty = "Rurikovich"
 				}
 				add_country_modifier = {
-					name = mos_legitimacy_of_the_rurikovich
+					name = mos_#legitimacy_of_the_rurikovich
 					duration = 9125
 				}
 			}
@@ -79,7 +79,7 @@ mos_rus_handle_succession = {
 		trigger = {
 			if = {
 				limit = { government = monarchy }
-				legitimacy = 90
+				#legitimacy = 90
 			}
 			ruler_total_stats = {
 				amount = 10
@@ -2558,125 +2558,9 @@ mos_rus_russian_steppes = {
 		}
 	}
 	
-	mos_rus_conquer_manchuria = {
-		icon = mission_amur_acquisition
-		required_missions = { mos_rus_colonize_eastern_siberia }
-		position = 7
-		provinces_to_highlight = {
-			OR = {
-				area = furdan_area
-				area = ilan_hala_area
-				area = central_jilin_area
-				area = sakhalin_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			owns_core_province = 2106
-			730 = {
-				is_strongest_trade_power = ROOT
-			}
-			furdan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ilan_hala_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			central_jilin_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			sakhalin_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			add_mercantilism = 4
-			2106 = {
-				rename_capital = "Vladivostok"
-				change_religion = ROOT
-				change_culture = ROOT
-				add_base_tax = 2
-				add_base_production = 4
-				add_base_manpower = 2
-				add_province_modifier = {
-					name = "russian_pacific_port"
-					duration = -1
-				}
-			}
-		}
-		ai_weight = {
-			factor = 250
-		}
-	}
+
 }
 
-mos_rus_california = {
-	slot = 4
-	generic = no
-	ai = yes
-	potential_on_load = {
-		has_dlc = "Domination"
-	}
-	potential = {
-		OR = {
-			tag = MOS
-			tag = RUS
-		}
-		has_dlc = "Domination"
-		NOT = { map_setup = map_setup_random }
-		is_random_new_world = no
-	}
-	has_country_shield = yes
-	
-	mos_rus_colonize_california = {
-		icon = mission_colonize_california
-		required_missions = { mos_rus_colonize_alaska }
-		position = 8
-		provinces_to_highlight = {
-			colonial_region = colonial_california
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = ROOT
-		}
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				colonial_region = colonial_california
-				value = 20
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = rus_new_world_trade
-				duration = -1
-			}
-			4637 = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = -1
-					power = 100
-					key = RUS_TRADE_OF_THE_NEW_WORLD
-				}
-			}
-			730 = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = -1
-					power = 100
-					key = RUS_TRADE_OF_THE_NEW_WORLD
-				}
-			}
-		}
-
-		ai_weight = {
-			factor = 250
-		}
-	}
-}
 
 #Slot 5
 #Muscovy only
@@ -3141,9 +3025,9 @@ mos_rus_siberian_conquest = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				region = east_siberia_region
-				value = 20
+				value = 5
 			}
-			owns = 1043
+			
 		}
 		effect = {
 			east_siberia_region = {
@@ -3153,65 +3037,30 @@ mos_rus_siberian_conquest = {
 				}
 				add_province_modifier = {
 					name = "siberian_fur_production"
-					duration = 7300
-				}
-			}
-			define_explorer = {
-				name = "Vitus Bering"
-				fire = 4
-				shock = 2
-				manuever = 5
-			}
-			1043 = {
-				if = {
-					limit = {
-						NOT = { has_building = shipyard }
-						NOT = { has_building = grand_shipyard }
-					}
-					add_building = shipyard
-				}
-				center_of_trade = 2
-				change_religion = ROOT
-				change_culture = ROOT
-				add_base_production = 2
-				add_province_modifier = {
-					name = "russian_pacific_port"
 					duration = -1
 				}
 			}
-			add_country_modifier = {
-				name = rus_new_world_colonization
-				duration = 36500
+			tunguska_area = {
+				limit = {
+					trade_goods = fur
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "siberian_fur_production"
+					duration = -1
+				}
+			}
+			irkutsk_area = {
+				limit = {
+					trade_goods = fur
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "siberian_fur_production"
+					duration = -1
+				}
 			}
 			increase_gold_discovery = yes
-			furdan_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_russian_claim = yes
-			}
-			ilan_hala_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_russian_claim = yes
-			}
-			central_jilin_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_russian_claim = yes
-			}
-			sakhalin_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_russian_claim = yes
-			}
 		}
 
 		ai_weight = {
@@ -3220,101 +3069,7 @@ mos_rus_siberian_conquest = {
 	}
 }
 
-mos_rus_new_world = {
-	slot = 5
-	generic = no
-	ai = yes
-	potential_on_load = {
-		has_dlc = "Domination"
-	}
-	potential = {
-		OR = {
-			tag = MOS
-			tag = RUS
-		}
-		has_dlc = "Domination"
-		NOT = { map_setup = map_setup_random }
-		is_random_new_world = no
-	}
-	has_country_shield = yes
-	
-	mos_rus_colonize_alaska = {
-		icon = mission_colonize_alaska
-		required_missions = { mos_rus_colonize_eastern_siberia }
-		position = 7
-		provinces_to_highlight = {
-			if = {
-				limit = {
-					ROOT = {
-						NOT = {
-							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-								colonial_region = colonial_alaska
-								value = 20
-							}
-						}
-					}
-				}
-				colonial_region = colonial_alaska
-			}
-			else = {
-				province_id = 2613
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = ROOT
-		}
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				colonial_region = colonial_alaska
-				value = 20
-			}
-			owns_or_non_sovereign_subject_of = 2613
-		}
-		effect = {
-			add_country_modifier = {
-				name = "rus_alaska_modifier"
-				duration = 7300
-			}
-			2613 = {
-				change_province_name = "Novo-Arkhangelsk"
-				rename_capital = "Novo-Arkhangelsk"
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-			}
-		}
 
-		ai_weight = {
-			factor = 250
-		}
-	}
-	
-	mos_rus_colonize_canada = {
-		icon = mission_settlers_north_america
-		required_missions = { mos_rus_colonize_alaska }
-		position = 8
-		provinces_to_highlight = {
-			region = hudson_bay_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = ROOT
-		}
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				region = hudson_bay_region
-				value = 40
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = rus_tariffs_of_the_new_world
-				duration = -1
-			}
-		}
-
-		ai_weight = {
-			factor = 250
-		}
-	}
-}
 
 #Russian Tsardom Misssions - Available for all Russias before modernization
 rus_russian_bureaucracy = {
@@ -3371,7 +3126,7 @@ rus_russian_bureaucracy = {
 			simple_dynamic_effect = {
 				first_custom_tooltip = rus_enact_the_sudebnik_at
 				first_limit = "has_reform = tysyatsky_reform"
-				first_effect = "add_estate_loyalty = { estate = estate_nobles loyalty = 15 } add_legitimacy_equivalent = { amount = 10 republican_tradition = 5 }"
+				first_effect = "add_estate_loyalty = { estate = estate_nobles loyalty = 15 } add_#legitimacy_equivalent = { amount = 10 republican_tradition = 5 }"
 				second_custom_tooltip = rus_enact_the_sudebnik_bt
 				second_limit = "has_reform = namestnik_reform"
 				second_effect = "change_estate_land_share = { estate = all share = -5 } add_adm_power = 50"
@@ -3883,14 +3638,8 @@ rus_russian_streltsy = {
 				limit = {
 					is_absolutism_active = no
 				}
-				legitimacy_equivalent = 90
+				#legitimacy_equivalent = 90
 				stability = 3
-				num_of_subjects = 7
-				NOT = {
-					any_subject_country = {
-						liberty_desire = 20
-					}
-				}
 				custom_trigger_tooltip = {
 					tooltip = absolutism_dynamic_reward_tt
 					is_absolutism_active = no
@@ -4037,7 +3786,7 @@ rus_court_and_church = {
 				limit = {
 					government = monarchy
 				}
-				legitimacy = 95
+				#legitimacy = 95
 			}
 			if = {
 				limit = {
