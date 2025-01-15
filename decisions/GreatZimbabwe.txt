@@ -5,8 +5,6 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-
-			NOT = { has_country_flag = formed_great_zimbabwe_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -49,7 +47,6 @@ country_decisions = {
 				province_id = 1204
 				province_id = 2796
 				province_id = 2774
-				region = central_africa_region
 				region = kongo_region
 			}
 		}
