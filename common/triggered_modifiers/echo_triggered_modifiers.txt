@@ -288,51 +288,6 @@ Berber_Raids = {
 	coast_raid_range = 1
 }
 
-spice_bros = {
-	potential = {
-		OR = {
-			tag = SUN
-			tag = MLC
-			tag = MSA
-			tag = BAN
-			tag = CRB
-		}
-		current_age = age_of_discovery
-	}
-
-	trigger = {
-			OR = {
-					great_power_rank = 5
-					 is_great_power = no
-					}
-			OR = {		
-				AND = {
-					OR = {
-						was_tag = SUN
-						tag = SUN	
-					}
-					OR = {
-						alliance_with = MLC
-						alliance_with = MSA
-					}
-				}
-				AND = {		
-					OR = {
-						was_tag = MLC
-						tag = MLC	
-					}	
-					OR = {
-						alliance_with = SUN
-						alliance_with = BAN
-						alliance_with = CRB
-					}	
-				}
-			}	
-			NOT = { is_lacking_institutions = yes }			
-	}
-	global_colonial_growth = 20
-	colonists = 1
-}
 Stop_the_raids = {
 	potential = {
 		OR = {

@@ -4306,6 +4306,8 @@ altaic = {
 
 	mongol = {
 		primary = KHA
+		country = { has_banners = yes}
+		province = { local_has_banners = yes}
 		male_names = {
 			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligt� Dayan 
 			Delbeg Ejei Elbeg Engke G�y�k G�n Gulichi Irinchibal Jorightu Kublai K�ke Ligdan Mark�rgis M�ngke 
