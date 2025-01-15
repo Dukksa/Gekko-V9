@@ -724,14 +724,18 @@ maritime_ideas = {
 	}
 	overseas_merchants = {
 		merchants = 1
+		center_of_trade_upgrade_cost = -0.2
 	}
 	sea_hawks = {
-		center_of_trade_upgrade_cost = -0.2
+		naval_forcelimit_modifier = 0.25
+		max_flagships = 2
+		flagship_cost = -0.5
 	}
 	merchant_traditions = {
 		infantry_power = 0.05
 		sailors_recovery_speed = 0.15
 		regiment_disembark_speed = 0.25
+		leader_naval_manuever = 1
 	}
 	national_trade_policy = {
 		trade_efficiency = 0.10
