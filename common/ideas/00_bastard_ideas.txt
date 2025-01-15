@@ -1960,11 +1960,12 @@ RUS_ideas = {
 	free = yes		#will be added at load.
 
 	land_of_the_rus = {
-		shock_damage_received = -0.15
+		shock_damage_received = -0.05
 	}
 	siberian_frontier = {
 		may_establish_frontier = yes
-		infantry_power = 0.10
+		max_hostile_attrition = 1
+		hostile_attrition = 1
 	}
 	russian_artillery_yard = {
 		artillery_cost = -0.2
