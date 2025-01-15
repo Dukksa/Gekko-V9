@@ -2279,11 +2279,7 @@ country_event = {
 	#We shall push for more innovation for our administration
 	option = {
 		name = flavor_rus.47.a
-		add_adm_power = 50
-		if = {
-			limit = { NOT = { adm_tech = 32 } }
-			add_adm_tech = 1
-		}
+		add_adm_power = 250
 		change_government_reform_progress = 25
 		ai_chance = {
 			factor = 1
@@ -2293,11 +2289,7 @@ country_event = {
 	#We shall push for more innovation for our navy
 	option = {
 		name = flavor_rus.47.b
-		add_dip_power = 50
-		if = {
-			limit = { NOT = { dip_tech = 32 } }
-			add_dip_tech = 1
-		}
+		add_dip_power = 250
 		add_navy_tradition = 20
 		ai_chance = {
 			factor = 0
@@ -2307,11 +2299,8 @@ country_event = {
 	#We shall push for more innovation for our military
 	option = {
 		name = flavor_rus.47.c
-		add_mil_power = 50
-		if = {
-			limit = { NOT = { mil_tech = 32 } }
-			add_mil_tech = 1
-		}
+		add_mil_power = 250
+		
 		add_army_tradition = 20
 		ai_chance = {
 			factor = 0
