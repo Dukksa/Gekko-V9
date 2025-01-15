@@ -99,6 +99,7 @@ country_decisions = {
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
+			add_government_reform = gc_imperial_spain_reform
 			custom_tooltip = spanish_unification_effect.tooltip
 			hidden_effect = {
 				iberia_region = {
