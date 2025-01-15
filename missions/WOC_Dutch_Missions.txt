@@ -1229,105 +1229,7 @@ NED_2_1 = {
 		} 
 	}
 
-	NED_japan = {
-		icon = mission_trade_with_japan
-		position = 20
-		required_missions = { NED_malacca_trade } 
-		provinces_to_highlight = {  
-			region = japan_region
-			province_has_center_of_trade_of_level = 1
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
 
-		trigger = {  
-			OR = {
-				japan_region = {
-					province_has_center_of_trade_of_level = 1
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				1020 = {
-					owner = {
-						NOT = { tag = ROOT }
-						has_opinion = {
-							who = ROOT
-							value = 125
-						}
-					}
-				}
-			}
-		} 
-
-		effect = {  
-			complex_dynamic_effect = {
-				first_custom_tooltip = NED_IF_COMPLETED_VIA_CONQUEST
-				first_limit = "
-					japan_region = {
-						province_has_center_of_trade_of_level = 1
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				"
-				first_effect = "
-					add_mercantilism_or_monarch_power = { amount = 3 }
-					custom_tooltip = NED_PRODUCTION_IN_ALL_COT_JAPAN_PROVINCES
-					hidden_effect = {
-						japan_region = {
-							limit = {
-								country_or_non_sovereign_subject_holds = ROOT
-								province_has_center_of_trade_of_level = 1
-							}
-							add_base_production = 1
-						}
-					}
-				"
-				second_custom_tooltip = NED_IF_RELATIONS_KYOTO
-				second_limit = "
-					1020 = {
-						owner = {
-							NOT = { tag = ROOT }
-							has_opinion = {
-								who = ROOT
-								value = 125
-							}
-						}
-					}
-				"
-				second_effect = "
-					1020 = {
-						add_dip_power = 100
-						custom_tooltip = SEPERATOR_TOOLTIP
-						add_province_triggered_modifier = ned_dutch_traders
-						custom_tooltip = SEPERATOR_TOOLTIP
-						custom_tooltip = NED_AS_LONG_AS_DUTCH_TRADER_MODIFIER_IS_ACTIVE_GAIN_TRADE_POWER
-					}
-				"
-			}
-			
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = {
-							japan_region = {
-								province_has_center_of_trade_of_level = 1
-								country_or_non_sovereign_subject_holds = ROOT
-							}
-						}
-						1020 = {
-							owner = {
-								NOT = { tag = ROOT }
-								has_opinion = {
-									who = ROOT
-									value = 125
-								}
-							}
-						}
-					}
-					1020 = {
-						add_province_triggered_modifier = ned_dutch_traders
-					}
-				}
-			}
-		} 
-	}
 }
 
 NED_3 = {
@@ -1850,104 +1752,56 @@ NED_3_1 = {
 		} 
 	}
 
-	NED_malacca_trade = {
-		icon = mission_portuguese_malacca
+	NED_city_of_batavia = {
+		icon = found_batavia
 		position = 19
 		required_missions = { NED_access_to_india } 
 		provinces_to_highlight = {  
-			OR = {
-				region = malaya_region
-				region = indonesia_region
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			area = lower_burma_area
+			
 		} 
 
 		trigger = {  
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
-					region = malaya_region
-					region = indonesia_region
-				}
-				province_has_center_of_trade_of_level = 1
-				value = 3
-			}
-			596 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
+			lower_burma_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
 			}
 		} 
 
-		effect = {  
+		effect = { 
+			586 = {
+				add_permanent_province_modifier = {
+					name = ned_fort_of_batavia
+					duration = -1
+				}
+			}
 			custom_tooltip = NED_BUFFS_VOC_PRIVILEGE
 			set_country_flag = ned_voc_burghers_buff_flag
 		} 
 	}
 
-	NED_taiwan = {
-		icon = dutch_formosa
-		position = 20
-		required_missions = { NED_malacca_trade } 
-		provinces_to_highlight = {  
-			area = spice_islands_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {  
-			spice_islands_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
-
-		effect = {  
-			650 = {
-				add_or_upgrade_fort_building = yes
-				center_of_trade = 2
-				add_province_modifier = {
-					name = ned_formossa_fort
-					duration = -1
-				}
-			}
-			define_advisor = {
-				type = colonial_governor
-				skill = 3
-				culture = swedish
-				cost_multiplier = 0.75
-				name = "Frederick Coyett"
-			}
-		} 
-	}
-
 	NED_east_indies_domination = {
 		icon = dutch_east_indies
-		position = 21
+		position = 20
 		required_missions = {
 			NED_city_of_batavia
-			NED_taiwan
-			NED_japan
+			
+			NED_ceylon_bases
 		}
 		
 		provinces_to_highlight = {
-			OR = {
-				superregion = india_superregion
-				superregion = east_indies_superregion
-				superregion = china_superregion
-			}
+			superregion = india_superregion
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 	
 		trigger = {  
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
-					superregion = india_superregion
-					superregion = east_indies_superregion
-					superregion = china_superregion
-				}
-				value = 30
+				
+				superregion = india_superregion
+					
+				value = 20
 			}
-			monthly_income = 500
+			
 		} 
 	
 		effect = {  
@@ -1956,7 +1810,7 @@ NED_3_1 = {
 			capital_scope = {
 				add_trade_node_income = 5
 			}
-			add_mercantilism_or_monarch_power = { amount = 5 }
+			add_mercantilism_or_monarch_power = { amount = 10 }
 		} 
 	}
 }
@@ -2706,33 +2560,7 @@ NED_4_1 = {
 		} 
 	}
 
-	NED_city_of_batavia = {
-		icon = found_batavia
-		position = 20
-		required_missions = { NED_malacca_trade } 
-		provinces_to_highlight = {  
-			province_id = 630
-			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { development = 15 }
-			}
-		} 
-
-		trigger = {  
-			630 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
-
-		effect = { 
-			630 = {
-				add_permanent_province_modifier = {
-					name = ned_fort_of_batavia
-					duration = -1
-				}
-			}
-		} 
-	}
+	
 }
 
 NED_5 = {
