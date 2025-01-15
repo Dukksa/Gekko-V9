@@ -1448,9 +1448,9 @@ emp_burgundy_5 = {
 	emp_bur_crown_of_lothair = {
 		icon = the_crown_of_lothair
 		required_missions = { emp_bur_join_the_empire emp_bur_king_of_the_franks}
-
+		position = 5
 		trigger = {
-					is_at_war = no
+			is_at_war = no
 			owns_core_province = 1878
 			owns_core_province = 189
 			num_of_owned_provinces_with = {

@@ -699,11 +699,7 @@ west_siberia_region = {
 east_siberia_region = {
 	areas = {
 		yakutia_area
-		sakha_area
-		okhotsk_area
-		kamchatka_area
 		buryatia_area
-		kolyma_area
 	}
 }
 

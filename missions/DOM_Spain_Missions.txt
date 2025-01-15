@@ -1644,7 +1644,28 @@ dom_cas_missions_3 = {
 					}
 				}
 				custom_tooltip = spa_pu_por_tt
+			}
+			corsica_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}		
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			baleares_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			if = {
 				limit = {
 					exists = NAP
@@ -1763,12 +1784,27 @@ dom_cas_missions_3 = {
 				area = calabria_area
 				area = apulia_area
 				area = naples_area
+				area = baleares_area
+				area = corsica_area
+				area = corsica_sardinia_area
 				province_id = 120
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
+			corsica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			baleares_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			OR = {
 				NAP = {
 					junior_union_with = ROOT
