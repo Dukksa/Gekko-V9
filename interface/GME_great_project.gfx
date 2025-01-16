@@ -131,7 +131,7 @@ spriteTypes = {
 		texturefile = "gfx//interface//great_projects//GME//great_project_gme_casa_de_contratacion.dds"
 	}
 	spriteType = {
-		name = "GFX_great_project_gme_lonja_seda"
+		name = "GFX_great_project_X_SPA_lonja_de_la_seda"
 		texturefile = "gfx//interface//great_projects//GME//great_project_gme_lonja_seda.dds"
 	}
 	spriteType = {
@@ -550,7 +550,7 @@ spriteTypes = {
 		texturefile = "gfx//interface//great_projects//GME//great_project_gme_peterhof_palace.dds"
 	}
 	spriteType = {
-		name = "GFX_great_project_gme_bolshoi_theatre"
+		name = "GFX_great_project_X_RUS_trinity_lavra"
 		texturefile = "gfx//interface//great_projects//GME//great_project_gme_bolshoi_theatre.dds"
 	}
 
