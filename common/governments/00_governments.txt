@@ -105,7 +105,6 @@ monarchy = {
 				stadthalter_monarchy_reform
 				janissary_autocracy_reform
 				admiralty_regime_reform
-				system_of_councils_reform
 				courts_of_navarra
 				league_of_lezhe_reform
 				tibetan_dual_government_reform
@@ -230,6 +229,7 @@ monarchy = {
 				foreign_ghilman_reform
 				derbend_organization_reform
 				zabt_reform
+				system_of_councils_reform
 			}
 		}
 		state_and_religion = {
