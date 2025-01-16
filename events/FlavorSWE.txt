@@ -3710,13 +3710,19 @@ country_event = {
 			limit = { NOT = { owns_core_province = 315 } }
 			add_permanent_claim = 315
 		}
-		if = {
-			limit = { NOT = { owns_core_province = 1777 } }
-			add_permanent_claim = 1777
+		laponia_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
 		}
-		if = {
-			limit = { NOT = { owns_core_province = 1776 } }
-			add_permanent_claim = 1776
+		pomor_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
 		}
 		karelia_area = {
 			limit = {

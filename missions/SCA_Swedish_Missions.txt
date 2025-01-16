@@ -139,6 +139,13 @@ swe_scandinavian_colonialism_mission_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+			jemtland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -191,6 +198,13 @@ swe_scandinavian_colonialism_mission_slot = {
 				duration = 5475
 			}
 			jutland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_jutland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1225,10 +1239,10 @@ swe_diplomacy_mission_slot = {
 			1926 = {
 				trade_share = {
 					country = ROOT
-					share = 50
+					share = 85
 				}
 			}
-			1975 = {
+			33 = {
 				OR = {
 					is_strongest_trade_power = ROOT
 					trade_share = {

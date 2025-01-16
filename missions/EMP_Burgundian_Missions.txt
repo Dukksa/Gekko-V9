@@ -467,6 +467,9 @@ emp_burgundy_3 = {
 			1742 = {
 				add_permanent_claim = ROOT
 			}
+			6200 = {
+				add_permanent_claim = ROOT
+			}
 		}
 		ai_weight = {
 			factor = 500	#Natural conquest
@@ -498,6 +501,9 @@ emp_burgundy_3 = {
 			1742 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			6200 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		
 		effect = {
@@ -506,6 +512,7 @@ emp_burgundy_3 = {
 				name = "bur_diplo_mod"
 				duration = 5475
 			}
+			give_claims = { province = 98 }
 			frisia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1178,9 +1185,10 @@ emp_burgundy_4 = {
 	emp_bur_influence_the_princes = {
 		icon = influence_the_princes
 		position = 5
-		required_missions = { emp_bur_join_the_empire }
+		required_missions = {  }
 		trigger = {
 			is_subject = no
+			mission_completed = emp_bur_join_the_empire
 		}
 		effect = {	
 			add_country_modifier = {

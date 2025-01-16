@@ -1845,8 +1845,23 @@ lubeck_missions_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			1775 = { add_core = ROOT }	
-			13 = { add_core = ROOT }	
+			south_jutland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			jutland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			holstein_area = {
+				add_core = root
+			}
 			add_country_modifier = {
 				name = hsa_victory_in_holstein_modifier
 				duration = 7300
