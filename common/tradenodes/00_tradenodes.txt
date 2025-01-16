@@ -1585,6 +1585,7 @@ rheinland={
 	color={
 		114 171 184 
 	}
+	inland = yes
 
 	outgoing={
 		name="holland"
