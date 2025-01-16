@@ -526,25 +526,6 @@ WoC_austria_1_1 = {
 				}
 			}
 
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			complex_dynamic_effect = {
-				first_custom_tooltip = HAB_IF_NAPLES_VALID_PU
-				first_limit = "
-					exists = NAP
-					valid_for_personal_unions_trigger = yes
-					NAP = {
-						valid_for_personal_unions_trigger = yes
-					}
-				"
-				first_effect = "
-					add_casus_belli = {
-						type = cb_restore_personal_union
-						months = 300
-						target = NAP
-					}
-				"
-			}
 		}
 		ai_weight = {
 			factor = 500	#Historical conquest
@@ -1570,34 +1551,12 @@ WoC_austria_2_1 = {
 			}
 		}
 		effect = {
-			complex_dynamic_effect = {
-				first_custom_tooltip = HAB_IF_SHADOW_KINGDOM
-				first_limit = "
-					is_emperor = yes
-					has_global_flag = emperor_trying_to_avert_shadow_kingdom
-				"
-				first_effect = "
-					italian_ambitions_effect_1 = yes
-				"
-				second_custom_tooltip = HAB_IF_CONQUER_ITALY
-				second_limit = "
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 4
-						region = italy_region
-					}
-				"
-				second_effect = "
-					give_claims = { area = venetia_area }
-					give_claims = { area = po_valley_area }
-					give_claims = { area = lombardy_area }
-
-					custom_tooltip = SEPERATOR_TOOLTIP
-
-					add_country_modifier = {
-						name = hab_italian_wars
-						duration = 3650
-					}
-				"
+			give_claims = { area = venetia_area }
+			give_claims = { area = po_valley_area }
+			give_claims = { area = lombardy_area }
+			add_country_modifier = {
+				name = hab_italian_wars
+				duration = 3650
 			}
 		}
 	}
@@ -1799,10 +1758,7 @@ WoC_austria_2_1 = {
 				limit = {
 					exists = TUR
 				}
-				has_won_war_against = {
-					who = TUR
-					max_years_since = 25
-				}
+				is_rival = TUR
 			}
 			else = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -2838,11 +2794,8 @@ WoC_austria_4 = {
 						is_subject = no
 					}
 				}
-				total_development = FRA
-				has_won_war_against = {
-					who = FRA
-					max_years_since = 20
-				}
+				is_rival = FRA
+				
 			}
 			else = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -2890,71 +2843,18 @@ WoC_austria_4 = {
 					value = 25
 					region = france_region
 				}
-				AND = {
-					is_emperor = yes
-					calc_true_if = {
-						all_province = {
-							region = france_region
-							is_part_of_hre = yes
-						}
-						amount = 25
-					}
-				}
 			}
 		} 
 
 		effect = {
 
-			complex_dynamic_effect = {
-				first_custom_tooltip = HAB_IF_CONQUER
-				first_limit = "
-					OR = {
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 25
-							region = france_region
-						}
-						FRA = {
-							is_subject_of = ROOT
-						}
-					}
-				"
-				first_effect = "
-					country_event_with_option_insight = {
-						id = flavor_hab.29
-						option_1 = \"
-							custom_tooltip = HAB_SPLIT_FRANCE_INTO_HRE
-						\"
-						option_2 = \"
-							add_army_tradition_or_mil_power = { amount = 10 }
+			add_scaled_imperial_influence = 50
 
-							custom_tooltip = SEPERATOR_TOOLTIP
+			custom_tooltip = SEPERATOR_TOOLTIP
 
-							create_general_with_pips = { tradition = 55 add_shock = 1 }
-						\"
-					}
-				"
-
-				second_custom_tooltip = HAB_IF_HRE
-				second_limit = " 
-					is_emperor = yes
-					calc_true_if = {
-						all_province = {
-							region = france_region
-							is_part_of_hre = yes
-						}
-						amount = 25
-					}
-				"
-				second_effect = "
-					add_scaled_imperial_influence = 5
-
-					custom_tooltip = SEPERATOR_TOOLTIP
-
-					change_ruler_stat = {
-						type = dip
-						amount = 1
-					}
-				"
+			change_ruler_stat = {
+				type = dip
+				amount = 1
 			}
 		} 
 	}
@@ -3048,40 +2948,20 @@ WoC_austria_4 = {
 			}
 		}
 		effect = {
-			give_claims = { area = silesia_area }
-
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			complex_dynamic_effect = {
-				first_custom_tooltip = HAB_IF_COMPLETED_WITH_UNION
-				first_limit = "
-					senior_union_with = BOH
-				"
-				first_effect = "
-					custom_tooltip = HAB_BOHEMIA_INTEGRATES_SILESIA
-
-					hidden_effect = { boh_integrate_silesian_subjects = yes }
-
-					custom_tooltip = SEPERATOR_TOOLTIP
-
-					add_country_modifier = {
-						name = hab_union_with_bohemia
-						duration = 5475
-					}
-				"
-				second_custom_tooltip = HAB_IF_COMPLETED_WITH_CONQUEST
-				second_limit = "
-					NOT = { senior_union_with = BOH }
-				"
-				second_effect = "
-					add_country_modifier = {
-						name = habsburg_bohemia
-						duration = 5475
-					}
-
-					add_scaled_imperial_influence = 5
-				"
+			give_claims = { 
+				area = silesia_area 
 			}
+			give_claims = { 
+				area = breg_area 
+			}
+			give_claims = { 
+				area = opole_area 
+			}
+			add_country_modifier = {
+				name = habsburg_bohemia
+				duration = 5475
+			}
+	
 		}
 		ai_weight = {
 			factor = 500	#Historical conquest (though they got the crown not through war, but marriages are a little bit too mysterious and complex for the AI)
@@ -3101,51 +2981,31 @@ WoC_austria_4 = {
 		position = 6
 		required_missions = { hab_crown_of_bohemia } 
 		provinces_to_highlight = {  
-			if = {
-				limit = {
-					exists = PLC
-				}
-				owner = {
-					tag = PLC
-				}
+			
+			OR = { 
+				area = opole_area 
+				area = slovakia_area
+				area = breg_area
 			}
-			else_if = {
-				limit = {
-					exists = POL
-				}
-				owner = {
-					tag = POL
-				}
-			}
-			else = {
-				region = poland_region
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		} 
 
 		trigger = {  
 			OR = {
-				if = {
-					limit = {
-						exists = PLC
+				AND = {
+					opole_area = {
+						type = all 
+						country_or_non_sovereign_subject_holds = ROOT 
 					}
-					army_strength = {
-						who = PLC
-						value = 2
-					}
-				}
-				else_if = {
-					limit = {
-						exists = POL
-					}
-					army_strength = {
-						who = POL
-						value = 2
+					breg_area = {
+						type = all 
+						country_or_non_sovereign_subject_holds = ROOT 
 					}
 				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 3
-					region = poland_region
+				
+				slovakia_area = {
+					type = all 
+					country_or_non_sovereign_subject_holds = ROOT 
 				}
 			}
 		} 
@@ -3153,17 +3013,7 @@ WoC_austria_4 = {
 		effect = {
 			give_claims = { region = poland_region }
 
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			complex_dynamic_effect = {
-				first_custom_tooltip = HAB_IF_POLAND_BELOW_300_DEV
-				first_limit = "
-					surpass_poland_complex_scripted_trigger = yes
-				"
-				first_effect = "
-					austria_surpass_poland_effect = yes
-				"
-			}
+			
 		} 
 	}
 
@@ -3351,102 +3201,19 @@ WoC_austria_4 = {
 			}
 		}
 		effect = {
-			custom_tooltip = HAB_GRANT_CLAIMS_ON_CHINESE_PORTS
-			hidden_effect = {
-				north_china_region = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { owned_by = ROOT }
-						has_port = yes
-						province_has_center_of_trade_of_level = 1
-					}
-					add_permanent_claim = ROOT
-				}
-				south_china_region = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { owned_by = ROOT }
-						has_port = yes
-						province_has_center_of_trade_of_level = 1
-					}
-					add_permanent_claim = ROOT
-				}
-			}
+		
 
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			add_mercantilism_or_monarch_power = { amount = 3 }
+			add_mercantilism_or_monarch_power = { amount = 10 }
 
 			custom_tooltip = SEPERATOR_TOOLTIP
 			
-			add_dip_power = 50
+			add_dip_power = 250
 		}
 		ai_weight = {
 			factor = 0	#Same as above
 		}
 	}
 
-	hab_austrian_australia = {
-		icon = colonize_australia
-		position = 10
-		required_missions = {
-			hab_indian_trading
-			hab_china
-		}
-		provinces_to_highlight = {
-			region = australia_region
-			ROOT = {
-				NOT = {
-					any_subject_country = {
-						is_colonial_nation = yes
-						capital_scope = {
-							colonial_region = colonial_australia
-						}
-						any_owned_province = {
-							region = australia_region
-						}
-					}
-				}
-			}
-		}
-		trigger = {
-			any_subject_country = {
-				is_colonial_nation = yes
-				capital_scope = {
-					colonial_region = colonial_australia
-				}
-				any_owned_province = {
-					region = australia_region
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = HAB_MODIFY_OSTEND_COMPANY_1
-			hidden_effect = {
-				remove_country_modifier = hab_ostend_company_1
-				add_country_modifier = {
-					name = hab_ostend_company_2
-					duration = -1
-				}
-			}
-
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			4854 = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = -1
-					power = 25
-					key = LAND_DOWNUNDER
-				}
-			}
-		}
-		ai_weight = {
-			factor = 0	#It's a meme mission.
-		}
-	}
 
 	hab_balance_of_power = {
 		icon = balance_of_power
@@ -3548,57 +3315,20 @@ WoC_austria_4 = {
 		position = 13
 		required_missions = { hab_shift_in_balance } 
 		trigger = {
-			if = {
-				limit = {
-					government = monarchy
-					has_government_attribute = heir
-				}
-				OR = {
-					calc_true_if = {
-						desc = emp_hab_spread_dynasties_trigger_tooltip2
-						amount = 5
-						all_country = {
-							OR = {
-								junior_union_with = root
-								dynasty = root
-							}
-							has_opinion = {
-								who = root
-								value = 120
-							}
-						}
-					}
-				}
-			}
-			else = {
-				calc_true_if = {
-					amount = 5
-					all_country = {
-						OR = {
-							is_subject_of = root
-							alliance_with = root
-						}
-						has_opinion = {
-							who = root
-							value = 120
-						}
-						custom_trigger_tooltip = {
-							tooltip = same_government_as_root
-							same_govt_as_root_trigger = yes
-						}
-					}
+			num_of_subjects = 5
+			NOT = {
+				any_subject_country = {
+					liberty_desire = 20
 				}
 			}
 		}
 		effect = {
-			custom_tooltip = HAB_UNLOCK_SPREAD_DYNASTY_PEACE_OFFER
-			set_country_flag = hab_spread_von_habsburgs_peace_offer
 
 			custom_tooltip = SEPERATOR_TOOLTIP
 
 			add_country_modifier = {
 				name = hab_many_thrones
-				duration = 7300
+				duration = 14600
 			}
 
 			add_power_projection_mission = {
@@ -3647,16 +3377,15 @@ WoC_austria_5 = {
 			}
 		}
 		trigger = {
-			OR = {
-				senior_union_with = BUR
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					OR = {
-						area = bourgogne_area
-						area = lorraine_area
-					}
-					value = 4
+			
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = bourgogne_area
+					area = lorraine_area
 				}
+				value = 4
 			}
+			
 		}
 		effect = {
 			if = {
@@ -3671,60 +3400,15 @@ WoC_austria_5 = {
 
 			custom_tooltip = SEPERATOR_TOOLTIP
 
-			complex_dynamic_effect = {
-				first_custom_tooltip = HAB_IF_BURGUNDY_VASSAL
-				first_limit = "
-					BUR = {
-						junior_union_with = ROOT
-					}
-				"
-				first_effect = "
-					country_event_with_option_insight = {
-						id = flavor_hab.25
-						option_1 = \"
-							add_country_modifier = {
-								name = hab_dukes_of_burgundy_and_austria
-								duration = 3650
-							}
-					
-							custom_tooltip = HAB_DISABLE_HORSE_KISSING
-						\"
-
-						option_2 = \"
-							add_adm_power = 100
-							change_ruler_stat = {
-								type = adm
-								amount = 1
-							}
-						\"
-					}
-				"
-	
-				second_custom_tooltip = HAB_IF_BURGUNDY_HRE
-				second_limit = "
-					BUR = {
-						NOT = { junior_union_with = ROOT }
-					}
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						OR = {
-							area = bourgogne_area
-							area = lorraine_area
-						}
-						value = 4
-					}
-				"
-				second_effect = "
-					define_advisor = {
-						type = diplomat
-						skill = 2
-						cost_multiplier = 0.5
-					}
-
-					custom_tooltip = SEPERATOR_TOOLTIP
-
-					add_dip_power = 100
-				"
+			define_advisor = {
+				type = diplomat
+				skill = 2
+				cost_multiplier = 0.5
 			}
+
+			custom_tooltip = SEPERATOR_TOOLTIP
+
+			add_dip_power = 100
 		}
 		ai_weight = {
 			factor = 500	#Historical conquest
@@ -3786,213 +3470,7 @@ WoC_austria_5 = {
 		}
 	}
 
-	hab_spain_pu = {
-		icon = mission_imperial_spain
-		position = 3
-		provinces_to_highlight = { 
-			if = {
-				limit = {
-					exists = SPA
-				}
-				region = iberia_region
-				owner = {
-					tag = SPA
-				}
-			}
-			else_if = {
-				limit = {
-					exists = CAS
-				}
-				region = iberia_region
-				owner = {
-					tag = CAS
-				}
-			}
-			else = {
-				region = iberia_region
-				NOT = { country_or_non_sovereign_subject_holds = root }
-			}
-		}
 	
-		trigger = {
-			OR = {
-				if = {
-					limit = {
-						exists = SPA
-					}
-					AND = {
-						variable_arithmetic_trigger = {
-							custom_tooltip = HAB_greater_development_than_SPA
-							export_to_variable = {
-								variable_name = SPA_Development
-								value = total_development
-								who = SPA
-							}
-							export_to_variable = {
-								variable_name = HAB_Development
-								value = total_development
-								who = ROOT
-							}
-							multiply_variable = {
-								which = SPA_Development
-								value = 2
-							}
-							check_variable = {
-								which = HAB_Development
-								which = SPA_Development
-							}
-						}
-						SPA = {
-							dynasty = ROOT
-						}
-						legitimacy_equivalent = 100
-					}
-				}
-				else_if = {
-					limit = {
-						exists = CAS
-					}
-					AND = {
-						variable_arithmetic_trigger = {
-							custom_tooltip = HAB_greater_development_than_CAS
-							export_to_variable = {
-								variable_name = CAS_Development
-								value = total_development
-								who = CAS
-							}
-							export_to_variable = {
-								variable_name = HAB_Development
-								value = total_development
-								who = ROOT
-							}
-							multiply_variable = {
-								which = CAS_Development
-								value = 2
-							}
-							check_variable = {
-								which = HAB_Development
-								which = CAS_Development
-							}
-						}
-						CAS = {
-							dynasty = ROOT
-						}
-						legitimacy_equivalent = 100
-					}
-				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					region = iberia_region
-					value = 4
-				}
-			}
-		} 
-		effect = {
-			if = {
-				limit = {
-					exists = SPA
-					SPA = { valid_for_personal_unions_trigger = yes }
-					valid_for_personal_unions_trigger = yes
-				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					target = SPA
-					months = 120
-				}
-
-				custom_tooltip = SEPERATOR_TOOLTIP
-			}
-			else_if = {
-				limit = {
-					exists = CAS
-					CAS = { valid_for_personal_unions_trigger = yes }
-					valid_for_personal_unions_trigger = yes
-				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					target = CAS
-					months = 120
-				}
-
-				custom_tooltip = SEPERATOR_TOOLTIP
-			}
-
-			custom_tooltip = HAB_AS_LONG_AS_WE_HAVE_PU_CB_ON_CAS_OR_SPA_ALLOW_IBERIAN_PU_DECISION
-			set_country_flag = hab_iberian_union_flag
-
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			give_claims = { region = iberia_region }
-		}
-	}
-
-	hab_iberian_hegemony = {
-		icon = a_question_of_spain
-		position = 4
-		required_missions = { hab_spain_pu } 
-
-		provinces_to_highlight = {
-			region = iberia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 55
-				region = iberia_region
-			}
-			if = {
-				limit = {
-					OR = {
-						has_dlc = "Rights of Man"
-						has_dlc = "Emperor"
-					}
-				}
-				NOT = { great_power_rank = 5 }
-			}
-			else = {
-				total_development = 1000
-			}
-		} 
-		effect = {
-			add_permanent_power_projection = {
-				amount = 10
-				type = HAB_hegemon_of_iberia
-			}
-
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			add_country_modifier_for_age = {
-				name = hab_crown_of_iberia
-				age = age_of_reformation
-				else = "
-					add_dip_power = 100
-				"
-			}
-
-			complex_dynamic_effect = {
-				first_custom_tooltip = HAB_IF_WE_HAVE_IBERIAN_PU
-				first_limit = "
-					OR = {
-						AND = {
-							senior_union_with = CAS
-							NOT = {
-								CAS = { is_subject_of_type = integrated_personal_union }
-							}
-						}
-						AND = {
-							senior_union_with = SPA
-							NOT = {
-								SPA = { is_subject_of_type = integrated_personal_union }
-							}
-						}
-					}
-				"
-				first_effect = "
-					austria_iberian_hegemony_reward = yes
-				"
-			}
-		}
-	}
 
 	hab_silesia = {
 		icon = take_silesia
@@ -4116,59 +3594,7 @@ WoC_austria_5 = {
 		}
 	}
 
-	hab_china = {
-		icon = mission_open_up_china
-		position = 9
-		required_missions = { hab_ostend_company } 
-		provinces_to_highlight = {
-			OR = {
-				region = north_china_region
-				region = south_china_region
-			}
-			has_port = yes
-			province_has_center_of_trade_of_level = 1
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 1
-				OR = {
-					region = north_china_region
-					region = south_china_region
-				}
-				has_port = yes
-				province_has_center_of_trade_of_level = 1
-			}
-		}
-		effect = {
-			custom_tooltip = HAB_RANDOM_PROVINCE_THAT_MEET_REQUIREMENTS_GETS_FOLLOWING
-			tooltip = {
-				add_center_of_trade_level = 1
-				add_base_production = 2
-				add_or_upgrade_trade_building = yes
-			}
 	
-			hidden_effect = {
-				random_province = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						OR = {
-							region = north_china_region
-							region = south_china_region
-						}
-						has_port = yes
-						province_has_center_of_trade_of_level = 1
-					}
-					add_center_of_trade_level = 1
-					add_base_production = 2
-					add_or_upgrade_trade_building = yes
-				}
-			}
-		}
-		ai_weight = {
-			factor = 0	#No
-		}
-	}
 
 	hab_shift_in_balance = {
 		icon = shift_the_balance

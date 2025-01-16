@@ -2177,17 +2177,6 @@ country_event = {
 		}
 	}
 	
-	option = {# No
-		name = flavor_hab.20.B
-		
-		add_dip_power = 100
-
-		add_government_reform = austrian_absolute_monarchy
-
-		ai_chance = {
-			factor = 0
-		}
-	}
 }
 
 # Ladislaus Postumus: Archduke of Austria, King of Hungary (Austrian version)
