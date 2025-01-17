@@ -620,13 +620,13 @@ kok_persia_mission_origins_slot_ardabil = {
 			tag = ERS
 		}
 		was_tag = QOM
+		was_tag = ARL
 		NOT = { was_tag = TIM }
 		NOT = { was_tag = KHO }
 		NOT = { was_tag = FRS }
 		NOT = { was_tag = AFG }
 		NOT = { was_tag = TRS }
 		NOT = { was_tag = SIS }
-		NOT = { was_tag = QOM }
 		NOT = { has_country_flag = enthroned_a_timurid_prince }
 		NOT = { primary_culture = mazandarani }
 		NOT = { was_tag = AKK }
