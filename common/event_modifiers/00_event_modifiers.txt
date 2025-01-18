@@ -14054,7 +14054,7 @@ grand_vizier_artist = {
 grand_vizier_treasurer = {
 	yearly_corruption = -0.05
 	country_admin_power = 1
-	development_cost = -0.05
+	development_cost = -0.025
 }
 grand_vizier_theologian = {
 	yearly_corruption = -0.05
@@ -14064,7 +14064,7 @@ grand_vizier_theologian = {
 grand_vizier_master_of_mint = {
 	yearly_corruption = -0.05
 	country_admin_power = 1
-	build_cost = -0.1
+	build_cost = -0.05
 }
 grand_vizier_inquisitor = {
 	yearly_corruption = -0.05
@@ -14124,7 +14124,7 @@ grand_vizier_commandant = {
 grand_vizier_quartermaster = {
 	yearly_corruption = -0.05
 	country_military_power = 1
-	morale_damage_received = -0.1
+	morale_damage_received = -0.05
 }
 grand_vizier_recruitmaster = {
 	yearly_corruption = -0.05
@@ -14134,7 +14134,7 @@ grand_vizier_recruitmaster = {
 grand_vizier_fortification_expert = {
 	yearly_corruption = -0.05
 	country_military_power = 1
-	army_tradition = 1
+	army_tradition = 0.5
 }
 grand_vizier_grand_captain = {
 	yearly_corruption = -0.05
