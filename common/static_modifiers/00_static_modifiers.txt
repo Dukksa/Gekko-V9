@@ -540,11 +540,12 @@ resource_depleted = {
 }
 
 in_trade_company = {
-	province_trade_power_modifier = 1
+	
+	province_trade_power_modifier = 0.5
 	naval_forcelimit = 0.5
 	#local_missionary_strength = -0.2
 	#local_institution_spread = 0.10
-	local_governing_cost = 0.25
+
 }
 
 left_trade_company = {
