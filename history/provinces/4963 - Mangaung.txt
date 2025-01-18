@@ -1,0 +1,14 @@
+#HashMP South Africa
+#Mangaung
+
+culture = nguni
+religion = shamanism #Fetishism
+capital = "Mangaung"
+trade_goods = unknown
+hre = no
+base_tax = 2
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 1
