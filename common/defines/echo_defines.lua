@@ -148,8 +148,8 @@ NDefines.NMilitary.TRANSPORT_COST = 1
 NDefines.NMilitary.TRANSPORT_SHIP_SAILORS_COST = 1					-- 1 = 1 men in cost.
 NDefines.NMilitary.TRANSPORT_TIME = 90	
 NDefines.NMilitary.CAWA_STARTING_STRENGTH = 0.1
-NDefines.NMilitary.CREATE_JANISSARIES_MIL_COST = 0			-- Cost to create janissaries (per unit)
-NDefines.NMilitary.CREATE_CAWA_MIL_COST = 0					-- Cost to create Cawa (per unit)
+NDefines.NMilitary.CREATE_JANISSARIES_MIL_COST = 1			-- Cost to create janissaries (per unit)
+NDefines.NMilitary.CREATE_CAWA_MIL_COST = 1					-- Cost to create Cawa (per unit)
 NDefines.NMilitary.NATIVE_FEROCITY_IMPACT = -1
 NDefines.NMilitary.NOMAD_LOOT_TRADITION = 0.00
 NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.15 				

@@ -2055,8 +2055,9 @@ army_drill_modifier = { # Used by an entire army, is the average of all subunits
 
 janissary_regiment = {
 	assault_fort_ability = 0.5
-	drill_gain_modifier = 0.25
+	drill_gain_modifier = 0.5
 	reinforce_cost_modifier = 1
+	drill_decay_modifier = -0.20
 	fire_damage = 0.05
 }
 
