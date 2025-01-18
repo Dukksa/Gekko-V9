@@ -4069,9 +4069,9 @@
  mam_assign_waqf_desc:0 "By setting aside coin and wealth for the assistance of the less fortunate and especially education institutes. Charities are the lifeblood and sign of a pious and prosperous society!"
 
  #Tooltips 
- mam_unlock_galley_doctrine_tt:1 "Grants access to the §YMamluk Galleys§! Naval Doctrine, which grants the following: \nGalley Combat Ability: §G+15%§!\nGalley Cost: §G-25%§!"
- mam_unlock_light_doctrine_tt:0 "Grants access to the §YMamluk Merchant Vessels§! Naval Doctrine, which grants the following: \nShip Trade Power: §G+15%§!\nLight Ship Cost: §G-25%§!"
- mam_unlock_warships_doctrine_tt:0 "Grants access to the §YMamluk Warships§! Naval Doctrine, which grants the following: \nHeavy Ship Combat Ability: §G+10%§!\nGlobal Naval Engagement Modifier: §G+10%§!"
+ mam_unlock_galley_doctrine_tt:1 "Grants access to the §YMamluk Galleys§! Naval Doctrine, which grants the following: \nGlobal Ship Cost: §G-20%§!"
+ mam_unlock_light_doctrine_tt:0 "Grants access to the §YMamluk Merchant Vessels§! Naval Doctrine, which grants the following: \nShip Trade Power: §G+15%§!"
+ mam_unlock_warships_doctrine_tt:0 "Grants access to the §YMamluk Warships§! Naval Doctrine, which grants the following: \nDisengagement Chance: §G+15%§!"
  mam_unlock_transports_doctrine_tt:1 "Grants access to the §YMamluk Transports§! Naval Doctrine, which grants the following: \nAttrition when loaded on Ships: §G-50%§!\nMarines Force Limit: §G+10%§!\nFleet Movement Speed: §G+1§!"
  unlock_state_madrasas_reform_tt:0 "Grants access to the §YState Madrasas§! Government Reform: \n\n§YGovernment Mechanics:§! \nEach §YAdvisor§! will generate §G +0.02§! Yearly Innovativeness per level \n\n§YReform Modifiers:§! \nCost of Advisors with Ruler's Religion: §G -20.0%§!\nYearly Government Power: §G +0.33§!"
  mam_enable_coffee_monopoly_tt:0 "Grants access to the §YMonopoly on Coffee§! Merchant Guilds Estate privilege: \n\n§YBenefits:§! \nMerchant Guilds Loyalty Equilibrium §G +10%§!\nBase Tax on Coffee Provinces: §G+1§!\n "
