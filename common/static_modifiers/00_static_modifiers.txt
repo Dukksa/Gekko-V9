@@ -1048,10 +1048,10 @@ devotion = {
 
 # Multiplied by current meritocracy - 50
 meritocracy = {
-	global_spy_defence = 1.0
-	advisor_cost = -0.1
 	yearly_harmony = 1
 	reform_progress_growth = 0.5
+	global_unrest = -4
+	discipline = 0.10
 }
 
 # Multiplied by 50 - meritocracy
