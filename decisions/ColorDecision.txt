@@ -1,70 +1,92 @@
 country_decisions = {
-    change_back_color_nation = {
-        major = yes
-        potential = {
-            OR = {
-AND = {
- NOT = { tag = VEN }
- was_tag = VEN
- OR = { ai = no
-       AND = { ai = yes
-               has_global_flag = ai_will_change_color
-             }
-       }
-}
-AND = {
- NOT = { tag = MLO }
- was_tag = MLO
- OR = { ai = no
-       AND = { ai = yes
-               has_global_flag = ai_will_change_color
-             }
-       }
-}
-AND = {
- NOT = { tag = SIC }
- was_tag = SIC
- OR = { ai = no
-       AND = { ai = yes
-               has_global_flag = ai_will_change_color
-             }
-       }
-}
-}
-            NOT = { has_country_flag = has_overriden_color_flag }
-        }
-        allow = {
-        }
-        effect = {
-if = {
-  limit = { was_tag = VEN }
-  change_country_color = {
-      country = VEN
-  }
-  set_country_flag = has_overriden_color_flag
-}
-if = {
-  limit = { was_tag = MLO }
-  change_country_color = {
-      country = MLO
-  }
-  set_country_flag = has_overriden_color_flag
-}
-if = {
-  limit = { was_tag = SIC }
-  change_country_color = {
-      country = SIC
-  }
-  set_country_flag = has_overriden_color_flag
-}
-if = {
-  limit = { ai = yes }
-  clr_country_flag = has_overriden_color_flag
-}
-        }
-        ai_will_do = {
-            factor = 5
-        }
-         ai_importance = 800
-    }
+	change_back_color_nation = {
+		major = yes
+		potential = {
+			OR = {
+				AND = {
+					NOT = {
+						tag = VEN
+					}
+					was_tag = VEN
+					OR = {
+						ai = no
+						AND = {
+							ai = yes
+							has_global_flag = ai_will_change_color
+						}
+					}
+				}
+				AND = {
+					NOT = {
+						tag = MLO
+					}
+					was_tag = MLO
+					OR = {
+						ai = no
+						AND = {
+							ai = yes
+							has_global_flag = ai_will_change_color
+						}
+					}
+				}
+				AND = {
+					NOT = {
+						tag = SIC
+					}
+					was_tag = SIC
+					OR = {
+						ai = no
+						AND = {
+							ai = yes
+							has_global_flag = ai_will_change_color
+						}
+					}
+				}
+			}
+			NOT = {
+				has_country_flag = has_overriden_color_flag
+			}
+		}
+		allow = {
+		}
+		effect = {
+			if = {
+				limit = {
+					was_tag = VEN
+				}
+				change_country_color = {
+					country = VEN
+				}
+				set_country_flag = has_overriden_color_flag
+			}
+			if = {
+				limit = {
+					was_tag = MLO
+				}
+				change_country_color = {
+					country = MLO
+				}
+				set_country_flag = has_overriden_color_flag
+			}
+			if = {
+				limit = {
+					was_tag = SIC
+				}
+				change_country_color = {
+					country = SIC
+				}
+				set_country_flag = has_overriden_color_flag
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				clr_country_flag = has_overriden_color_flag
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		ai_importance = 800
+	}
 }
