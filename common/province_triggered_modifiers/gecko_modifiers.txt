@@ -914,3 +914,31 @@ conquest_of_delhi = {
 	
 	}
 }	
+
+dover_heights = {
+	potential = {
+		normal_or_historical_nations = yes
+	
+	}
+	trigger = {
+		controller = {
+			OR = {
+				tag = ENG 
+				tag = GBR
+			}		
+		}
+		
+	}
+	local_defender_dice_roll_bonus = 3
+	local_defensiveness = 0.25
+	local_garrison_size = 0.25
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}	
