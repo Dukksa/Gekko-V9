@@ -3788,7 +3788,6 @@ ramparts = {
 				}
 			}
 		}
-		NOT = {has_terrain = mountain }
 	}
 	keep_trigger = {
 		NOT = {
