@@ -250,28 +250,43 @@ my_desert = {
 #	local_development_cost = -0.10
 #}
 
-#conquest_of_amsterdam = {
-#	potential = {
-#		normal_or_historical_nations = yes
-#	}
-#
-#	trigger = {
-#		controlled_by = ROOT
-#	}
-#
-#
-#	global_trade_power = 0.1
-#	trade_efficiency = 0.1
-#	
-#	#Province scope
-#	on_activation = {
-#	
-#	}
-#	
-#	on_deactivation = {
-#	
-#	}
-#}
+conquest_of_amsterdam = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+
+	trigger = {
+		owner = {
+			NOT = { tag = NED }
+			NOT = { tag = BUR }
+			NOT = { 	
+					has_global_modifier_value = {
+					which = discipline
+					value = 0.30
+					}
+				}
+
+			holland_area	= {
+				type = all
+				country_or_non_sovereign_subject_holds = PREV
+			}	
+				
+		}
+		controlled_by = ROOT
+	}
+
+
+	land_morale = 0.05
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
 
 conquest_of_constantinople = {
 	potential = {
