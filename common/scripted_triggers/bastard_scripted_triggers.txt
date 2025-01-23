@@ -184,7 +184,6 @@ has_state_edict_enabled = {
 		has_state_edict = edict_advancement_effort
 		has_state_edict = edict_centralization_effort
 		has_state_edict = edict_defensive_edict
-		has_state_edict = edict_of_absolutism
 		has_state_edict = edict_of_governance
 		has_state_edict = edict_encourage_development
 		has_state_edict = edict_feudal_de_jure_law
