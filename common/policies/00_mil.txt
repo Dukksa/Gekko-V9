@@ -74,6 +74,7 @@ guerilla_warfare = {
 	
 	global_manpower_modifier = 0.15
 	land_forcelimit_modifier = 0.1
+	free_mil_policy = 1
 	
 	ai_will_do = {
 		factor = 1		
@@ -202,6 +203,7 @@ agricultural_cultivations = {
 	
 	land_forcelimit_modifier = 0.15
 	global_manpower_modifier = 0.1
+	free_mil_policy = 1
 
 	effect = {}
 	removed_effect = {}
@@ -225,6 +227,7 @@ the_mercenary_registration_act = {
 
 	global_regiment_cost = -0.1
 	land_forcelimit_modifier = 0.2
+	free_mil_policy = 1
 	
 	effect = {}
 	removed_effect = {}
@@ -520,6 +523,7 @@ field_priests = {
  	
  	land_forcelimit_modifier = 0.1
 	global_manpower_modifier = 0.15
+	free_mil_policy = 1
  	
  	effect = {}
  	removed_effect = {}
@@ -720,6 +724,7 @@ colonial_garrisons = {
 	}
 
 	global_manpower_modifier = 0.25
+	free_mil_policy = 1
 
 	effect = {}
 	removed_effect = {}
@@ -786,6 +791,7 @@ streamlined_galley_production = {
 	
 	allowed_marine_fraction = 0.25
 	has_marines = yes
+	free_mil_policy = 1
 	
 	effect = {}
 	removed_effect = {}

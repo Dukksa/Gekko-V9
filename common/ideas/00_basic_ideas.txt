@@ -1291,7 +1291,6 @@ quantity_ideas = {
 	bonus = {
 		land_forcelimit_modifier = 0.25
 		num_of_pronoiars = 1
-		free_mil_policy = 3
 		possible_mil_policy = 1
 	}
 	mass_army = {
