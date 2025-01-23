@@ -187,6 +187,7 @@ has_state_edict_enabled = {
 		has_state_edict = edict_of_governance
 		has_state_edict = edict_encourage_development
 		has_state_edict = edict_feudal_de_jure_law
+		has_state_edict = edict_devastation_edict
 		has_state_edict = french_infrastructure_network
 		has_state_edict = edict_promote_military_recruitment
 		has_state_edict = edict_protect_trade
