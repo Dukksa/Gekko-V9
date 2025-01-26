@@ -1772,8 +1772,14 @@ GRA_ideas = {
 
 PAP_ideas = {
 	start = {
-		diplomatic_reputation = 1
-		religious_unity = 0.25
+		land_forcelimit = -99 
+		global_manpower = -99
+		diplomatic_upkeep = 10
+		global_trade_power = -0.9
+		merchants = -10
+		global_tax_income = 120
+		liberty_desire = 200	
+		
 	}
 
 	bonus = {

@@ -300,6 +300,7 @@ papal_subjugation = {
 
 	trigger = {	
 		overlord_of = PAP
+		is_in_trade_league_with = PAP
 	}
 
 	development_cost = 0.5
