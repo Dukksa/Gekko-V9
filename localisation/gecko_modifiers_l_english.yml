@@ -35,6 +35,7 @@
  gc_thriving_arms_industry:0 "Thriving Arms Industry"
  #Province Triggered Modifiers
  conquest_of_constantinople:0 "Conquest of Constantinople"
+ conquest_of_rome:0 "The Eternal City"
  conquest_of_paris:0 "Conquest of Paris"
  conquest_of_vienna:0 "Conquest of Vienna"
  conquest_of_jerusalem:0 "Conquest of Jerusalem"

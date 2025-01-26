@@ -1,7 +1,7 @@
 #118 - Roma
 
-owner = PAP
-controller = PAP
+owner = SPL
+controller = SPL
 culture = umbrian 
 religion = catholic 
 hre = no
@@ -11,7 +11,7 @@ trade_goods = grain
 base_manpower = 2
 capital = "Viterbo"
 is_city = yes
-add_core = PAP
+add_core = SPL
 hre = yes
 
 
@@ -23,7 +23,7 @@ discovered_by = ottoman
 
 1750.1.1 = { add_core = ITA } 
 1809.4.10 = { controller = FRA } # Occupied by French troops
-1809.10.14 = { owner = FRA add_core = FRA } # Treaty of Schönbrunn
+1809.10.14 = { owner = FRA add_core = FRA } # Treaty of Schï¿½nbrunn
 1814.4.11 = {
 	owner = PAP
 	controller = PAP
