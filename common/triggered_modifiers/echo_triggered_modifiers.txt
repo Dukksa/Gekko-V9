@@ -437,3 +437,44 @@ African_Slave_Trade_Western = {
 	global_trade_goods_size_modifier = 0.1
 	global_tariffs = 0.1
 }
+
+italian_riches  = {
+	potential = {
+		
+	}
+
+	trigger = {
+		NOT = {
+			tag = MLO 
+			tag = ITA 
+			tag = TTS 
+			tag = SIC 
+			tag = ROM	
+		}
+
+		
+		ROOT = {
+			capital_scope = {
+				NOT = {
+					region = italy_region
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+
+				region = italy_region
+				value = 10
+
+			}
+		}
+
+		
+		 
+
+	}
+
+	global_trade_goods_size_modifier = 0.1
+	production_efficiency = 0.1
+	development_cost = -0.05
+	merchants = 1
+
+}
