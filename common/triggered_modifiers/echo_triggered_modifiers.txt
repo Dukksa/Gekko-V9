@@ -1,18 +1,20 @@
-Splendid_Court= {
+Splendid_Court = {
 	potential = {
 		current_age = age_of_discovery
-		ROOT = {ai = no}
+		ROOT = {
+			ai = no
+		}
 	}
-	
-
 	trigger = {
-		NOT = {is_colonial_nation = yes }
+		NOT = {
+			is_colonial_nation = yes
+		}
 		is_at_war = no
 		OR = {
 			has_adm_advisor_3 = yes
 			has_dip_advisor_3 = yes
 			has_mil_advisor_3 = yes
-		}	
+		}
 	}
 	advisor_cost = -0.1
 	development_cost = -0.05
@@ -20,22 +22,31 @@ Splendid_Court= {
 
 Minor = {
 	potential = {
-	OR = {
 		OR = {
-            is_part_of_hre = yes
-            NOT = {is_great_power = yes}
+			OR = {
+				is_part_of_hre = yes
+				NOT = {
+					is_great_power = yes
+				}
+			}
 		}
-	}	
-			ROOT = {
-				ai = no
-			}	
-			NOT = { is_emperor = yes }
+		ROOT = {
+			ai = no
+		}
+		NOT = {
+			is_emperor = yes
+		}
 	}
-	
 	trigger = {
-		NOT = {total_own_and_non_tributary_subject_development = 400 }	
-		NOT = { is_emperor = yes }
-		NOT = { is_colonial_nation = yes }	
+		NOT = {
+			total_own_and_non_tributary_subject_development = 400
+		}
+		NOT = {
+			is_emperor = yes
+		}
+		NOT = {
+			is_colonial_nation = yes
+		}
 	}
 	advisor_cost = -0.25
 	interest = -0.25
@@ -49,31 +60,42 @@ Minor = {
 
 We_stand_alone = {
 	potential = {
-			ROOT = {
-				ai = no	
-			}	
-			NOT = { has_country_modifier = imp_ambition_timer }
+		ROOT = {
+			ai = no
+		}
+		NOT = {
+			has_country_modifier = imp_ambition_timer
+		}
 	}
-	trigger  = {
+	trigger = {
 		OR = {
-				great_power_rank = 4
-				 is_great_power = no
-				}
-				any_country = {
-						total_development = ROOT
-					}
-				
-				OR = {
-					NOT = { num_of_allies = 1 }
-					has_country_modifier = Berber_Raids
-					has_country_modifier = Stop_the_raids
-					has_country_modifier = spice_bros
-					has_country_modifier = Minor
-				}
-				NOT = { is_hegemon = yes }
-				NOT = { is_colonial_nation = yes }	
-				NOT = { is_lacking_institutions = yes }
-				NOT = { is_subject_of_type = tributary_state }
+			great_power_rank = 4
+			is_great_power = no
+		}
+		any_country = {
+			total_development = ROOT
+		}
+		OR = {
+			NOT = {
+				num_of_allies = 1
+			}
+			has_country_modifier = Berber_Raids
+			has_country_modifier = Stop_the_raids
+			has_country_modifier = spice_bros
+			has_country_modifier = Minor
+		}
+		NOT = {
+			is_hegemon = yes
+		}
+		NOT = {
+			is_colonial_nation = yes
+		}
+		NOT = {
+			is_lacking_institutions = yes
+		}
+		NOT = {
+			is_subject_of_type = tributary_state
+		}
 	}
 	land_morale = 0.025
 	naval_morale = 0.025
@@ -82,56 +104,74 @@ We_stand_alone = {
 	global_manpower_modifier = 0.1
 	reinforce_cost_modifier = -0.05
 	global_prosperity_growth = 0.5
-	fort_maintenance_modifier = -0.10
+	fort_maintenance_modifier = -0.1
 	land_forcelimit_modifier = 0.15
 	merc_maintenance_modifier = -0.15
 	mercenary_manpower = 0.1
 	expand_infrastructure_cost_modifier = -0.25
 }
+
 Great_power_dominance = {
 	potential = {
-			ROOT = {
-				ai = no	
-			}	
+		ROOT = {
+			ai = no
+		}
 	}
-	trigger  = {
-		NOT = { great_power_rank = 4 }
-				OR = {
-					NOT = { num_of_allies = 1 }
-				}
-				NOT = { is_hegemon = yes }
-				NOT = { is_colonial_nation = yes }	
-				NOT = { is_lacking_institutions = yes }
+	trigger = {
+		NOT = {
+			great_power_rank = 4
+		}
+		OR = {
+			NOT = {
+				num_of_allies = 1
+			}
+		}
+		NOT = {
+			is_hegemon = yes
+		}
+		NOT = {
+			is_colonial_nation = yes
+		}
+		NOT = {
+			is_lacking_institutions = yes
+		}
 	}
 	army_tradition_decay = -0.005
 	navy_tradition_decay = -0.005
 }
-HRE_backup = {	
+
+HRE_backup = {
 	potential = {
-				NOT = {is_year = 1530}
-				OR = {
-					tag = HAB
-					tag = AHU
-					was_tag = HAB
-				}
-				was_player = yes
-				NOT = { is_emperor = yes }
-				ROOT = {
-					ai = no	
-				}
-			}
-	trigger  = {
+		NOT = {
+			is_year = 1530
+		}
 		OR = {
 			tag = HAB
 			tag = AHU
 			was_tag = HAB
-		}	
-		NOT = { is_emperor = yes }
+		}
+		was_player = yes
+		NOT = {
+			is_emperor = yes
+		}
+		ROOT = {
+			ai = no
+		}
+	}
+	trigger = {
+		OR = {
+			tag = HAB
+			tag = AHU
+			was_tag = HAB
+		}
+		NOT = {
+			is_emperor = yes
+		}
 	}
 	global_manpower = 15
 	land_forcelimit = 15
 	global_tax_income = 36
-	spy_offence = 0.1					#minor bonus on spies.
+	spy_offence = 0.1	#minor bonus on spies.
 	advisor_pool = 1
 	diplomatic_upkeep = 1
 	free_leader_pool = 1
@@ -145,38 +185,49 @@ HRE_backup = {
 War_chest = {
 	potential = {
 		ROOT = {
-				ai = no	
-			}
-		OR = {	
+			ai = no
+		}
+		OR = {
 			current_age = age_of_discovery
 			current_age = age_of_reformation
 		}
-		NOT = { has_country_modifier = imp_ambition_timer }
+		NOT = {
+			has_country_modifier = imp_ambition_timer
+		}
 	}
-
-
 	trigger = {
 		OR = {
-				great_power_rank = 4
-				 is_great_power = no
-				}
-			any_country = {
-						total_development = ROOT
-					}		
-		
-		NOT = {is_hegemon = yes}
+			great_power_rank = 4
+			is_great_power = no
+		}
+		any_country = {
+			total_development = ROOT
+		}
+		NOT = {
+			is_hegemon = yes
+		}
 		years_of_income = 1.25
-		NOT = { corruption = 1 }
-		NOT = { num_of_loans = 1 }
-		NOT = { is_colonial_nation = yes }	
+		NOT = {
+			corruption = 1
+		}
+		NOT = {
+			num_of_loans = 1
+		}
+		NOT = {
+			is_colonial_nation = yes
+		}
 		is_at_war = yes
 		land_maintenance = 1
 		army_size_percentage = 0.3
 		OR = {
-			NOT = { num_of_allies = 1 }
+			NOT = {
+				num_of_allies = 1
+			}
 			has_country_modifier = Minor
-		}	
-		NOT = { is_subject_of_type = tributary_state }
+		}
+		NOT = {
+			is_subject_of_type = tributary_state
+		}
 	}
 	land_morale = 0.1
 	land_forcelimit_modifier = 0.15
@@ -189,21 +240,23 @@ War_chest = {
 Ahead_of_time = {
 	potential = {
 		ROOT = {
-				ai = no	
-			}
+			ai = no
+		}
 	}
 	trigger = {
-		NOT = { is_lacking_institutions = yes }
+		NOT = {
+			is_lacking_institutions = yes
+		}
 	}
 	monthly_reform_progress_modifier = 0.25
 	yearly_innovativeness = 0.3
 	army_tradition = 1
 }
+
 TUR = {
 	potential = {
 		tag = TUR
 	}
-		
 	trigger = {
 		NOT = {
 			is_year = 1465
@@ -225,10 +278,10 @@ TUR = {
 			}
 			AND = {
 				is_in_war = {
-						attackers = HUN
+					attackers = HUN
 				}
 				is_in_war = {
-						attackers = MAM
+					attackers = MAM
 				}
 				MAM = {
 					ai = no
@@ -236,8 +289,8 @@ TUR = {
 				HUN = {
 					ai = no
 				}
-			}			
-		}	
+			}
+		}
 	}
 	mercenary_manpower = 1
 	land_forcelimit = 15
@@ -252,35 +305,36 @@ Berber_Raids = {
 		}
 		current_age = age_of_discovery
 	}
-
 	trigger = {
 		custom_trigger_tooltip = {
-            tooltip = berber_raids_tt
+			tooltip = berber_raids_tt
 			OR = {
-					great_power_rank = 5
-					 is_great_power = no
-					}
-			OR = {		
-				AND = {		
-					tag = MOR		
+				great_power_rank = 5
+				is_great_power = no
+			}
+			OR = {
+				AND = {
+					tag = MOR
 					alliance_with = TUN
 				}
-				AND = {		
-					tag = TUN		
+				AND = {
+					tag = TUN
 					alliance_with = MOR
 				}
-			}	
-			NOT = { is_lacking_institutions = yes }
-			NOT = {	
+			}
+			NOT = {
+				is_lacking_institutions = yes
+			}
+			NOT = {
 				maghreb_region = {
-						owner = {
-							OR = {
-							  culture_group = latin
-							  culture_group = iberian
-							  }
+					owner = {
+						OR = {
+							culture_group = latin
+							culture_group = iberian
 						}
-				}											
-			}			
+					}
+				}
+			}
 		}
 	}
 	defensiveness = 0.15
@@ -296,44 +350,48 @@ Stop_the_raids = {
 		}
 		current_age = age_of_discovery
 	}
-
 	trigger = {
-			OR = {
-					great_power_rank = 5
-					 is_great_power = no
-					}
-			OR = {		
-				AND = {		
-					tag = CAS		
-					alliance_with = POR
-					TUN = { alliance_with = MOR }
+		OR = {
+			great_power_rank = 5
+			is_great_power = no
+		}
+		OR = {
+			AND = {
+				tag = CAS
+				alliance_with = POR
+				TUN = {
+					alliance_with = MOR
 				}
-				AND = {		
-					tag = POR		
-					alliance_with = CAS
-					TUN = { alliance_with = MOR }
+			}
+			AND = {
+				tag = POR
+				alliance_with = CAS
+				TUN = {
+					alliance_with = MOR
 				}
-			}	
-			NOT = { is_lacking_institutions = yes }		
-		
+			}
+		}
+		NOT = {
+			is_lacking_institutions = yes
+		}
 	}
 	navy_tradition = 0.5
 	army_tradition = 0.5
 }
+
 Merc_payments = {
 	potential = {
-		ROOT = {ai = no}
+		ROOT = {
+			ai = no
+		}
 	}
-		
 	trigger = {
 		is_at_war = yes
 		NOT = {
 			manpower_percentage = 0.1
 		}
 	}
-
 	mercenary_discipline = -0.05
-
 }
 
 Control_African_Slave_Trade = {
@@ -343,14 +401,15 @@ Control_African_Slave_Trade = {
 			continent = africa
 			trade_goods = slaves
 		}
-		NOT = { technology_group = western }
+		NOT = {
+			technology_group = western
+		}
 	}
-
 	trigger = {
 		owns_all_provinces = {
 			continent = africa
 			trade_goods = slaves
-		}		
+		}
 	}
 	global_manpower_modifier = 0.125
 	infantry_power = 0.1
@@ -367,16 +426,15 @@ African_Gold_Monopoly = {
 			trade_goods = gold
 		}
 	}
-
 	trigger = {
 		owns_all_provinces = {
 			continent = africa
 			trade_goods = gold
-		}		
+		}
 	}
 	global_trade_goods_size_modifier = 0.05
 	gold_depletion_chance_modifier = -0.25
-	global_prosperity_growth  = 0.05
+	global_prosperity_growth = 0.05
 	monthly_gold_inflation_modifier = -0.25
 	development_cost = -0.05
 	build_time = -0.25
@@ -391,13 +449,12 @@ African_Gold = {
 			trade_goods = gold
 		}
 	}
-
 	trigger = {
 		num_of_owned_provinces_with = {
 			value = 3
 			continent = africa
 			trade_goods = gold
-		}			
+		}
 	}
 	global_trade_goods_size_modifier = 0.05
 	monthly_gold_inflation_modifier = -0.25
@@ -408,15 +465,13 @@ African_Gold = {
 
 African_Slave_Trade = {
 	potential = {
-
 	}
-
 	trigger = {
 		num_of_owned_provinces_with = {
 			value = 5
 			continent = africa
 			trade_goods = slaves
-		}		
+		}
 	}
 	mil_tech_cost_modifier = -0.05
 	infantry_power = 0.05
@@ -426,33 +481,30 @@ African_Slave_Trade_Western = {
 	potential = {
 		always = no
 	}
-
 	trigger = {
 		num_of_owned_provinces_with = {
 			value = 5
 			continent = africa
 			trade_goods = slaves
-		}		
+		}
 	}
 	global_trade_goods_size_modifier = 0.1
 	global_tariffs = 0.1
 }
 
-italian_riches  = {
+italian_riches = {
 	potential = {
-		
 	}
-
 	trigger = {
 		NOT = {
-			tag = MLO 
-			tag = ITA 
-			tag = TTS 
-			tag = SIC 
-			tag = ROM	
+			OR = {
+				was_tag = MLO
+				was_tag = ITA
+				was_tag = TTS
+				was_tag = SIC
+				was_tag = ROM
+			}
 		}
-
-		
 		ROOT = {
 			capital_scope = {
 				NOT = {
@@ -460,21 +512,86 @@ italian_riches  = {
 				}
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-
 				region = italy_region
-				value = 10
-
+				value = 15
 			}
 		}
-
-		
-		 
-
 	}
-
 	global_trade_goods_size_modifier = 0.1
 	production_efficiency = 0.1
 	development_cost = -0.05
 	merchants = 1
+}
 
+Peace_of_Italy = {
+	potential = {
+		NOT = {
+			is_year = 1500
+		}
+		OR = {
+			tag = MLO
+			tag = VEN
+			tag = SIC
+			tag = TTS
+			tag = ITA
+			tag = ROM
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = peace_of_italy_tt
+			OR = {
+				great_power_rank = 5
+				is_great_power = no
+			}
+			OR = {
+				AND = {
+					OR = {
+						tag = SIC
+						tag = TTS
+					}
+					alliance_with = MLO
+					alliance_with = VEN
+				}
+				AND = {
+					tag = MLO
+					OR = {
+						alliance_with = SIC
+						alliance_with = TTS
+					}
+					alliance_with = VEN
+				}
+				AND = {
+					tag = VEN
+					OR = {
+						alliance_with = SIC
+						alliance_with = TTS
+					}
+					alliance_with = MLO
+				}
+			}
+			NOT = {
+				is_lacking_institutions = yes
+			}
+			NOT = {
+				italy_region = {
+					owner = {
+						OR = {
+							culture_group = germanic
+							culture_group = french
+							culture_group = iberian
+							culture_group = carpathian
+							culture_group = maghrebi
+							culture_group = turko_semitic
+						}
+					}
+				}
+			}
+		}
+	}
+	all_power_cost = -0.025
+	build_cost = -0.05
+	global_tax_modifier = 0.05
+	global_autonomy = -0.05
+	monthly_reform_progress_modifier = 0.025
 }
