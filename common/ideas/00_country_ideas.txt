@@ -1779,6 +1779,7 @@ PAP_ideas = {
 		merchants = -10
 		global_tax_income = 120
 		liberty_desire = 200	
+		can_not_declare_war = yes
 		
 	}
 
