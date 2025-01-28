@@ -497,13 +497,10 @@ italian_riches = {
 	}
 	trigger = {
 		NOT = {
-			OR = {
-				was_tag = MLO
-				was_tag = ITA
-				was_tag = TTS
-				was_tag = SIC
-				was_tag = ROM
-			}
+			OR={ was_tag = MLO tag = MLO}
+			OR={ was_tag = VEN tag = VEN}
+			OR={ was_tag = SIC tag = SIC}
+			OR={ was_tag = ITA tag = ITA}
 		}
 		ROOT = {
 			capital_scope = {
@@ -593,5 +590,5 @@ Peace_of_Italy = {
 	build_cost = -0.05
 	global_tax_modifier = 0.05
 	global_autonomy = -0.05
-	monthly_reform_progress_modifier = 0.025
+	monthly_reform_progress_modifier = 0.25
 }
