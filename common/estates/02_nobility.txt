@@ -6,6 +6,11 @@ estate_nobles = {
 		###X###
 		is_emperor_of_china = no
 		#######
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
 		#NOT = { has_government_attribute = is_merchant_republic }
 		#NOT = { has_reform = veche_republic }
 		#NOT = { has_reform = trading_city }

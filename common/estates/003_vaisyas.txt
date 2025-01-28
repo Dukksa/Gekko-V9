@@ -4,6 +4,11 @@ estate_vaisyas = {
 	# If true, country will get estate
 	#Replaces Burghers
 	trigger = {	
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
 		OR = {
 			has_dlc = "Dharma"
 			has_dlc = "Winds of Change"

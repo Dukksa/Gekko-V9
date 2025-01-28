@@ -3,6 +3,11 @@ estate_nomadic_tribes = {
 
 	# If true, country will get estate
 	trigger = {
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
 		OR = {
 			is_nomad = yes
 			is_emperor_of_china = yes

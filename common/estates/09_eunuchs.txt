@@ -5,6 +5,11 @@ estate_eunuchs = {
 
 	# If true, country will get estate
 	trigger = {
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
 		religion = confucianism
 	}
 

@@ -5,6 +5,11 @@ estate_qizilbash = {
 
 	# If true, country will get estate
 	trigger = {
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
 		has_dlc = "King of Kings"
 		NOT = { has_government_attribute = disables_estate_qizilbash }
 		NOT = { has_disabled_estate = { estate = estate_qizilbash } }

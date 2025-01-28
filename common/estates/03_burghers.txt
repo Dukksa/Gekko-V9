@@ -6,6 +6,11 @@ estate_burghers = {
 		###X###
 		is_emperor_of_china = no
 		#######
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
 		NOT = { has_government_attribute = disables_estate_burghers }
 		NOT = { has_disabled_estate = { estate = estate_burghers } }
 		OR = {
