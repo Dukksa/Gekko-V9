@@ -31,6 +31,49 @@ X_CRI_great_tatar_state_reform = {
 		manpower_in_culture_group_provinces = 0.1
 		nomadic_tribes_loyalty_modifier = 0.05
 		reform_progress_growth = -0.5
+		development_cost = -0.1
+		cav_to_inf_ratio = 0.25
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		has_tributaries = yes
+	}
+	government_abilities = {
+		tribal_federation_mechanic
+	}
+	
+}
+
+#this one is  the one u get when forming golden horde
+X_CRI_great_tatar_state_reform_2 = {
+	icon = "horde_riding"
+	
+	potential = {
+		OR = {
+			is_emperor_of_china = yes
+			have_had_reform = X_CRI_great_tatar_state_reform_2
+		}
+	}
+	nomad = yes
+	allow_normal_conversion = no
+	maintain_dynasty = yes
+	allow_force_tributary = no
+	lock_level_when_selected = yes
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+		factions = {
+		}
+	}
+	
+	modifiers = {
+		meritocracy = 0.25
+		movement_speed = 0.1
+		available_province_loot = 0.25
+		governing_capacity = 150
+		nomadic_tribes_loyalty_modifier = 0.05
+		reform_progress_growth = -0.25
+		development_cost = -0.1
 	}
 	custom_attributes = {
 		locked_government_type = yes

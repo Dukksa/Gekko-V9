@@ -3,6 +3,9 @@ monarchy = {
 	reform_levels = {
 		feudalism_vs_autocracy = {
 			reforms = {
+				####X####
+				X_CRI_great_tatar_state_reform_2
+				####X####
 				feudalism_reform
 				autocracy_reform
 				elective_monarchy_reform
