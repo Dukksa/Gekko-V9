@@ -281,7 +281,7 @@ colonial_branch_3 = {
 			##PROVINCESHIGHLIGHTCODE
 		}
 		trigger = {
-			has_reform = h_reform_dominion
+			total_development = 750
 		}
 		effect = {
 			add_country_modifier = {
