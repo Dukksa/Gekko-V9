@@ -828,7 +828,7 @@ tributary_state = {
 
 	# Properties:
 	can_fight_independence_war = no
-	joins_overlords_wars = no
+	joins_overlords_wars = yes
 	joins_colonial_wars = no
 	is_voluntary = yes
 	overlord_can_attack = yes
