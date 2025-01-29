@@ -1,5 +1,42 @@
 country_decisions = {
 
+
+	upgrade_colony = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = became_dominion }
+			was_never_end_game_tag_trigger = yes
+			is_colonial_nation = yes
+			
+		}
+		allow = {
+			is_at_war = no
+			total_development = 750
+		}
+		effect  = {
+			remove_non_electors_emperors_from_empire_effect = yes
+		
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = became_dominion
+
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+
 	h_enable_australia = {
 			major = yes
 			potential = {
@@ -27,6 +64,7 @@ country_decisions = {
 			major = yes
 			potential = {
 				NOT = { has_country_flag = became_dominion }
+				always = no
 				was_never_end_game_tag_trigger = yes
 				is_colonial_nation = yes
 				colonial_australia = {
@@ -72,6 +110,7 @@ country_decisions = {
 			major = yes
 			potential = {
 				NOT = { has_country_flag = became_dominion }
+				always = no
 				was_never_end_game_tag_trigger = yes
 				is_colonial_nation = yes
 				colonial_south_africa = {
@@ -117,6 +156,7 @@ country_decisions = {
 			major = yes
 			potential = {
 				NOT = { has_country_flag = became_dominion }
+				always = no
 				was_never_end_game_tag_trigger = yes
 				is_colonial_nation = yes
 				colonial_south_africa = {
@@ -162,6 +202,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = became_dominion }
+			always = no
 			was_never_end_game_tag_trigger = yes
 			is_colonial_nation = yes
 			la_plata_region = {
@@ -207,6 +248,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = became_dominion }
+			always = no
 			was_never_end_game_tag_trigger = yes
 			is_colonial_nation = yes
 			brazil_region = {
@@ -252,6 +294,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = became_dominion }
+			always = no
 			was_never_end_game_tag_trigger = yes
 			is_colonial_nation = yes
 			colombia_region = {
@@ -297,6 +340,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = became_dominion }
+			always = no
 			was_never_end_game_tag_trigger = yes
 			is_colonial_nation = yes
 			OR = {
@@ -354,6 +398,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = became_dominion }
+			always = no
 			was_never_end_game_tag_trigger = yes
 			is_colonial_nation = yes
 			mississippi_region = {
@@ -400,6 +445,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = became_dominion }
+			always = no
 			was_never_end_game_tag_trigger = yes
 			is_colonial_nation = yes
 			OR = {
@@ -457,6 +503,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = became_dominion }
+			always = no
 			was_never_end_game_tag_trigger = yes
 			is_colonial_nation = yes
 			OR = {
@@ -514,6 +561,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = became_dominion }
+			always = no
 			was_never_end_game_tag_trigger = yes
 			is_colonial_nation = yes
 			rio_grande_region = {
@@ -559,6 +607,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = became_dominion }
+			always = no
 			was_never_end_game_tag_trigger = yes
 			is_colonial_nation = yes
 			carribeans_region = {

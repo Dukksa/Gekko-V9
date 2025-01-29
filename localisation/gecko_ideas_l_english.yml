@@ -121,3 +121,8 @@
  fo_korean_city_ideas:0 "Korean City State Ideas"
  fo_korean_city_ideas_start:0 "Korean City State Traditions"
  fo_korean_city_ideas_bonus:0 "Korean City State Ambitions"
+
+ #colonial 
+ upgraded_colonial_ideas:0 "Colonial Ideas"
+ upgraded_colonial_ideas_start:0 "Colonial Traditions"
+ upgraded_colonial_ideas_bonus:0 "Colonial Ambition"

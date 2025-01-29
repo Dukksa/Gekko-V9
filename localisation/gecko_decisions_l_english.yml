@@ -134,3 +134,7 @@ gecko_merc_limit_tt:0 "Manually Update Mercenary Forcelimit"
 
  Create_a_Trade_Hub_2_title:0 "Invest in the Provinces"
  Create_a_Trade_Hub_2_desc:0 "At least one of our province has become a production hub and could potentially become a center of production, our merchants say. They would however, need some investment to make this happen."
+
+#colonial 
+upgrade_colony_title:0 "Proclaim Dominion"
+upgrade_colony_desc:0 "The territorial extension we have reached demands a considerable reform, to better administrate our new territories."

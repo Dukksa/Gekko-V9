@@ -2973,6 +2973,9 @@ colonial_ideas = {
 	
 	trigger = {
 		is_colonial_nation = yes
+		NOT = {
+			has_country_flag = became_dominion
+		}
 	}
 	free = yes
 	
@@ -2998,6 +3001,52 @@ colonial_ideas = {
 	new_frontiers = {
 		auto_explore_adjacent_to_colony = yes
 		global_colonial_growth = 20
+	}
+	liberty_heroes = {
+		global_unrest = -1
+		free_leader_pool = 1
+	}
+}
+upgraded_colonial_ideas = {
+	start = {
+		governing_capacity_modifier = 0.25
+		no_religion_penalty = yes
+	}
+	
+	bonus = {
+		governing_capacity = 300
+	}
+	
+	trigger = {
+		is_colonial_nation = yes
+		has_country_flag = became_dominion
+		
+	}
+	free = yes
+	
+	founding_fathers = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.5
+		meritocracy = 1
+		horde_unity = 1
+	}
+	continental_trade = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	manufacturing_center = {
+		build_cost = -0.1
+	}
+	free_thinkers = {
+		idea_cost = -0.1
+	}
+	colonial_militia = {
+		global_regiment_cost = -0.1
+	}
+	new_frontiers = {
+		auto_explore_adjacent_to_colony = yes
+		global_colonial_growth = 20
+		
 	}
 	liberty_heroes = {
 		global_unrest = -1
