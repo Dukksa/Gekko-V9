@@ -2458,24 +2458,109 @@ HUN_ideas = {
 	
 	hun_renaissanse_knowledge = {
 		global_unrest = -1
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_first_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_first_idea
+		}
 	}
 	bulwark_of_christianity = {
 		global_manpower_modifier = 0.2
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_second_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_second_idea
+		}
 	}
 	found_the_black_army = {
 		discipline = 0.05
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_third_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_third_idea
+		}
 	}
 	reformed_coinage = {
 		global_tax_modifier = 0.1
+		gold_depletion_chance_modifier = -0.25
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_fourth_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_fourth_idea
+		}
 	}
 	curtailed_peasantry = {
 		production_efficiency = 0.1
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_fifth_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_fifth_idea
+		}
 	}
 	strengthened_towns = {
 		global_own_trade_power = 0.25
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_sixth_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_sixth_idea
+		}
 	}
 	hungarian_estates_general = {
 		no_religion_penalty = yes
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_seventh_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_seventh_idea
+		}
 	}
 }
 
@@ -2495,26 +2580,110 @@ EOH_ideas = {
 	
 	gc_reformed_coinage = {
 		global_tax_modifier = 0.15
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_first_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_first_idea
+		}
 	}
 	gc_found_the_black_army = {
 		discipline = 0.05
 		mercenary_discipline = 0.025
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_second_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_second_idea
+		}
 	}
 	bulwark_of_christianity = {
 		global_manpower_modifier = 0.20
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_third_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_third_idea
+		}
 	}
 	gc_hun_renaissanse_knowledge = {
 		technology_cost = -0.05
-		development_cost -0.05
+		development_cost = -0.05
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_fourth_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_fourth_idea
+		}
 	}
 	curtailed_peasantry = {
 		production_efficiency = 0.1
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_fifth_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_fifth_idea
+		}
 	}
 	strengthened_towns = {
 		global_own_trade_power = 0.25
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_sixth_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_sixth_idea
+		}
 	}
 	gc_hungarian_estates_general = {
 		country_military_power = 1
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = hun_unlocked_seventh_idea
+					}
+					has_country_flag = hun_national_idea_bonus
+				}
+				change_government_reform_progress =  25
+			}
+			set_country_flag = hun_unlocked_seventh_idea
+		}
 	}
 }
 HAB_ideas = {
