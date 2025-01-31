@@ -85,3 +85,7 @@
  mechanic_establish_auxiliary_support_system_privilege_interaction_no: " " #intentionally empty
  mechanic_reform_the_janissaries_privilege_interaction_yes: "Enables the Janissaries Estate Privilege §YReform the Janissary Corps§!, which grants §G+5%§! Discipline to §YJanissary Regiments§!."
  mechanic_reform_the_janissaries_privilege_interaction_no: " " #intentionally empty
+ #generic
+ fervor_diplomacy_short: "Diplomacy"
+ fervor_diplomacy:0 "Fervent focus on diplomacy"
+ qizilbash_cavalry_unit: "Qizilbash Cavalry"
