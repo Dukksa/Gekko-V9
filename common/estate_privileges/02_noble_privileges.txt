@@ -321,10 +321,10 @@ estate_nobles_officer_corp = {
 		}
 		modifier = { max_general_shock = 1 }
 	}
-	#conditional_modifier = {
-	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
-	#	modifier = { monthly_ottoman_decadence = 0.02 }
-	#}
+	conditional_modifier = {
+		trigger = { has_country_flag = hab_military_reform_flag }
+		modifier = { land_morale = 0.1 }
+	}
 	ai_will_do = {
 		factor = 0
 	}
