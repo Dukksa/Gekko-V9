@@ -233,7 +233,9 @@
  ####################
  #Government
  X_CRI_great_tatar_state_reform:0 "Great Tatar State"
- X_CRI_great_tatar_state_reform_desc:0 "The Great Tatar State proclaims its rulers to be sons of Genghis Khan, who trace their legitimacy to this royal descent." 
+ X_CRI_great_tatar_state_reform_desc:0 "The Great Tatar State proclaims its rulers to be sons of Genghis Khan, who trace their legitimacy to this royal descent."
+ X_CRI_great_tatar_state_reform_2:0 "Great Tatar State"
+ X_CRI_great_tatar_state_reform_2_desc:0 "The Great Tatar State proclaims its rulers to be sons of Genghis Khan, who trace their legitimacy to this royal descent." 
  X_CRI_great_khan:0 "Great Khan"
  X_CRI_great_tatar_state:0 "Great Tatar State"
  X_CRI_great_tatar_state_desc:0 ""
