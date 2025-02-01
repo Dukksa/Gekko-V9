@@ -5774,7 +5774,7 @@
  HAB_IF_WALLACHIA_AND_MOLDAVIA_VASSALS:0 "If §Y[WAL.GetName]§! and §Y[MOL.GetName]§! are our subjects and §Y[RMN.GetName]§! does not exist:"
  HAB_CREATE_ROMANIA:0 "Unify §Y[WAL.GetName]§! and §Y[MOL.GetName]§! into creating §Y[RMN.GetName]§!."
  HAB_CONTAIN_IMPERIAL_PRINCES_TT:0 "No §YHRE Member State§! below §Y100§! Opinion of us has §Y10§! Provinces in the Holy Roman Empire."
- HAB_UPGRADE_OFFICERS_PRIVILEGE:0 "Whenever we go to §YWar§!, the §YNobility in Officer Corps§! Nobility Privilege will grant §G+10.0%§! Morale of Armies."
+ HAB_UPGRADE_OFFICERS_PRIVILEGE:0 "The §YNobility in Officer Corps§! Nobility Privilege will grant §G+10.0%§! Morale of Armies."
  HAB_IF_NO_TIROL_EVENT:0 "If the event §YSchwaz Silver Mine§! has not fired yet:"
  HAB_MODIFY_DIPLOMAT_ADVISOR:0 "The §YDiplomat Advisor§! will now grant §G-2.00%§! Aggressive Expansion Impact per level."
  HAB_UNLOCK_HABSBURG_CONNECTIONS_ESTATE_PRIVILEGE:1 "Unlocks the §Y[Root.Monarch.Dynasty.GetName] Connections§! Nobility Privilege, which at Max Loyalty will grant §G+2§! Monthly Diplomatic Power and §G+2§! Diplomatic Reputation."
