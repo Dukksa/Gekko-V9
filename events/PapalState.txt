@@ -1,0 +1,207 @@
+# Papal State
+country_event = {
+	id = 1081
+	title = "EVTNAME1081"
+	desc = "EVTDESC1081"
+	picture = POPE_PREACHING_eventPicture
+	
+	trigger = {
+		papacy_active = yes
+		owns = 6415		# Vatican
+		normal_or_historical_nations = yes
+		religion = catholic
+		NOT = { exists = PAP }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = "EVTOPTB1081" # Rome is rightfully theirs
+		ai_chance = { 
+			factor = 75 
+		}
+		6415 = {
+			add_core = PAP
+			cede_province = PAP
+			if = {
+				limit = {
+					is_core = ROOT
+				}
+				remove_core = ROOT
+			}
+		}
+		add_prestige = 25
+		PAP = {
+			change_religion = catholic
+		}
+	}
+}
+
+
+# The Papal State
+country_event = {
+	id = 1082
+	title = "EVTNAME1082"
+	desc = "EVTDESC1082"
+	picture = POPE_PREACHING_eventPicture
+	
+	trigger = {
+		papacy_active = yes
+		overlord_of = PAP
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA1082"
+		ai_chance = { factor = 100 }
+		free_vassal = PAP
+		PAP = {
+			change_religion = catholic
+		}
+	}
+}
+
+# Lacking Support
+country_event = {
+	id = 1083
+	title = "EVTNAME1083"
+	desc = "EVTDESC1083"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		NOT = { has_country_flag = unsupportive_cardinals }
+		has_reform = papacy_reform
+		overextension_percentage = 0.25
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.9
+			NOT = { dip = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { adm = 1 }
+		}
+		modifier = {
+			factor = 1.1
+			adm = 4
+		}
+		modifier = {
+			factor = 1.1
+			adm = 5
+		}
+		modifier = {
+			factor = 1.1
+			adm = 6
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA1083"		# Hire someone to investigate the matter
+		ai_chance = { factor = 55 }
+		set_country_flag = unsupportive_cardinals
+		add_country_modifier = {
+			name = investigating_spies
+			duration = 1825
+		}
+		add_treasury = -25
+	}
+	option = {
+		name = "EVTOPTB1083"		# Just try to prove them wrong
+		ai_chance = { factor = 45 }
+		set_country_flag = unsupportive_cardinals
+		random_list = {
+			50 = { add_prestige = 5 }
+			50 = { add_prestige = -5 }
+		}		
+	}
+}
+
+# Possible Infiltrator
+country_event = {
+	id = 1084
+	title = "EVTNAME1084"
+	desc = "EVTDESC1084"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		NOT = { has_country_flag = cardinal_infiltrator }
+		has_reform = papacy_reform
+		NOT = { adm = 1 }
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 1.1
+			advisor = spymaster
+		}
+		modifier = {
+			factor = 1.1
+			spymaster = 2
+		}
+		modifier = {
+			factor = 1.1
+			spymaster = 3
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+	}
+
+	option = {
+		name = "EVTOPTA1084"		# Take his word for it
+		ai_chance = { factor = 55 }
+		set_country_flag = cardinal_infiltrator
+		random = {
+			chance = 40
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB1084"		# Ask for some proof
+		ai_chance = { factor = 45 }
+		set_country_flag = cardinal_infiltrator
+		add_country_modifier = {
+			name = "infiltrator_in_the_cardinal_office"
+			duration = 730
+		}
+	}
+}
