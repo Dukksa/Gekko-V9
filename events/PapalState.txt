@@ -65,7 +65,7 @@ country_event = {
 	}
 }
 
-# Lacking Support
+# Lacking Support - now it just peaces out 
 country_event = {
 	id = 1083
 	title = "EVTNAME1083"
@@ -73,71 +73,22 @@ country_event = {
 	picture = POPE_PREACHING_eventPicture
 
 	trigger = {
-		NOT = { has_country_flag = unsupportive_cardinals }
-		has_reform = papacy_reform
-		overextension_percentage = 0.25
+		
+		is_in_war = {
+			participants = PAP
+			attacker_leader = ROOT
+		}
 	}
 
 	mean_time_to_happen = {
-		months = 180
-
-		modifier = {
-			factor = 0.9
-			NOT = { dip = 1 }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { adm = 1 }
-		}
-		modifier = {
-			factor = 1.1
-			adm = 4
-		}
-		modifier = {
-			factor = 1.1
-			adm = 5
-		}
-		modifier = {
-			factor = 1.1
-			adm = 6
-		}
-		modifier = {
-			factor = 1.1
-			stability = 2
-		}
-		modifier = {
-			factor = 1.1
-			stability = 3
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { stability = -1 }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { stability = -2 }
-		}
+		months = 1
 	}
 
 	option = {
 		name = "EVTOPTA1083"		# Hire someone to investigate the matter
-		ai_chance = { factor = 55 }
-		set_country_flag = unsupportive_cardinals
-		add_country_modifier = {
-			name = investigating_spies
-			duration = 1825
-		}
-		add_treasury = -25
+		white_peace = PAP
 	}
-	option = {
-		name = "EVTOPTB1083"		# Just try to prove them wrong
-		ai_chance = { factor = 45 }
-		set_country_flag = unsupportive_cardinals
-		random_list = {
-			50 = { add_prestige = 5 }
-			50 = { add_prestige = -5 }
-		}		
-	}
+	
 }
 
 # Possible Infiltrator
