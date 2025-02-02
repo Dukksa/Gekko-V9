@@ -535,51 +535,20 @@ Peace_of_Italy = {
 		}
 	}
 	trigger = {
+		OR = {
+			great_power_rank = 5
+			is_great_power = no
+		} 
+		NOT = {
+			is_lacking_institutions = yes
+		}
 		custom_trigger_tooltip = {
 			tooltip = peace_of_italy_tt
-			OR = {
-				great_power_rank = 5
-				is_great_power = no
-			}
-			OR = {
-				AND = {
-					OR = {
-						tag = SIC
-						tag = TTS
-					}
-					alliance_with = MLO
-					alliance_with = VEN
-				}
-				AND = {
-					tag = MLO
-					OR = {
-						alliance_with = SIC
-						alliance_with = TTS
-					}
-					alliance_with = VEN
-				}
-				AND = {
-					tag = VEN
-					OR = {
-						alliance_with = SIC
-						alliance_with = TTS
-					}
-					alliance_with = MLO
-				}
-			}
-			NOT = {
-				is_lacking_institutions = yes
-			}
 			NOT = {
 				italy_region = {
 					owner = {
-						OR = {
-							culture_group = germanic
-							culture_group = french
-							culture_group = iberian
-							culture_group = carpathian
-							culture_group = maghrebi
-							culture_group = turko_semitic
+						NOT = {
+							culture_group = latin
 						}
 					}
 				}
