@@ -510,12 +510,12 @@ italian_riches = {
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = italy_region
-				value = 15
+				value = 5
 			}
 		}
 	}
-	global_trade_goods_size_modifier = 0.1
-	production_efficiency = 0.1
+	#global_trade_goods_size_modifier = 0.1
+	#production_efficiency = 0.1
 	development_cost = -0.05
 	merchants = 1
 }
