@@ -31,7 +31,9 @@ country_event = {
 				remove_core = ROOT
 			}
 		}
-		add_prestige = 25
+		add_truce_with = PAP
+		add_prestige = -25
+		add_treasury = -250
 		PAP = {
 			change_religion = catholic
 		}
@@ -62,6 +64,9 @@ country_event = {
 		PAP = {
 			change_religion = catholic
 		}
+		add_truce_with = PAP
+		add_prestige = -25
+		add_treasury = -250
 	}
 }
 
