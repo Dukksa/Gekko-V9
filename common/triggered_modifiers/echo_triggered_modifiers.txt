@@ -76,12 +76,23 @@ We_stand_alone = {
 			total_development = ROOT
 		}
 		OR = {
+			
 			NOT = {
-				num_of_allies = 1
+				OR = { 
+					AND = {
+						any_ally = {  ai = no }
+						num_of_allies = 1
+					}
+					AND = {
+						any_ally = {  ai = yes }
+						num_of_allies = 2
+					}
+				}		
 			}
+			
+			
 			has_country_modifier = Berber_Raids
 			has_country_modifier = Stop_the_raids
-			has_country_modifier = spice_bros
 			has_country_modifier = Minor
 		}
 		NOT = {
@@ -121,10 +132,17 @@ Great_power_dominance = {
 		NOT = {
 			great_power_rank = 4
 		}
-		OR = {
-			NOT = {
-				num_of_allies = 1
-			}
+		NOT = {
+			OR = { 
+				AND = {
+					any_ally = {  ai = no }
+					num_of_allies = 1
+				}
+				AND = {
+					any_ally = {  ai = yes }
+					num_of_allies = 2
+				}
+			}		
 		}
 		NOT = {
 			is_hegemon = yes
@@ -221,7 +239,16 @@ War_chest = {
 		army_size_percentage = 0.3
 		OR = {
 			NOT = {
-				num_of_allies = 1
+				OR = { 
+					AND = {
+						any_ally = {  ai = no }
+						num_of_allies = 1
+					}
+					AND = {
+						any_ally = {  ai = yes }
+						num_of_allies = 2
+					}
+				}		
 			}
 			has_country_modifier = Minor
 		}
