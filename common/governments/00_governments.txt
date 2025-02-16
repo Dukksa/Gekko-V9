@@ -5,6 +5,7 @@ monarchy = {
 			reforms = {
 				####X####
 				X_CRI_great_tatar_state_reform_2
+				great_mongol_state_reform_EOC_version
 				####X####
 				feudalism_reform
 				autocracy_reform

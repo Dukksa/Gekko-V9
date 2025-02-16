@@ -84,3 +84,55 @@ X_CRI_great_tatar_state_reform_2 = {
 	}
 	
 }
+
+
+#mongol empire one 
+great_mongol_state_reform_EOC_version = {
+	icon = "horde_riding"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = great_mongol_state_reform_EOC_version
+			have_had_reform = great_mongol_state_reform_EOC_version
+			tag = MGE
+		}
+	}
+	fixed_rank = 3
+	valid_for_nation_designer = no
+	nomad = yes
+	allow_normal_conversion = no
+	maintain_dynasty = yes
+	allow_force_tributary = no
+	lock_level_when_selected = yes
+	modifiers = {
+		meritocracy = 0.25
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
+		loot_amount = 0.50
+		reinforce_cost_modifier = -0.25
+		development_cost = -0.1
+		movement_speed = 0.1
+		years_of_nationalism = -5
+		governing_capacity = 150
+	}
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
+		has_meritocracy = yes
+		factions = {
+		}
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+		has_tributaries = yes
+	}
+	
+	government_abilities = {
+		tribal_federation_mechanic
+	}
+
+	ai = {
+		factor = 1000
+	}
+}
