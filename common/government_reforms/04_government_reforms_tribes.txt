@@ -65,7 +65,6 @@ steppe_horde = {
 great_mongol_state_reform = {
 	icon = "horde_riding"
 	allow_normal_conversion = yes
-	lock_level_when_selected = yes
 	potential = {
 		OR = {
 			has_reform = great_mongol_state_reform
