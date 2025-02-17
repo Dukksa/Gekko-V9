@@ -5788,7 +5788,7 @@
  HAB_GAIN_25_AE_WITH_ALL_HRE:1 "§Y[Emperor.GetName]§! will gain §R+25§! Aggressive Expansion with all of the §YImperial Princes§!."
  HAB_LOSE_75_OPINION_WITH_ALL_HRE:1 "§Y[Emperor.GetName]§! will lose §R75§! Opinion with all of the §YImperial Princes§!."
  HAB_UNLOCK_RAAB_RESTRICTIONS_PRIVILEGE:1 "Unlocks the §YVon Raab's Restrictions§! Nobility Estate Privilege, which will have the following modifier scaled with Estate Loyalty as long as we keep the §YNobility's§! Influence to less than §Y40§!:\n   Development Cost: §G-7.5%§!"
- HAB_MODIFY_SUPREMACY_OVER_THE_CROWN_PRIVILEGE:1 "Modify the §YSupremacy Over the [Root.GetStateForm]§! Nobility Privilege to grant the following bonus scaled with Estate Loyalty, as long as the §YNobility's§! Influence is higher than §Y80§!:\n   National Manpower Modifier: §G+20.0%§!"
+ HAB_MODIFY_SUPREMACY_OVER_THE_CROWN_PRIVILEGE:1 "This option doesn't exist because Dukksa removed supremacy over the crown, but I thought it would be funny to keep it in the mission tooltip."
  HAB_UNLOCK_PROSPERITY_EDICT:1 "Unlocks the §YEdict of Governance§! State Edict, which will give the following:\n   Province Governing Cost: §G-5.00%§!"
  HAB_this_is_a_branching_mission:0 "This is a §YBranching Mission§!. Complete §YSecure Electors§! Mission to preview each branch."
  HAB_EVERY_IMPERIAL_CAPITAL_GAINS_FOLLOWING_MODIFIER:0 "Every §YCapital§! of an §YImperial State§! will gain the following:"
