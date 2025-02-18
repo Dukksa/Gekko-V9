@@ -785,7 +785,6 @@ peace = {
 	monthly_militarized_society = -0.1
 	monthly_ottoman_decadence = 0.1
 	monthly_asha_vahishta = 0.25
-	global_supply_limit_modifier = 8
 }
 
 unconditional_surrender = {
