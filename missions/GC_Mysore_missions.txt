@@ -73,7 +73,7 @@ gc_mysore_branch_1 = {
             mil_tech = 18
             has_global_modifier_value = {
 				which = artillery_power
-				value = 0.30
+				value = 0.15
 			}
         }
 
