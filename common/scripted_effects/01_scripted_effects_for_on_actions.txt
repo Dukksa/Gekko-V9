@@ -4126,6 +4126,24 @@ on_government_change_effect = {
 	}
 }
 
+on_native_government_change_effect = {
+	hidden_effect = {
+		every_owned_province = {
+			if = { limit = { has_building = native_palisade } set_province_flag = native_palisade_flag }
+			if = { limit = { has_building = native_fortified_house } set_province_flag = native_fortified_house_flag }
+			if = { limit = { has_building = native_ceremonial_fire_pit } set_province_flag = native_ceremonial_fire_pit_flag }
+			if = { limit = { has_building = native_storehouse } set_province_flag = native_storehouse_flag }
+			if = { limit = { has_building = native_longhouse } set_province_flag = native_longhouse_flag }
+			if = { limit = { has_building = native_sweat_lodge } set_province_flag = native_sweat_lodge_flag }
+			if = { limit = { has_building = native_great_trail } set_province_flag = native_great_trail_flag }
+		}
+		country_event = {
+			id = native_americans.999
+			days = 35
+		}
+	}
+}
+
 on_non_estate_disaster_end = {
 	hidden_effect = {
 		change_variable = {
