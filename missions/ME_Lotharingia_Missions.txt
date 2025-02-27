@@ -56,9 +56,6 @@ ME_bur_1 = {
 					add_base_tax = 1
 				}
 				every_subject_country = {
-					limit = {
-						is_dutch_subject_trigger = yes
-					}
 					overlord = {
 						add_years_of_income = 0.5
 					}
@@ -1392,9 +1389,6 @@ ME_bur_4 = {
 			}
 			hidden_effect = {
 				every_subject_country = {
-					limit = {
-						is_dutch_subject_trigger = yes
-					}
 					add_liberty_desire = -10
 					capital_scope = {
 						add_base_manpower = 1
