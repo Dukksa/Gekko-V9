@@ -6,7 +6,7 @@ X_center_of_trade_effect = { #Not using country flags to switch between max leve
 			}
 			center_of_trade = 1
 		}
-		else = {
+		else_if= {
 			limit = {
 				NOT = { province_has_center_of_trade_of_level = 2 }
 			}
@@ -20,7 +20,7 @@ X_center_of_trade_effect = { #Not using country flags to switch between max leve
 			}
 			center_of_trade = 1
 		}
-		else = {
+		else_if = {
 			limit = {
 				NOT = { province_has_center_of_trade_of_level = 3 }
 			}

@@ -677,7 +677,6 @@ ENG_missions_2_1 = {
 			}
 		}
 		effect = {
-			change_national_focus_effect = yes
 			country_event = { id = ME_England_Events.2 } #New Order
 		}
 	}
