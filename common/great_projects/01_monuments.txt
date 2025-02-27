@@ -23812,7 +23812,7 @@ fu_blue_mosque = {
 		}
 
 		country_modifiers = {
-			yearly_tribal_allegiance = 0.25
+			monthly_tribal_allegiance = 0.25
 			legitimacy = 0.25
 		}
 		
@@ -23839,7 +23839,7 @@ fu_blue_mosque = {
 		}
 
 		country_modifiers = {
-			yearly_tribal_allegiance = 0.3
+			monthly_tribal_allegiance = 0.3
 			legitimacy = 0.3
 		}
 		
@@ -23865,7 +23865,7 @@ fu_blue_mosque = {
 		}
 
 		country_modifiers = {
-			yearly_tribal_allegiance = 0.3
+			monthly_tribal_allegiance = 0.3
 			legitimacy = 0.5
 		}
 		
