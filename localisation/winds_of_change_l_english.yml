@@ -4338,7 +4338,7 @@
  sunset_invasion.8.d:0 "The Chinese praise their Emperors as if they're guided by the heavens themselves. They call it the Mandate of Heaven. However, such divinity is only more nutrients for the gods. Having captured the Chinese Emperor, the dragon of China, we can now slay him and offer his heart to the gods."
  sunset_invasion.8.a:0 "The Dragon Throne is now empty."
 
- #European Colonies:
+ #European Colonies (this is removed):
  european_colony:0 "Sunset Colony"
  european_colony_long_desc:1 "A Sunset Colony is a subject type that is similar to other colonial subjects, with the main difference being that it can be established in overseas territory. Its main purpose is to govern the people outside of the Americas with more efficiency, whilst also retaining our grip in the region."
  european_colony_is_our:0 "$NAME|Y$ is a Sunset Colony of us"

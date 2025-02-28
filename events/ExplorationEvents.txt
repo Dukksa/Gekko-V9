@@ -479,7 +479,6 @@ province_event = {
 		is_empty = yes
 		OR = {
 			region = peru_region
-			region = upper_peru_region
 			region = la_plata_region
 			region = south_africa_region
 			region = australia_region

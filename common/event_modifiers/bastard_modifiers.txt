@@ -140,6 +140,12 @@ persia_united = {
 	global_tax_income = 48
 }
 
+gc_tim_resurgent = {
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+}	
+
 fuck_you_no_switching_mid_war = {
 	naval_morale_constant = -1
 	heavy_ship_power = -0.2

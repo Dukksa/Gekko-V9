@@ -2703,17 +2703,17 @@ reform_civil_registration_effect = {
 }
 
 yua_examination_system_effect = {
-	country_event_with_effect_insight = {
-		id = flavor_mng.30
-		effect = "
-			700 = { add_province_triggered_modifier = mng_hanlin_academy_modifier }
-			if = {
-				limit = { has_dlc = \"Mandate of Heaven\" } 
-				add_splendor = 100 
-			}
-			else = { add_prestige_or_monarch_power = { amount = 25 } }
-		"
-	}
+	#country_event_with_effect_insight = {
+	#	id = flavor_mng.30
+	#	effect = "
+	#		700 = { add_province_triggered_modifier = mng_hanlin_academy_modifier }
+	#		if = {
+	#			limit = { has_dlc = \"Mandate of Heaven\" } 
+	#			add_splendor = 100 
+	#		}
+	#		else = { add_prestige_or_monarch_power = { amount = 25 } }
+	#	"
+	#}
 }
 
 yua_mutual_trade_effect_1 = {

@@ -1259,17 +1259,17 @@ heddal_stave_church_modifier_non_leviathan_reformation = {
 	local_tax_modifier = 0.25
 }
 
-mng_hanlin_academy_modifier = {
-	potential = {
-		owner = { mission_completed = mng_examination_system }
-	}
-	trigger = {
-		owner = { has_reform = examination_system_reform }
-	}
-	eunuchs_loyalty_modifier = 0.05
-	governing_capacity_modifier = 0.05
-	yearly_corruption = -0.03
-}
+#mng_hanlin_academy_modifier = {
+#	potential = {
+#		owner = { mission_completed = mng_examination_system }
+#	}
+#	trigger = {
+#		owner = { has_reform = examination_system_reform }
+#	}
+#	eunuchs_loyalty_modifier = 0.05
+#	governing_capacity_modifier = 0.05
+#	yearly_corruption = -0.03
+#}
 
 mng_islamic_mosque_of_beijing_modifier = { 
 	potential = { owner = { has_country_flag = mng_islamic_mosque_of_beijing_flag } }
@@ -2121,47 +2121,47 @@ MAY_obsidian_source = {
 	
 }
 
-MAY_restoration = {
-	potential = {
-		owner = {
-			mission_completed = MAY_restore_lowland_ruins
-		}
-	}
+#MAY_restoration = {
+#	potential = {
+#		owner = {
+#			mission_completed = MAY_restore_lowland_ruins
+#		}
+#	}
+#
+#	trigger = {
+#		owner = {
+#			mission_completed = MAY_restore_lowland_ruins
+#		}
+#	}
+#
+#	local_great_project_upgrade_cost = -0.1
+#	local_great_project_upgrade_time = -0.33
+#}
 
-	trigger = {
-		owner = {
-			mission_completed = MAY_restore_lowland_ruins
-		}
-	}
-
-	local_great_project_upgrade_cost = -0.1
-	local_great_project_upgrade_time = -0.33
-}
-
-SUN_symposium_modifier = {
-	potential = {
-		owner = {
-			OR = {
-				mission_completed = SUN_symposium
-				mission_completed = SUNm_symposium
-			}
-		}
-	}
-
-	trigger = {
-		owner = {
-			OR = {
-				mission_completed = SUN_symposium
-				mission_completed = SUNm_symposium
-			}
-			is_ahead_of_time_in_technology = { tech = adm }
-			is_ahead_of_time_in_technology = { tech = dip }
-			is_ahead_of_time_in_technology = { tech = mil }
-		}
-	}
-	
-	development_cost = -0.1
-}
+#SUN_symposium_modifier = {
+#	potential = {
+#		owner = {
+#			OR = {
+#				mission_completed = SUN_symposium
+#				mission_completed = SUNm_symposium
+#			}
+#		}
+#	}
+#
+#	trigger = {
+#		owner = {
+#			OR = {
+#				mission_completed = SUN_symposium
+#				mission_completed = SUNm_symposium
+#			}
+#			is_ahead_of_time_in_technology = { tech = adm }
+#			is_ahead_of_time_in_technology = { tech = dip }
+#			is_ahead_of_time_in_technology = { tech = mil }
+#		}
+#	}
+#	
+#	development_cost = -0.1
+#}
 
 hab_vienna_ballrooms = {
 	potential = {

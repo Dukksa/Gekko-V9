@@ -230,21 +230,6 @@ select_current_missions_TEU = {
 			clr_country_flag = teu_conquest_hre_path
 			set_country_flag = formed_prussia_flag
 		}
-		if = {
-			limit = { has_mission = teu_defeat_the_poles }
-			hidden_effect = {
-				if = {
-					limit = {
-						has_mission = teu_crusader_mil_reform_1
-						NOT = { mission_completed = teu_crusader_mil_reform_1 }
-					}
-					set_country_flag = teu_crusader_battle_counter
-				}
-				else = {
-					clr_country_flag = teu_crusader_battle_counter
-				}
-			}
-		}
 		custom_tooltip = flavor_teu.10.b.ct
 		if = {
 			limit = { is_part_of_hre = yes }
@@ -863,66 +848,6 @@ select_current_missions_ITA_TRADE = {
 }
 select_current_missions_FEO = {}	#Empty
 select_current_missions_TIM = {
-	hidden_effect = {
-		if = {
-			limit = {
-				has_country_flag = TIM_nomad_missions
-			}
-			if = {
-				limit = {
-					mission_completed = TIM_qoyunlu
-				}
-				give_claims = { region = egypt_region }
-				give_claims = { area = palestine_area }
-				give_claims = { area = trans_jordan_area }
-				give_claims = { area = syria_area }
-				give_claims = { area = syrian_desert_area }
-				give_claims = { area = aleppo_area }
-				give_claims = { region = anatolia_region }
-				give_claims = { region = balkan_region }
-			}
-			if = {
-				limit = {
-					mission_completed = TIM_delhi
-				}
-				give_claims = { region = hindusthan_region }
-			}
-			if = {
-				limit = {
-					mission_completed = TIM_caucasia
-				}
-				give_claims = { region = crimea_region }
-			}
-			if = {
-				limit = {
-					mission_completed = TIM_recover_north
-				}
-				give_claims = { area = tambov_area }
-				give_claims = { area = lower_yik_area }
-				give_claims = { area = nogai_area }
-				give_claims = { area = saratov_area }
-				give_claims = { area = samara_area }
-				give_claims = { area = bashkiria_area }
-				give_claims = { area = volga_area }
-				give_claims = { area = kazan_area }
-				give_claims = { area = kama_area }
-			}
-			if = {
-				limit = {
-					mission_completed = TIM_delhi
-				}
-				give_claims = { area = marwar_area }
-				give_claims = { area = jangladesh_area }
-				give_claims = { area = multan_area }
-			}
-			if = {
-				limit = {
-					mission_completed = TIM_moghulistan
-				}
-				give_claims = { region = mongolia_region }
-			}
-		}
-	}
 }
 select_current_missions_VEN = {} 	#Empty
 select_current_missions_HORDES = {
