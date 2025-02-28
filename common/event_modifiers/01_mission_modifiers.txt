@@ -4343,6 +4343,11 @@ tibetan_missionaries = {
 	missionary_maintenance_cost = -0.5
 }
 
+gc_mongol_rule_tibet = {
+	local_autonomy = -0.05
+	local_development_cost = -0.25
+}
+
 mongol_religion_unity = {
 	tolerance_own = 1
 }

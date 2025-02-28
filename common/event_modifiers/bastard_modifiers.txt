@@ -12,6 +12,9 @@ jihad = {
     monthly_piety = -0.08
 }
 
+gecko_armyreform_cooldown = {
+	land_morale = 0.001
+}
 
 Great_power_dominance_timer = {
 }

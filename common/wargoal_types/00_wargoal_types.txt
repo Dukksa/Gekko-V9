@@ -3310,7 +3310,6 @@ take_capital_vassalize_flower_wars = {
 		peace_options = {
 			po_demand_provinces
 			po_subjugate_vassal
-			make_nahuatl_tributary
 		}
 	}
 	
@@ -3321,7 +3320,6 @@ take_capital_vassalize_flower_wars = {
 
 		peace_options = {
 			po_demand_provinces
-			make_nahuatl_tributary
 		}
 	}
 

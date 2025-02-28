@@ -12,7 +12,6 @@ base_manpower = 4
 capital = "Asti"
 is_city = yes	# Estimated
 add_core = MLO
-add_core = STI
 
 
 

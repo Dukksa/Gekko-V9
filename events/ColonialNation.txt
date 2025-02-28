@@ -5087,6 +5087,8 @@ province_event = {
 	}
 }
 
+namespace = hashmp
+
 country_event = {
 	id = hashmp.18
 	title = hashmp.18.title

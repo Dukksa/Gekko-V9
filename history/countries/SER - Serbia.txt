@@ -11,17 +11,6 @@ historical_friend = BOS
 }
 
 1397.6.24 = {
-	monarch = {
-		name = "Dukksa The Femboy"
-		dynasty = "Dukksa"
-		birth_date = 2000.1.1		
-		adm = 0
-		dip = 0
-		mil = 0
-	}
-}
-
-1397.6.24 = {
 	heir = {
 		name = "Ðurad"
 		monarch_name = "Ðurad I"

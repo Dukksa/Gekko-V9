@@ -3152,7 +3152,7 @@
  azt_jaguars_and_eagles_title:0 "Jaguars and Eagles"
  azt_jaguars_and_eagles_desc:0 "Jaguar and Eagle knights are some of the most elite warriors in Aztec society. Representing both Tezcatlipoca, the God of Conflict, and Huitzilopochtli, the God of War, they are feared on the battlefield. By using their reputation to our advantage, we will be able to dominate the battlefield even more."
 
- #Doom changes:
+ #Doom changes ( these have been removed)
  AZT_ADD_30_LD_WITH_SUBJECTS:1 "All our §YSubjects§! will gain §R40%§! Liberty Desire.\n\nAny §YSubject§! that had §Y50%§! or more Liberty Desire will break free."
  reform_cooldown:0 "Religious Reform Cooldown"
  make_nahuatl_tributary:0 "Make Mesoamerican Tributary"
