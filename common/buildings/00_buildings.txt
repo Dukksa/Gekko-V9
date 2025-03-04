@@ -33,6 +33,7 @@ marketplace = {
 
 	modifier = {
 		province_trade_power_modifier = 0.5
+		province_trade_power_value = 1.25
 	}
 	on_built = {
 		bastard_dev_cost_add_from_buildings = yes
@@ -1670,6 +1671,7 @@ trade_depot = {
 
 	modifier = {
 		province_trade_power_modifier = 1
+		province_trade_power_value = 2.5
 	}
 
 	on_built = {
@@ -2214,6 +2216,7 @@ stock_exchange = {
 
 	modifier = {
 		province_trade_power_modifier = 1.25
+		province_trade_power_value = 3.75
 	}
 
 	on_built = {
