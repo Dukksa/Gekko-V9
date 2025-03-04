@@ -22,6 +22,31 @@ client_state_act = {
 	}
 }
 
+colonial_act = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = maritime_ideas
+		has_idea_group = influence_ideas
+		OR = {
+			full_idea_group = maritime_ideas
+			full_idea_group = influence_ideas
+		}
+	}
+	
+	allow = {
+		full_idea_group = maritime_ideas
+		full_idea_group = influence_ideas
+	}
+	
+	liberty_desire_from_subject_development = -0.25
+	reduced_liberty_desire_on_other_continent = 25
+	
+	ai_will_do = {
+		factor = 1		
+	}
+}
+
 vassal_obligations_act = {
 	monarch_power = DIP
 	
