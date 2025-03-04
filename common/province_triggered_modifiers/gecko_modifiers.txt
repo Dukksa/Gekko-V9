@@ -217,12 +217,6 @@ conquest_of_amsterdam = {
 			NOT = {
 				tag = BUR
 			}
-			NOT = {
-				has_global_modifier_value = {
-					which = discipline
-					value = 0.3
-				}
-			}
 			holland_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -273,12 +267,7 @@ conquest_of_paris = {
 			NOT = {
 				tag = FRA
 			}
-			NOT = {
-				has_global_modifier_value = {
-					which = discipline
-					value = 0.3
-				}
-			}
+			
 			ile_de_france_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -288,6 +277,7 @@ conquest_of_paris = {
 	}
 	discipline = 0.025
 	land_morale = 0.025
+	
 	#Province scope
 	on_activation = {
 	}
@@ -310,18 +300,7 @@ conquest_of_vienna = {
 			NOT = {
 				tag = AUH
 			}
-			NOT = {
-				tag = POL
-			}
-			NOT = {
-				tag = PLC
-			}
-			NOT = {
-				has_global_modifier_value = {
-					which = discipline
-					value = 0.3
-				}
-			}
+			
 			austria_proper_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -331,6 +310,7 @@ conquest_of_vienna = {
 	}
 	discipline = 0.025
 	land_morale = 0.025
+	
 	#Province scope
 	on_activation = {
 	}
@@ -366,6 +346,7 @@ conquest_of_cairo = {
 	infantry_power = 0.05
 	cavalry_power = 0.05
 	production_efficiency = 0.05
+	
 	#Province scope
 	on_activation = {
 	}
@@ -385,12 +366,7 @@ conquest_of_fez = {
 			NOT = {
 				tag = ADU
 			}
-			NOT = {
-				has_global_modifier_value = {
-					which = discipline
-					value = 0.3
-				}
-			}
+			
 			marrekesh_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -400,6 +376,7 @@ conquest_of_fez = {
 	}
 	discipline = 0.025
 	land_morale = 0.025
+	
 	#Province scope
 	on_activation = {
 	}
@@ -419,12 +396,7 @@ conquest_of_london = {
 			NOT = {
 				tag = GBR
 			}
-			NOT = {
-				has_global_modifier_value = {
-					which = discipline
-					value = 0.3
-				}
-			}
+			
 			home_counties_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -434,6 +406,7 @@ conquest_of_london = {
 	}
 	land_morale = 0.025
 	discipline = 0.025
+	
 	#Province scope
 	on_activation = {
 	}
@@ -450,12 +423,7 @@ conquest_of_rome = {
 			NOT = {
 				tag = ITA
 			}
-			NOT = {
-				has_global_modifier_value = {
-					which = discipline
-					value = 0.31
-				}
-			}
+			
 			lazio_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -466,6 +434,7 @@ conquest_of_rome = {
 	}
 	discipline = 0.025
 	land_morale = 0.025
+	
 	#Province scope
 	on_activation = {
 	}
@@ -485,18 +454,6 @@ conquest_of_warszawa = {
 			NOT = {
 				tag = PLC
 			}
-			NOT = {
-				has_global_modifier_value = {
-					which = infantry_power
-					value = 0.31
-				}
-			}
-			NOT = {
-				has_global_modifier_value = {
-					which = cavalry_power
-					value = 0.61
-				}
-			}
 			mazovia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -507,6 +464,7 @@ conquest_of_warszawa = {
 	}
 	infantry_power = 0.05
 	cavalry_power = 0.05
+	
 	#Province scope
 	on_activation = {
 	}
@@ -528,6 +486,7 @@ conquest_of_berlin = {
 		controlled_by = ROOT
 	}
 	yearly_army_professionalism = 0.005
+	
 	#Province scope
 	on_activation = {
 	}
@@ -556,6 +515,7 @@ conquest_of_saint_petersburg = {
 	}
 	vassal_income = 0.1
 	vassal_forcelimit_bonus = 0.25
+	
 	#Province scope
 	on_activation = {
 	}
@@ -589,6 +549,7 @@ conquest_of_tabriz = {
 	}
 	infantry_power = 0.05
 	cavalry_power = 0.05
+	
 	#Province scope
 	on_activation = {
 	}
@@ -611,12 +572,7 @@ conquest_of_samarkand = {
 			NOT = {
 				tag = TIM
 			}
-			NOT = {
-				has_global_modifier_value = {
-					which = discipline
-					value = 0.3
-				}
-			}
+			
 			samarkand_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -627,6 +583,7 @@ conquest_of_samarkand = {
 	discipline = 0.025
 	land_morale = 0.025
 	#Province scope
+	
 	on_activation = {
 	}
 	on_deactivation = {
@@ -646,12 +603,6 @@ conquest_of_pest = {
 				tag = EOH
 			}
 			#NOT = { tag = TUR }
-			NOT = {
-				has_global_modifier_value = {
-					which = discipline
-					value = 0.3
-				}
-			}
 			alfold_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -661,6 +612,7 @@ conquest_of_pest = {
 	}
 	land_morale = 0.025
 	discipline = 0.025
+	
 	#Province scope
 	on_activation = {
 	}
@@ -677,12 +629,6 @@ conquest_of_copenhagen = {
 			NOT = {
 				tag = DAN
 			}
-			NOT = {
-				has_global_modifier_value = {
-					which = discipline
-					value = 0.3
-				}
-			}
 			denmark_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -692,6 +638,7 @@ conquest_of_copenhagen = {
 	}
 	land_morale = 0.025
 	discipline = 0.025
+	
 	#Province scope
 	on_activation = {
 	}
@@ -726,6 +673,7 @@ conquest_of_herat = {
 	}
 	infantry_power = 0.05
 	cavalry_power = 0.05
+	
 	#Province scope
 	on_activation = {
 	}
@@ -746,12 +694,7 @@ conquest_of_frankfurt = {
 				tag = WES
 			}
 			#NOT = { tag = TUR }
-			NOT = {
-				has_global_modifier_value = {
-					which = discipline
-					value = 0.3
-				}
-			}
+			
 			hesse_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -762,6 +705,7 @@ conquest_of_frankfurt = {
 	land_morale = 0.025
 	discipline = 0.025
 	#Province scope
+	
 	on_activation = {
 	}
 	on_deactivation = {
@@ -784,6 +728,7 @@ conquest_of_prague = {
 	}
 	artillery_levels_available_vs_fort = 1
 	siege_ability = 0.1
+	
 	#Province scope
 	on_activation = {
 	}
@@ -803,12 +748,7 @@ conquest_of_toledo = {
 			NOT = {
 				tag = SPA
 			}
-			NOT = {
-				has_global_modifier_value = {
-					which = discipline
-					value = 0.3
-				}
-			}
+			
 			toledo_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV
@@ -818,6 +758,7 @@ conquest_of_toledo = {
 	}
 	discipline = 0.025
 	land_morale = 0.025
+	
 	#Province scope
 	on_activation = {
 	}
@@ -844,6 +785,7 @@ conquest_of_delhi = {
 		controlled_by = ROOT
 	}
 	land_morale = 0.05
+	
 	#Province scope
 	on_activation = {
 	}
