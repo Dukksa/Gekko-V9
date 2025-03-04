@@ -347,6 +347,17 @@ march = {
 		expiration_message_overlord = MARCHTOOLARGE
 		expiration_message_subject = MARCHTOOLARGEUS
 	}
+
+	modifier_subject = {
+		trigger = {
+			OR = {
+				overlord = { ai = no }
+				ai = no
+			}
+		}
+		modifier = ai_overlord_modifier
+	}
+	
 	modifier_subject = {
 		modifier = subject_tax_modifier
 		trigger = {
