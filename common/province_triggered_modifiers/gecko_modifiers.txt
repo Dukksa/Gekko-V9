@@ -135,6 +135,7 @@ my_desert = {
 		controlled_by = ROOT
 	}
 	trade_goods_size = 1
+	trade_value_modifier = 1
 	#Province scope
 	on_activation = {
 	}
