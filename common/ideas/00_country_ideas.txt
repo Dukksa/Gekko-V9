@@ -14250,7 +14250,7 @@ ISR_ideas = {
 		church_power_modifier = 0.15
 	}
 	national_myths_restored = {
-		discipline = 0.05
+		discipline = 0.1
 	}
 	return_home = {
 		production_efficiency = 0.2
@@ -14260,7 +14260,7 @@ ISR_ideas = {
 		trade_steering = 0.1
 	}
 	pious_people = {
-		tolerance_own = 2
+		interest = -0.5
 	}
 	people_of_exile = {
 		development_cost = -0.1
