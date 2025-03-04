@@ -33,6 +33,7 @@ marketplace = {
 
 	modifier = {
 		province_trade_power_modifier = 0.5
+		province_trade_power_value = 1.25
 	}
 	on_built = {
 		bastard_dev_cost_add_from_buildings = yes
@@ -152,11 +153,7 @@ workshop = {
 			FROM = { treasury = 10000 }
 		}
 		#FROM AUTONOMY
-		modifier = {
-			factor = 0.25
-			num_free_building_slots = 2
-			NOT = { xorme_has_any_manufactory_trigger = yes }
-		}
+
 		modifier = {
 			factor = 0.4
 			local_autonomy = 75
@@ -183,26 +180,6 @@ workshop = {
 			base_production = 8
 		}
 		#FROM TRADE GOODS
-		modifier = {
-			factor = 5.0
-			xorme_lowest_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 10.0
-			xorme_low_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 15.0
-			xorme_medium_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 20.0
-			xorme_high_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 25.0
-			xorme_province_with_special_goods_produced_trigger = yes
-		}
 		modifier = {
 			factor = 100.0
 			has_province_modifier = xorme_ai_agenda_building_spot
@@ -331,10 +308,7 @@ temple = {
 		#FROM AUTONOMY
 		modifier = {
 			factor = 0.05
-			OR = {
-				NOT = { num_free_building_slots = 2 }
-				xorme_has_production_buildings_trigger = no
-			}
+			NOT = { num_free_building_slots = 2 }
 		}
 		modifier = {
 			factor = 0.4
@@ -362,26 +336,6 @@ temple = {
 			base_tax = 8
 		}
 		#FROM TRADE GOODS
-		modifier = {
-			factor = 5.0
-			xorme_province_with_special_goods_produced_trigger = yes
-		}
-		modifier = {
-			factor = 10.0
-			xorme_high_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 15.0
-			xorme_medium_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 20.0
-			xorme_low_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 25.0
-			xorme_lowest_quality_trade_goods_trigger = yes
-		}
 		modifier = {
 			factor = 100.0
 			has_province_modifier = xorme_ai_agenda_building_spot
@@ -424,17 +378,17 @@ barracks = {
 				add_manpower = 1
 			}
 		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = 0.001
-			}
-		}
+		#if = {
+		#	limit = {
+		#		FROM = {
+		#			mission_completed = jap_tanegashima_teppo
+		#			has_dlc = "Cradle of Civilization" 
+		#		}
+		#	}
+		#	FROM = {
+		#		add_army_professionalism = 0.001
+		#	}
+		#}
 		add_development_from_building = {
 			building = barracks
 			type = manpower
@@ -456,17 +410,17 @@ barracks = {
 				add_manpower = -1
 			}
 		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = -0.001
-			}
-		}
+		#if = {
+		#	limit = {
+		#		FROM = {
+		#			mission_completed = jap_tanegashima_teppo
+		#			has_dlc = "Cradle of Civilization" 
+		#		}
+		#	}
+		#	FROM = {
+		#		add_army_professionalism = -0.001
+		#	}
+		#}
 		remove_development_from_building = {
 			building = barracks
 			type = manpower
@@ -525,10 +479,7 @@ barracks = {
 		}
 		modifier = {
 			factor = 0.05
-			OR = {
-				NOT = { num_free_building_slots = 2 }
-				xorme_has_production_buildings_trigger = no
-			}
+			NOT = { num_free_building_slots = 2 }
 		}
 		modifier = {
 			factor = 0.4
@@ -560,10 +511,7 @@ barracks = {
 			NOT = { development = 7 }
 		}
 		#BUILDINGS
-		modifier = {
-			factor = 10.0
-			xorme_has_production_buildings_trigger = yes
-		}
+
 		modifier = {
 			factor = 100.0
 			has_province_modifier = xorme_ai_agenda_building_spot
@@ -643,10 +591,7 @@ shipyard = {
 		}
 		modifier = {
 			factor = 0.05
-			OR = {
-				NOT = { num_free_building_slots = 2 }
-				xorme_has_production_buildings_trigger = no
-			}
+			NOT = { num_free_building_slots = 2 }
 		}
 		modifier = {
 			factor = 0.4
@@ -678,10 +623,7 @@ shipyard = {
 			NOT = { development = 7 }
 		}
 		#BUILDINGS
-		modifier = {
-			factor = 10.0
-			xorme_has_production_buildings_trigger = yes
-		}
+
 		modifier = {
 			factor = 100.0
 			has_province_modifier = xorme_ai_agenda_building_spot
@@ -1121,17 +1063,17 @@ regimental_camp = {
 		update_improved_military_buildings_modifier = {
 			building = regimental_camp
 		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = 0.001
-			}
-		}
+		#if = {
+		#	limit = {
+		#		FROM = {
+		#			mission_completed = jap_tanegashima_teppo
+		#			has_dlc = "Cradle of Civilization" 
+		#		}
+		#	}
+		#	FROM = {
+		#		add_army_professionalism = 0.001
+		#	}
+		#}
 	}
 	on_destroyed = {
 	bastard_dev_cost_remove_from_buildings = yes
@@ -1143,17 +1085,17 @@ regimental_camp = {
 		update_improved_military_buildings_modifier = {
 			building = regimental_camp
 		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = -0.001
-			}
-		}
+		#if = {
+		#	limit = {
+		#		FROM = {
+		#			mission_completed = jap_tanegashima_teppo
+		#			has_dlc = "Cradle of Civilization" 
+		#		}
+		#	}
+		#	FROM = {
+		#		add_army_professionalism = -0.001
+		#	}
+		#}
 	}
 	on_obsolete = {
 	}
@@ -1186,10 +1128,7 @@ regimental_camp = {
 		}
 		modifier = {
 			factor = 0.05
-			OR = {
-				NOT = { num_free_building_slots = 2 }
-				xorme_has_production_buildings_trigger = no
-			}
+			NOT = { num_free_building_slots = 2 }
 		}
 		modifier = {
 			factor = 0.4
@@ -1221,10 +1160,7 @@ regimental_camp = {
 			NOT = { development = 7 }
 		}
 		#BUILDINGS
-		modifier = {
-			factor = 100.0
-			xorme_has_production_buildings_trigger = yes
-		}
+
 		modifier = {
 			factor = 100.0
 			has_province_modifier = xorme_ai_agenda_building_spot
@@ -1579,10 +1515,7 @@ cathedral = {
 		#FROM BUILDINGS
 		modifier = {
 			factor = 0.05
-			OR = {
-				NOT = { num_free_building_slots = 2 }
-				xorme_has_production_buildings_trigger = no
-			}
+			NOT = { num_free_building_slots = 2 }
 		}
 		#FROM AUTONOMY
 		modifier = {
@@ -1616,26 +1549,7 @@ cathedral = {
 			has_building = temple
 		}
 		#FROM TRADE GOODS
-		modifier = {
-			factor = 5.0
-			xorme_province_with_special_goods_produced_trigger = yes
-		}
-		modifier = {
-			factor = 10.0
-			xorme_high_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 15.0
-			xorme_medium_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 20.0
-			xorme_low_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 25.0
-			xorme_lowest_quality_trade_goods_trigger = yes
-		}
+
 		modifier = {
 			factor = 100.0
 			has_province_modifier = xorme_ai_agenda_building_spot
@@ -1757,6 +1671,7 @@ trade_depot = {
 
 	modifier = {
 		province_trade_power_modifier = 1
+		province_trade_power_value = 2.5
 	}
 
 	on_built = {
@@ -1885,10 +1800,7 @@ grand_shipyard = {
 		}
 		modifier = {
 			factor = 0.05
-			OR = {
-				NOT = { num_free_building_slots = 2 }
-				xorme_has_production_buildings_trigger = no
-			}
+			NOT = { num_free_building_slots = 2 }
 		}
 		modifier = {
 			factor = 0.4
@@ -1925,10 +1837,7 @@ grand_shipyard = {
 			NOT = { development = 7 }
 		}
 		#BUILDINGS
-		modifier = {
-			factor = 10.0
-			xorme_has_production_buildings_trigger = yes
-		}
+
 		modifier = {
 			factor = 100.0
 			has_province_modifier = xorme_ai_agenda_building_spot
@@ -2007,17 +1916,17 @@ training_fields = {
 		update_improved_military_buildings_modifier = {
 			building = training_fields
 		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = 0.001
-			}
-		}
+		#if = {
+		#	limit = {
+		#		FROM = {
+		#			mission_completed = jap_tanegashima_teppo
+		#			has_dlc = "Cradle of Civilization" 
+		#		}
+		#	}
+		#	FROM = {
+		#		add_army_professionalism = 0.001
+		#	}
+		#}
 	}
 	on_destroyed = {
 		bastard_dev_cost_remove_from_buildings = yes
@@ -2034,17 +1943,17 @@ training_fields = {
 		update_improved_military_buildings_modifier = {
 			building = training_fields
 		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = -0.001
-			}
-		}
+		#if = {
+		#	limit = {
+		#		FROM = {
+		#			mission_completed = jap_tanegashima_teppo
+		#			has_dlc = "Cradle of Civilization" 
+		#		}
+		#	}
+		#	FROM = {
+		#		add_army_professionalism = -0.001
+		#	}
+		#}
 		remove_development_from_building = {
 			building = training_fields
 			type = manpower
@@ -2071,10 +1980,7 @@ training_fields = {
 		#FROM AUTONOMY
 		modifier = {
 			factor = 0.05
-			OR = {
-				NOT = { num_free_building_slots = 2 }
-				xorme_has_production_buildings_trigger = no
-			}
+			NOT = { num_free_building_slots = 2 }
 		}
 		modifier = {
 			factor = 0.4
@@ -2107,15 +2013,6 @@ training_fields = {
 			base_manpower = 8
 		}
 		#FROM TRADE GOODS
-		modifier = {
-			factor = 10.0
-			xorme_additional_manpower_goods_trigger = yes
-		}
-		#BUILDINGS
-		modifier = {
-			factor = 10.0
-			xorme_has_production_buildings_trigger = yes
-		}
 		modifier = {
 			factor = 100.0
 			has_province_modifier = xorme_ai_agenda_building_spot
@@ -2319,6 +2216,7 @@ stock_exchange = {
 
 	modifier = {
 		province_trade_power_modifier = 1.25
+		province_trade_power_value = 3.75
 	}
 
 	on_built = {
@@ -2487,27 +2385,6 @@ counting_house = {
 		modifier = {
 			factor = 9.0
 			base_production = 8
-		}
-		#FROM TRADE GOODS
-		modifier = {
-			factor = 5.0
-			xorme_lowest_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 10.0
-			xorme_low_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 15.0
-			xorme_medium_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 20.0
-			xorme_high_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 25.0
-			xorme_province_with_special_goods_produced_trigger = yes
 		}
 		modifier = {
 			factor = 100.0
@@ -2767,17 +2644,17 @@ conscription_center = {
 		update_improved_military_buildings_modifier = {
 			building = conscription_center
 		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = 0.001
-			}
-		}
+		#if = {
+		#	limit = {
+		#		FROM = {
+		#			mission_completed = jap_tanegashima_teppo
+		#			has_dlc = "Cradle of Civilization" 
+		#		}
+		#	}
+		#	FROM = {
+		#		add_army_professionalism = 0.001
+		#	}
+		#}
 	}
 	on_destroyed = {
 		bastard_dev_cost_remove_from_buildings = yes
@@ -2789,17 +2666,17 @@ conscription_center = {
 		update_improved_military_buildings_modifier = {
 			building = conscription_center
 		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = -0.001
-			}
-		}
+		#if = {
+		#	limit = {
+		#		FROM = {
+		#			mission_completed = jap_tanegashima_teppo
+		#			has_dlc = "Cradle of Civilization" 
+		#		}
+		#	}
+		#	FROM = {
+		#		add_army_professionalism = -0.001
+		#	}
+		#}
 	}
 	on_obsolete = {
 	}
@@ -2827,10 +2704,7 @@ conscription_center = {
 		}
 		modifier = {
 			factor = 0.05
-			OR = {
-				NOT = { num_free_building_slots = 2 }
-				xorme_has_production_buildings_trigger = no
-			}
+			NOT = { num_free_building_slots = 2 }
 		}
 		modifier = {
 			factor = 0.4
@@ -2867,10 +2741,6 @@ conscription_center = {
 			NOT = { development = 7 }
 		}
 		#BUILDINGS
-		modifier = {
-			factor = 100.0
-			xorme_has_production_buildings_trigger = yes
-		}
 		modifier = {
 			factor = 100.0
 			has_province_modifier = xorme_ai_agenda_building_spot
@@ -3161,10 +3031,6 @@ wharf = {
 			factor = 3.5
 			has_building = counting_house
 		}
-		modifier = {
-			factor = 10.0
-			xorme_province_with_special_goods_produced_trigger = yes
-		}
 	}
 }
 
@@ -3248,10 +3114,6 @@ weapons = {
 		modifier = {
 			factor = 3.5
 			has_building = counting_house
-		}
-		modifier = {
-			factor = 10.0
-			xorme_province_with_special_goods_produced_trigger = yes
 		}
 	}
 }
@@ -3338,10 +3200,6 @@ textile = {
 		modifier = {
 			factor = 3.5
 			has_building = counting_house
-		}
-		modifier = {
-			factor = 10.0
-			xorme_province_with_special_goods_produced_trigger = yes
 		}
 	}
 }
@@ -3431,10 +3289,6 @@ plantations = {
 			factor = 3.5
 			has_building = counting_house
 		}
-		modifier = {
-			factor = 10.0
-			xorme_province_with_special_goods_produced_trigger = yes
-		}
 	}
 }
 
@@ -3522,10 +3376,6 @@ tradecompany = {
 		modifier = {
 			factor = 3.5
 			has_building = counting_house
-		}
-		modifier = {
-			factor = 10.0
-			xorme_province_with_special_goods_produced_trigger = yes
 		}
 	}
 }
@@ -3628,10 +3478,6 @@ farm_estate = {
 			factor = 3.5
 			has_building = counting_house
 		}
-		modifier = {
-			factor = 10.0
-			xorme_province_with_special_goods_produced_trigger = yes
-		}
 	}
 }
 
@@ -3718,10 +3564,6 @@ mills = {
 		modifier = {
 			factor = 3.5
 			has_building = counting_house
-		}
-		modifier = {
-			factor = 10.0
-			xorme_province_with_special_goods_produced_trigger = yes
 		}
 	}
 }
@@ -3922,14 +3764,6 @@ soldier_households = {
 			FROM = { num_of_loans = 1 }
 		}
 		modifier = {
-			factor = 0.1
-			xorme_high_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 0.2
-			xorme_medium_quality_trade_goods_trigger = yes
-		}
-		modifier = {
 			factor = 4.5
 			owner = { is_subject = yes }
 		}
@@ -3959,10 +3793,6 @@ soldier_households = {
 				has_building = barracks
 				has_building = training_fields
 			}
-		}
-		modifier = {
-			factor = 1000
-			xorme_additional_manpower_goods_trigger = yes
 		}
 	}
 }
@@ -4021,14 +3851,6 @@ impressment_offices = {
 		modifier = {
 			factor = 0
 			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0.1
-			xorme_high_quality_trade_goods_trigger = yes
-		}
-		modifier = {
-			factor = 0.2
-			xorme_medium_quality_trade_goods_trigger = yes
 		}
 		modifier = {
 			factor = 4.5

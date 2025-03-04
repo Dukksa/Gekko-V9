@@ -28,15 +28,6 @@ swe_scandinavian_colonialism_mission_slot = {
 			OR = {
 				is_subject = no
 				liberty_desire = 100
-				any_hired_mercenary_company = {
-					custom_trigger_tooltip = {
-						tooltip = is_free_merc_company_tt
-						OR = {
-							template = merc__local_free_city_company
-							template = merc__local_small_company
-						}
-					}
-				}
 			}
 		}
 		effect = {
@@ -1406,9 +1397,8 @@ swe_kalmar_union_mission_slot = {
 			skaneland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_core = ROOT
 			}
 		}
 	}

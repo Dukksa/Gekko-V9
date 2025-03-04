@@ -144,7 +144,7 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = { exists = BHA }
-			#NOT = { exists = HIN }
+			NOT = { exists = HIN }
 			NOT = { tag = MUG }
 			culture_group = western_aryan
 			OR = {
@@ -276,7 +276,7 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			#NOT = { exists = HIN }
+			NOT = { exists = HIN }
 			NOT = { exists = BHA }
 			NOT = { tag = MUG }
 			culture_group = hindusthani
@@ -410,7 +410,7 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = { exists = BHA }
-			#NOT = { exists = HIN }
+			NOT = { exists = HIN }
 			NOT = { tag = MUG }
 			culture_group = eastern_aryan
 			OR = {
@@ -543,7 +543,7 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = { exists = BHA }
-			#NOT = { exists = HIN }
+			NOT = { exists = HIN }
 			NOT = { tag = MUG }
 			culture_group = central_indic
 			OR = {

@@ -1318,6 +1318,17 @@ BYZ_discipline = {
 	discipline = 0.05
 }
 
+soyurghal_base_overlord_modifiers = {
+	land_forcelimit_modifier = 0.05
+	soyurghals_amount_check_influence = 1 #used for exporting, invisible by default
+}
+
+soyurghal_base_modifiers = { #slightly weaker pronoia but without penalties
+	global_manpower = 5
+	global_manpower_modifier = 0.25
+	global_regiment_cost = -0.25
+}
+
 tributary_state_behind_overlord_tech_adm = {
 	adm_tech_cost_modifier = -0.05
 }

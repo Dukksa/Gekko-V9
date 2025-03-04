@@ -1,3 +1,5 @@
+namespace = frscolor
+
 country_event = {
 	id = frscolor.1
 	title = "flavor_tim.18.t"

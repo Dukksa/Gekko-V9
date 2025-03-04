@@ -1,7 +1,0 @@
-government = monarchy
-mercantilism = 20
-add_government_reform = feudalism_reform
-technology_group = ottoman
-capital = 153 #Pest
-add_army_professionalism = 0.25
-

@@ -19467,7 +19467,7 @@ golden_kremnica = {
 		country_modifiers = {
 			monthly_gold_inflation_modifier = -0.2
 			gold_depletion_chance_modifier = -0.2
-			interest = -0.5
+			global_trade_goods_size_modifier = 0.05
 		}
 		on_upgraded = {
 			154 = {
@@ -19491,7 +19491,7 @@ golden_kremnica = {
 		country_modifiers = {
 			monthly_gold_inflation_modifier = -0.33
 			gold_depletion_chance_modifier = -0.33
-			interest = -1
+			global_trade_goods_size_modifier = 0.1
 		}
 		on_upgraded = {
 			154 = {
@@ -23813,7 +23813,7 @@ fu_blue_mosque = {
 		}
 
 		country_modifiers = {
-			yearly_tribal_allegiance = 0.25
+			monthly_tribal_allegiance = 0.25
 			legitimacy = 0.25
 		}
 		
@@ -23840,7 +23840,7 @@ fu_blue_mosque = {
 		}
 
 		country_modifiers = {
-			yearly_tribal_allegiance = 0.3
+			monthly_tribal_allegiance = 0.3
 			legitimacy = 0.3
 		}
 		
@@ -23866,7 +23866,7 @@ fu_blue_mosque = {
 		}
 
 		country_modifiers = {
-			yearly_tribal_allegiance = 0.3
+			monthly_tribal_allegiance = 0.3
 			legitimacy = 0.5
 		}
 		

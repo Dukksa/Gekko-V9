@@ -546,7 +546,7 @@ POL_Missions_1 = {
 						264 = { country_or_non_sovereign_subject_holds = ROOT }
 					}
 					264 = {
-						create_or_add_center_of_trade_level = { level = 1 }
+						X_center_of_trade_effect = yes
 					}
 				}
 			}
@@ -3659,9 +3659,9 @@ POL_Missions_5_2 = {
 				AND = {
 					ROOT = {
 						NOT = { religious_unity = 0.75 }
-						owned_by = ROOT
-						NOT = { religion = ROOT }
 					}
+					owned_by = ROOT
+					NOT = { religion = ROOT }
 				}
 			}
 		}

@@ -180,6 +180,7 @@ estate_rajput = {
 		estate_nobles_noble_officer_right
 		estate_rajput_force_conscription
 		estate_rajputs_MUG_rajput_mansabdars
+		estate_rajput_noble_promotion
 	}
 
 	agendas = {

@@ -104,19 +104,6 @@ country_event = {
 			factor = 0
 		}
     }
-}
-
-country_event = {
-    id = echo.6
-    title = echo.6.t
-    desc = echo.6.d
-    picture = COURT_eventPicture
-
-    is_triggered_only = yes
-	
-    option = {
-		name = echo.6.a
-	}
 }	
 
 country_event = {
@@ -720,21 +707,20 @@ country_event = { # state edicts
 		}
 	}
 	#event to notify about ur money being stolen
-	country_event = {
-		id = bertus_changes.6032
-		title = bertus_changes.6032.title
-		desc = bertus_changes.6032.desc
-		picture = DHIMMI_ESTATE_eventPicture
-	
-		is_triggered_only = yes
-	
-		immediate = {
-		}
-		option = {
-			name = bertus_changes.6031.a #
-		}
-	}
-
+	#country_event = {
+	#	id = bertus_changes.6032
+	#	title = bertus_changes.6032.title
+	#	desc = bertus_changes.6032.desc
+	#	picture = DHIMMI_ESTATE_eventPicture
+	#
+	#	is_triggered_only = yes
+	#
+	#	immediate = {
+	#	}
+	#	option = {
+	#		name = bertus_changes.6031.a #
+	#	}
+	#}
 
 ##old merc shit
 country_event = {
@@ -775,5 +761,34 @@ country_event = {
     option = {
 		name = echo.18.a
 		remove_country_modifier = Merc_payments_reneged
+	}
+}
+
+#new player read me
+
+country_event = {
+    id = echo.6
+    title = echo.6.t
+    desc = echo.6.d
+    picture = COURT_eventPicture
+
+    is_triggered_only = yes
+	
+    option = {
+		name = echo.6.a
+		country_event = { id = echo.24}
+	}
+}
+
+country_event = {
+    id = echo.24
+    title = echo.6.t
+    desc = echo.24.d
+    picture = COURT_eventPicture
+
+    is_triggered_only = yes
+	
+    option = {
+		name = echo.24.a
 	}
 }

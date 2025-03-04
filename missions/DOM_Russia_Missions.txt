@@ -53,7 +53,7 @@ mos_rus_handle_succession = {
 					dynasty = "Rurikovich"
 				}
 				add_country_modifier = {
-					name = mos_#legitimacy_of_the_rurikovich
+					name = mos_legitimacy_of_the_rurikovich
 					duration = 9125
 				}
 			}

@@ -858,7 +858,7 @@ country_event = { #Grevens Fejde
 	
 	trigger = {
 		tag = HSA 
-		DAN = { has_disaster = counts_feud }
+#		DAN = { has_disaster = counts_feud }
 		NOT = { alliance_with = DAN }
 		NOT = { is_subject_of = DAN }
 	}

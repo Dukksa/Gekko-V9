@@ -4126,6 +4126,24 @@ on_government_change_effect = {
 	}
 }
 
+on_native_government_change_effect = {
+	hidden_effect = {
+		every_owned_province = {
+			if = { limit = { has_building = native_palisade } set_province_flag = native_palisade_flag }
+			if = { limit = { has_building = native_fortified_house } set_province_flag = native_fortified_house_flag }
+			if = { limit = { has_building = native_ceremonial_fire_pit } set_province_flag = native_ceremonial_fire_pit_flag }
+			if = { limit = { has_building = native_storehouse } set_province_flag = native_storehouse_flag }
+			if = { limit = { has_building = native_longhouse } set_province_flag = native_longhouse_flag }
+			if = { limit = { has_building = native_sweat_lodge } set_province_flag = native_sweat_lodge_flag }
+			if = { limit = { has_building = native_great_trail } set_province_flag = native_great_trail_flag }
+		}
+		country_event = {
+			id = native_americans.999
+			days = 35
+		}
+	}
+}
+
 on_non_estate_disaster_end = {
 	hidden_effect = {
 		change_variable = {
@@ -4355,22 +4373,7 @@ on_monarch_death_effect = {
 		}
 		clr_country_flag = sax_thuringen_split_to_happen
 	}
-	if = {
-		limit = { tag = SAM }
-		country_event = { id = polynesian.35 }
-	}
-	if = {
-		limit = { tag = TOG }
-		country_event = { id = polynesian.36 }
-	}
-	if = {	# Ascension of Trailokanat	
-		limit = { tag = AYU }
-		country_event = { id = flavor_suk.1 }
-	}
-	if = {
-		limit = { tag = GOT }
-		country_event = { id = flavor_got.37 }
-	}
+
 	if = {
 		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
 		add_stability = 1

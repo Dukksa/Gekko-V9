@@ -693,7 +693,6 @@ gold = {
 			NOT = { region = south_africa_region }
 			NOT = { region = central_africa_region }
 			NOT = { region = peru_region }
-			NOT = { region = upper_peru_region }
 			NOT = { region = mexico_region }
 			NOT = { region = rio_grande_region }
 			NOT = { region = central_america_region }
@@ -2039,7 +2038,6 @@ gems = {
 			NOT = { region = central_africa_region }
 			NOT = { region = central_america_region }
 			NOT = { region = peru_region }
-			NOT = { region = upper_peru_region }
 			NOT = { region = colombia_region }
 			NOT = { region = indonesia_region }
 			NOT = { region = moluccas_region }
