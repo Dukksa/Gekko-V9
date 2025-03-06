@@ -12510,11 +12510,7 @@ MYS_ideas = {
 		core_creation = -0.1
 	}
 	mys_patronize_kannada_literature = {
-		legitimacy = 1
-		devotion = 1
-		republican_tradition = 0.3
-		meritocracy = 1
-		horde_unity = 1
+		build_cost = -0.1
 	}
 	mys_religious_tolerance = {
 		tolerance_heathen = 2

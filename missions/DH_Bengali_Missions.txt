@@ -211,9 +211,8 @@ bng_slot_2 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			mil_tech = 4
 			army_size_percentage = 1
-			total_development = 200
+			num_of_generals = 1
 		}
 		effect = {
 			bihar_area = {
@@ -251,6 +250,13 @@ bng_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			give_claims = { area = mithila_area }
+			give_claims = { area = bhutan_area }
+			give_claims = { area = nepal_area }
+			give_claims = { area = orissa_area }
+				
+				
+				
 		}
 	}
 	bng_conquer_jaunpur = {
