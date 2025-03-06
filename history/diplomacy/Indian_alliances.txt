@@ -8,7 +8,7 @@ vassal = {
 
 vassal = {
 	first = MYS
-	second = KOC
+	second = VND
 	start_date = 1443.1.1
 	end_date = 1596.1.1
 }

@@ -360,7 +360,7 @@ gecko_cannon_institute = {
 }
 
 gecko_handheld_rockets = {
-	infantry_fire = 0.25
+	infantry_fire = 0.15
 }
 
 gecko_mysore_encourage_production = {
