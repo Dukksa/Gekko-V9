@@ -68,6 +68,8 @@ country_decisions = {
 			}
 			OR = {
 				has_estate = estate_nobles
+				has_estate = estate_rajput
+				has_estate = estate_maratha
 				has_estate = estate_nomadic_tribes
 			}
 		}
