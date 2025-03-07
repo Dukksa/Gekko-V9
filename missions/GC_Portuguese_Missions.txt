@@ -462,6 +462,8 @@ gc_por_2 = {
 			sao_tome_area = {
 				cede_province = POR
 				add_core = POR
+				change_culture = portugese
+				change_religion = catholic
 			}
 			define_explorer = {
 				name = "Lançarote de Freitas"
@@ -623,7 +625,7 @@ gc_por_2_b = {
 				trade_goods = slaves 
 				key = triangle_trade_key
 				value = 0.5
-				duration = 9125
+				duration = -1
 			}
 		}
 	}
@@ -1245,6 +1247,8 @@ gc_por_4 = {
 					1177 = {
 						cede_province = POR
 						add_core = POR
+						change_culture = portugese
+						change_religion = catholic
 					}
 			}
 
