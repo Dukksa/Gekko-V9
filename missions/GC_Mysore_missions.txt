@@ -266,7 +266,7 @@ gc_mysore_branch_3 = {
         }
 
         trigger = {
-            owns = 541
+            541 = { controlled_by = ROOT}
         }
 
         effect = {

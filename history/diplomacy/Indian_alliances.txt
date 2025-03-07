@@ -156,9 +156,16 @@ vassal = {
 #Bengal
 
 #Khen-Ahom marriage alliance
-alliance = {
-	first = KMT
-	second = ASS
+vassal = {
+	first = BNG
+	second = KMT
+	start_date = 1320.1.1
+	end_date = 1490.1.1
+}
+
+vassal = {
+	first = BNG
+	second = MBL
 	start_date = 1320.1.1
 	end_date = 1490.1.1
 }
