@@ -160,7 +160,7 @@ country_event = {
 				}
 				add_province_modifier = {
 					name = "gc_mongol_rule_tibet"
-					duration = 36500
+					duration = 3650
 				}
 			}
 			add_country_modifier = {

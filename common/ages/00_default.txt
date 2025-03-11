@@ -362,7 +362,11 @@ age_of_reformation = {
 		}
 		
 		obj_humanism_religious = {
-			full_idea_group = religious_ideas
+			OR = {
+				full_idea_group = religious_ideas
+				full_idea_group = innovativeness_ideas
+			}
+			
 		}
 		
 		obj_convert_10_provinces = {

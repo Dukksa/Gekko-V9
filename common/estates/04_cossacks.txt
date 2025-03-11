@@ -40,6 +40,11 @@ estate_cossacks = {
 	# If true, country will get estate
 	
 	trigger = {	
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
 		has_dlc = "The Cossacks"
 		NOT = { has_government_attribute = disables_estate_cossacks }
 		NOT = { has_disabled_estate = { estate = estate_cossacks } }
@@ -129,6 +134,7 @@ estate_cossacks = {
 		estate_cossacks_exploration_expedition
 		estate_cossacks_cossack_self_governance
 		estate_cossacks_expand_the_cossack_regiments
+		estate_cossacks_establish_the_cossack_regiments
 		estate_cossacks_recruit_cossack_generals
 		estate_cossacks_prime_herding_rights
 		estate_cossacks_freedom_of_the_steppes

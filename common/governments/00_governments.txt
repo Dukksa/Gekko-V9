@@ -120,14 +120,8 @@ monarchy = {
 				egyptian_government_reform
 				#1.37
 				ayyubid_dynasty
-				arabic_plutocracy_reform
 				apostolic_kingdom
 				imperial_hungarian_government
-				andean_empire_reform
-				aztec_empire_reform
-				maya_confederation_reform
-				divine_kingship_reform
-				nahuatl_monarchy_reform
 				empire_of_trebizond
 				austrian_absolute_monarchy
 				merchant_aristocracy_reform
@@ -194,7 +188,7 @@ monarchy = {
 				extend_the_unio_trium_nationum_reform
 				#1.37 Trebizond
 				crusader_nobility_reform
-				TIM_plunder_economy
+				
 				###Gecko###
 				establish_qurchi_corps_reform
 				#upgrade_janissary_weaponry_reform
@@ -297,7 +291,6 @@ monarchy = {
 				royal_marines_reform
 				maritime_military_reform
 				professional_navy_reform
-				doppelsoldner_reform
 				#Invisible until unlocked
 				expanded_devshirme_system_reform
 				reformed_ottoman_conscription_reform
@@ -436,7 +429,6 @@ monarchy = {
 				#1.37
 				merchant_representation_reform
 				modern_economics_reform
-				chinampa_farms_reform
 				bergordnung_reforms_reform
 			}
 		}
@@ -596,7 +588,6 @@ monarchy = {
 		allotment_system
 		prussian_monarchy
 		prussian_monarchy_base
-		doppelsoldner_reform
 		swiss_mercenary_reform
 	}
 
@@ -648,7 +639,6 @@ republic = {
 		prussian_republic
 		united_cantons_legacy
 		#Mamluks
-		egyptian_government_reform
 		united_cantons_legacy
 	}
 	reform_levels = {
@@ -813,7 +803,6 @@ republic = {
 				royal_marines_reform
 				maritime_military_reform
 				professional_navy_reform
-				doppelsoldner_reform
 				#Invisible until unlocked
 				expanded_devshirme_system_reform
 				reformed_ottoman_conscription_reform
@@ -933,7 +922,6 @@ republic = {
 				#1.37
 				merchant_representation_reform
 				modern_economics_reform
-				chinampa_farms_reform
 			}
 		}
 		consolidation_of_power_category = {
@@ -1121,7 +1109,6 @@ tribal = {
 				#Visible but locked
 				royal_marines_reform
 				professional_navy_reform
-				doppelsoldner_reform
 				#Invisible until unlocked
 				expanded_devshirme_system_reform
 				reformed_ottoman_conscription_reform
@@ -1300,7 +1287,6 @@ theocracy = {
 				sisterhood_of_jeanne_darc_reform
 				#Egypt
 				egyptian_government_reform
-				blood_theocracy_reform
 			}
 		}
 		internal_vs_external_mission = {
@@ -1390,7 +1376,6 @@ theocracy = {
 				royal_marines_reform
 				maritime_military_reform
 				professional_navy_reform
-				doppelsoldner_reform
 				#Invisible until unlocked
 				expanded_devshirme_system_reform
 				reformed_ottoman_conscription_reform
@@ -1500,7 +1485,6 @@ theocracy = {
 				#1.37
 				merchant_representation_reform
 				modern_economics_reform
-				chinampa_farms_reform
 			}
 		}
 		divine_cause = {

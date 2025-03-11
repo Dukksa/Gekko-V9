@@ -3,6 +3,7 @@
 owner = GOT
 controller = GOT
 add_core = GOT
+add_core = SWE
 #add_core = DAN
 culture = swedish
 religion = catholic

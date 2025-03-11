@@ -12,6 +12,9 @@ jihad = {
     monthly_piety = -0.08
 }
 
+gecko_armyreform_cooldown = {
+	land_morale = 0.001
+}
 
 Great_power_dominance_timer = {
 }
@@ -136,6 +139,12 @@ persia_united = {
 	core_creation = -0.25
 	global_tax_income = 48
 }
+
+gc_tim_resurgent = {
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+}	
 
 fuck_you_no_switching_mid_war = {
 	naval_morale_constant = -1

@@ -1470,9 +1470,9 @@ ITA_non_conquest_1 = {
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			italy_region = {
-				type = all
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				region = italy_region
+				value = 60
 			}
 			
 			development_in_provinces = {
@@ -3506,44 +3506,7 @@ ITA_non_conquest_5 = {
 				}
 				innovativeness = 80
 			}
-			variable_arithmetic_trigger = {
-				custom_tooltip = more_than_33_mana_gain
-				
-				export_to_variable = {
-					variable_name = adm_gain
-					value = trigger_value:monthly_adm
-				}
-				export_to_variable = {
-					variable_name = dip_gain
-					value = trigger_value:monthly_dip
-				}
-				export_to_variable = {
-					variable_name = mil_gain
-					value = trigger_value:monthly_mil
-				}
-				change_variable = {
-					which = adm_gain
-					which = dip_gain
-				}
-				
-				change_variable = {
-					which = adm_gain
-					which = mil_gain
-				}
-				
-				check_variable = {
-					which = adm_gain
-					value = 33
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "Mandate of Heaven"
-				}
-				num_of_age_rewards_taken = {
-					amount = 4
-				}
-			}
+			splendor = 800
 			reform_level = 7
 		}
 		effect = {

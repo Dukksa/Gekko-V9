@@ -2850,8 +2850,8 @@
  hun_orthodox_unrest_no:0 "\n£no£ §TAlternatively§! we will receive:"
  hun_unlock_orthodox_privilege_tt:0 "Upgrades the '§YGrant Orthodox Autonomy§!' [Root.GetBurghersOrFallbackName] estate privilege, making it no longer give §R-10.0%§! Clergy Loyalty Equilibrium and §R-5§! Max Absolutism."
  hun_empower_religious_diplomats_tt:0 "Upgrades the '§YReligious Diplomats§!' [Root.GetChurchOrFallbackName] estate privilege, making it give an additional §G+10§! Opinion of Same Religion and §G+10§! Opinion of Country from others of the same Religion."
- hun_cardinal_capital_tt_yes:0 "\n£yes£ If we complete this mission while §YCatholic§! and §Y[Root.Capital.GetCapitalName]§! does not have a §YCardinal§!, it will gain one."
- hun_cardinal_capital_tt_no:0 "\n£no£ If we complete this mission while §YCatholic§! and §Y[Root.Capital.GetCapitalName]§! does not have a §YCardinal§!, it will gain one."
+ hun_cardinal_capital_tt_yes:0 "\n£yes£ If we complete this mission while §YCatholic§! and §YPEST§! does not have a §YCardinal§!, it will gain one."
+ hun_cardinal_capital_tt_no:0 "\n£no£ If we complete this mission while §YCatholic§! and §YPEST§! does not have a §YCardinal§!, it will gain one."
  hun_incident_event_insight_tt:0 "\n§GEvent Insight:§!\nThis event starts the '§YHungary Wishes to Join the Empire§!' imperial incident, which allows us to join the §YHoly Roman Empire§! and take over §YBohemia's§! electorate."
  hun_emperor_bohemia_pu_tt_yes:1 "£yes£ If we complete this mission by enforcing a §YPersonal Union§! with @BOH §YBohemia§!, they are an §YElector§!, and we meet the requirements to join the §YHoly Roman Empire§!, we will also receive:"
  hun_emperor_bohemia_pu_tt_no:1 "£no£ If we complete this mission by enforcing a §YPersonal Union§! with @BOH §YBohemia§!, they are an §YElector§!, and we meet the requirements to join the §YHoly Roman Empire§!, we will also receive:"
@@ -3152,7 +3152,7 @@
  azt_jaguars_and_eagles_title:0 "Jaguars and Eagles"
  azt_jaguars_and_eagles_desc:0 "Jaguar and Eagle knights are some of the most elite warriors in Aztec society. Representing both Tezcatlipoca, the God of Conflict, and Huitzilopochtli, the God of War, they are feared on the battlefield. By using their reputation to our advantage, we will be able to dominate the battlefield even more."
 
- #Doom changes:
+ #Doom changes ( these have been removed)
  AZT_ADD_30_LD_WITH_SUBJECTS:1 "All our §YSubjects§! will gain §R40%§! Liberty Desire.\n\nAny §YSubject§! that had §Y50%§! or more Liberty Desire will break free."
  reform_cooldown:0 "Religious Reform Cooldown"
  make_nahuatl_tributary:0 "Make Mesoamerican Tributary"
@@ -4338,7 +4338,7 @@
  sunset_invasion.8.d:0 "The Chinese praise their Emperors as if they're guided by the heavens themselves. They call it the Mandate of Heaven. However, such divinity is only more nutrients for the gods. Having captured the Chinese Emperor, the dragon of China, we can now slay him and offer his heart to the gods."
  sunset_invasion.8.a:0 "The Dragon Throne is now empty."
 
- #European Colonies:
+ #European Colonies (this is removed):
  european_colony:0 "Sunset Colony"
  european_colony_long_desc:1 "A Sunset Colony is a subject type that is similar to other colonial subjects, with the main difference being that it can be established in overseas territory. Its main purpose is to govern the people outside of the Americas with more efficiency, whilst also retaining our grip in the region."
  european_colony_is_our:0 "$NAME|Y$ is a Sunset Colony of us"
@@ -5788,7 +5788,7 @@
  HAB_GAIN_25_AE_WITH_ALL_HRE:1 "§Y[Emperor.GetName]§! will gain §R+25§! Aggressive Expansion with all of the §YImperial Princes§!."
  HAB_LOSE_75_OPINION_WITH_ALL_HRE:1 "§Y[Emperor.GetName]§! will lose §R75§! Opinion with all of the §YImperial Princes§!."
  HAB_UNLOCK_RAAB_RESTRICTIONS_PRIVILEGE:1 "Unlocks the §YVon Raab's Restrictions§! Nobility Estate Privilege, which will have the following modifier scaled with Estate Loyalty as long as we keep the §YNobility's§! Influence to less than §Y40§!:\n   Development Cost: §G-7.5%§!"
- HAB_MODIFY_SUPREMACY_OVER_THE_CROWN_PRIVILEGE:1 "Modify the §YSupremacy Over the [Root.GetStateForm]§! Nobility Privilege to grant the following bonus scaled with Estate Loyalty, as long as the §YNobility's§! Influence is higher than §Y80§!:\n   National Manpower Modifier: §G+20.0%§!"
+ HAB_MODIFY_SUPREMACY_OVER_THE_CROWN_PRIVILEGE:1 "This option doesn't exist because Dukksa removed supremacy over the crown, but I thought it would be funny to keep it in the mission tooltip."
  HAB_UNLOCK_PROSPERITY_EDICT:1 "Unlocks the §YEdict of Governance§! State Edict, which will give the following:\n   Province Governing Cost: §G-5.00%§!"
  HAB_this_is_a_branching_mission:0 "This is a §YBranching Mission§!. Complete §YSecure Electors§! Mission to preview each branch."
  HAB_EVERY_IMPERIAL_CAPITAL_GAINS_FOLLOWING_MODIFIER:0 "Every §YCapital§! of an §YImperial State§! will gain the following:"

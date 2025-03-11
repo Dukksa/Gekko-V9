@@ -112,8 +112,8 @@ forced_conversion = {
 }
 
 decreased_morale = {
-	land_morale = -0.10
-	naval_morale = -0.10
+	land_morale = -0.025
+	naval_morale = -0.025
 }
 
 domestic_improvements = {
@@ -503,7 +503,7 @@ morale_boost = {
 }
 
 deserters = {
-	land_morale = -0.10
+	land_morale = -0.025
 }
 
 battle_preparations = {
@@ -965,7 +965,6 @@ long_term_boost = {
 }
 
 decreased_military_funding = {
-	land_morale = -0.10
 	discipline = -0.05
 	global_manpower_modifier = -0.05
 }
@@ -2319,7 +2318,7 @@ plundering_soldiers = {
 }
 
 legitimacy_questioned = {
-	land_morale = -0.1
+	land_morale = -0.025
 	global_regiment_recruit_speed = -0.1
 }
 
@@ -2512,8 +2511,6 @@ traitorous_officers = {
 }
 
 executed_officers = {
-	land_morale = -0.1
-	naval_morale = -0.1
 	global_regiment_recruit_speed = -0.1
 	global_ship_recruit_speed = -0.1
 }
@@ -8517,7 +8514,7 @@ distrusted_merchants = {
 
 # Trade League Events
 friction_among_troops = {
-	land_morale = -0.1
+	land_morale = -0.025
 }
 
 merchants_angered = {

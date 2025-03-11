@@ -440,12 +440,20 @@ gc_por_2 = {
 		}
 		
 		trigger = { 
-			custom_trigger_tooltip = {
-				tooltip = miss_colonize_west_africa
-				guinea_region = {
-					owned_by = ROOT
-					is_city = yes
-				}
+			futa_jallon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			jolof_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			manding_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1111 = { 
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 	
@@ -454,6 +462,8 @@ gc_por_2 = {
 			sao_tome_area = {
 				cede_province = POR
 				add_core = POR
+				change_culture = portugese
+				change_religion = catholic
 			}
 			define_explorer = {
 				name = "Lançarote de Freitas"
@@ -471,27 +481,29 @@ gc_por_2 = {
 				tradition = 60
 			}
 			add_dip_power = 60
-			coastal_kongo = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}	
-			tekrur_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
+
+			1121 = {
+				change_trade_goods = gold
 			}
-			manding_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
+			2248 = {
+				change_trade_goods = slaves
 			}
+			1114 = {
+				change_trade_goods = slaves
+			}
+			2238 = {
+				change_trade_goods = slaves
+			}
+			1117 = {
+				change_trade_goods = slaves
+			}
+			1111 = {
+				change_trade_goods = slaves
+			}
+			add_years_of_income = 1
+			
+			give_claims = { region = kongo_region }
+			
 		}
 	}
 	gc_por_colonise_central_africa = {
@@ -613,7 +625,7 @@ gc_por_2_b = {
 				trade_goods = slaves 
 				key = triangle_trade_key
 				value = 0.5
-				duration = 9125
+				duration = -1
 			}
 		}
 	}
@@ -1235,6 +1247,8 @@ gc_por_4 = {
 					1177 = {
 						cede_province = POR
 						add_core = POR
+						change_culture = portugese
+						change_religion = catholic
 					}
 			}
 

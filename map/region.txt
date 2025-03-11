@@ -96,6 +96,7 @@ italy_region = {
 		torino_area
 		carinthia_area
 		siena_area
+		vatican_area
 	}
 }
 

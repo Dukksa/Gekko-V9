@@ -2495,13 +2495,17 @@ woc_hun_fourth_branch = {
 		position = 1
 		
 		trigger = {
-			share_of_starting_income = 2
+			share_of_starting_income = 1.75
 		}
 		
 		effect = {
-			add_years_of_income = 0.25
+			add_years_of_income = 1.25
 			capital_scope = {	
 				add_or_upgrade_production_building = yes
+			}
+			add_country_modifier = {
+				name = "gc_growing_economy"
+				duration = 9125 #25 years
 			}
 		}
 	}

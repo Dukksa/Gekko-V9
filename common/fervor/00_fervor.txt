@@ -1,5 +1,5 @@
 fervor_trade = {
-	cost = 8
+	cost = 6
 	potential = {
 		FROM = { NOT = { has_country_flag = ned_buff_fervor_actions } }
 	}
@@ -37,7 +37,7 @@ fervor_trade = {
 }
 
 fervor_war = {
-	cost = 8
+	cost = 6
 	potential = {
 		FROM = { NOT = { has_country_flag = ned_buff_fervor_actions } }
 	}
@@ -46,7 +46,7 @@ fervor_war = {
 	effect = {
 		land_morale = 0.1
 		naval_morale = 0.1
-		morale_damage = 0.05
+		morale_damage = 0.1
 	}
 	ai_will_do = {
 		factor = 1
@@ -62,7 +62,7 @@ fervor_war = {
 }
 
 fervor_stability = {
-	cost = 8
+	cost = 6
 	potential = {
 		FROM = { NOT = { has_country_flag = ned_buff_fervor_actions } }
 	}
@@ -92,7 +92,7 @@ fervor_stability = {
 }
 
 fervor_diplomacy = {
-	cost = 8
+	cost = 6
 	potential = {
 		FROM = { NOT = { has_country_flag = ned_buff_fervor_actions } }
 	}
@@ -118,7 +118,7 @@ fervor_diplomacy = {
 }
 
 fervor_trade_buffed = {
-	cost = 8
+	cost = 5
 	potential = {
 		FROM = { has_country_flag = ned_buff_fervor_actions }
 	}
@@ -156,7 +156,7 @@ fervor_trade_buffed = {
 }
 
 fervor_war_buffed = {
-	cost = 8
+	cost = 5
 	potential = {
 		FROM = { has_country_flag = ned_buff_fervor_actions }
 	}
@@ -165,7 +165,7 @@ fervor_war_buffed = {
 	effect = {
 		land_morale = 0.1
 		naval_morale = 0.1
-		morale_damage = 0.05
+		morale_damage = 0.1
 	}
 	ai_will_do = {
 		factor = 1
@@ -181,7 +181,7 @@ fervor_war_buffed = {
 }
 
 fervor_stability_buffed = {
-	cost = 8
+	cost = 5
 	potential = {
 		FROM = { has_country_flag = ned_buff_fervor_actions }
 	}

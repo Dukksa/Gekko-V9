@@ -3476,14 +3476,6 @@ estate_nobles_noble_officer_right = {
 		has_dlc = "Domination"
 	}
 	can_select = {
-		if = {
-			limit = { has_estate = estate_rajput }
-			NOT = { has_estate_privilege = estate_rajput_force_conscription }
-		}
-		if = {
-			limit = { has_estate = estate_maratha }
-			NOT = { has_estate_privilege = estate_maratha_force_conscription }
-		}
 	}
 	on_granted = {
 		enable_estate_action = {

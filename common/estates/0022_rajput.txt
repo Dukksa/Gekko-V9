@@ -5,6 +5,11 @@ estate_rajput = {
 
 	# If true, country will get estate
 	trigger = {
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
 		OR = {
 			has_dlc = "Dharma"
 			has_dlc = "Winds of Change"
@@ -175,6 +180,7 @@ estate_rajput = {
 		estate_nobles_noble_officer_right
 		estate_rajput_force_conscription
 		estate_rajputs_MUG_rajput_mansabdars
+		estate_rajput_noble_promotion
 	}
 
 	agendas = {

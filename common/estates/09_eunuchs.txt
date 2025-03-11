@@ -5,6 +5,11 @@ estate_eunuchs = {
 
 	# If true, country will get estate
 	trigger = {
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
 		religion = confucianism
 	}
 
@@ -193,7 +198,7 @@ estate_eunuchs = {
 		estate_eunuchs_establish_favor_system_privilege
 		estate_eunuchs_allow_personal_fortunes_privilege
 		estate_eunuchs_single_whip_law_privilege
-		estate_eunuchs_ears_and_eyes_of_the_emperor_privilege
+		#estate_eunuchs_ears_and_eyes_of_the_emperor_privilege
 	}
 
 	agendas = {

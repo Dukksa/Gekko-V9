@@ -785,6 +785,7 @@ peace = {
 	monthly_militarized_society = -0.1
 	monthly_ottoman_decadence = 0.1
 	monthly_asha_vahishta = 0.25
+	global_supply_limit_modifier = 8
 }
 
 unconditional_surrender = {
@@ -1315,6 +1316,17 @@ BYZ_army_trad = {
 
 BYZ_discipline = {
 	discipline = 0.05
+}
+
+soyurghal_base_overlord_modifiers = {
+	land_forcelimit_modifier = 0.05
+	soyurghals_amount_check_influence = 1 #used for exporting, invisible by default
+}
+
+soyurghal_base_modifiers = { #slightly weaker pronoia but without penalties
+	global_manpower = 5
+	global_manpower_modifier = 0.25
+	global_regiment_cost = -0.25
 }
 
 tributary_state_behind_overlord_tech_adm = {
@@ -2129,7 +2141,7 @@ geobukseon_ship = {
 man_of_war_ship = {
 	#engagement_cost = -1
 	#naval_maintenance_modifier = 0.5
-	naval_morale_damage = 0.1
+	number_of_cannons_modifier = 0.5
 }
 
 galleon_ship = {

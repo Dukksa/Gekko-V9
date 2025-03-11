@@ -280,27 +280,27 @@ estate_jains_indebted_to_jains = {
 		}
 		hidden_effect = {
 			add_loan = {
-				fixed_interest = 1
+				fixed_interest = 2.5
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 1
+				fixed_interest = 2.5
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 1
+				fixed_interest = 2.5
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 1
+				fixed_interest = 2.5
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 1
+				fixed_interest = 2.5
 				duration = 60
 				estate_loan = yes
 			}

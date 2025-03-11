@@ -12116,6 +12116,7 @@ erdene_zuu = {
 		}
 		country_modifiers = {
 			religious_unity = 0.1
+			horde_unity = 0.5
 			church_loyalty_modifier = 0.05
 			yearly_karma_decay = 0.01
 		}
@@ -12136,7 +12137,7 @@ erdene_zuu = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			horde_unity = 0.5
+			horde_unity = 1
 			religious_unity = 0.2
 			church_loyalty_modifier = 0.1
 			yearly_karma_decay = 0.025
@@ -12158,7 +12159,7 @@ erdene_zuu = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			horde_unity = 1
+			horde_unity = 2
 			religious_unity = 0.3
 			church_loyalty_modifier = 0.15
 			yearly_karma_decay = 0.05
@@ -19466,7 +19467,7 @@ golden_kremnica = {
 		country_modifiers = {
 			monthly_gold_inflation_modifier = -0.2
 			gold_depletion_chance_modifier = -0.2
-			interest = -0.5
+			global_trade_goods_size_modifier = 0.05
 		}
 		on_upgraded = {
 			154 = {
@@ -19490,7 +19491,7 @@ golden_kremnica = {
 		country_modifiers = {
 			monthly_gold_inflation_modifier = -0.33
 			gold_depletion_chance_modifier = -0.33
-			interest = -1
+			global_trade_goods_size_modifier = 0.1
 		}
 		on_upgraded = {
 			154 = {
@@ -19724,7 +19725,7 @@ city_of_sarai = {
 			regiment_recruit_speed = -0.1
 		}
 		country_modifiers = {
-			horde_unity = 0.5
+			horde_unity = 1
 			envoy_travel_time = -0.15
 		}
 		on_upgraded = {}
@@ -19739,7 +19740,7 @@ city_of_sarai = {
 			regiment_recruit_speed = -0.25
 		}
 		country_modifiers = {
-			horde_unity = 1 
+			horde_unity = 2
 			envoy_travel_time = -0.25
 		}
 		on_upgraded = {}
@@ -23812,7 +23813,7 @@ fu_blue_mosque = {
 		}
 
 		country_modifiers = {
-			yearly_tribal_allegiance = 0.25
+			monthly_tribal_allegiance = 0.25
 			legitimacy = 0.25
 		}
 		
@@ -23839,7 +23840,7 @@ fu_blue_mosque = {
 		}
 
 		country_modifiers = {
-			yearly_tribal_allegiance = 0.3
+			monthly_tribal_allegiance = 0.3
 			legitimacy = 0.3
 		}
 		
@@ -23865,7 +23866,7 @@ fu_blue_mosque = {
 		}
 
 		country_modifiers = {
-			yearly_tribal_allegiance = 0.3
+			monthly_tribal_allegiance = 0.3
 			legitimacy = 0.5
 		}
 		

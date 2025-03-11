@@ -16,6 +16,11 @@ estate_dhimmi = {
 
 	# If true, country will get estate
 	trigger = {
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
 		OR = {
 			has_dlc = "The Cossacks"
 			has_dlc = "King of Kings"
