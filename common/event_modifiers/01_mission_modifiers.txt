@@ -5191,7 +5191,7 @@ bur_channel_trading = {
 }
 
 bur_english_diplomacy = {
-	improve_relation_modifier = 0.25
+	ae_impact = -0.5
 }
 
 bur_king_of_franks = {
