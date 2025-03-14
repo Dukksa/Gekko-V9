@@ -1,18 +1,18 @@
 #4327 - Jask
 
-owner = KRM
-controller = KRM
+owner = FRS
+controller = FRS
 culture = gulf_arabic
 religion = shiite
 capital = "Jask"
 trade_goods = fish
 hre = no
-base_tax = 1
-base_production = 1
+base_tax = 3
+base_production = 3
 base_manpower = 1
 is_city = yes
 add_core = BAL
-add_core = KRM
+add_core = FRS
 discovered_by = east_african
 discovered_by = muslim
 discovered_by = ottoman

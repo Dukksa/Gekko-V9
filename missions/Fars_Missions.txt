@@ -122,7 +122,7 @@ Fars_Missions_slot_1 = {
 		Fars_conquer_mushasha = {
 			position = 7
 			required_missions = {
-				Fars_conquer_Kerman
+				Fars_build_to_forcelimit
 			}
 			provinces_to_highlight = {
 				OR = {
@@ -311,28 +311,10 @@ Fars_Missions_slot_3 = {
 		}
 	}
 
-	Fars_build_to_forcelimit = {
-		position = 5
-		icon = mission_assemble_an_army
-		required_missions = { }
-		trigger = {
-			army_size_percentage = 0.9
-			num_of_generals = 1
-		}
-		effect = {
-			4345 ={ add_core = ROOT}
-			2234 ={ add_core = ROOT}
-			432 ={ add_core = ROOT}
-			2220 ={ add_core = ROOT}
-			431 ={ add_core = ROOT}
-			4327 ={ add_core = ROOT}
 
-		}
-	}
-	Fars_conquer_Kerman = {
+	Fars_build_to_forcelimit = {
 		position = 6
 		required_missions = {
-			Fars_build_to_forcelimit
 		}
 		icon = league_of_the_public_weal
 		provinces_to_highlight = {
@@ -347,12 +329,8 @@ Fars_Missions_slot_3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = { 
-			owns_core_province= 4345 
-			owns_core_province= 2234 
-			owns_core_province= 432 
-			owns_core_province= 2220 
-			owns_core_province= 431 
-			owns_core_province= 4327 
+			army_size_percentage = 0.9
+			num_of_generals = 1 
 		}
 		effect = {
 			makran_area = { add_permanent_claim = ROOT}
@@ -472,7 +450,7 @@ Fars_Missions_slot_4 = {
 	Fars_conquer_baluchistan = {
 		position = 7
 		required_missions = {
-			Fars_conquer_Kerman
+			Fars_build_to_forcelimit
 		}
 		provinces_to_highlight = {
 			OR = {
