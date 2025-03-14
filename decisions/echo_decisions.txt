@@ -631,6 +631,47 @@ country_decisions = {
 			factor = 0 #doubt ai can use it
 		}
 	}
+
+	master_of_india = {
+		color = { 41  233  249 }
+		potential = {
+			is_at_war = no
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 1
+			superregion = india_superregion
+			is_city = yes
+			}
+			NOT = {has_country_modifier = master_of_india}
+		}	
+		provinces_to_highlight = {
+			AND = {
+					superregion = india_superregion
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 200
+								superregion = india_superregion
+								is_core = root
+							}
+						}	
+					}
+				}
+		}
+		allow = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 200
+			superregion = india_superregion
+			is_city = yes
+			}
+		}	
+		effect = {
+			add_prestige = 100
+			add_country_modifier = {
+					name = "master_of_india"
+					duration = -1
+			}
+		}
+	}
 	
 	sea_state_edicts_decision = {
 		major = yes
