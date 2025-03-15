@@ -20,7 +20,7 @@ country_decisions = {
 				NOT = { exists = MUG }
 				ai = no
 			}
-			tag = AFG
+			tag = TRS
 			OR = {
 				ai = no
 				AND = {
@@ -62,26 +62,26 @@ country_decisions = {
 			#owns_core_province = 522 #Delhi
 		}
 		effect = {
+			#if = {
+			#	limit = {
+			#		tag = TRS
+			#		exists = TRS
+			#	}
+	  		#	balkh_area = {
+			#		limit = {
+			#			owned_by = TRS
+			#		}
+	  		#		remove_core = TRS
+	  		#		add_core = TRS
+	  		#		cede_province = TRS
+	  		#	}
+			#	balkh_area = {
+	  		#		remove_core = TRS
+	  		#	}
+	  		#}
 			if = {
 				limit = {
-					tag = AFG
-					exists = TRS
-				}
-	  			balkh_area = {
-					limit = {
-						owned_by = AFG
-					}
-	  				remove_core = AFG
-	  				add_core = TRS
-	  				cede_province = TRS
-	  			}
-				balkh_area = {
-	  				remove_core = AFG
-	  			}
-	  		}
-			if = {
-				limit = {
-					tag = AFG
+					tag = TRS
 					exists = TIM
 					TIM = { 
 						ai = no
@@ -89,19 +89,19 @@ country_decisions = {
 				}
 	  			balkh_area = {
 					limit = {
-						owned_by = AFG
+						owned_by = TRS
 					}
-	  				remove_core = AFG
+	  				remove_core = TRS
 	  				add_core = TIM
 	  				cede_province = TIM
 	  			}
 				balkh_area = {
-	  				remove_core = AFG
+	  				remove_core = TRS
 	  			}
 	  		}
 			if = {
 				limit = {
-					tag = AFG
+					tag = TRS
 					exists = BUK
 					BUK = { 
 						ai = no
@@ -109,14 +109,14 @@ country_decisions = {
 				}
 	  			balkh_area = {
 					limit = {
-						owned_by = AFG
+						owned_by = TRS
 					}
-	  				remove_core = AFG
+	  				remove_core = TRS
 	  				add_core = BUK
 	  				cede_province = BUK
 	  			}
 				balkh_area = {
-	  				remove_core = AFG
+	  				remove_core = TRS
 	  			}
 	  		}
 			khorasan_region = {
@@ -126,41 +126,12 @@ country_decisions = {
 				}
 			if = {
 				limit = {
-					tag = AFG
-					exists = TRS
-					AFG = {
-						any_subject_country = {
-							balkh_area = {
-								owned_by = PREV
-							}
-						}
-					}
-				}
-				every_subject_country = {
-					limit = {
-						balkh_area = {
-							owned_by = PREV
-						}
-					}
-					balkh_area = {
-						limit = {
-							owned_by = PREV
-						}
-						remove_core = AFG
-						remove_core = PREV
-						add_core = TRS
-						cede_province = TRS
-					}
-				}
-	  		}
-			if = {
-				limit = {
-					tag = AFG
+					tag = TRS
 					exists = TIM
 					TIM = { 
 						ai = no
 					}
-					AFG = {
+					TRS = {
 						any_subject_country = {
 							balkh_area = {
 								owned_by = PREV
@@ -178,7 +149,7 @@ country_decisions = {
 						limit = {
 							owned_by = PREV
 						}
-						remove_core = AFG
+						remove_core = TRS
 						remove_core = PREV
 						add_core = TIM
 						cede_province = TIM
@@ -187,12 +158,12 @@ country_decisions = {
 	  		}
 			if = {
 				limit = {
-					tag = AFG
+					tag = TRS
 					exists = BUK
 					TIM = { 
 						ai = no
 					}
-					AFG = {
+					TRS = {
 						any_subject_country = {
 							balkh_area = {
 								owned_by = PREV
@@ -210,7 +181,7 @@ country_decisions = {
 						limit = {
 							owned_by = PREV
 						}
-						remove_core = AFG
+						remove_core = TRS
 						remove_core = PREV
 						add_core = BUK
 						cede_province = BUK
