@@ -5109,7 +5109,7 @@ dan_danish_investment = {
 }
 
 dan_dream_of_freedom = {
-	liberty_desire = 50
+	#liberty_desire = 50
 }
 
 #Timurids
@@ -11962,7 +11962,7 @@ reformer_praises_church_timer = { }
 
 # Swiss Geneva Desire for Independence
 geneva_liberty_desire = {
-	liberty_desire = 50
+	#liberty_desire = 50
 }
 
 # John Calvin as spiritual leader
@@ -12077,7 +12077,7 @@ edible_dodos = { local_colonial_growth = 20 }
 to_be_agenda_annexed_timer = { }
 
 colony_inspired_by_revolution = {
-	liberty_desire = 30
+	#liberty_desire = 30
 }
 
 estate_cossacks_prime_herding_rights_mod = {

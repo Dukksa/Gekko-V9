@@ -882,7 +882,7 @@ age_of_revolutions = {
 		}
 		ab_same_contine_lib_desire = {
 			modifier = {
-				reduced_liberty_desire_on_same_continent = 25
+				reduced_liberty_desire = 25
 			}
 			ai_will_do = {
 				factor = 15
