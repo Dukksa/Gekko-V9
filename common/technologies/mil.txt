@@ -275,7 +275,7 @@ technology = {
 	#Spanish Square
 	sprite_level = 2
 	
-	supply_limit 		= 	0.5
+	supply_limit 		= 	1
 	military_tactics	=	0.25
 	artillery_fire 		= 	0.2
 	enable = tofongchis_musketeer		
@@ -390,7 +390,7 @@ technology = {
 	year = 1622
 	
 	cavalry_shock		=	0.25
-	supply_limit		= 	0.5	
+	supply_limit		= 	1
 	artillery_fire		=	0.3
 	enable = maharathan_cavalry		
 	enable = manchu_banner		
@@ -427,7 +427,7 @@ technology = {
 	
 	#Gustavian Infantry
 	military_tactics 	= 	0.25
-	supply_limit		=	0.5
+	supply_limit		=	1
 	artillery_fire		=	0.3
 	fort_17th = yes
 
@@ -609,7 +609,7 @@ technology = {
 	year = 1760
 	
 	#Bayonet
-	supply_limit		=	0.5
+	supply_limit		=	1
 	infantry_fire		= 	0.5	
 }
 
@@ -683,7 +683,7 @@ technology = {
 	#Rifle
 	cavalry_shock		=	1.0
 	infantry_fire		=	1.0
-	supply_limit		=	0.5
+	supply_limit		=	2
 }
 
 technology = {
