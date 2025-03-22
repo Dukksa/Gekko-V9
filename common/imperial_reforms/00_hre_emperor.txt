@@ -275,12 +275,13 @@ emperor_erbkaisertum = {
 	emperor = {
 		imperial_authority = 0.25
 		manpower_recovery_speed = 0.20
+		diplomatic_upkeep = 4
 	}
 	on_effect = {
-		hre_inheritable = yes
+		#hre_inheritable = yes
 	}
 	off_effect = {
-		hre_inheritable = no
+		#hre_inheritable = no
 	}
 	required_reform = emperor_imperial_estates
 	gui_container = right_branch

@@ -118,7 +118,18 @@ X_CRI_slot_1 = {
 				add_reform_progress_small_effect = yes
 			}
 			add_mandate = 10
-			X_improve_ruler_stats_effect = { all = yes all_amount = 2 }
+			change_ruler_stat = {
+				type = adm
+				amount = 2
+			}
+			change_ruler_stat = {
+				type = dip
+				amount = 2
+			}
+			change_ruler_stat = {
+				type = mil
+				amount = 2
+			}
 			custom_tooltip = X_CRI_mission_9_tt
 			hidden_effect = {
 				every_owned_province = {
@@ -333,7 +344,9 @@ X_CRI_slot_3 = {
 				limit = { 
 					284 = { 
 						NOT = { is_capital_of = ROOT }
-						NOT = { tag = GLH }
+						owner = {
+							NOT = { tag = GLH }
+						}
 					} 
 				}
 				set_capital = 284
@@ -366,7 +379,7 @@ X_CRI_slot_3 = {
 				limit = { 
 					284 = { 
 						NOT = { is_capital_of = ROOT }
-						NOT = { tag = GLH }
+						owner = {NOT = { tag = GLH } }
 					} 
 				}
 				set_capital = 284
@@ -512,7 +525,7 @@ X_CRI_slot_3 = {
 									limit = { base_production = 2 }
 									add_base_production = -1
 								}
-								else = {
+								else_if = {
 									limit = { base_manpower = 2 }
 									add_base_manpower = -1
 								}
@@ -527,7 +540,7 @@ X_CRI_slot_3 = {
 									limit = { base_manpower = 2 }
 									add_base_manpower = -1
 								}
-								else = {
+								else_if = {
 									limit = { base_tax = 2 }
 									add_base_tax = -1
 								}
@@ -541,7 +554,7 @@ X_CRI_slot_3 = {
 									limit = { base_tax = 2 }
 									add_base_tax = -1
 								}
-								else = {
+								else_if = {
 									limit = { base_production = 2 }
 									add_base_production = -1
 								}
@@ -681,15 +694,10 @@ X_CRI_slot_4 = {
 						NOT = { is_subject_of = ROOT }
 						unit_type = eastern
 						religion_group = christian
-						OR = {
-							any_owned_province = {
-								OR = {
-									has_terrain = steppe
-									AND = {
-										region = ruthenia_region
-										X_flatland_terrain_trigger = yes
-									}
-								}
+						any_owned_province = {
+							AND = {
+								region = ruthenia_region
+								has_terrain = steppe
 							}
 						}
 					}

@@ -70,7 +70,7 @@ foreign_ghilman_reform = { #tier 3
 	modifiers = {
 		advisor_pool = 1
 		free_leader_pool = 1
-		ghulam_loyalty_modifier = 0.10
+		ghulams_loyalty_modifier = 0.10
 		qizilbash_loyalty_modifier = -0.05
 		qizilbash_influence_modifier = -0.10
 		}
@@ -88,8 +88,8 @@ qizilbash_in_officer_corps_reform = { #tier 4
 		recover_army_morale_speed = 0.05
 		qizilbash_influence_modifier = 0.1
 		qizilbash_loyalty_modifier = 0.05
-		ghulam_loyalty_modifier = -0.05
-		ghulam_influence_modifier = -0.05
+		ghulams_loyalty_modifier = -0.05
+		ghulams_influence_modifier = -0.05
 		nobles_loyalty_modifier = -0.05
 		nobles_influence_modifier = -0.05
 	}
@@ -114,8 +114,8 @@ reforms_of_abbas_i_reform = { #tier 5
 		global_own_trade_power = 0.25
 		qizilbash_influence_modifier = -0.25
 		qizilbash_loyalty_modifier = -0.1
-		ghulam_loyalty_modifier = 0.05
-		ghulam_influence_modifier = 0.10
+		ghulams_loyalty_modifier = 0.05
+		ghulams_influence_modifier = 0.10
 		yearly_army_professionalism= 0.00250
 	}
 	custom_attributes = {
@@ -140,8 +140,8 @@ ghilman_administrative_positions_reform = { #tier 6
 		governing_capacity_modifier = 0.1
 		qizilbash_influence_modifier = -0.05
 		qizilbash_loyalty_modifier = -0.05
-		ghulam_influence_modifier = 0.05
-		ghulam_loyalty_modifier = 0.10
+		ghulams_influence_modifier = 0.05
+		ghulams_loyalty_modifier = 0.10
 		possible_policy = 1
 	}
 	ai = {
@@ -228,8 +228,8 @@ janissary_administrative_positions_reform = { #tier 5
 		free_adm_policy = 1
 		state_maintenance_modifier = -0.25
 		advisor_pool = 1
-		janissary_influence_modifier = 0.1
-		janissary_loyalty_modifier = 0.05
+		janissaries_influence_modifier = 0.1
+		janissaries_loyalty_modifier = 0.05
 		yearly_army_professionalism= 0.00250
 	}
 	ai = {
@@ -244,8 +244,8 @@ reform_the_janissaries_reform = { #tier 6
 		NOT = { has_country_modifier = force_janissaries_to_undergo_yoklama }
 	}
 	modifiers = {
-		janissary_influence_modifier = 0.10
-		janissary_loyalty_modifier = -0.10
+		janissaries_influence_modifier = 0.10
+		janissaries_loyalty_modifier = -0.10
 		possible_policy = 1
 	}
 	custom_attributes = {

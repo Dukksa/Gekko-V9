@@ -460,6 +460,9 @@ yem_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			2346 = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -817,8 +820,10 @@ yem_missions_4 = {
 			}
 			num_of_owned_provinces_with = {
 				value = 5
-				has_building = university
-				development = 30
+				OR = {
+					has_building = university
+					development = 30
+				}
 			}
 		}
 		effect = {

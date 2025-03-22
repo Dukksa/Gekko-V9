@@ -103,3 +103,16 @@ enacted_states_general_reform = {
 gc_african_corridor = {
 	local_production_efficiency = -0.1
 }
+
+#hashmp
+h_event_adm = {
+	advisor_cost = -0.075
+}
+
+h_event_dip = {
+	candidate_random_bonus = 1
+}
+
+h_event_mil = {
+	army_tradition = 0.5
+}

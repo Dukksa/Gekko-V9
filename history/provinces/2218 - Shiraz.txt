@@ -9,7 +9,7 @@ trade_goods = wine #and Glass
 hre = no
 base_tax = 5
 base_production = 5
-base_manpower = 4
+base_manpower = 5
 is_city = yes
 add_core = FRS
 #add_core = TIM
@@ -19,6 +19,7 @@ discovered_by = indian
 discovered_by = nomad_group
 extra_cost = 16
 center_of_trade = 2
+fort_15th = yes
 
 1447.3.13 = { #Shah Rokh dies in the field trying to put down the rebellion of Muhammad bin Baysonqor
 	owner = QOM

@@ -139,7 +139,7 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			#NOT = { exists = BHA }
+			NOT = { exists = BHA }
 			NOT = { exists = HIN }
 			NOT = { tag = MUG }
 			culture_group = western_aryan
@@ -267,7 +267,7 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			#NOT = { exists = BHA }
+			NOT = { exists = BHA }
 			NOT = { exists = HIN }
 			NOT = { tag = MUG }
 			religion_group = muslim
@@ -395,7 +395,7 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			#NOT = { exists = BHA }
+			NOT = { exists = BHA }
 			NOT = { exists = HIN }
 			NOT = { tag = MUG }
 			religion_group = muslim
@@ -525,7 +525,7 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			#NOT = { exists = BHA }
+			NOT = { exists = BHA }
 			NOT = { exists = HIN }
 			NOT = { tag = MUG }
 			religion_group = muslim

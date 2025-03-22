@@ -4213,6 +4213,98 @@ norwegian_parliamentary_monarchy = {
 		has_parliament = yes
 	}
 }
+austrian_absolute_monarchy = {
+	icon = "austrian_dual_monarchy_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Winds of Change"
+		OR = {
+			has_reform = austrian_absolute_monarchy
+			have_had_reform = austrian_absolute_monarchy
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		has_dlc = "Winds of Change"
+	}
+
+	modifiers = {
+		culture_conversion_cost = -0.25
+		culture_conversion_time = -0.2
+		monarch_diplomatic_power = 2
+	}
+
+	custom_attributes = {
+		increase_nobles_loyalty_per_culture_conversion = yes
+	}
+	effect = {
+		change_dip = 2
+	}
+	removed_effect = {
+		change_dip = -2
+	}
+}
+
+merchant_aristocracy_reform = {
+	icon = "merchant_aristocracy_reform"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = merchant_aristocracy_reform
+			have_had_reform = merchant_aristocracy_reform
+			AND = {
+				tag = FEO
+				government = monarchy
+			}
+		}
+	}
+	trigger = {
+		OR = {
+			has_reform = merchant_aristocracy_reform
+			have_had_reform = merchant_aristocracy_reform
+			AND = {
+				tag = FEO
+				government = monarchy
+			}
+		}
+	}
+	nation_designer_trigger = {
+		primary_culture = goths
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+
+	modifiers = {
+		max_absolutism = -10
+		global_trade_goods_size_modifier = 0.05
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Winds of Change"
+		}
+		custom_attributes = {
+			enables_recruit_foreign_generals = yes
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Leviathan"
+		}
+		allow_draft_transport_ships = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		can_use_trade_post = yes
+	}
+
+	ai = {
+		factor = 0
+	}
+}
 
 #Hereditary vs Nobility
 enforce_privileges_reform = {
@@ -5395,6 +5487,42 @@ legacy_of_timur_reform = {
 	}
 }
 
+timurid_diwan_reform = {
+    icon = "timurid_diwan_reform"
+    allow_normal_conversion = yes
+    potential = {
+        has_dlc = "Winds of Change"
+        has_unlocked_government_reform = { government_reform = timurid_diwan_reform }
+    }
+    modifiers = {
+        national_focus_years = -5
+        governing_capacity = 150
+    }
+    conditional = {
+        allow = {
+            OR = {
+                has_dlc = "Common Sense"
+                has_dlc = "Res Publica"
+            }
+        }
+        custom_attributes = {
+            enables_timurid_diwan = yes
+        }
+    }
+    conditional = {
+        allow = {
+            NOT = { 
+                OR = {
+                    has_dlc = "Common Sense"
+                    has_dlc = "Res Publica"
+                }
+            }
+        }
+        custom_attributes = {
+            buffed_strong_duchies = yes
+        }
+    }
+} 
 #State and Religion
 #in Common
 restoration_of_clergy_reform = {
@@ -6831,6 +6959,7 @@ egyptian_government_reform = {
 		egyptian_westernization
 	}
 }
+
 gothic_monarchy_reform = {
 	icon = gothic_monarchy_reform
 	allow_normal_conversion = no

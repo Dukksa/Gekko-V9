@@ -573,12 +573,6 @@ country_event = {
 				clr_country_flag = formed_prussia_flag
 			}
 		}
-		if = {
-			limit = {
-				has_mission = teu_defeat_the_poles
-			}
-			swap_non_generic_missions = yes
-		}
 		ai_chance = {
 			factor = 100
 		}
@@ -592,24 +586,6 @@ country_event = {
 			clr_country_flag = teu_diplomacy_hre_path
 			clr_country_flag = teu_conquest_hre_path
 			set_country_flag = formed_prussia_flag
-		}
-		if = {
-			limit = {
-				has_mission = teu_defeat_the_poles
-			}
-			swap_non_generic_missions = yes
-			hidden_effect = {
-				if = {
-					limit = {
-						has_mission = teu_crusader_mil_reform_1
-						NOT = { mission_completed = teu_crusader_mil_reform_1 }
-					}
-					set_country_flag = teu_crusader_battle_counter
-				}
-				else = {
-					clr_country_flag = teu_crusader_battle_counter
-				}
-			}
 		}
 		custom_tooltip = flavor_teu.10.b.ct
 		if = {

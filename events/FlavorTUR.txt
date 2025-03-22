@@ -2795,7 +2795,6 @@ country_event = {
 		always = no
 		OR = { tag = TUR tag = RUM }
 		NOT = { is_year = 1455 }
-		NOT = { owns = 151 }
 		years_of_income = 0.3
 	}
 	
