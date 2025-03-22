@@ -245,49 +245,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = ME_England_Events.6 #smth
-	title = ME_England_Events.6.t
-	desc = ME_England_Events.6.d
-	picture = RELIGIOUS_WARS_eventPicture
-
-	hidden = yes
-
-	trigger = {
-		has_country_modifier = eng_longbowmen
-		OR = {
-			AND = {
-				NOT = { current_age  = age_of_discovery }
-				NOT = { has_country_flag = eng_longbowmen_last_until_end_of_reformation }
-			}
-			AND = {
-				has_country_flag = eng_longbowmen_last_until_end_of_reformation
-				NOT = {
-					OR = {
-						current_age  = age_of_discovery
-						current_age  = age_of_reformation
-					}
-				}
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
-
-	immediate = {
-		hidden_effect = {
-			remove_country_modifier = eng_longbowmen
-		}
-	}
-
-	option = {
-		name = ME_England_Events.6.a
-
-		ai_chance = { factor = 100 }
-	}
-}
 
 country_event = {
 	id = ME_England_Events.7 #Statutes of Iona
