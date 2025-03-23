@@ -819,8 +819,13 @@ aleppo={
 		}
 	}
 	members={
-		418 2306 2307 4295 4296 377 1849 2313 4298 378 382 1855 4297 407 411 2309 2314 4292 332 2303 2308 4310 405 4270 4271 163 320 321 6121 2302 327 323 324 2301 4307   
-		6113 6114 6117 6116 6115 4302
+		418 2306 2307 4295 4296 377 1849 2313 4298 378 382 1855 4297 407 411 2309 2314 4292 332 2303 2308 4310 405 4270 4271 
+		6113 6114 4302
+
+
+		
+
+		 
 	}
 }
 persia={
@@ -1255,6 +1260,10 @@ constantinople={
 		2305 331
 		2298 1848
 
+		323 324 2301 4307  #karaman
+		163 320 321 6121 #mediterranean isles
+		327 2302 6117 6116 6115 #icel
+
 		
 	}
 }
@@ -1369,13 +1378,90 @@ novgorod={
 		5037 5038 5036 5034 5035
 	}
 }
+
+genua={
+	location=1298
+	color={
+		218 215 56 
+	}
+
+	
+	outgoing={
+		name="bordeaux"
+		path={
+			201 196
+		}
+		
+	}
+	outgoing={
+		name="sevilla"
+		path={
+		}
+		control={
+			2903.000 1367.000  2868.500 1350.500 2828.000 1323.000 2816.500 1296.000 2776.000 1258.000  
+		}
+	}
+	outgoing = {
+		name = "wien"
+		path={
+		}
+		control={
+			3021.000000 1442.000000 
+		}
+	}
+
+	outgoing={
+		name="gc_south_germany_tradenode"
+		path={
+			104 6174
+		}
+		
+	}
+	
+	outgoing={
+		name="ragusa"
+		path={
+			1303 1304 1307 1311 1310
+		}
+		
+	}
+	members={
+		1298 #Water
+		102 2992 101 #genoa_area
+		4727 103 1875 2981 #piedmont_area
+		4728 2979 4740 104 1862 #lombardy_area
+		2980 115 116 2978 117 #tuscanny_area
+		2976 118 4731 4732 #lazio_umbria_area
+		121 4734 2983 #campania_area
+		1934 2984 123 #calabria_area
+		124 2982 126 #eastern_sicily_area
+		125 4737 4736 #western_sicily_area
+		2986 4735 127 1247 #western_mediteranean_islands_area
+		4560 333 4559 #baleares_area
+		6415 #vatican
+		6158 5775
+		5780 5781 5782 
+		5776
+		5786
+		6060 6053
+		6052 6051 
+		6049 6048 
+		6047 
+		6046
+		6078 105
+		6075 5785 5783
+		106 107 108 109 111 112 113 114 119 120 122 130 1308 1774 1933 2977 2985 4729 4730 4733 4738 4739 #old-
+		6126 6125 6050 6124 5779 5778 5777 6045															  #-venice node
+		
+	}
+}
 ragusa={
-	location=1831
+	location=4174
 	color = { 101 89 63 }
 	outgoing={
 		name="wien"
 		path={
-			1831 3002 4755 4173 4126 
+			138 3002 4755 4173 4126 
 		}
 		control={
 			3105.000000 1405.000000 3106.000000 1427.000000 3101.000000 1441.000000 
@@ -1384,16 +1470,20 @@ ragusa={
 	outgoing={
 		name="constantinople"
 		path={
-			138 1766 1765 149     
+			4780 4705  
 		}
 		
 	}
 	members={
 		138 139 140 141 142 143 144 147 1766 1827 1831 1853 3000 3002 3001 4174 4175 4176 148 1828 4239 145 146 1773 4702 4699 4698 4701 4750 4755 4757 4780  
 		6120 
-		
+		131 4752 1826 #croatia
+		4753 136 137 4754 #dalmatia
 	}
 }
+
+
+
 tunis={
 	location=1301
 	color={
@@ -1664,86 +1754,7 @@ baltic_sea={
 #}
 
 
-genua={
-	location=1298
-	color={
-		218 215 56 
-	}
-	outgoing={
-		name="bordeaux"
-		path={
-			201 196
-		}
-		
-	}
-	outgoing={
-		name="sevilla"
-		path={
-		}
-		control={
-			2903.000 1367.000  2868.500 1350.500 2828.000 1323.000 2816.500 1296.000 2776.000 1258.000  
-		}
-	}
-	outgoing = {
-		name = "wien"
-		path={
-		}
-		control={
-			3021.000000 1442.000000 
-		}
-	}
-	outgoing = {
-		name = "tunis"
-		path = { 
-			1300
-		}
-		
-	}
-	outgoing={
-		name="gc_south_germany_tradenode"
-		path={
-			104 6174
-		}
-		
-	}
-	
-	outgoing={
-		name="ragusa"
-		path={
-			1303 1304 1307 1311 1310
-		}
-		
-	}
-	members={
-		1298 #Water
-		102 2992 101 #genoa_area
-		4727 103 1875 2981 #piedmont_area
-		4728 2979 4740 104 1862 #lombardy_area
-		2980 115 116 2978 117 #tuscanny_area
-		2976 118 4731 4732 #lazio_umbria_area
-		121 4734 2983 #campania_area
-		1934 2984 123 #calabria_area
-		124 2982 126 #eastern_sicily_area
-		125 4737 4736 #western_sicily_area
-		2986 4735 127 1247 #western_mediteranean_islands_area
-		4560 333 4559 #baleares_area
-		6415 #vatican
-		6158 5775
-		5780 5781 5782 
-		5776
-		5786
-		6060 6053
-		6052 6051 
-		6049 6048 
-		6047 
-		6046
-		6078 105
-		6075 5785 5783
-		106 107 108 109 111 112 113 114 119 120 122 130 1308 1774 1933 2977 2985 4729 4730 4733 4738 4739 #old-
-		6126 6125 6050 6124 5779 5778 5777 6045															  #-venice node
-		4753 136 137 4754 #dalmatia
-	}
-}
+
 wien={
 	location=134
 	color={
@@ -1778,11 +1789,10 @@ wien={
 		266 2968 4725 4724 2970 
 		267 2967 1771 
 		4751 129 1769 # krain_area
-		152 4756 1767 4173 #slavonia_area
-		131 4752 1826 #croatia
 		6099 6100 6182 6180 6106 6186 6105 6104 6102 6103 6101 
 		1954 156 1951 4128 #southern_transylvania_area
 		157 158 1952 4127 #transylvania_area
+		152 4756 1767 4173 #slavonia_area
 	}
 }
 rheinland={
