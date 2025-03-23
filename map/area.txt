@@ -1283,11 +1283,11 @@ kartli_kakheti_area = { #3
 }
 
 armenia_area = { #5
-	419 2202 2205 6141 4302
+	419 2202 2205 6141 420
 }
 shirvan_area = { #5 #Northern Azerbaijan
 	color = { 225 231 53 }
-	421 4299 4305 6139 420
+	421 4299 4305 6139 
 }
 
 dagestan_area = { #5
@@ -1370,7 +1370,7 @@ luristan_area = { #4
 }
 
 north_kurdistan_area = { #5
-	418 2307 4295 4296 2306
+	418 2307 4295 4296 2306 4302
 }
 
 khuzestan_area = { #5

@@ -95,6 +95,10 @@ unite_mongol_culture_tt:1 "All owned provinces with §YKazakh§!, §YTurkmeni§!
  splendor_into_monarch_power_desc:0 ""
  french_empire_title:0 "Proclaim the French Empire"
  french_empire_desc:0 "I'm literaly napoleon maxxing"
+ proclaim_ottoman_empire_title:0 "Proclaim the Ottoman Empire"
+ proclaim_ottoman_empire_desc:0 "The Osmanoglu rule over Europe and Middle East"
+ OTTOMAN_EMPIRE:0 "Ottoman Empire"
+ OTTOMAN_EMPIRE_ADJ:0 "Ottoman"
 #bertus mod shit
  spy_steal_treasury_action_title:0 "Steal Treasury"
  spy_steal_treasury_action_desc:0 "Steals §Y10%§! of their current Treasury"
