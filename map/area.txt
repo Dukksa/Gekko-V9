@@ -1374,7 +1374,7 @@ north_kurdistan_area = { #5
 }
 
 khuzestan_area = { #5
-	412 2217 4289 4290 4342
+	412  4289 4290 
 }
 
 shahrizor_area = {	#4
@@ -2158,15 +2158,15 @@ kerman_area = { #4
 }
 
 persian_gulf_coast = { #4
-	430 2219 2223 4332 
+	430 4332 4342 2217 4331
 }
 
 mogostan_area = { #3
-	431 4327
+	431 4327 2219 2223 
 }
 
 farsistan_area = { #4
-	2218 4329 4330 4331 4171 
+	2218 4329 4330 4171 
 }
 
 teheran_area = {

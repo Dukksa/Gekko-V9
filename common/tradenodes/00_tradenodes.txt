@@ -350,45 +350,54 @@ hatton_bank = {
 			2537.500000 1480.000000 2623.000000 1351.000000	2667.000000 1311.000000 2681.000000 1300.000000
 		}
 	}
-}
-
-
-burma={
-	location=584
-	color={
-		35 229 76
-	}
-	inland=yes
 	outgoing={
-		name="ganges_delta"
+		name="tunis"
 		path={
-			4396 1815 
-		}
-		control={
-			4297.000000 951.000000 4306.000000 891.000000 4277.000000 895.000000 4254.000000 947.000000 
-		}
-	}
-	outgoing={
-		name="lhasa"
-		path={
-			2041
+			1526 1575 1581 1471 346 2462
 		}
 		control={
 			
 		}
 	}
-	members={
-		570 573 2041 #naga_hills_area
-		584 2399 581 #upper_burma_area
-		2398 580 4393 2397 #chindwin_area
-		566 571 2040 2042 4440 #assam_area
-		4394 4396 585 4395 #central_burma_area
-		583 588 2400 4397 4406 #shan_hill_area
-		587 2401 4398 #karenni_area 
-		582 2395 2396 4404 4405 #kachin_area
-		567 2091 4473 #tripura_area
-	}
 }
+
+
+#burma={
+#	location=584
+#	color={
+#		35 229 76
+#	}
+#	inland=yes
+#	outgoing={
+#		name="ganges_delta"
+#		path={
+#			4396 1815 
+#		}
+#		control={
+#			4297.000000 951.000000 4306.000000 891.000000 4277.000000 895.000000 4254.000000 947.000000 
+#		}
+#	}
+#	outgoing={
+#		name="lhasa"
+#		path={
+#			2041
+#		}
+#		control={
+#			
+#		}
+#	}
+#	members={
+#		570 573 2041 #naga_hills_area
+#		584 2399 581 #upper_burma_area
+#		2398 580 4393 2397 #chindwin_area
+#		566 571 2040 2042 4440 #assam_area
+#		4394 4396 585 4395 #central_burma_area
+#		583 588 2400 4397 4406 #shan_hill_area
+#		587 2401 4398 #karenni_area 
+#		582 2395 2396 4404 4405 #kachin_area
+#		567 2091 4473 #tripura_area
+#	}
+#}
 
 lhasa={
 	location=677
@@ -465,6 +474,16 @@ ganges_delta={
 		586 590 1815 2403 4399 #lower_burma_area
 		558 4469 4472 4489 #bihar_area
 		2047 4484 4487 4488 #mithila_area
+
+		570 573 2041 #naga_hills_area
+		584 2399 581 #upper_burma_area
+		2398 580 4393 2397 #chindwin_area
+		566 571 2040 2042 4440 #assam_area
+		4394 4396 585 4395 #central_burma_area
+		583 588 2400 4397 4406 #shan_hill_area
+		587 2401 4398 #karenni_area 
+		582 2395 2396 4404 4405 #kachin_area
+		567 2091 4473 #tripura_area
 	}
 }
 deccan={
@@ -701,7 +720,7 @@ lahore={
 		436 4336 #birjand_area
 		446 4324  #herat_area
 		2233 434 575 2231 2232 #baluchistan
-		431 4327 #mogostan
+		431 4327 2223 2219 #mogostan
 		2221 2235 2236 4326 2214#mashhad_area
 
 		6143 4328
@@ -811,7 +830,7 @@ aleppo={
 	outgoing={
 		name="alexandria"
 		path={
-			406 2314 407 1849 4297 378 6113 1855 1854 364 2316
+			406 4271 379 364 4316
 		}
 		
 	}
@@ -833,8 +852,7 @@ aleppo={
 		406 409 410 2310 4291 #iraq_arabi_area
 		408 2311 2312 4288 #basra
 		412 2217 4289 4290 4342 #khuzestan 
-		2218 4329 4330 4331 4171 #farsistan 
-		430 2219 2223 4332 #persian_gulf_coast
+		415 4293 4294 #shahrizor
 
 		 
 	}
@@ -882,7 +900,7 @@ persia={
 		417 426 4339 4341 #tabarestan_area
 		416 2206 2207 4304 #tabriz_area
 		2212 2215 4300 4338 #azerbaijan_area
-		415 2211 4293 4294
+		2211 
 		413 414 2209 2210
 		424 4340
 		419 2202 2205 #armenia_area
@@ -891,6 +909,8 @@ persia={
 		422 462 1856 #imereti_area
 		2196 2204 4303 #samtskhe_area
 		423 2203 4301 #kartli_kakheti_area
+		2218 4329 4330 4171 #farsistan 
+		430 4332 4342 2217 4331 #persian_gulf_coast
 		6140 6139 6138 6142 6136 6133 6134 6135 6155 6156 6157 6144 6145 6146 6148 6149 6151 6153 6152 6154 6141
 		
 		4172 4170
