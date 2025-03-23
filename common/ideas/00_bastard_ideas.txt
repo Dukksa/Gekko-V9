@@ -347,7 +347,7 @@ CXI_ideas = { #Xi
 ARB_ideas = { #Arabian Empire
 	start = {
 		development_cost = -0.05
-		infantry_power = 0.1
+		infantry_power = 0.15
 	}
 	
 	bonus = {
@@ -359,7 +359,7 @@ ARB_ideas = { #Arabian Empire
 	}
 	free = yes
 	arb_7 = { #Arabia
-		land_morale = 0.1
+		land_morale = 0.15
 	}
 	arb_1 = { #Indian Ocean Trade
 		trade_efficiency = 0.1

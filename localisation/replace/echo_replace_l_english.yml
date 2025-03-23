@@ -14,10 +14,10 @@
  ARMY_PROFESSIONALISM_STATIC_MODIFIERS_DESC:1 "§YImmediate Gain:§!\nRecruit General: §G+0.25%§!\nRecruit General with Offensive Ideas: §G+0.375%§!\nRecruit Mercenary: §R-0.2%§!"
  #EU4_l_english
  tunis:0 "Barbary Coast"
- persia:0 "Tabriz"
+ persia:0 "Persia"
  lahore:0 "Herat"
- basra:0 "Persian Gulf"
- gulf_of_aden:0 "Red Sea"
+ basra:0 "Arabia"
+ gulf_of_aden:0 "Horn Of Africa"
  english_channel:0 "London"
  genua:0 "Italia"
  obj_30_development_city_desc:0 "Own and control a core province with at least §Y25§! development."
