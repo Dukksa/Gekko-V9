@@ -2302,7 +2302,7 @@ MAM2_ideas = { #Mission reward to double mam_monopoly_ports // see mam_establish
 		manpower_recovery_speed = 0.15
 	}
 	purchase_new_mamelukes = {
-		cavalry_power = 0.1
+		cavalry_power = 0.15
 	}
 	mam_army_reform = {
 		discipline = 0.05
