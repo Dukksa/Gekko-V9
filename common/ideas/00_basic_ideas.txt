@@ -1371,6 +1371,10 @@ quantity_ideas = {
 mercenary_ideas = {
 	category = MIL 
 
+	trigger = {
+		is_subject = no
+	}
+
 	bonus = {
 		allow_mercenary_drill = yes
 	}
