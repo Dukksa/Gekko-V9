@@ -25,19 +25,28 @@ custom_button = {
     }
     trigger = { 
 		FROM = {
-			is_colonial_nation = no	
 			NOT = { has_country_modifier = trade_hub_created }
-			treasury = 200
-			dip_power = 50
+
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+					}
+				}
+				treasury = 500
+				dip_power = 100
+			}
+			else = {
+				treasury = 200
+				dip_power = 50
+			}
+			
 			is_at_war = no
 		}	
 		ROOT = {
-			NOT = {
-				continent = north_america
-			}
-			NOT = {
-				continent = south_america
-			}
 			is_state_core = FROM
 			development = 30
 			NOT = { 
@@ -56,8 +65,25 @@ custom_button = {
 	}
     effect = { 
 		owner = { #This will apply to the country
-			add_treasury = -200
-			add_dip_power = -50
+
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+					}
+				}
+				add_treasury = -500
+				add_dip_power = -100
+			}
+			else = {
+				add_treasury = -200
+				add_dip_power = -50
+			}
+
+			
 		}
 
 		#These will apply on the province
