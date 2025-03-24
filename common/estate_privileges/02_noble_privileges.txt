@@ -2395,8 +2395,7 @@ estate_nobles_rynda = {
 		custom_tooltip = SCALES_WITH_LOYALTY_TT
 	}
 	loyalty_scaled_conditional_modifier = {
-		trigger = { is_monarch_leader = yes }
-		modifier = { infantry_power = 0.15 }
+		modifier = { infantry_power = 0.075 }
 	}
 	loyalty_scaled_conditional_modifier = {
 		trigger = { is_monarch_leader = no }
