@@ -930,10 +930,14 @@ TIM_missions_4 = {
 			if = {
 				limit = {
 					exists = QOM
+					QOM = { is_subject = no }
 				}
 				offensive_war_with = QOM
 			}
-			else = {
+			else_if = {
+				limit = {
+					NOT = { exists = QOM }
+				}
 				iraq_e_ajam_area = {
 					type = all
 					owned_by = ROOT
@@ -947,6 +951,11 @@ TIM_missions_4 = {
 				}
 				2210 = {
 					owned_by = ROOT
+				}
+			}
+			else = {
+				QOM = {
+					is_subject_of = ROOT
 				}
 			}
 		}

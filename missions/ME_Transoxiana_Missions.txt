@@ -282,7 +282,13 @@ Transoxiana_missions_slot_3 = {
 		}
 		trigger = {
 			all_country = {
-				NOT = { dynasty = "Timurid" }
+				OR = {
+					NOT = { dynasty = "Timurid" }
+					AND = {
+						dynasty = "Timurid"
+						is_subject_of = ROOT
+					}
+				}
 			}
 		}
 		effect = {
