@@ -851,7 +851,7 @@ aleppo={
 
 		406 409 410 2310 4291 #iraq_arabi_area
 		408 2311 2312 4288 #basra
-		412 2217 4289 4290 4342 #khuzestan 
+		412 4289 4290  #khuzestan 
 		415 4293 4294 #shahrizor
 
 		 
