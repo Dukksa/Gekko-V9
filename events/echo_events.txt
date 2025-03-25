@@ -159,7 +159,7 @@ country_event = {
 	option = {
 		change_estate_land_share = {
 			estate = all
-			share = 15
+			share = 25
 		}
 		set_country_flag = start_estates_setup
 	}
