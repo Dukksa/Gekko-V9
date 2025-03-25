@@ -25,6 +25,7 @@ country_decisions = {
 				area = morea_area
 				area = northern_greece_area
 				area = eastern_mediterrenean_islands_area
+				area = aegean_archipelago_area
 				area = albania_area
 				area = rascia_area
 				area = serbia_area
@@ -80,6 +81,10 @@ country_decisions = {
 				owned_by = ROOT
 			}
 			eastern_mediterrenean_islands_area = {
+				type = all
+				owned_by = ROOT
+			}
+			aegean_archipelago_area = {
 				type = all
 				owned_by = ROOT
 			}
