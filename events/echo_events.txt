@@ -1,159 +1,154 @@
 namespace = echo
-
 #advisors
-
 ###we stand alone dev event####
 country_event = {
-    id = echo.2
-    title = echo.2.t
-    desc = echo.2.d
-    picture = COURT_eventPicture
-
-    trigger = {
-            has_country_modifier = We_stand_alone
-			NOT = {is_great_power = yes}
-			adm_tech = 5
-			
-			NOT = {
-				has_country_modifier = echo_development
-			}	
-    }
-    mean_time_to_happen = {
-        months = 1
-    }
-	
-    option = {
+	id = echo.2
+	title = echo.2.t
+	desc = echo.2.d
+	picture = COURT_eventPicture
+	trigger = {
+		has_country_modifier = We_stand_alone
+		NOT = {
+			is_great_power = yes
+		}
+		adm_tech = 5
+		NOT = {
+			has_country_modifier = echo_development
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
 		name = echo.2.a
 		add_country_modifier = {
-				name = echo_development
-				duration = 5475
-			}
+			name = echo_development
+			duration = 5475
+		}
 	}
 }
 
 # Revealing Africa to Africans
 country_event = {
-    id = echo.5
-    title = "echo.5.t"
-    desc = "echo.5.d"
-    picture = COURT_eventPicture
+	id = echo.5
+	title = "echo.5.t"
+	desc = "echo.5.d"
+	picture = COURT_eventPicture
 	is_triggered_only = yes
 	hidden = yes
-	
-    immediate = {
+	immediate = {
 		hidden_effect = {
 			set_country_flag = PR_discover_africa_flag
 			niger_region = {
 				ROOT = {
-								discover_province = PREV
-							}
+					discover_province = PREV
+				}
 			}
-			guinea_region= {
+			guinea_region = {
 				ROOT = {
-								discover_province = PREV
-							}
-			}	
+					discover_province = PREV
+				}
+			}
 			sahel_region = {
 				ROOT = {
-								discover_province = PREV
-							}
-			}	
+					discover_province = PREV
+				}
+			}
 			horn_of_africa_region = {
 				ROOT = {
-								discover_province = PREV
-							}
-			}	
+					discover_province = PREV
+				}
+			}
 			maghreb_region = {
 				ROOT = {
-								discover_province = PREV
-							}
-			}		
-
+					discover_province = PREV
+				}
+			}
 			east_africa_region = {
 				ROOT = {
-								discover_province = PREV
-							}
+					discover_province = PREV
+				}
 			}
 			kongo_region = {
 				ROOT = {
-								discover_province = PREV
-							}
+					discover_province = PREV
+				}
 			}
 			south_africa_region = {
 				ROOT = {
-								discover_province = PREV
-							}
+					discover_province = PREV
+				}
 			}
 			central_africa_region = {
 				ROOT = {
-								discover_province = PREV
-							}
+					discover_province = PREV
+				}
 			}
 			egypt_region = {
 				ROOT = {
-								discover_province = PREV
-							}
+					discover_province = PREV
+				}
 			}
 		}
 	}
-	
 	option = {
-        name = "echo.5.a"
+		name = "echo.5.a"
 		custom_tooltip = echo.5.a
 		ai_chance = {
 			factor = 0
 		}
-    }
-}	
+	}
+}
 
 country_event = {
-    id = echo.7
-    title = echo.7.t
-    desc = echo.7.d
-    picture = COURT_eventPicture
-
-    trigger = {
+	id = echo.7
+	title = echo.7.t
+	desc = echo.7.d
+	picture = COURT_eventPicture
+	trigger = {
 		NOT = {
-		 	current_age = age_of_discovery
+			current_age = age_of_discovery
 		}
 		has_country_modifier = mam_age_ability_modifier
 	}
 	hidden = yes
-    option = {
+	option = {
 		name = echo.7.a
 		remove_country_modifier = mam_age_ability_modifier
 	}
-}	
+}
 
 country_event = {
-    id = echo.8
-    title = echo.8.t
-    desc = echo.8.d
-    picture = COURT_eventPicture
-
-    trigger = {
+	id = echo.8
+	title = echo.8.t
+	desc = echo.8.d
+	picture = COURT_eventPicture
+	trigger = {
 		NOT = {
-		 	current_age = age_of_discovery
+			current_age = age_of_discovery
 		}
 		has_country_modifier = tur_age_ability_modifier
 	}
 	hidden = yes
-    option = {
+	option = {
 		name = echo.8.a
 		remove_country_modifier = tur_age_ability_modifier
 	}
 }
 
 country_event = {
-    id = echo.9
-    title = echo.9.t
-    desc = echo.9.d
+	id = echo.9
+	title = echo.9.t
+	desc = echo.9.d
 	picture = COURT_eventPicture
-
 	hidden = yes
 	trigger = {
-		NOT = { is_year = 1445}
-		NOT = { has_country_flag = start_estates_setup }
+		NOT = {
+			is_year = 1445
+		}
+		NOT = {
+			has_country_flag = start_estates_setup
+		}
 		ai = no
 	}
 	option = {
@@ -164,53 +159,46 @@ country_event = {
 		set_country_flag = start_estates_setup
 	}
 }
-country_event = { #Recruit Adm Advisor
+
+country_event = {
+	#Recruit Adm Advisor
 	id = echo.10
 	title = echo.10.title
 	desc = echo.10.desc
 	picture = AULIC_COUNCIL_eventPicture
-
 	is_triggered_only = yes
-
 	option = {
 		name = echo.10.a
-
 		add_adm_power = -15
 		create_advisor = philosopher
 	}
 	option = {
 		name = echo.10.b
-
 		add_adm_power = -15
 		create_advisor = natural_scientist
 	}
 	option = {
 		name = echo.10.c
-
 		add_adm_power = -15
 		create_advisor = artist
 	}
 	option = {
 		name = echo.10.d
-
 		add_adm_power = -15
 		create_advisor = treasurer
 	}
 	option = {
 		name = echo.10.e
-
 		add_adm_power = -15
-		create_advisor = theologian 
+		create_advisor = theologian
 	}
 	option = {
 		name = echo.10.f
-
 		add_adm_power = -15
 		create_advisor = master_of_mint
 	}
 	option = {
 		name = echo.10.g
-
 		add_adm_power = -15
 		create_advisor = inquisitor
 	}
@@ -222,53 +210,45 @@ country_event = { #Recruit Adm Advisor
 	}
 }
 
-country_event = { #Recruit Dip advisor
+country_event = {
+	#Recruit Dip advisor
 	id = echo.11
 	title = echo.11.title
 	desc = echo.11.desc
 	picture = DIPLOMACY_SIGNING_eventPicture
-
 	is_triggered_only = yes
-
 	option = {
 		name = echo.11.a
-
 		add_dip_power = -15
 		create_advisor = statesman
 	}
 	option = {
 		name = echo.11.b
-
 		add_dip_power = -15
 		create_advisor = naval_reformer
 	}
 	option = {
 		name = echo.11.c
-
 		add_dip_power = -15
 		create_advisor = trader
 	}
 	option = {
 		name = echo.11.d
-
 		add_dip_power = -15
 		create_advisor = spymaster
 	}
 	option = {
-		name = echo.11.e 
-
+		name = echo.11.e
 		add_dip_power = -15
 		create_advisor = colonial_governor
 	}
 	option = {
 		name = echo.11.f
-
 		add_dip_power = -15
 		create_advisor = diplomat
 	}
 	option = {
 		name = echo.11.g
-
 		add_dip_power = -15
 		create_advisor = navigator
 	}
@@ -280,53 +260,45 @@ country_event = { #Recruit Dip advisor
 	}
 }
 
-country_event = { #Recruit Mil Advisor 
+country_event = {
+	#Recruit Mil Advisor 
 	id = echo.12
 	title = echo.12.title
 	desc = echo.12.desc
 	picture = GENERALS_DISCUSSING_eventPicture
-
 	is_triggered_only = yes
-
 	option = {
 		name = echo.12.a
-
 		add_mil_power = -15
 		create_advisor = army_reformer
 	}
 	option = {
 		name = echo.12.b
-
 		add_mil_power = -15
 		create_advisor = army_organiser
 	}
 	option = {
 		name = echo.12.c
-
 		add_mil_power = -15
 		create_advisor = commandant
 	}
 	option = {
 		name = echo.12.d
-
 		add_mil_power = -15
 		create_advisor = quartermaster
 	}
 	option = {
 		name = echo.12.e
-
 		add_mil_power = -15
 		create_advisor = recruitmaster
 	}
 	option = {
 		name = echo.12.f
-
 		add_mil_power = -15
 		create_advisor = fortification_expert
 	}
 	option = {
 		name = echo.12.g
-
 		add_mil_power = -15
 		create_advisor = grand_captain
 	}
@@ -340,32 +312,30 @@ country_event = { #Recruit Mil Advisor
 
 ###remove we stand alone dev event####
 country_event = {
-    id = echo.13
-    title = echo.13.t
-    desc = echo.13.d
-    picture = COURT_eventPicture
+	id = echo.13
+	title = echo.13.t
+	desc = echo.13.d
+	picture = COURT_eventPicture
 	hidden = yes
-    trigger = {
-			is_great_power = yes	
-			has_country_modifier = echo_development	
-    }
-    mean_time_to_happen = {
-        months = 1
-    }
-	
-    option = {
+	trigger = {
+		is_great_power = yes
+		has_country_modifier = echo_development
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
 		name = echo.2.a
 		remove_country_modifier = echo_development
 	}
 }
 
 country_event = {
-    id = echo.14 #
-    title = echo.14.t
-    desc = echo.14.d
-    picture = COURT_eventPicture
-    is_triggered_only = yes
-	
+	id = echo.14	#
+	title = echo.14.t
+	desc = echo.14.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
 	option = {
 		name = echo.14.a
 		custom_tooltip = bastard_renew_burgher_priv_tooltip
@@ -373,7 +343,9 @@ country_event = {
 			estate = estate_burghers
 			loyalty = 10
 		}
-		reapply_estate_privilege = { privilege = estate_burghers_financial_demand }
+		reapply_estate_privilege = {
+			privilege = estate_burghers_financial_demand
+		}
 	}
 	option = {
 		name = echo.14.b
@@ -388,25 +360,29 @@ country_event = {
 	}
 }
 
-
 country_event = {
-    id = echo.16
-    title = echo.16.t
-    desc = echo.16.d
-    picture = COURT_eventPicture
-
-    trigger = {
-		NOT = { great_power_rank = 2 }
-		NOT = { has_country_modifier = Great_power_dominance_established }
-		NOT = { governing_capacity_percentage = 1.01 }
+	id = echo.16
+	title = echo.16.t
+	desc = echo.16.d
+	picture = COURT_eventPicture
+	trigger = {
 		NOT = {
-		 	current_age = age_of_discovery
+			great_power_rank = 2
+		}
+		NOT = {
+			has_country_modifier = Great_power_dominance_established
+		}
+		NOT = {
+			governing_capacity_percentage = 1.01
+		}
+		NOT = {
+			current_age = age_of_discovery
 		}
 	}
 	mean_time_to_happen = {
-        months = 1
-    }
-    option = {
+		months = 1
+	}
+	option = {
 		name = echo.16.a
 		add_country_modifier = {
 			name = Great_power_dominance_established
@@ -417,25 +393,26 @@ country_event = {
 				has_country_modifier = mid_power_dominance_established
 			}
 			remove_country_modifier = mid_power_dominance_established
-		}	
+		}
 	}
 }
 
 country_event = {
-    id = echo.17
-    title = echo.17.t
-    desc = echo.17.d
-    picture = COURT_eventPicture
-
-    trigger = {
+	id = echo.17
+	title = echo.17.t
+	desc = echo.17.d
+	picture = COURT_eventPicture
+	trigger = {
 		great_power_rank = 4
 		has_country_modifier = Great_power_dominance_established
-		NOT = { is_lacking_institutions = yes }
+		NOT = {
+			is_lacking_institutions = yes
+		}
 	}
 	mean_time_to_happen = {
-        months = 1
-    }
-    option = {
+		months = 1
+	}
+	option = {
 		name = echo.17.a
 		remove_country_modifier = Great_power_dominance_established
 		add_country_modifier = {
@@ -446,19 +423,21 @@ country_event = {
 }
 
 country_event = {
-    id = echo.18
-    title = echo.18.t
-    desc = echo.18.d
-    picture = COURT_eventPicture
+	id = echo.18
+	title = echo.18.t
+	desc = echo.18.d
+	picture = COURT_eventPicture
 	hidden = yes
-    trigger = {
+	trigger = {
 		army_size = 750
-		NOT =  { has_country_modifier = anti_lag }
+		NOT = {
+			has_country_modifier = anti_lag
+		}
 	}
 	mean_time_to_happen = {
-        months = 1
-    }
-    option = {
+		months = 1
+	}
+	option = {
 		name = echo.18.a
 		add_country_modifier = {
 			name = anti_lag
@@ -475,18 +454,15 @@ country_event = {
 	desc = echo.21.d
 	picture = BATTLE_eventPicture
 	is_triggered_only = yes
-
 	trigger = {
 		is_at_war = no
 		has_country_modifier = defense_of_the_low_countries
 	}
-
 	option = {
 		name = flavor_kor.21.a
 		remove_country_modifier = defense_of_the_low_countries
 	}
 }
-
 
 country_event = {
 	id = echo.23
@@ -496,7 +472,9 @@ country_event = {
 	hidden = yes
 	trigger = {
 		is_march = yes
-		NOT = {has_country_flag = march_ideas_taken}
+		NOT = {
+			has_country_flag = march_ideas_taken
+		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -507,242 +485,295 @@ country_event = {
 	}
 }
 
-country_event = { # state edicts
-		id = sealand_events.28
-		title = sealand_events.28.t
-		desc = sealand_events.28.d
-		picture = BIG_BOOK_eventPicture
-		is_triggered_only = yes
-		option = {
-			name = sealand_events.28.0
-			clr_country_flag = sea_state_edicts_flag
-		}
-		option = {
-			name = sealand_events.28.00
-			set_country_flag = sea_state_edicts_clear_flag
-			clr_country_flag = sea_state_edicts_flag
-			custom_tooltip = sealand_events.28.00.tt
-		}
-		option = {
-			name = sealand_events.28.1
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = edict_advancement_effort
+country_event = {
+	# state edicts
+	id = sealand_events.28
+	title = sealand_events.28.t
+	desc = sealand_events.28.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sealand_events.28.0
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.00
+		set_country_flag = sea_state_edicts_clear_flag
+		clr_country_flag = sea_state_edicts_flag
+		custom_tooltip = sealand_events.28.00.tt
+	}
+	option = {
+		name = sealand_events.28.1
+		every_owned_province = {
+			limit = {
+				is_state = yes
 			}
-			set_country_flag = sea_state_edicts_decision_edict_advancement_effort_flag
-			clr_country_flag = sea_state_edicts_flag
+			set_state_edict = edict_advancement_effort
 		}
-		option = {
-			name = sealand_events.28.2
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = edict_centralization_effort
+		set_country_flag = sea_state_edicts_decision_edict_advancement_effort_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.2
+		every_owned_province = {
+			limit = {
+				is_state = yes
 			}
-			set_country_flag = sea_state_edicts_decision_edict_centralization_effort_flag
-			clr_country_flag = sea_state_edicts_flag
-		}	
-		option = {
-			name = sealand_events.28.3
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = edict_defensive_edict
-			}
-			set_country_flag = sea_state_edicts_decision_edict_defensive_edict_flag
-			clr_country_flag = sea_state_edicts_flag
+			set_state_edict = edict_centralization_effort
 		}
-		option = {
-			name = sealand_events.28.4
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = edict_devastation_edict
+		set_country_flag = sea_state_edicts_decision_edict_centralization_effort_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.3
+		every_owned_province = {
+			limit = {
+				is_state = yes
 			}
-			set_country_flag = sea_state_edicts_decision_edict_devastation_edict_flag
-			clr_country_flag = sea_state_edicts_flag
+			set_state_edict = edict_defensive_edict
 		}
-		option = {
-			trigger = { has_country_flag = hab_prosperity_edict }
-			name = sealand_events.28.5
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = edict_of_governance
+		set_country_flag = sea_state_edicts_decision_edict_defensive_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.4
+		every_owned_province = {
+			limit = {
+				is_state = yes
 			}
-			set_country_flag = sea_state_edicts_decision_edict_of_governance_flag
-			clr_country_flag = sea_state_edicts_flag
+			set_state_edict = edict_devastation_edict
 		}
-		option = {
-			name = sealand_events.28.6
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = edict_encourage_development
+		set_country_flag = sea_state_edicts_decision_edict_devastation_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			has_country_flag = hab_prosperity_edict
+		}
+		name = sealand_events.28.5
+		every_owned_province = {
+			limit = {
+				is_state = yes
 			}
-			set_country_flag = sea_state_edicts_decision_edict_encourage_development_flag
-			clr_country_flag = sea_state_edicts_flag
+			set_state_edict = edict_of_governance
 		}
-		option = {
-			trigger = { current_age = age_of_discovery }
-			name = sealand_events.28.7
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = edict_feudal_de_jure_law
+		set_country_flag = sea_state_edicts_decision_edict_of_governance_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.6
+		every_owned_province = {
+			limit = {
+				is_state = yes
 			}
-			set_country_flag = sea_state_edicts_decision_edict_feudal_de_jure_law_flag
-			clr_country_flag = sea_state_edicts_flag
+			set_state_edict = edict_encourage_development
 		}
-		option = {
-			trigger = { has_country_flag = fra_enable_infrastructure_network_flag }
-			name = sealand_events.28.8
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = french_infrastructure_network
+		set_country_flag = sea_state_edicts_decision_edict_encourage_development_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_discovery
+		}
+		name = sealand_events.28.7
+		every_owned_province = {
+			limit = {
+				is_state = yes
 			}
-			set_country_flag = sea_state_edicts_decision_french_infrastructure_network_flag
-			clr_country_flag = sea_state_edicts_flag
+			set_state_edict = edict_feudal_de_jure_law
 		}
-		option = {
-			name = sealand_events.28.9
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = edict_promote_military_recruitment
+		set_country_flag = sea_state_edicts_decision_edict_feudal_de_jure_law_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			has_country_flag = fra_enable_infrastructure_network_flag
+		}
+		name = sealand_events.28.8
+		every_owned_province = {
+			limit = {
+				is_state = yes
 			}
-			set_country_flag = sea_state_edicts_decision_edict_promote_military_recruitment_flag
-			clr_country_flag = sea_state_edicts_flag
+			set_state_edict = french_infrastructure_network
 		}
-		option = {
-			trigger = { NOT = { has_country_flag = fra_improve_trade_power_state_edict_flag } }
-			name = sealand_events.28.10
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = edict_protect_trade
+		set_country_flag = sea_state_edicts_decision_french_infrastructure_network_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.9
+		every_owned_province = {
+			limit = {
+				is_state = yes
 			}
-			set_country_flag = sea_state_edicts_decision_edict_protect_trade_flag
-			clr_country_flag = sea_state_edicts_flag
+			set_state_edict = edict_promote_military_recruitment
 		}
-		option = {
-			trigger = { has_country_flag = fra_improve_trade_power_state_edict_flag }
-			name = sealand_events.28.11
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = protect_trade_empowered
+		set_country_flag = sea_state_edicts_decision_edict_promote_military_recruitment_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			NOT = {
+				has_country_flag = fra_improve_trade_power_state_edict_flag
 			}
-			set_country_flag = sea_state_edicts_decision_protect_trade_empowered_flag
-			clr_country_flag = sea_state_edicts_flag
 		}
-		option = {
-			trigger = {
+		name = sealand_events.28.10
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_protect_trade
+		}
+		set_country_flag = sea_state_edicts_decision_edict_protect_trade_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			has_country_flag = fra_improve_trade_power_state_edict_flag
+		}
+		name = sealand_events.28.11
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = protect_trade_empowered
+		}
+		set_country_flag = sea_state_edicts_decision_protect_trade_empowered_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
 			current_age = age_of_reformation
 			has_country_flag = religion_enforced_edict
-			}
-			name = sealand_events.28.12
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = edict_religion_enforced
-			}
-			set_country_flag = sea_state_edicts_decision_edict_religion_enforced_flag
-			clr_country_flag = sea_state_edicts_flag
 		}
-		option = {
-			name = sealand_events.28.13
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = edict_religious_unity
+		name = sealand_events.28.12
+		every_owned_province = {
+			limit = {
+				is_state = yes
 			}
-			set_country_flag = sea_state_edicts_decision_edict_religious_unity_flag
-			clr_country_flag = sea_state_edicts_flag
+			set_state_edict = edict_religion_enforced
 		}
-		option = {
-			trigger = { has_country_flag = enable_industrialisation_flag }
-			name = sealand_events.28.14
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = chinese_industrialization
-			}
-			set_country_flag = sea_state_edicts_decision_chinese_industrialization_flag
-			clr_country_flag = sea_state_edicts_flag
-		}
-		option = {
-			trigger = {
-				current_age = age_of_discovery
-				has_government_attribute = unlock_special_state_edicts
-			}
-			name = sealand_events.28.15
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = feudal_taxes_state_edict
-			}
-			set_country_flag = sea_state_edicts_decision_feudal_taxes_state_edict_flag
-			clr_country_flag = sea_state_edicts_flag
-		}
-		option = {
-			trigger = {
-				current_age = age_of_reformation
-				has_government_attribute = unlock_special_state_edicts
-			}
-			name = sealand_events.28.16
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = religious_tolerance_state_edict
-			}
-			set_country_flag = sea_state_edicts_decision_religious_tolerance_state_edict_flag
-			clr_country_flag = sea_state_edicts_flag
-		}
-		option = {
-			trigger = {
-				current_age = age_of_absolutism
-				has_government_attribute = unlock_special_state_edicts
-			}
-			name = sealand_events.28.17
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = state_integration_state_edict
-			}
-			set_country_flag = sea_state_edicts_decision_state_integration_state_edict_flag
-			clr_country_flag = sea_state_edicts_flag
-		}
-		option = {
-			trigger = {
-				current_age = age_of_revolutions
-				has_government_attribute = unlock_special_state_edicts
-			}
-			name = sealand_events.28.18
-			every_owned_province = { 
-				limit = { is_state = yes }
-				set_state_edict = urbanization_state_edict
-			}
-			set_country_flag = sea_state_edicts_decision_urbanization_state_edict_flag
-			clr_country_flag = sea_state_edicts_flag
-		}
+		set_country_flag = sea_state_edicts_decision_edict_religion_enforced_flag
+		clr_country_flag = sea_state_edicts_flag
 	}
-	#event to notify about ur money being stolen
-	#country_event = {
-	#	id = bertus_changes.6032
-	#	title = bertus_changes.6032.title
-	#	desc = bertus_changes.6032.desc
-	#	picture = DHIMMI_ESTATE_eventPicture
-	#
-	#	is_triggered_only = yes
-	#
-	#	immediate = {
-	#	}
-	#	option = {
-	#		name = bertus_changes.6031.a #
-	#	}
-	#}
+	option = {
+		name = sealand_events.28.13
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_religious_unity
+		}
+		set_country_flag = sea_state_edicts_decision_edict_religious_unity_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			has_country_flag = enable_industrialisation_flag
+		}
+		name = sealand_events.28.14
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = chinese_industrialization
+		}
+		set_country_flag = sea_state_edicts_decision_chinese_industrialization_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_discovery
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.15
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = feudal_taxes_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_feudal_taxes_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_reformation
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.16
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = religious_tolerance_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_religious_tolerance_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_absolutism
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.17
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = state_integration_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_state_integration_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_revolutions
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.18
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = urbanization_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_urbanization_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+}
 
+#event to notify about ur money being stolen
+#country_event = {
+#	id = bertus_changes.6032
+#	title = bertus_changes.6032.title
+#	desc = bertus_changes.6032.desc
+#	picture = DHIMMI_ESTATE_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	immediate = {
+#	}
+#	option = {
+#		name = bertus_changes.6031.a #
+#	}
+#}
 ##old merc shit
 country_event = {
-    id = echo.19
-    title = echo.19.t
-    desc = echo.19.d
-    picture = COURT_eventPicture
-    trigger = {
-		NOT = { has_country_modifier = Merc_payments_reneged }
+	id = echo.19
+	title = echo.19.t
+	desc = echo.19.d
+	picture = COURT_eventPicture
+	trigger = {
+		NOT = {
+			has_country_modifier = Merc_payments_reneged
+		}
 		has_country_modifier = Merc_payments
 	}
 	mean_time_to_happen = {
-        months = 1
-    }
+		months = 1
+	}
 	hidden = yes
-    option = {
+	option = {
 		name = echo.15.a
 		add_country_modifier = {
 			name = Merc_payments_reneged
@@ -750,51 +781,50 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
-    id = echo.20
-    title = echo.20.t
-    desc = v.d
-    picture = COURT_eventPicture
-    trigger = {
+	id = echo.20
+	title = echo.20.t
+	desc = v.d
+	picture = COURT_eventPicture
+	trigger = {
 		has_country_modifier = Merc_payments_reneged
-		NOT = {has_country_modifier = Merc_payments }
+		NOT = {
+			has_country_modifier = Merc_payments
+		}
 	}
-	
 	mean_time_to_happen = {
-        months = 1
-    }
+		months = 1
+	}
 	hidden = yes
-    option = {
+	option = {
 		name = echo.18.a
 		remove_country_modifier = Merc_payments_reneged
 	}
 }
 
 #new player read me
-
 country_event = {
-    id = echo.6
-    title = echo.6.t
-    desc = echo.6.d
-    picture = COURT_eventPicture
-
-    is_triggered_only = yes
-	
-    option = {
+	id = echo.6
+	title = echo.6.t
+	desc = echo.6.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = {
 		name = echo.6.a
-		country_event = { id = echo.24}
+		country_event = {
+			id = echo.24
+		}
 	}
 }
 
 country_event = {
-    id = echo.24
-    title = echo.6.t
-    desc = echo.24.d
-    picture = COURT_eventPicture
-
-    is_triggered_only = yes
-	
-    option = {
+	id = echo.24
+	title = echo.6.t
+	desc = echo.24.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = {
 		name = echo.24.a
 	}
 }
