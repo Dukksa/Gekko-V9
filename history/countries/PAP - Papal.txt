@@ -1,5 +1,5 @@
 government = theocracy
-add_government_reform = pope_reform
+add_government_reform = battle_pope_reform
 government_rank = 2
 primary_culture = umbrian
 religion = catholic

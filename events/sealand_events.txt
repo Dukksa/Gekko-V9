@@ -1,0 +1,258 @@
+namespace = sealand_events
+
+country_event = {
+	# state edicts
+	id = sealand_events.28
+	title = sealand_events.28.t
+	desc = sealand_events.28.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = sealand_events.28.0
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.00
+		set_country_flag = sea_state_edicts_clear_flag
+		clr_country_flag = sea_state_edicts_flag
+		custom_tooltip = sealand_events.28.00.tt
+	}
+	option = {
+		name = sealand_events.28.1
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_advancement_effort
+		}
+		set_country_flag = sea_state_edicts_decision_edict_advancement_effort_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.2
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_centralization_effort
+		}
+		set_country_flag = sea_state_edicts_decision_edict_centralization_effort_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.3
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_defensive_edict
+		}
+		set_country_flag = sea_state_edicts_decision_edict_defensive_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.4
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_devastation_edict
+		}
+		set_country_flag = sea_state_edicts_decision_edict_devastation_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			has_country_flag = hab_prosperity_edict
+		}
+		name = sealand_events.28.5
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_of_governance
+		}
+		set_country_flag = sea_state_edicts_decision_edict_of_governance_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.6
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_encourage_development
+		}
+		set_country_flag = sea_state_edicts_decision_edict_encourage_development_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_discovery
+		}
+		name = sealand_events.28.7
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_feudal_de_jure_law
+		}
+		set_country_flag = sea_state_edicts_decision_edict_feudal_de_jure_law_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			has_country_flag = fra_enable_infrastructure_network_flag
+		}
+		name = sealand_events.28.8
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = french_infrastructure_network
+		}
+		set_country_flag = sea_state_edicts_decision_french_infrastructure_network_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.9
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_promote_military_recruitment
+		}
+		set_country_flag = sea_state_edicts_decision_edict_promote_military_recruitment_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			NOT = {
+				has_country_flag = fra_improve_trade_power_state_edict_flag
+			}
+		}
+		name = sealand_events.28.10
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_protect_trade
+		}
+		set_country_flag = sea_state_edicts_decision_edict_protect_trade_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			has_country_flag = fra_improve_trade_power_state_edict_flag
+		}
+		name = sealand_events.28.11
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = protect_trade_empowered
+		}
+		set_country_flag = sea_state_edicts_decision_protect_trade_empowered_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_reformation
+			has_country_flag = religion_enforced_edict
+		}
+		name = sealand_events.28.12
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_religion_enforced
+		}
+		set_country_flag = sea_state_edicts_decision_edict_religion_enforced_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		name = sealand_events.28.13
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = edict_religious_unity
+		}
+		set_country_flag = sea_state_edicts_decision_edict_religious_unity_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			has_country_flag = enable_industrialisation_flag
+		}
+		name = sealand_events.28.14
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = chinese_industrialization
+		}
+		set_country_flag = sea_state_edicts_decision_chinese_industrialization_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_discovery
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.15
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = feudal_taxes_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_feudal_taxes_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_reformation
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.16
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = religious_tolerance_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_religious_tolerance_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_absolutism
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.17
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = state_integration_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_state_integration_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+	option = {
+		trigger = {
+			current_age = age_of_revolutions
+			has_government_attribute = unlock_special_state_edicts
+		}
+		name = sealand_events.28.18
+		every_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			set_state_edict = urbanization_state_edict
+		}
+		set_country_flag = sea_state_edicts_decision_urbanization_state_edict_flag
+		clr_country_flag = sea_state_edicts_flag
+	}
+}
