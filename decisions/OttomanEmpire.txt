@@ -1,10 +1,11 @@
 country_decisions = {
-
 	proclaim_ottoman_empire = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			NOT = { has_country_flag = proclaim_ottoman_empire_flag }
+			NOT = {
+				has_country_flag = proclaim_ottoman_empire_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -32,115 +33,107 @@ country_decisions = {
 				area = moldavia_area
 				area = imereti_area
 				area = samtskhe_area
-				
-				
 			}
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 		allow = {
-		
-					anatolia_region = {
-						type = all
-						owned_by = ROOT
-					}
-					mashriq_region = {
-						type = all
-						owned_by = ROOT
-					}
-					egypt_region = {
-						type = all
-						owned_by = ROOT
-					}
-					thrace_area = {
-						type = all
-						owned_by = ROOT
-					}
-					bulgaria_area = {
-						type = all
-						owned_by = ROOT
-					}
-					silistria_area = {
-						type = all
-						owned_by = ROOT
-					}
-					macedonia_area = {
-						type = all
-						owned_by = ROOT
-					}
-					X_central_greece_area = {
-						type = all
-						owned_by = ROOT
-					}
-					morea_area = {
-						type = all
-						owned_by = ROOT
-					}
-					northern_greece_area = {
-						type = all
-						owned_by = ROOT
-					}
-					eastern_mediterrenean_islands_area = {
-						type = all
-						owned_by = ROOT
-					}
-					albania_area = {
-						type = all
-						owned_by = ROOT
-					}
-					rascia_area = {
-						type = all
-						owned_by = ROOT
-					}
-					serbia_area = {
-						type = all
-						owned_by = ROOT
-					}
-					bosnia_area = {
-						type = all
-						owned_by = ROOT
-					}
-					wallachia_area = {
-						type = all
-						owned_by = ROOT
-					}
-					moldavia_area = {
-						type = all
-						owned_by = ROOT
-					}
-					imereti_area = {
-						type = all
-						owned_by = ROOT
-					}
-					samtskhe_area = {
-						type = all
-						owned_by = ROOT
-					}
-				
-			
-			
-			
-
-			
+			anatolia_region = {
+				type = all
+				owned_by = ROOT
+			}
+			mashriq_region = {
+				type = all
+				owned_by = ROOT
+			}
+			egypt_region = {
+				type = all
+				owned_by = ROOT
+			}
+			thrace_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bulgaria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			silistria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			macedonia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			X_central_greece_area = {
+				type = all
+				owned_by = ROOT
+			}
+			morea_area = {
+				type = all
+				owned_by = ROOT
+			}
+			northern_greece_area = {
+				type = all
+				owned_by = ROOT
+			}
+			eastern_mediterrenean_islands_area = {
+				type = all
+				owned_by = ROOT
+			}
+			albania_area = {
+				type = all
+				owned_by = ROOT
+			}
+			rascia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			serbia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bosnia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			wallachia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			moldavia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			imereti_area = {
+				type = all
+				owned_by = ROOT
+			}
+			samtskhe_area = {
+				type = all
+				owned_by = ROOT
+			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 		}
 		effect = {
-
 			set_country_flag = proclaim_ottoman_empire_flag
-			add_prestige_or_monarch_power = { amount = 100 }
-			#override_country_name = OTTOMAN_EMPIRE
+			add_prestige_or_monarch_power = {
+				amount = 100
+			}
+			override_country_name = OTTOMAN_EMPIRE
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
 			}
 			set_country_flag = proclaim_ottoman_empire_flag
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-
-			
 		}
 		ai_will_do = {
 			factor = 1

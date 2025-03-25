@@ -2792,7 +2792,6 @@ country_event = {
 	picture = ARTILLERY_eventPicture
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = { tag = TUR tag = RUM }
 		NOT = { is_year = 1455 }
 		years_of_income = 0.3
