@@ -776,37 +776,6 @@ gulf_of_aden={
 		
 	}
 }
-basra={
-	color = {
-		76 141 58 
-	}
-	location=2336
-
-	outgoing={
-		name="alexandria"
-		path={
-			2330 1328 361
-		}
-		
-	}
-
-	members={
-		1335 394 395 396 2340 2347 393 2338 4272 392 2337 4273 4274 2335 2336 2339 4275 2334 4276 1779
-		397 398 404 403 4285 4287 399 400 4286    1332 1334 4347 2333
-		2999
-
-		2342 401 2341 #dhofar 
-		402 1099 4284 #mahra
-		389 2343 4283 #hadramut
-		384 2329 2330 #medina
-		385 2331 2332 4277 4278 #mecca
-		386 391 4282 #najran 
-		390 2344 4281 #upper_yemen 
-		387 2346 4279 #tihama
-		388 2345 4280 #lower_yemen
-	}	
-}
-
 aleppo={
 	location=410
 	color={
@@ -857,6 +826,39 @@ aleppo={
 		 
 	}
 }
+
+basra={
+	color = {
+		76 141 58 
+	}
+	location=2336
+
+	outgoing={
+		name="alexandria"
+		path={
+			2330 1328 361
+		}
+		
+	}
+
+	members={
+		1335 394 395 396 2340 2347 393 2338 4272 392 2337 4273 4274 2335 2336 2339 4275 2334 4276 1779
+		397 398 404 403 4285 4287 399 400 4286    1332 1334 4347 2333
+		2999
+
+		2342 401 2341 #dhofar 
+		402 1099 4284 #mahra
+		389 2343 4283 #hadramut
+		384 2329 2330 #medina
+		385 2331 2332 4277 4278 #mecca
+		386 391 4282 #najran 
+		390 2344 4281 #upper_yemen 
+		387 2346 4279 #tihama
+		388 2345 4280 #lower_yemen
+	}	
+}
+
+
 persia={
 	location=416
 	color={
@@ -1261,6 +1263,120 @@ crimea={
 		6006 6003 6004 6005 6007 6008 6002 6001 6213 6000 6009 6010
 	}
 }
+
+genua={
+	location=1298
+	color={
+		218 215 56 
+	}
+
+	
+	outgoing={
+		name="bordeaux"
+		path={
+			201 196
+		}
+		
+	}
+	outgoing={
+		name="sevilla"
+		path={
+		}
+		control={
+			2903.000 1367.000  2868.500 1350.500 2828.000 1323.000 2816.500 1296.000 2776.000 1258.000  
+		}
+	}
+	outgoing = {
+		name = "wien"
+		path={
+		}
+		control={
+			3021.000000 1442.000000 
+		}
+	}
+
+	outgoing={
+		name="gc_south_germany_tradenode"
+		path={
+			104 6174
+		}
+		
+	}
+	
+	outgoing={
+		name="ragusa"
+		path={
+			1303 1304 1307 1311 1310
+		}
+		
+	}
+
+	outgoing = {
+		name = "tunis"
+		path={
+			1298 1300 1301
+		}
+		
+	}
+	members={
+		1298 #Water
+		102 2992 101 #genoa_area
+		4727 103 1875 2981 #piedmont_area
+		4728 2979 4740 104 1862 #lombardy_area
+		2980 115 116 2978 117 #tuscanny_area
+		2976 118 4731 4732 #lazio_umbria_area
+		121 4734 2983 #campania_area
+		1934 2984 123 #calabria_area
+		124 2982 126 #eastern_sicily_area
+		125 4737 4736 #western_sicily_area
+		2986 4735 127 1247 #western_mediteranean_islands_area
+		4560 333 4559 #baleares_area
+		6415 #vatican
+		6158 5775
+		5780 5781 5782 
+		5776
+		5786
+		6060 6053
+		6052 6051 
+		6049 6048 
+		6047 
+		6046
+		6078 105
+		6075 5785 5783
+		106 107 108 109 111 112 113 114 119 120 122 130 1308 1774 1933 2977 2985 4729 4730 4733 4738 4739 #old-
+		6126 6125 6050 6124 5779 5778 5777 6045															  #-venice node
+		
+	}
+}
+
+
+ragusa={
+	location=4174
+	color = { 101 89 63 }
+	outgoing={
+		name="wien"
+		path={
+			138 3002 4755 4173 4126 
+		}
+		control={
+			3105.000000 1405.000000 3106.000000 1427.000000 3101.000000 1441.000000 
+		}
+	}
+	outgoing={
+		name="constantinople"
+		path={
+			4780 4705  
+		}
+		
+	}
+	members={
+		138 139 140 141 142 143 144 147 1766 1827 1831 1853 3000 3002 3001 4174 4175 4176 148 1828 4239 145 146 1773 4702 4699 4698 4701 4750 4755 4757 4780  
+		6120 
+		131 4752 1826 #croatia
+		4753 136 137 4754 #dalmatia
+	}
+}
+
 constantinople={
 	location=1320
 	color={
@@ -1400,118 +1516,6 @@ novgorod={
 		5037 5038 5036 5034 5035
 	}
 }
-
-genua={
-	location=1298
-	color={
-		218 215 56 
-	}
-
-	
-	outgoing={
-		name="bordeaux"
-		path={
-			201 196
-		}
-		
-	}
-	outgoing={
-		name="sevilla"
-		path={
-		}
-		control={
-			2903.000 1367.000  2868.500 1350.500 2828.000 1323.000 2816.500 1296.000 2776.000 1258.000  
-		}
-	}
-	outgoing = {
-		name = "wien"
-		path={
-		}
-		control={
-			3021.000000 1442.000000 
-		}
-	}
-
-	outgoing={
-		name="gc_south_germany_tradenode"
-		path={
-			104 6174
-		}
-		
-	}
-	
-	outgoing={
-		name="ragusa"
-		path={
-			1303 1304 1307 1311 1310
-		}
-		
-	}
-
-	outgoing = {
-		name = "tunis"
-		path={
-			1298 1300 1301
-		}
-		
-	}
-	members={
-		1298 #Water
-		102 2992 101 #genoa_area
-		4727 103 1875 2981 #piedmont_area
-		4728 2979 4740 104 1862 #lombardy_area
-		2980 115 116 2978 117 #tuscanny_area
-		2976 118 4731 4732 #lazio_umbria_area
-		121 4734 2983 #campania_area
-		1934 2984 123 #calabria_area
-		124 2982 126 #eastern_sicily_area
-		125 4737 4736 #western_sicily_area
-		2986 4735 127 1247 #western_mediteranean_islands_area
-		4560 333 4559 #baleares_area
-		6415 #vatican
-		6158 5775
-		5780 5781 5782 
-		5776
-		5786
-		6060 6053
-		6052 6051 
-		6049 6048 
-		6047 
-		6046
-		6078 105
-		6075 5785 5783
-		106 107 108 109 111 112 113 114 119 120 122 130 1308 1774 1933 2977 2985 4729 4730 4733 4738 4739 #old-
-		6126 6125 6050 6124 5779 5778 5777 6045															  #-venice node
-		
-	}
-}
-ragusa={
-	location=4174
-	color = { 101 89 63 }
-	outgoing={
-		name="wien"
-		path={
-			138 3002 4755 4173 4126 
-		}
-		control={
-			3105.000000 1405.000000 3106.000000 1427.000000 3101.000000 1441.000000 
-		}
-	}
-	outgoing={
-		name="constantinople"
-		path={
-			4780 4705  
-		}
-		
-	}
-	members={
-		138 139 140 141 142 143 144 147 1766 1827 1831 1853 3000 3002 3001 4174 4175 4176 148 1828 4239 145 146 1773 4702 4699 4698 4701 4750 4755 4757 4780  
-		6120 
-		131 4752 1826 #croatia
-		4753 136 137 4754 #dalmatia
-	}
-}
-
 
 
 tunis={
