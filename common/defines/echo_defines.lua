@@ -133,7 +133,8 @@ NDefines.NEconomy.COT_DOWNGRADE_PRESTIGE_COST = 0
 NDefines.NEconomy.GOLD_MINE_DEPLETION_THRESHOLD = 10				-- Gold mines above production level or above can be depleted
 NDefines.NEconomy.GOLD_MINE_DEPLETION_CHANCE = 0.05
 NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER = 20
-NDefines.NEconomy.HEAVY_SHIP_MAINT_FACTOR = 0.07	
+NDefines.NEconomy.HEAVY_SHIP_MAINT_FACTOR = 0.07
+NDefines.NEconomy.TRADE_ADDED_VALUE_MODIFER = 0.01
 NDefines.NMilitary.MIN_MONTHLY_MANPOWER = 0.2						-- 100 men/month is minimum
 NDefines.NMilitary.MIN_MONTHLY_SAILORS = 10						-- 5 sailors/month is minimum
 NDefines.NMilitary.MERCENARY_REINFORCE_COST_MULTIPLIER = 1
@@ -209,6 +210,7 @@ NDefines.NGovernment.LEADER_AS_MONARCH_TRADITION = 15
 
 NDefines.NGame.DAYS_BEHIND_PAUSE = 90					-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will pause
 NDefines.NGame.DAYS_BEHIND_LOWER_SPEED = 90			-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will slow down
+NDefines.NGame.HEGEMONY_LOST_DAYS = 1825
 
 -- Xorme ai ones from here
 NDefines.NAI.DIPLOMATIC_ACTION_INFLUENCE_NATION_BASE_FACTOR = 5
@@ -413,3 +415,5 @@ NDefines.NAI.DANGEROUS_OVEREXTENSION_PERCENTAGE = 1.1
 --
 NDefines.NAI.FOREIGN_MINISTER_IGNORE_DISTANCE_BASE = 7
 NDefines.NAI.FOREIGN_MINISTER_BASE_PROVINCE_COUNT = 2
+
+
