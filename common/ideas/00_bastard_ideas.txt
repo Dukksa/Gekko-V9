@@ -2295,15 +2295,16 @@ MAM2_ideas = { #Mission reward to double mam_monopoly_ports // see mam_establish
 	}
 	free = yes
 	
+	purchase_new_mamelukes = {
+		cavalry_power = 0.15
+	}
 	monuments_to_greatness = {
 		development_cost = -0.05
 	}
 	red_sea_trade = {
 		manpower_recovery_speed = 0.15
 	}
-	purchase_new_mamelukes = {
-		cavalry_power = 0.15
-	}
+	
 	mam_army_reform = {
 		discipline = 0.05
 	}
@@ -2334,16 +2335,15 @@ MAM_ideas = {
 	}
 	free = yes
 	
+	purchase_new_mamelukes = {
+		cavalry_power = 0.15
+	}
 	monuments_to_greatness = {
 		development_cost = -0.05
 	}
 	red_sea_trade = {
 		manpower_recovery_speed = 0.15
 	}
-	purchase_new_mamelukes = {
-		cavalry_power = 0.15
-	}
-	
 	reform_fellah_system = {
 		production_efficiency = 0.1
 	}
