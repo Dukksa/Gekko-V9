@@ -1,0 +1,42 @@
+#4292 - Rimini
+
+owner = URB
+controller = URB
+culture = romagnan 
+religion = catholic 
+hre = no 
+base_tax = 2 
+base_production = 2   
+trade_goods = salt
+base_manpower = 2   
+capital = "Rimini" 
+is_city = yes 
+add_core = URB
+#add_core = PAP
+hre = yes
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+
+1500.1.1 = {
+	owner = PAP
+	controller = PAP
+	add_core = PAP
+}
+1750.1.1 = { add_core = ITA }
+1805.12.26 = {
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	remove_core = PAP
+} # Treaty of Pressburg
+1814.4.11 = {
+	owner = PAP
+	controller = PAP
+	add_core = PAP
+	remove_core = FRA
+} # Treaty of Fontainebleau, Napoleon abdicates unconditionally

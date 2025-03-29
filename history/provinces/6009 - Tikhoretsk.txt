@@ -1,0 +1,19 @@
+#6009 - Tikhoretsk
+
+owner = CRI
+controller = CRI
+culture = crimean
+religion = sunni
+hre = no
+base_tax = 2
+base_production = 3
+trade_goods = iron
+base_manpower = 1
+capital = "Tikhoretsk"
+is_city = yes
+add_core = CRI
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = western
+discovered_by = nomad_group
