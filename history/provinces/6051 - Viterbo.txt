@@ -1,0 +1,31 @@
+#118 - Roma
+
+owner = PGA
+controller = PGA
+culture = umbrian 
+religion = catholic 
+hre = no
+base_tax = 4
+base_production = 3
+trade_goods = grain
+base_manpower = 3
+capital = "Viterbo"
+is_city = yes
+add_core = PGA
+hre = yes
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+
+1750.1.1 = { add_core = ITA } 
+1809.4.10 = { controller = FRA } # Occupied by French troops
+1809.10.14 = { owner = FRA add_core = FRA } # Treaty of Sch�nbrunn
+1814.4.11 = {
+	owner = PAP
+	controller = PAP
+	remove_core = FRA
+} # # Treaty of Fontainebleau, Napoleon abdicates unconditionally

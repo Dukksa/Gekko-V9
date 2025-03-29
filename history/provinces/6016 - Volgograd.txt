@@ -1,0 +1,21 @@
+#6016 - Volgograd
+
+owner = GOL
+controller = GOL 
+culture = mishary
+religion = sunni
+hre = no
+base_tax = 2
+base_production = 4
+trade_goods = iron 
+base_manpower = 2
+capital = "Volgograd"
+is_city = yes
+add_core = GOL
+center_of_trade = 1
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = nomad_group
+discovered_by = ottoman
+discovered_by = muslim

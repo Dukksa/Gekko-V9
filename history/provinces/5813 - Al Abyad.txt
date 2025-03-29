@@ -1,0 +1,24 @@
+#5813 - Al Abyad
+
+culture = berber
+capital = "Al Abyad"
+religion = sunni
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+
+
+discovered_by = MOR
+discovered_by = sub_saharan
+
+native_size = 30
+native_ferocity = 4
+native_hostileness = 9
+
+add_permanent_province_modifier = {
+	name = gc_african_corridor
+	duration = -1
+}
