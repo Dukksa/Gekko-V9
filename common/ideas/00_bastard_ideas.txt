@@ -2296,7 +2296,7 @@ MAM2_ideas = { #Mission reward to double mam_monopoly_ports // see mam_establish
 	free = yes
 	
 	purchase_new_mamelukes = {
-		cavalry_power = 0.15
+		cavalry_power = 0.1
 	}
 	monuments_to_greatness = {
 		development_cost = -0.05
@@ -2336,7 +2336,7 @@ MAM_ideas = {
 	free = yes
 	
 	purchase_new_mamelukes = {
-		cavalry_power = 0.15
+		cavalry_power = 0.1
 	}
 	monuments_to_greatness = {
 		development_cost = -0.05
