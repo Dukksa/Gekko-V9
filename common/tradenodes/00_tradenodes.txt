@@ -362,42 +362,42 @@ hatton_bank = {
 }
 
 
-#burma={
-#	location=584
-#	color={
-#		35 229 76
-#	}
-#	inland=yes
-#	outgoing={
-#		name="ganges_delta"
-#		path={
-#			4396 1815 
-#		}
-#		control={
-#			4297.000000 951.000000 4306.000000 891.000000 4277.000000 895.000000 4254.000000 947.000000 
-#		}
-#	}
-#	outgoing={
-#		name="lhasa"
-#		path={
-#			2041
-#		}
-#		control={
-#			
-#		}
-#	}
-#	members={
-#		570 573 2041 #naga_hills_area
-#		584 2399 581 #upper_burma_area
-#		2398 580 4393 2397 #chindwin_area
-#		566 571 2040 2042 4440 #assam_area
-#		4394 4396 585 4395 #central_burma_area
-#		583 588 2400 4397 4406 #shan_hill_area
-#		587 2401 4398 #karenni_area 
-#		582 2395 2396 4404 4405 #kachin_area
-#		567 2091 4473 #tripura_area
-#	}
-#}
+burma={
+	location=584
+	color={
+		35 229 76
+	}
+	inland=yes
+	outgoing={
+		name="ganges_delta"
+		path={
+			4396 1815 
+		}
+		control={
+			4297.000000 951.000000 4306.000000 891.000000 4277.000000 895.000000 4254.000000 947.000000 
+		}
+	}
+	outgoing={
+		name="lhasa"
+		path={
+			2041
+		}
+		control={
+			
+		}
+	}
+	members={
+		570 573 2041 #naga_hills_area
+		584 2399 581 #upper_burma_area
+		2398 580 4393 2397 #chindwin_area
+		566 571 2040 2042 4440 #assam_area
+		4394 4396 585 4395 #central_burma_area
+		583 588 2400 4397 4406 #shan_hill_area
+		587 2401 4398 #karenni_area 
+		582 2395 2396 4404 4405 #kachin_area
+		567 2091 4473 #tripura_area
+	}
+}
 
 lhasa={
 	location=677
@@ -474,16 +474,10 @@ ganges_delta={
 		586 590 1815 2403 4399 #lower_burma_area
 		558 4469 4472 4489 #bihar_area
 		2047 4484 4487 4488 #mithila_area
+		2097 2098 4468 #baghelkhand_area
+		555 2055 2095 4490 #purvanchal_area
 
-		570 573 2041 #naga_hills_area
-		584 2399 581 #upper_burma_area
-		2398 580 4393 2397 #chindwin_area
-		566 571 2040 2042 4440 #assam_area
-		4394 4396 585 4395 #central_burma_area
-		583 588 2400 4397 4406 #shan_hill_area
-		587 2401 4398 #karenni_area 
-		582 2395 2396 4404 4405 #kachin_area
-		567 2091 4473 #tripura_area
+	
 	}
 }
 deccan={
@@ -659,11 +653,9 @@ doab={
 		2061 4498 4499 #katehar_area
 		519 520 2064 4500 #jaipur_area
 		523 2094 4494 4495 4497 #oudh_area
-		555 2055 2095 4490 #purvanchal_area
 		524 556 2063 4496 #lower_doab_area
 		525 528 740 4464 4465 #gird_area
 		559 2059 4459 4466 4467 #bundelkhand_area
-		2097 2098 4468 #baghelkhand_area
 		4491 4492 554 #baisi_rajya_area
 		509 511 2069 4493 #himalayan_hills_area
 		522 2060 2062 #upper_doab_area #smeev change
