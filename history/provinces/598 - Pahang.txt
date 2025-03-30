@@ -1,7 +1,7 @@
 #598 - Pahang
 
-owner = PAH
-controller = PAH
+owner = MLC
+controller = MLC
 culture = malayan
 religion = sunni
 capital = "Pahang"
@@ -11,7 +11,7 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 is_city = yes
-add_core = PAH
+add_core = MLC
 
 
 

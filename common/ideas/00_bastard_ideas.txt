@@ -3576,7 +3576,7 @@ SIA_ideas = {
     }
     sia_advanced_elephant_warfare = {
 		cavalry_power = 0.1
-		cavalry_fire = 0.5
+		cavalry_fire = 0.15
     }
     sia_experienced_ambassadors = {
         diplomatic_reputation = 2
@@ -3805,7 +3805,8 @@ MSA_ideas = {
 		colonists = 1
 	}
 	msa_advanced_galley_warfare = {
-		movement_speed = 0.1
+		galley_power  = 0.25
+		global_naval_engagement_modifier = 0.1
 	}
 	msa_expert_haggling = {
 		trade_efficiency = 0.15

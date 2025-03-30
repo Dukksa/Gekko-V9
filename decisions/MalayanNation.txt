@@ -3,45 +3,32 @@ country_decisions = {
 	malayan_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_malaya_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			OR = {
-				is_free_or_tributary_trigger = yes
-				ai = no
-			}
 			NOT = { exists = MSA }
-			culture_group = malay
-			NOT = { has_reform = steppe_horde }
-			is_colonial_nation = no
 			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
-			OR = {
-				ai = no
-				num_of_cities = 12
+				tag = MAJ 
+				tag = MLC 
 			}
 		}
 		provinces_to_highlight = {
-			region = malaya_region
-			NOT = { owned_by = ROOT }
+			province_id = 636
+			province_id = 620
+			province_id = 630
+			province_id = 2690
+		
+
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
-			is_nomad = no
 			is_at_war = no
-			num_of_owned_provinces_with = {
-				value = 40
-				region = malaya_region
-			}
+			
+			adm_tech = 10
+			owns_core_province = 636
+			owns_core_province = 639
+			owns_core_province = 630
+			owns_core_province = 2690
+
 		}
 		effect = {
 			change_tag = MSA

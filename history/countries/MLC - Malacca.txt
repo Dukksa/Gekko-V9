@@ -48,8 +48,8 @@ religious_school = shafii_school
 
 1402.1.1 = {
 	heir = {
-		name = "Megat Iskandar Shâh"
-		monarch_name = "Megat Iskandar Shâh"
+		name = "Megat Iskandar Shï¿½h"
+		monarch_name = "Megat Iskandar Shï¿½h"
 		dynasty = "Srivijaya"
 		birth_date = 1380.1.1
 		death_date = 1424.1.1
@@ -62,7 +62,7 @@ religious_school = shafii_school
 
 1414.1.1 = {
 	monarch = {
-		name = "Megat Iskandar Shâh"
+		name = "Megat Iskandar Shï¿½h"
 		dynasty = "Srivijaya"
 		adm = 2
 		dip = 2
@@ -72,8 +72,8 @@ religious_school = shafii_school
 
 1414.1.1 = {
 	heir = {
-		name = "Muhammad Shâh"
-		monarch_name = "Muhammad Shâh"
+		name = "Muhammad Shï¿½h"
+		monarch_name = "Muhammad Shï¿½h"
 		dynasty = "Srivijaya"
 		birth_date = 1400.1.1
 		death_Date = 1444.1.1
@@ -87,7 +87,7 @@ religious_school = shafii_school
 
 1424.1.1 = {
 	monarch = {
-		name = "Muhammad Shâh"
+		name = "Muhammad Shï¿½h"
 		dynasty = "Srivijaya"
 		adm = 1
 		dip = 0
@@ -113,17 +113,17 @@ religious_school = shafii_school
 	monarch = {
 		name = "Ibrahim"
 		dynasty = "Srivijaya"
-		adm = 3
+		adm = 4	
 		dip = 3
-		mil = 3
+		mil = 5
 		religion = hinduism
 	}
 }
 
 1444.1.1 = {
 	heir = {
-		name = "Muzaffar Shâh"
-		monarch_name = "Muzaffar Shâh"
+		name = "Muzaffar Shï¿½h"
+		monarch_name = "Muzaffar Shï¿½h"
 		dynasty = "Srivijaya"
 		birth_date = 1420.1.1
 		death_Date = 1459.1.1
@@ -136,7 +136,7 @@ religious_school = shafii_school
 
 1446.1.1 = {
 	monarch = {
-		name = "Muzaffar Shâh"
+		name = "Muzaffar Shï¿½h"
 		dynasty = "Srivijaya"
 		adm = 3
 		dip = 5
@@ -146,8 +146,8 @@ religious_school = shafii_school
 
 1446.1.1 = {
 	heir = {
-		name = "Mansûr Shâh"
-		monarch_name = "Mansûr Shâh"
+		name = "Mansï¿½r Shï¿½h"
+		monarch_name = "Mansï¿½r Shï¿½h"
 		dynasty = "Srivijaya"
 		birth_date = 1440.1.1
 		death_Date = 1477.10.2
@@ -162,7 +162,7 @@ religious_school = shafii_school
 
 1459.1.1 = {
 	monarch = {
-		name = "Mansûr Shâh"
+		name = "Mansï¿½r Shï¿½h"
 		dynasty = "Srivijaya"
 		adm = 5
 		dip = 4
@@ -172,8 +172,8 @@ religious_school = shafii_school
 
 1459.1.1 = {
 	heir = {
-		name = "Ri'âyat Shâh"
-		monarch_name = "Ri'âyat Shâh"
+		name = "Ri'ï¿½yat Shï¿½h"
+		monarch_name = "Ri'ï¿½yat Shï¿½h"
 		dynasty = "Srivijaya"
 		birth_date = 1450.1.1
 		death_date = 1488.1.1
@@ -181,7 +181,7 @@ religious_school = shafii_school
 		adm = 3
 		dip = 1
 		mil = 5
-		leader = { name = "Riâyat Shâh"		type = general	fire = 3	shock = 2	manuever = 3	siege = 0 }
+		leader = { name = "Riï¿½yat Shï¿½h"		type = general	fire = 3	shock = 2	manuever = 3	siege = 0 }
 	}
 }
 
@@ -189,19 +189,19 @@ religious_school = shafii_school
 
 1477.10.2 = {
 	monarch = {
-		name = "Ri'âyat Shâh"
+		name = "Ri'ï¿½yat Shï¿½h"
 		dynasty = "Srivijaya"
 		adm = 3
 		dip = 1
 		mil = 5
-		leader = { name = "Riâyat Shâh"		type = general	fire = 3	shock = 2	manuever = 3	siege = 0 }
+		leader = { name = "Riï¿½yat Shï¿½h"		type = general	fire = 3	shock = 2	manuever = 3	siege = 0 }
 	}
 }
 
 1477.10.2 = {
 	heir = {
-		name = "Mahmûd Shâh"
-		monarch_name = "Mahmûd Shâh"
+		name = "Mahmï¿½d Shï¿½h"
+		monarch_name = "Mahmï¿½d Shï¿½h"
 		dynasty = "Srivijaya"
 		birth_date = 1470.1.1
 		death_date = 1528.1.1
@@ -214,7 +214,7 @@ religious_school = shafii_school
 
 1488.1.1 = {
 	monarch = {
-		name = "Mahmûd Shâh"
+		name = "Mahmï¿½d Shï¿½h"
 		dynasty = "Srivijaya"
 		adm = 0
 		dip = 0
@@ -224,8 +224,8 @@ religious_school = shafii_school
 
 1488.1.1 = {
 	heir = {
-		name = "Ri'âyat Shâh"
-		monarch_name = "Ri'âyat Shâh I"
+		name = "Ri'ï¿½yat Shï¿½h"
+		monarch_name = "Ri'ï¿½yat Shï¿½h I"
 		dynasty = "Srivijaya"
 		birth_date = 1488.1.1
 		death_Date = 1564.1.1
@@ -242,7 +242,7 @@ religious_school = shafii_school
 
 1528.1.1 = {
 	monarch = {
-		name = "Ri'âyat Shâh I"
+		name = "Ri'ï¿½yat Shï¿½h I"
 		dynasty = "Srivijaya"
 		adm = 2
 		dip = 4
