@@ -467,7 +467,6 @@ slaves_raided = {
 tolerance = {
 	local_unrest = -1
 	local_tax_modifier = 0.05
-	trade_goods_size_modifier = 0.0125
 }
 
 # Multiplied with negative religious tolerance
