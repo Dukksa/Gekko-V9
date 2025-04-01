@@ -892,6 +892,27 @@ japan_region = {
 }
 
 australia_region = {
+	areas = {
+		western_australia_area
+		northern_australia_area
+		eastern_australia_area
+		southern_australia_area
+		top_end_area
+		murray_river_area
+		illawara_area
+		north_queensland_area
+		south_queensland_area
+		pilbara_area
+		tasmania_area
+	}
+	monsoon = {
+		00.10.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.03.30
+	}
 }
 
 
