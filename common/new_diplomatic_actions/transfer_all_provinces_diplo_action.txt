@@ -47,19 +47,7 @@ transfer_all_provinces = {
 	}
 
 	ai_acceptance = {
-		add_entry = {
-            name = DIPLO_OPPINION
-			export_to_variable = {
-				variable_name = ai_value
-				value = opinion
-				who = FROM
-				with = ROOT
-			}
-			multiply_variable = {
-				which = ai_value 
-				value = 0.2
-			}
-        }
+		always = yes
 	}
 
 	ai_will_do = {
@@ -116,19 +104,7 @@ request_subject_transfer_all_provinces = {
 	}
 
 	ai_acceptance = {
-		add_entry = {
-            name = DIPLO_OPPINION
-			export_to_variable = {
-				variable_name = ai_value
-				value = opinion
-				who = FROM
-				with = ROOT
-			}
-			multiply_variable = {
-				which = ai_value 
-				value = 0.2
-			}
-        }
+		always = yes
 	}
 
 	ai_will_do = {
