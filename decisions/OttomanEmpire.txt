@@ -1,0 +1,155 @@
+country_decisions = {
+	proclaim_ottoman_empire = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = {
+				has_country_flag = proclaim_ottoman_empire_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			tag = TUR
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = mashriq_region
+				region = egypt_region
+				region = anatolia_region
+				area = thrace_area
+				area = bulgaria_area
+				area = silistria_area
+				area = macedonia_area
+				area = X_central_greece_area
+				area = morea_area
+				area = northern_greece_area
+				area = eastern_mediterrenean_islands_area
+				area = aegean_archipelago_area
+				area = albania_area
+				area = rascia_area
+				area = serbia_area
+				area = bosnia_area
+				area = wallachia_area
+				area = moldavia_area
+				area = imereti_area
+				area = samtskhe_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		allow = {
+			anatolia_region = {
+				type = all
+				owned_by = ROOT
+			}
+			mashriq_region = {
+				type = all
+				owned_by = ROOT
+			}
+			egypt_region = {
+				type = all
+				owned_by = ROOT
+			}
+			thrace_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bulgaria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			silistria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			macedonia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			X_central_greece_area = {
+				type = all
+				owned_by = ROOT
+			}
+			morea_area = {
+				type = all
+				owned_by = ROOT
+			}
+			northern_greece_area = {
+				type = all
+				owned_by = ROOT
+			}
+			eastern_mediterrenean_islands_area = {
+				type = all
+				owned_by = ROOT
+			}
+			aegean_archipelago_area = {
+				type = all
+				owned_by = ROOT
+			}
+			albania_area = {
+				type = all
+				owned_by = ROOT
+			}
+			rascia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			serbia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bosnia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			wallachia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			moldavia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			imereti_area = {
+				type = all
+				owned_by = ROOT
+			}
+			samtskhe_area = {
+				type = all
+				owned_by = ROOT
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 100
+			}
+			if = {
+				limit = { NOT = { government_rank = 3} }
+				set_government_rank = 3
+			}
+			change_country_color = {
+				color = {
+					166  0  0
+				}
+			}
+			override_country_name = OTTOMAN_EMPIRE
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
+			}
+			set_country_flag = proclaim_ottoman_empire_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

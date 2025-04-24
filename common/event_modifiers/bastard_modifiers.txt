@@ -63,7 +63,7 @@ defense_of_the_low_countries = {
 }
 
 bastard_dev_cost_modifier_1 = {
-	local_development_cost_modifier = -0.0125
+	local_development_cost_modifier = -0.015
 }
 
 bastard_dev_cost_modifier_2  = {
@@ -71,16 +71,16 @@ bastard_dev_cost_modifier_2  = {
 }
 
 bastard_dev_cost_modifier_3 = {
-	local_development_cost_modifier = -0.0375
+	local_development_cost_modifier = -0.035
 }
 bastard_dev_cost_modifier_4 = {
-	local_development_cost_modifier = -0.05
+	local_development_cost_modifier = -0.045
 }
 bastard_dev_cost_modifier_5 = {
-	local_development_cost_modifier = -0.075
+	local_development_cost_modifier = -0.055
 }
 bastard_dev_cost_modifier_6 = {
-	local_development_cost_modifier = -0.1
+	local_development_cost_modifier = -0.075
 }
 provincial_investment_woods = {
 	local_development_cost_modifier = -0.025

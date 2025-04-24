@@ -52,6 +52,8 @@ NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -20.0
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.5
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_5_LOANS = -0.36
 NDefines.NDiplomacy.CHANGE_COLONIAL_TYPE_COST = 0
+NDefines.NCountry.NAVAL_FORCELIMIT_EXTRA_COST_FACTOR = 4
+NDefines.NCountry.MIN_POPULATION_FOR_TRADEGOOD_ASSIGNMENT = 1000
 NDefines.NCountry.ABANDON_IDEAGROUP_REFUND = 0.1
 NDefines.NCountry.ABDICATE_LEGITIMACY_THRESHOLD = 0
 NDefines.NCountry.ABDICATE_AGE_THRESHOLD = 30
@@ -131,7 +133,8 @@ NDefines.NEconomy.COT_DOWNGRADE_PRESTIGE_COST = 0
 NDefines.NEconomy.GOLD_MINE_DEPLETION_THRESHOLD = 10				-- Gold mines above production level or above can be depleted
 NDefines.NEconomy.GOLD_MINE_DEPLETION_CHANCE = 0.05
 NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER = 20
-NDefines.NEconomy.HEAVY_SHIP_MAINT_FACTOR = 0.07	
+NDefines.NEconomy.HEAVY_SHIP_MAINT_FACTOR = 0.07
+NDefines.NEconomy.TRADE_ADDED_VALUE_MODIFER = 0.01
 NDefines.NMilitary.MIN_MONTHLY_MANPOWER = 0.2						-- 100 men/month is minimum
 NDefines.NMilitary.MIN_MONTHLY_SAILORS = 10						-- 5 sailors/month is minimum
 NDefines.NMilitary.MERCENARY_REINFORCE_COST_MULTIPLIER = 1
@@ -200,13 +203,15 @@ NDefines.NReligion.CONVERSION_ZEAL_DURATION = 1825
 NDefines.NReligion.CHANGE_SECONDARY_PRESTIGE_HIT = 0
 NDefines.NGovernment.SELECT_HEIR_FROM_HAREM_AT_MONARCH_AGE = 20
 NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_PROGRESS_COST = 10
-NDefines.NGovernment.CENTRALIZE_STATE_YEARS = 10
-NDefines.NGovernment.CENTRALIZE_STATE_ADM_COST = 40
+NDefines.NGovernment.CENTRALIZE_STATE_ADM_COST = 200
+NDefines.NGovernment.GOVERNMENT_REFORM_COST_CENTRALIZE_STATE = 0
+NDefines.NGovernment.CENTRALIZE_STATE_YEARS = 5
 NDefines.NGovernment.EXPAND_ADMIN_COST = 400.0
 NDefines.NGovernment.LEADER_AS_MONARCH_TRADITION = 15
 
 NDefines.NGame.DAYS_BEHIND_PAUSE = 90					-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will pause
 NDefines.NGame.DAYS_BEHIND_LOWER_SPEED = 90			-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will slow down
+NDefines.NGame.HEGEMONY_LOST_DAYS = 1825
 
 -- Xorme ai ones from here
 NDefines.NAI.DIPLOMATIC_ACTION_INFLUENCE_NATION_BASE_FACTOR = 5
@@ -411,3 +416,5 @@ NDefines.NAI.DANGEROUS_OVEREXTENSION_PERCENTAGE = 1.1
 --
 NDefines.NAI.FOREIGN_MINISTER_IGNORE_DISTANCE_BASE = 7
 NDefines.NAI.FOREIGN_MINISTER_BASE_PROVINCE_COUNT = 2
+
+

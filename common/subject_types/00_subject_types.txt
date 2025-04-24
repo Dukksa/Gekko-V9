@@ -634,7 +634,7 @@ colony = {
 	overlord_enforce_peace_attacking = yes
 	can_transfer_in_peace = no
 	press_sailors = yes
-	transfer_trade_power = no
+	transfer_trade_power = yes
 	can_concentrate_development = no
 	extend_trading_range = yes
 

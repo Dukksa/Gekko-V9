@@ -4038,7 +4038,7 @@ por_arts_and_letters = {
 
 por_triangle_trade_modifier = {
 	trade_goods_size_modifier = 0.2
-	development_cost = -0.1
+	local_development_cost = -0.1
 }
 
 por_african_gold_modifier = {
@@ -5191,7 +5191,7 @@ bur_channel_trading = {
 }
 
 bur_english_diplomacy = {
-	improve_relation_modifier = 0.25
+	ae_impact = -0.5
 }
 
 bur_king_of_franks = {

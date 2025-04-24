@@ -977,32 +977,7 @@ ME_bur_3 = {
 		} 
 
 		effect = {
-			custom_tooltip = ME_BUR_GRANT_BONUS_FOR_CURIA_ACTIONS_FOR_5_TIMES
-			hidden_effect = {
-				set_country_flag = me_bur_curia_actions_rewards_flag
-				set_variable = {
-					which = BurCuriaCount
-					value = 5
-				}
-			}
-			custom_tooltip = " "
-			add_prestige_or_monarch_power = { amount = 15 }
-			custom_tooltip = " "
-			complex_dynamic_effect = {
-				first_custom_tooltip = ME_BUR_IF_TUR_EXISTS
-				first_limit = "
-					exists = TUR
-					TUR = { NOT = { religion_group = christian } }
-				"
-				first_effect = "
-					add_casus_belli = {
-						target = TUR
-						type = cb_crusade_against_ottomans
-						months = 600
-					}
-					custom_tooltip = ME_BUR_CRUSADE_TOOLTIP
-				"
-			}
+			add_prestige_or_monarch_power = { amount = 50 }
 		} 
 	}
 

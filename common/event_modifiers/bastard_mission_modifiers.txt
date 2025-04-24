@@ -351,16 +351,16 @@ gecko_cannon_foundries = {
 }
 
 gecko_mysorean_rockets = {
-	artillery_fire = 0.25
+	artillery_fire = 0.1
 }
 
 gecko_cannon_institute = {
-	mil_tech_cost_modifier = -0.1
+	mil_tech_cost_modifier = -0.05
 	idea_cost = -0.05
 }
 
 gecko_handheld_rockets = {
-	infantry_fire = 0.15
+	infantry_fire = 0.05
 }
 
 gecko_mysore_encourage_production = {

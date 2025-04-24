@@ -330,12 +330,6 @@ conquest_of_cairo = {
 			NOT = {
 				tag = EGY
 			}
-			NOT = {
-				tag = ETH
-			}
-			NOT = {
-				tag = AKS
-			}
 			bahari_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = PREV

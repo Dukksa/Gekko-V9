@@ -1743,7 +1743,7 @@ grand_shipyard = {
 		has_port = yes
 	}
 	modifier = {
-		naval_forcelimit = 4
+		naval_forcelimit = 2
 		ship_recruit_speed = -0.5
 		local_ship_repair = 0.5
 		local_ship_cost = -0.2
@@ -3967,7 +3967,7 @@ armory = {
 	on_obsolete = {
 	}
 	modifier = {
-		land_forcelimit = 3
+		land_forcelimit = 1.5
 		
 	}
 	onmap = no

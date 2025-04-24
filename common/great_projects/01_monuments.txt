@@ -7582,14 +7582,9 @@ prambanan_temple = {
 		province_modifiers = {
 		}
 
-		#what modifiers are added to the provinces in the map area when we have this project here on this tier
-		area_modifier = {
-		}
-
 		#what modifiers are added to the country when we have this project here on this tier
-		country_modifiers = {
-			development_cost = -0.02
-			global_missionary_strength =  0.005
+		area_modifier = {
+			local_development_cost = -0.075
 		}
 
 		#what effects happen when this tier is achieved
@@ -7614,11 +7609,11 @@ prambanan_temple = {
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {
+			local_development_cost = -0.15
 		}
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			development_cost = -0.05
 			global_missionary_strength = 0.01
 		}
 
@@ -7644,11 +7639,11 @@ prambanan_temple = {
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {
+			local_development_cost = -0.25
 		}
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			development_cost = -0.10
 			global_missionary_strength = 0.02
 			missionaries = 1
 		}
@@ -10683,7 +10678,7 @@ bam_citadel = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 10
-	starting_tier = 2
+	starting_tier = 1
 	type = monument
 
 	build_trigger = {

@@ -10284,7 +10284,7 @@ FRS_ideas = {
 	start = {
 		infantry_power = 0.1
 		infantry_cost = -0.1
-		land_morale = 0.15
+		land_morale = 0.1
 	}
 	bonus = {
 		dip_tech_cost_modifier = -0.1
@@ -10295,23 +10295,23 @@ FRS_ideas = {
 	free = yes
 	
 	frs_land_of_the_persians = {
-		idea_cost = -0.1
+		idea_cost = -0.05
 	}
 	frs_center_of_religion_and_philosophy = {
 		embracement_cost = -0.1
 		prestige = 0.5
 	}
 	frs_diplomatic_prudence = {
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.0725
 	}
 	frs_shirazi_wine = {
-		production_efficiency = 0.1
+		production_efficiency = 0.0725
 	}
 	frs_shirazi_school = {
-		discipline = 0.05
+		discipline = 0.025
 	}
 	frs_integrate_the_qashqai = {
-		global_manpower_modifier = 0.15
+		global_manpower_modifier = 0.1
 	}
 	frs_capital_for_an_empire = { #The Zand Ambition
 		development_cost = -0.05
@@ -12239,7 +12239,7 @@ BHA_ideas = {
 	free = yes
 
 	bha_modernized_war_elephants = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 	}
 	bha_united_india = {
 		num_accepted_cultures = 3
@@ -12257,7 +12257,7 @@ BHA_ideas = {
 		administrative_efficiency = 0.05
 	}
 	bha_rocketry = {
-		artillery_power = 0.15
+		artillery_power = 0.1
 	}
 }
 

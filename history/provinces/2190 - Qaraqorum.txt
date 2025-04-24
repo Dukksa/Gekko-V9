@@ -15,7 +15,7 @@ is_city = yes
 extra_cost = 8
 #center_of_trade = 1
 
-add_province_triggered_modifier = gc_mongol_kurultai
+#add_province_triggered_modifier = gc_mongol_kurultai
 
 
 discovered_by = chinese

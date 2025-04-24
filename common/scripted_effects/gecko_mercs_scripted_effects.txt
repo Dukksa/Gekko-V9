@@ -690,13 +690,46 @@ gecko_mercs_army_professionalism_cost = {
 					has_country_modifier = pol_cheap_ap_mercs_modifier
 				}
 			}
-			add_army_professionalism = -0.001
+
+			
+			if = { 
+				limit = { is_year = 1520 } 
+				if = { limit = { is_year = 1570 } 
+					if = { limit = { is_year = 1620 } 
+						if = { limit = { is_year = 1670 } 
+							add_army_professionalism = -0.0002 
+						}
+						else = { add_army_professionalism = -0.0004 }
+					}
+					else = { add_army_professionalism = -0.0006 }
+				}
+				else = { add_army_professionalism = -0.0008 }
+			}
+			else = { add_army_professionalism = -0.001 }
 		}
-		else = {
-			add_army_professionalism = -0.002
+
+		else = { 
+			
+			if = { 
+				limit = { is_year = 1520 } 
+				if = { limit = { is_year = 1580 } 
+					if = { limit = { is_year = 1630 } 
+						if = { limit = { is_year = 1680 } 
+							add_army_professionalism = -0.0004 
+						}
+						else = { add_army_professionalism = -0.0008 }
+					}
+					else = { add_army_professionalism = -0.0012 }
+				}
+				else = { add_army_professionalism = -0.0016 }
+			}
+			else = { add_army_professionalism = -0.002 }
 		}
 	}
 }
+
+
+
 
 #Country effect
 gecko_mercs_get_spawn_point = {

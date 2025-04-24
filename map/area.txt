@@ -1241,12 +1241,12 @@ albania_area = { #4
 }
 
 bosnia_area = { #5
-	139 140 1831 3002 4755
+	139 140 1831 3002 4755 1828
 }
 
 croatia_area = { #4
 	color = { 18 126 16 }
-	131 1826 4752 1828 
+	131 1826 4752  
 }
 
 slavonia_area = { #4
@@ -1283,11 +1283,11 @@ kartli_kakheti_area = { #3
 }
 
 armenia_area = { #5
-	419 2202 2205 6141 4302
+	419 2202 2205 6141 420
 }
 shirvan_area = { #5 #Northern Azerbaijan
 	color = { 225 231 53 }
-	421 4299 4305 6139 420
+	421 4299 4305 6139 
 }
 
 dagestan_area = { #5
@@ -1370,11 +1370,11 @@ luristan_area = { #4
 }
 
 north_kurdistan_area = { #5
-	418 2307 4295 4296 2306
+	418 2307 4295 4296 2306 4302
 }
 
 khuzestan_area = { #5
-	412 2217 4289 4290 4342
+	412  4289 4290 
 }
 
 shahrizor_area = {	#4
@@ -1397,7 +1397,7 @@ bahrain_area = { #5
 }
 
 pirate_coast_area = { #4
-	397 398 404 2333
+	397 398 404 2333 2999
 }
 
 nafud_area = { #3
@@ -1807,7 +1807,7 @@ mascarenes_area = { #3
 }
 
 indian_ocean_islands_area = { #5
-	574 1248 1101
+	574 1248 1101 1998 1999
 }
 
 papua_area = { #5 (Papuan Peninsula)
@@ -2158,15 +2158,15 @@ kerman_area = { #4
 }
 
 persian_gulf_coast = { #4
-	430 2219 2223 4332 
+	430 4332 4342 2217 4331
 }
 
 mogostan_area = { #3
-	431 2999 4327
+	431 4327 2219 2223 
 }
 
 farsistan_area = { #4
-	2218 4329 4330 4331 4171 
+	2218 4329 4330 4171 
 }
 
 teheran_area = {
@@ -2534,7 +2534,7 @@ angkor_area = { #5
 }
 
 lower_burma_area = { #5
-	586 590 1815 4399
+	586 590 1815 4399 2403
 }
 
 arakan_area = { #3
@@ -4105,8 +4105,6 @@ X_unused_provinces_area = {
 	841 844 847 849
 	851 854
 	891
-	1998 1999
-	2403
 	2638
 	2640 2649 
 	2653 2657 
