@@ -12186,12 +12186,12 @@ KLE_ideas = {
 
 DLH_ideas = {
 	start = {
-		cavalry_power = 0.15
-		global_manpower_modifier = 0.15
+		cavalry_power = 0.1
+		global_manpower_modifier = 0.1
 	}
 	
 	bonus = {
-		development_cost = -0.1
+		development_cost = -0.075
 	}
 	
 	trigger = {
@@ -12200,7 +12200,7 @@ DLH_ideas = {
 	free = yes
 	
 	dlh_expansionism = {
-		core_creation = -0.20
+		core_creation = -0.15
 	}
 	dlh_reconquest = {
 		land_morale = 0.1
@@ -12219,7 +12219,7 @@ DLH_ideas = {
 		global_unrest = -2
 	}
 	dlh_throne_of_india = {
-		discipline = 0.05
+		discipline = 0.025
 	}
 }
 
