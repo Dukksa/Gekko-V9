@@ -16,6 +16,12 @@ entrepot = {
         #local_development_cost = -0.05
         local_institution_spread = 0.1
     }
+    state_modifiers = {
+        #local_development_cost = -0.05
+        local_manpower_modifier = 0.075
+		local_sailors_modifier = 0.075
+		trade_value_modifier = 0.05
+    }
 }
 regional_port = {
     level = 3

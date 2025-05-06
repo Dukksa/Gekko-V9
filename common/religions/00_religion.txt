@@ -2288,7 +2288,7 @@ zoroastrian_group = {
 			hinduism
 		}
 
-		holy_sites = { 2212 4430 2223 441 4336 }
+		holy_sites = { 2212 4430 2223 441 410 }
 
 		blessings = {
 			blessing_yasna

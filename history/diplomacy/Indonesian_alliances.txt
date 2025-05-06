@@ -210,37 +210,37 @@ alliance = {
 
 # Remaining Mahapahit Tributaries
 
-dependency = {
-	subject_type = "tributary_state"
-	first = MAJ
-	second = BNJ
-	start_date = 1444.1.1
-	end_date = 1468.1.1
-}
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = MAJ
+#	second = BNJ
+#	start_date = 1444.1.1
+#	end_date = 1468.1.1
+#}
 
-dependency = {
-	subject_type = "tributary_state"
-	first = MAJ
-	second = BLI
-	start_date = 1444.1.1
-	end_date = 1475.1.1
-}
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = MAJ
+#	second = BLI
+#	start_date = 1444.1.1
+#	end_date = 1475.1.1
+#}
 
-dependency = {
-	subject_type = "tributary_state"
-	first = MAJ
-	second = BLM
-	start_date = 1444.1.1
-	end_date = 1475.1.1
-}
-
-dependency = {
-	subject_type = "tributary_state"
-	first = MAJ
-	second = PLB
-	start_date = 1444.1.1
-	end_date = 1475.1.1
-}
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = MAJ
+#	second = BLM
+#	start_date = 1444.1.1
+#	end_date = 1475.1.1
+#}
+#
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = MAJ
+#	second = PLB
+#	start_date = 1444.1.1
+#	end_date = 1475.1.1
+#}
 
 # Muan Phuang
 guarantee = {

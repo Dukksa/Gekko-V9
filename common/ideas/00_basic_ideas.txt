@@ -1373,6 +1373,7 @@ mercenary_ideas = {
 
 	trigger = {
 		is_subject = no
+		always = no
 	}
 
 	bonus = {

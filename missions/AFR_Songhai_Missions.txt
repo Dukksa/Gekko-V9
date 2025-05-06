@@ -1884,6 +1884,9 @@ songhai_money_maker_slot = {
 			}
 		}
 		effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_control_over_the_mint
+			}
 			1120 = {
 				if = {
 					limit = { 

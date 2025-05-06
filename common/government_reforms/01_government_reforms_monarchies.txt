@@ -1368,6 +1368,7 @@ barbary_sultanate_reform = {
 		navy_tradition_decay = -0.005
 		has_samurai = yes
 		allowed_samurai_fraction = 0.15
+		amount_of_samurai = 10
 	}
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
@@ -2157,6 +2158,8 @@ al_andalusia_government = {
 		tolerance_of_heathens_capacity = 2
 		tolerance_heathen = 1
 		has_samurai = yes
+		allowed_samurai_fraction = 0.15
+		amount_of_samurai = 15
 	}
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
@@ -3113,6 +3116,10 @@ negusa_nagast = {
 		move_capital_cost_modifier = -0.75
 		global_unrest = -1
 		stability_cost_modifier = -0.1
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
 	}
 
 	conditional = {
