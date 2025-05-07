@@ -1397,7 +1397,7 @@ bahrain_area = { #5
 }
 
 pirate_coast_area = { #4
-	397 398 404 2333 2999
+	397 398 404 2333
 }
 
 nafud_area = { #3
@@ -2162,7 +2162,7 @@ persian_gulf_coast = { #4
 }
 
 mogostan_area = { #3
-	431 4327 2219 2223 
+	431 4327 2219 2223 2999
 }
 
 farsistan_area = { #4

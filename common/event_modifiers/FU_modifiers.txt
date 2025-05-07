@@ -6,7 +6,7 @@ arl_arsacid_legacy_modifier = {
 	cavalry_flanking = 0.5
 }
 arl_sassanid_legacy_modifier = {
-	cavalry_shock = 0.25	
+	cavalry_shock = 0.1	
 	cavalry_cost = -0.1
 }
 arl_slave_cavalry_modifier = {

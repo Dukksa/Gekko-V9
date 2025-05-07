@@ -19,26 +19,6 @@ fu_ardabil_missions_1 = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					has_regency = no 
-				}
-				define_ruler_to_general = { 
-					fire = 2
-					shock = 6
-					manuever = 3
-					siege = 1
-				}
-			}
-			else = {
-				define_general = {
-					fire = 1
-					shock = 4
-					manuever = 2
-					siege = 1
-					trait = fu_ambusher_personality
-				}
-			}
 			add_army_tradition = 20
 			imereti_area = {
 				limit = {
@@ -88,43 +68,12 @@ fu_ardabil_missions_1 = {
 			is_at_war = yes
 		}
 		effect = {
-			if = {
-				limit = { has_unit_type = muslim_cavalry_archers }
-				add_country_modifier = {
-					name = arl_arsacid_legacy_modifier
-					duration = -1 
-					desc = qar_until_we_form_another_nation_desc
-				}
+			add_country_modifier = {
+				name = arl_sassanid_legacy_modifier
+				duration = -1 
+				desc = qar_until_we_form_another_nation_desc
 			}
-			if = {
-				limit = { has_unit_type = persian_cavalry_charge }
-				add_country_modifier = {
-					name = arl_sassanid_legacy_modifier
-					duration = -1 
-					desc = qar_until_we_form_another_nation_desc
-				}
-			}
-			if = {
-				limit = { has_unit_type = mamluk_cavalry_charge }
-				add_country_modifier = {
-					name = arl_slave_cavalry_modifier
-					duration = -1 
-					desc = qar_until_we_form_another_nation_desc
-				}
-			}
-			if = {
-				limit = { 
-					NOT = { has_unit_type = muslim_cavalry_archers }
-					NOT = { has_unit_type = persian_cavalry_charge }
-					NOT = { has_unit_type = mamluk_cavalry_charge }
-				}
-				add_country_modifier = {
-					name = arl_advanced_cavalry_tactics_modifier
-					duration = -1 
-					desc = qar_until_we_form_another_nation_desc
-				}
-			}
-			custom_tooltip = arl_based_cavalry_tt
+			
 		}
 	}
 	

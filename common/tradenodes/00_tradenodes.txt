@@ -793,52 +793,7 @@ doab={
 
 
 
-lahore={
-	location=446
-	color={
-		224 74 54 
-	}
-	inland=yes
-	outgoing={
-		name="samarkand"
-		path={
-		}
-		control={
-			3780.000 1265.000
-		}
-	}
-	outgoing={
-		name="persia"
-		path={
-		}
-		control={
-			3732.000 1249.000 3712.000 1253.000 3639.000 1237.000 3612.000 1243.000 3583.000 1250.000 3561.000 1263.000
-		}
-	}
-	outgoing={
-		name="basra"
-		path={
-			435 431 395
-		}
-		
-	}
-	
-	members={
-		578 2226 452 448 451
-		450 2227 2228 
-		447 449 2225 
-		576 577 2068 
-		432 2220 2234 4345
-		435 2224 2229 2230 #sistan_area
-		436 4336 #birjand_area
-		446 4324  #herat_area
-		2233 434 575 2231 2232 #baluchistan
-		431 4327 2223 2219 #mogostan
-		2221 2235 2236 4326 2214#mashhad_area
 
-		6143 4328
-	}
-}
 
 
 gulf_of_aden={
@@ -953,11 +908,17 @@ basra={
 		}
 		
 	}
+	outgoing={
+		name="lahore"
+		path={
+			4347 2220 
+		}
+		
+	}
 
 	members={
 		1335 394 395 396 2340 2347 393 2338 4272 392 2337 4273 4274 2335 2336 2339 4275 2334 4276 1779
 		397 398 404 403 4285 4287 399 400 4286    1332 1334 4347 2333
-		2999
 
 		2342 401 2341 #dhofar 
 		402 1099 4284 #mahra
@@ -971,7 +932,47 @@ basra={
 	}	
 }
 
+lahore={
+	location=446
+	color={
+		224 74 54 
+	}
+	inland=yes
+	outgoing={
+		name="samarkand"
+		path={
+		}
+		control={
+			3780.000 1265.000
+		}
+	}
+	outgoing={
+		name="persia"
+		path={
+		}
+		control={
+			3732.000 1249.000 3712.000 1253.000 3639.000 1237.000 3612.000 1243.000 3583.000 1250.000 3561.000 1263.000
+		}
+	}
+	
+	
+	
+	members={
+		578 2226 452 448 451
+		450 2227 2228 
+		447 449 2225 
+		576 577 2068 
+		432 2220 2234 4345
+		435 2224 2229 2230 #sistan_area
+		436 4336 #birjand_area
+		446 4324  #herat_area
+		2233 434 575 2231 2232 #baluchistan
+		431 4327 2223 2219 2999 #mogostan
+		2221 2235 2236 4326 2214#mashhad_area
 
+		6143 4328
+	}
+}
 persia={
 	location=416
 	color={
@@ -1663,7 +1664,7 @@ tunis={
 		5826 5825
 		334 335 1751 4563 4561 #northern_morocco_area
 		336 2465 4562 #algier_area
-		366 4565 367 368 #macaronesia_area
+	
 		347 1110 2470 #southern_morocco_area
 		342 345 2469 4564 #western_morocco_area
 		343 344 2467 2468 #marrekesh_area
@@ -2046,6 +2047,7 @@ sevilla={
 		207 208 216 4553 #leon_area
 		206 4554 4555 4558 #galicia_area
 		1746 1745 4552 #north_castille_area
+		366 4565 367 368 #macaronesia_area
 	}
 }
 bordeaux={
