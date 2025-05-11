@@ -1,3 +1,4 @@
+#the one crimea start with
 X_CRI_great_tatar_state_reform = {
 	icon = "horde_riding"
 	
@@ -12,12 +13,7 @@ X_CRI_great_tatar_state_reform = {
 	maintain_dynasty = yes
 	allow_force_tributary = no
 	lock_level_when_selected = yes
-	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
-		has_meritocracy = yes
-		factions = {
-		}
-	}
+
 	
 	modifiers = {
 		meritocracy = 0.25
@@ -59,12 +55,7 @@ X_CRI_great_tatar_state_reform_2 = {
 	maintain_dynasty = yes
 	allow_force_tributary = no
 	lock_level_when_selected = yes
-	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
-		has_meritocracy = yes
-		factions = {
-		}
-	}
+
 	
 	modifiers = {
 		meritocracy = 0.25
@@ -118,7 +109,6 @@ great_mongol_state_reform_EOC_version = {
 	conditional = {
 		allow = { has_dlc = "Mandate of Heaven" }
 		allow_banners = yes
-		has_meritocracy = yes
 		factions = {
 		}
 	}
