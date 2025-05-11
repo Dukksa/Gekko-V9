@@ -1,8 +1,7 @@
 #Kendal
 
-owner = MAJ
-controller = MAJ
-add_core = MAJ
+owner = DMK
+controller = DMK
 culture = javanese
 religion = hinduism
 capital = "Kendal"

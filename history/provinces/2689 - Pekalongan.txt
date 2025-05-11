@@ -1,7 +1,7 @@
 
-owner = MAJ
-controller = MAJ
-add_core = MAJ
+owner = DMk
+controller = DMK
+add_core = DMK
 culture = javanese
 religion = hinduism
 capital = "Pekalongan"

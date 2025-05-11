@@ -1,8 +1,8 @@
 #626 - Karta
 
-owner = MAJ
-controller = MAJ
-add_core = MAJ
+owner = DMK
+controller = DMK
+add_core = DMK
 culture = javanese
 religion = hinduism
 capital = "Karta"
