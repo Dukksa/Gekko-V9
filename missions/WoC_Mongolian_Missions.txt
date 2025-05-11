@@ -281,13 +281,14 @@ mongol_missions_3 = {
 	
 	mongols_annex_tibet = {
 		icon = mission_buddhist_monk_praying
-		required_missions = { mongols_unite_the_mongols }
+		required_missions = {  }
 		provinces_to_highlight = {
 			region = tibet_region
 			NOT = { owned_by = ROOT }
 		}
 		position = 3
 		trigger = {
+			mission_completed = mongols_unite_the_mongols
 			num_of_owned_provinces_with = {
 				region = tibet_region
 				value = 10
