@@ -295,24 +295,9 @@ country_decisions = {
 				estate = estate_church
 				share = 10
 				}
-			add_country_modifier = {
-				name = "persia_united"
-				duration = 5475
-			}
 			if = {
 				limit = { has_estate_privilege = estate_burghers_indebted_to_burghers }
 				remove_estate_privilege = estate_burghers_indebted_to_burghers
-			}
-			add_war_exhaustion = -20
-			if = {
-				limit = { corruption = 5 }
-				add_corruption = -10
-			}
-			add_manpower = 30
-			add_treasury = 1000
-			if = {
-				limit = { stability = -3 }
-				add_stability = 3
 			}
 		}
 		ai_will_do = {
@@ -422,25 +407,11 @@ country_decisions = {
 				estate = estate_church
 				share = 10
 				}
-			add_country_modifier = {
-				name = "persia_united"
-				duration = 5475
-			}
 			if = {
 				limit = { has_estate_privilege = estate_burghers_indebted_to_burghers }
 				remove_estate_privilege = estate_burghers_indebted_to_burghers
 			}
-			add_war_exhaustion = -20
-			if = {
-				limit = { corruption = 5 }
-				add_corruption = -10
-			}
-			add_manpower = 20
-			add_treasury = 1000
-			if = {
-				limit = { stability = -3 }
-				add_stability = 3
-			}
+	
 		}
 		ai_will_do = {
 			factor = 1
