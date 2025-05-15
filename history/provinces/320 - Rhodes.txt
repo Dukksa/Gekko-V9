@@ -20,7 +20,6 @@ discovered_by = ottoman
 center_of_trade = 1
 coastal_defence = yes
 ramparts = yes
-fort_17th = yes
 1522.12.21 = {	owner = TUR
 	controller = TUR
 	add_core = TUR
