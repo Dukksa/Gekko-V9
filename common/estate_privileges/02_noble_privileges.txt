@@ -1471,7 +1471,7 @@ estate_nobles_better_integration = {
 		reduced_liberty_desire = -15
 	}
 	benefits = {
-		diplomatic_annexation_cost = -0.05
+		diplomatic_annexation_cost = -0.15
 	}
 	cooldown_years = 10
 	conditional_modifier = {
