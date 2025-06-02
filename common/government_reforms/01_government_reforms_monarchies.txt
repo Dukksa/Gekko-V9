@@ -5034,7 +5034,7 @@ centralize_reform = {
 				tooltip = less_than_15_provinces_on_same_continent
 				NOT = {
 					num_of_owned_provinces_with = {
-						value = 15
+						value = 25
 					}
 				}
 			}
@@ -5045,7 +5045,7 @@ centralize_reform = {
 				tooltip = less_than_25_provinces_on_same_continent
 				NOT = {
 					num_of_owned_provinces_with = {
-						value = 20
+						value = 50
 					}
 				}
 			}
@@ -5056,7 +5056,7 @@ centralize_reform = {
 				tooltip = less_than_35_provinces_on_same_continent
 				NOT = {
 					num_of_owned_provinces_with = {
-						value = 35
+						value = 75
 					}
 				}
 			}
@@ -5067,7 +5067,7 @@ centralize_reform = {
 				tooltip = less_than_50_provinces_on_same_continent
 				NOT = {
 					num_of_owned_provinces_with = {
-						value = 50
+						value = 100
 					}
 				}
 			}
@@ -5080,7 +5080,7 @@ centralize_reform = {
 				tooltip = less_than_15_provinces_on_same_continent
 				NOT = {
 					num_of_owned_provinces_with = {
-						value = 15
+						value = 25
 					}
 				}
 			}
@@ -5091,7 +5091,7 @@ centralize_reform = {
 				tooltip = less_than_25_provinces_on_same_continent
 				NOT = {
 					num_of_owned_provinces_with = {
-						value = 25
+						value = 50
 					}
 				}
 			}
@@ -5102,7 +5102,7 @@ centralize_reform = {
 				tooltip = less_than_35_provinces_on_same_continent
 				NOT = {
 					num_of_owned_provinces_with = {
-						value = 35
+						value = 75
 					}
 				}
 			}
@@ -5113,7 +5113,7 @@ centralize_reform = {
 				tooltip = less_than_50_provinces_on_same_continent
 				NOT = {
 					num_of_owned_provinces_with = {
-						value = 50
+						value = 100
 					}
 				}
 			}

@@ -6257,8 +6257,7 @@ on_centralized_state = {
 			}
 		}
 		owner = {
-			add_adm_power = 50
-			change_government_reform_progress = 50
+			add_adm_power = 200
 		}
 	}
 	else_if = {
@@ -6268,8 +6267,7 @@ on_centralized_state = {
 			}
 		}
 		owner = {
-			add_adm_power = 25
-			change_government_reform_progress = 25
+			add_adm_power = 100
 		}
 	}
 	if = {
