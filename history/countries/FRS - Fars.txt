@@ -28,7 +28,7 @@ add_sailors = 5000
 	religious_school = hanafi_school
 	add_piety = -0.5
 	monarch = {
-		name = "Abdallah bin Ibrahim"
+		name = "Dukksa da"
 		dynasty = "Timurid"
 		birth_date = 1429.1.1
 		death_date = 1451.6.1 #Executed
@@ -37,7 +37,7 @@ add_sailors = 5000
 		religion = shiite
 		adm = 4
 		dip = 3
-		mil = 3
+		mil = 5
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = inspiring_leader_personality
