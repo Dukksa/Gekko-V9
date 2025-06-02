@@ -19534,7 +19534,7 @@ schonbrunn_palace = {
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 350 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -19544,7 +19544,7 @@ schonbrunn_palace = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 750 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -19556,7 +19556,7 @@ schonbrunn_palace = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -19611,7 +19611,7 @@ tzintzuntzan = {
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 350 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -19622,7 +19622,7 @@ tzintzuntzan = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 750 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -19634,7 +19634,7 @@ tzintzuntzan = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -19662,6 +19662,9 @@ city_of_sarai = {
 				has_reform = steppe_horde
 				has_reform = holy_horde_reform
 				has_reform = cossacks_reform
+				has_reform = X_CRI_great_tatar_state_reform
+				has_reform = X_CRI_great_tatar_state_reform_2
+				has_reform = great_mongol_state_reform_EOC_version
 			}
 		}
 	}
@@ -19674,6 +19677,9 @@ city_of_sarai = {
 				has_reform = steppe_horde
 				has_reform = holy_horde_reform
 				has_reform = cossacks_reform
+				has_reform = X_CRI_great_tatar_state_reform
+				has_reform = X_CRI_great_tatar_state_reform_2
+				has_reform = great_mongol_state_reform_EOC_version
 			}
 		}
 	}
@@ -19684,6 +19690,9 @@ city_of_sarai = {
 				has_reform = steppe_horde
 				has_reform = holy_horde_reform
 				has_reform = cossacks_reform
+				has_reform = X_CRI_great_tatar_state_reform
+				has_reform = X_CRI_great_tatar_state_reform_2
+				has_reform = great_mongol_state_reform_EOC_version
 			}
 		}
 	}
@@ -19698,7 +19707,7 @@ city_of_sarai = {
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 350 }
 		province_modifiers = {}
 		area_modifier = {}
 		region_modifier = {
@@ -19712,7 +19721,7 @@ city_of_sarai = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 750 }
 		province_modifiers = {}
 		area_modifier = {}
 		region_modifier = {
@@ -19727,7 +19736,7 @@ city_of_sarai = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {}
 		area_modifier = {}
 		region_modifier = {
@@ -19766,7 +19775,7 @@ afaq_khoja_mausoleum = {
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 350 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -19778,7 +19787,7 @@ afaq_khoja_mausoleum = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 750 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -19790,7 +19799,7 @@ afaq_khoja_mausoleum = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {}
 		area_modifier = {}
 		country_modifiers = {
@@ -19826,7 +19835,7 @@ citadel_of_aleppo = {
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 350 }
 		province_modifiers = {}
 		area_modifier = {
 			local_defensiveness = 0.25
@@ -19838,7 +19847,7 @@ citadel_of_aleppo = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 750 }
 		province_modifiers = {}
 		area_modifier = {
 			local_defensiveness = 0.33
@@ -19850,7 +19859,7 @@ citadel_of_aleppo = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {}
 		area_modifier = {
 			local_defensiveness = 0.5
