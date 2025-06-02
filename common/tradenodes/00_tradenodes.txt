@@ -696,19 +696,65 @@ comorin_cape={
 		543 549 2084 2080 4425 #andhra_area
 	}
 }
+doab={
+	location=524
+	color={
+		236 162 19 
+	}
+	inland=yes
+	#outgoing={
+	#	name="deccan"
+	#	path={
+	#		525 740 2057 
+	#	}
+	#	control={
+	#		4014.000000 1082.000000 4030.000000 1062.000000 4018.000000 1024.000000 3998.000000 1002.000000 3987.000000 966.000000 
+	#	}
+	#}
+
+	outgoing={
+		name="gujarat"
+		path={
+			4500 2087 4506
+		}
+		
+	}
+
+	outgoing={
+		name="lahore"
+		path={
+			522 2062 4411
+		}
+		control={
+			4021.000000 1115.000000 
+		}
+	}
+	members={
+		2061 4498 4499 #katehar_area
+		519 520 2064 4500 #jaipur_area
+		523 2094 4494 4495 4497 #oudh_area
+		524 556 2063 4496 #lower_doab_area
+		525 528 740 4464 4465 #gird_area
+		559 2059 4459 4466 4467 #bundelkhand_area
+		4491 4492 554 #baisi_rajya_area
+		509 511 2069 4493 #himalayan_hills_area
+		522 2060 2062 #upper_doab_area #smeev change
+		507 2075 2076 4510 4513 #lahore_area
+		506 2079 2086 4508 4509 #multan_area
+		2077 2078 4511 #sind_sagar_area
+		510 2065 4411 4463 #sirhind_area
+		512 4502 4507 2066 #jangladesh_area
+		508 2073 2074 4449 4521 #kashmir_area
+	}
+}
+
+
 gujarat={
 	location=504
 	color={
 		135 104 85 
 	}
 	
-	outgoing={
-		name="doab"
-		path={
-			4506 2087 4500
-		}
-		
-	}
 	outgoing={
 		name="gulf_of_aden"
 		path={
@@ -746,48 +792,7 @@ gujarat={
 	}
 }
 
-doab={
-	location=524
-	color={
-		236 162 19 
-	}
-	inland=yes
-	#outgoing={
-	#	name="deccan"
-	#	path={
-	#		525 740 2057 
-	#	}
-	#	control={
-	#		4014.000000 1082.000000 4030.000000 1062.000000 4018.000000 1024.000000 3998.000000 1002.000000 3987.000000 966.000000 
-	#	}
-	#}
-	outgoing={
-		name="lahore"
-		path={
-			522 2062 4411
-		}
-		control={
-			4021.000000 1115.000000 
-		}
-	}
-	members={
-		2061 4498 4499 #katehar_area
-		519 520 2064 4500 #jaipur_area
-		523 2094 4494 4495 4497 #oudh_area
-		524 556 2063 4496 #lower_doab_area
-		525 528 740 4464 4465 #gird_area
-		559 2059 4459 4466 4467 #bundelkhand_area
-		4491 4492 554 #baisi_rajya_area
-		509 511 2069 4493 #himalayan_hills_area
-		522 2060 2062 #upper_doab_area #smeev change
-		507 2075 2076 4510 4513 #lahore_area
-		506 2079 2086 4508 4509 #multan_area
-		2077 2078 4511 #sind_sagar_area
-		510 2065 4411 4463 #sirhind_area
-		512 4502 4507 2066 #jangladesh_area
-		508 2073 2074 4449 4521 #kashmir_area
-	}
-}
+
 
 
 
