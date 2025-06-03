@@ -19674,6 +19674,7 @@ city_of_sarai = {
 				has_reform = steppe_horde
 				has_reform = holy_horde_reform
 				has_reform = cossacks_reform
+				tag = GLH
 			}
 		}
 	}
@@ -19684,6 +19685,8 @@ city_of_sarai = {
 				has_reform = steppe_horde
 				has_reform = holy_horde_reform
 				has_reform = cossacks_reform
+				has_reform = X_CRI_great_tatar_state_reform_2 
+				has_reform = X_CRI_great_tatar_state_reform
 			}
 		}
 	}
@@ -19698,7 +19701,7 @@ city_of_sarai = {
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 750 }
 		province_modifiers = {}
 		area_modifier = {}
 		region_modifier = {
@@ -19712,7 +19715,7 @@ city_of_sarai = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {}
 		area_modifier = {}
 		region_modifier = {
@@ -19727,7 +19730,7 @@ city_of_sarai = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {}
 		area_modifier = {}
 		region_modifier = {

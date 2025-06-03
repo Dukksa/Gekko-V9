@@ -29,6 +29,7 @@ h_reform_dominion = {
 		embracement_cost = -0.1
 		state_maintenance_modifier = -0.25
 		max_absolutism = 40
+		trade_range_modifier = -2
 	}
 
 	custom_attributes = {
