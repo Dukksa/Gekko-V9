@@ -3943,7 +3943,7 @@ state_house = {
 	}
 }
 armory = {
-	cost = 500
+	cost = 250
 	time = 60
 
 	build_trigger = {
