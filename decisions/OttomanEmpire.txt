@@ -132,11 +132,6 @@ country_decisions = {
 				limit = { NOT = { government_rank = 3} }
 				set_government_rank = 3
 			}
-			change_country_color = {
-				color = {
-					166  0  0
-				}
-			}
 			override_country_name = OTTOMAN_EMPIRE
 			if = {
 				limit = {
