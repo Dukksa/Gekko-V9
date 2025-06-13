@@ -1,4 +1,42 @@
+get_monthly_military_reform = {
+	if = {
+		limit = {
+			has_global_modifier_value = { which = monthly_military_reform_power_gain value = 0.01 }
+		}
+		export_to_variable = { which = monthly_military_reform_power_gain_var value = modifier:monthly_military_reform_power_gain }
+		export_to_variable = { which = monthly_military_reform_multiplier_var value = modifier:military_reform_power_gain_modifier }
+		multiply_variable = { which = monthly_military_reform_power_gain_var which = monthly_military_reform_multiplier_var }
+		change_variable = { which = military_reform_progress_var which = monthly_military_reform_power_gain_var }
+		if = {
+			limit = { check_variable = { which = military_reform_progress_var value = 100 } }
+			change_variable = { which = military_reforms_tokens_var value = 1 }
+			change_variable = { which = military_reform_progress_var value = -100 }
+		}
+	}
+}
 
+increase_military_investment = {
+	if = {
+		limit = { NOT = {has_country_flag = military_investment_$type$_1_flag} }
+		add_country_modifier = { name = military_investment_$type$_1_modifier duration = -1 }
+		set_country_flag = military_investment_$type$_1_flag
+	}
+	else = {
+		trigger_switch = {
+			on_trigger = has_country_flag
+			military_investment_$type$_9_flag = { add_country_modifier = { name = military_investment_$type$_10_modifier duration = -1 } remove_country_modifier = military_investment_$type$_9_modifier set_country_flag = military_investment_$type$_10_flag }
+			military_investment_$type$_8_flag = { add_country_modifier = { name = military_investment_$type$_9_modifier duration = -1 } remove_country_modifier = military_investment_$type$_8_modifier set_country_flag = military_investment_$type$_9_flag }
+			military_investment_$type$_7_flag = { add_country_modifier = { name = military_investment_$type$_8_modifier duration = -1 } remove_country_modifier = military_investment_$type$_7_modifier set_country_flag = military_investment_$type$_8_flag }
+			military_investment_$type$_6_flag = { add_country_modifier = { name = military_investment_$type$_7_modifier duration = -1 } remove_country_modifier = military_investment_$type$_6_modifier set_country_flag = military_investment_$type$_7_flag }
+			military_investment_$type$_5_flag = { add_country_modifier = { name = military_investment_$type$_6_modifier duration = -1 } remove_country_modifier = military_investment_$type$_5_modifier set_country_flag = military_investment_$type$_6_flag }
+			military_investment_$type$_4_flag = { add_country_modifier = { name = military_investment_$type$_5_modifier duration = -1 } remove_country_modifier = military_investment_$type$_4_modifier set_country_flag = military_investment_$type$_5_flag }
+			military_investment_$type$_3_flag = { add_country_modifier = { name = military_investment_$type$_4_modifier duration = -1 } remove_country_modifier = military_investment_$type$_3_modifier set_country_flag = military_investment_$type$_4_flag }
+			military_investment_$type$_2_flag = { add_country_modifier = { name = military_investment_$type$_3_modifier duration = -1 } remove_country_modifier = military_investment_$type$_2_modifier set_country_flag = military_investment_$type$_3_flag }
+			military_investment_$type$_1_flag = { add_country_modifier = { name = military_investment_$type$_2_modifier duration = -1 } remove_country_modifier = military_investment_$type$_1_modifier set_country_flag = military_investment_$type$_2_flag }
+		}
+	}
+	change_variable = { which = military_reforms_tokens_var value = -1 }
+}
 
 get_treasury_fraction = {
 	FROM = {

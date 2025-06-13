@@ -99,4 +99,111 @@ spriteTypes = {
 		name = "GFX_sea_development_logo"
 		texturefile = "gfx/interface/sea_decision_logos/sea_development_logo.dds"
 	}
+
+	########################
+	# Army Professionalism #
+	########################
+	
+	spriteType = {
+		name = "GFX_land_doctrine_button"
+		texturefile = "gfx//interface//land_doctrine_button.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_professional_army_doctrine_window"
+		texturefile = "gfx//interface//PA_bg_screen_wip.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_exit_button"
+		texturefile = "gfx//interface//PA_exit_button.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_army_doctrine_defensive"
+		texturefile = "gfx//interface//PA_army_doctrine_defensive.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_army_doctrine_drilled_army"
+		texturefile = "gfx//interface//PA_army_doctrine_drilled_army.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_army_doctrine_generals"
+		texturefile = "gfx//interface//PA_army_doctrine_generals.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_army_doctrine_mass_army"
+		texturefile = "gfx//interface//PA_army_doctrine_mass_army.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_army_doctrine_mercenary_army"
+		texturefile = "gfx//interface//PA_army_doctrine_mercenary_army.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_army_doctrine_marine"
+		texturefile = "gfx//interface//PA_army_doctrine_marine.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_army_doctrine_levels"
+		texturefile = "gfx//interface//PA_army_doctrine_levels_wip.dds"
+		noOfFrames = 6
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_professional_army_temp_boost_discipline"
+		texturefile = "gfx//interface//professional_army_temp_boost_discipline.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_professional_army_temp_boost_fort_defense"
+		texturefile = "gfx//interface//professional_army_temp_boost_fort_defense.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_professional_army_temp_boost_fort_manpower_recovery"
+		texturefile = "gfx//interface//professional_army_temp_boost_fort_manpower_recovery.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_professional_army_temp_boost_fort_morale"
+		texturefile = "gfx//interface//professional_army_temp_boost_fort_morale.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_professional_army_temp_boost_militairy_leaders"
+		texturefile = "gfx//interface//professional_army_temp_boost_militairy_leaders.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_unit_professionalization_window"
+		texturefile = "gfx//interface//PA_unit_professionalization_window.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_professional_unit_professionalization_levels"
+		texturefile = "gfx//interface//professional_unit_professionalization_levels.dds"
+		noOfFrames = 11
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_infantry_icon"
+		texturefile = "gfx//interface//PA_infantry_icon.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_cavalry_icon"
+		texturefile = "gfx//interface//PA_cavalry_icon.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_PA_artillery_icon"
+		texturefile = "gfx//interface//PA_artillery_icon.dds"
+		transparencecheck = yes
+	}
 }

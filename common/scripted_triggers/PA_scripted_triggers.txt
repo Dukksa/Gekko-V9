@@ -1,0 +1,30 @@
+# check for having any army doctrine
+PA_has_active_army_doctrine_trigger = {
+	OR = {
+		has_country_modifier = military_investment_mages_1_modifier
+		has_country_modifier = military_investment_mages_2_modifier
+		has_country_modifier = military_investment_mages_3_modifier
+		has_country_modifier = military_investment_mages_4_modifier
+		has_country_modifier = military_investment_mages_5_modifier
+		has_country_modifier = military_investment_artificer_1_modifier
+		has_country_modifier = military_investment_artificer_2_modifier
+		has_country_modifier = military_investment_artificer_3_modifier
+		has_country_modifier = military_investment_artificer_4_modifier
+		has_country_modifier = military_investment_artificer_5_modifier
+		has_country_modifier = military_investment_adventurer_1_modifier
+		has_country_modifier = military_investment_adventurer_2_modifier
+		has_country_modifier = military_investment_adventurer_3_modifier
+		has_country_modifier = military_investment_adventurer_4_modifier
+		has_country_modifier = military_investment_adventurer_5_modifier
+		has_country_modifier = military_investment_national_elite_1_modifier
+		has_country_modifier = military_investment_national_elite_2_modifier
+		has_country_modifier = military_investment_national_elite_3_modifier
+		has_country_modifier = military_investment_national_elite_4_modifier
+		has_country_modifier = military_investment_national_elite_5_modifier
+		has_country_modifier = military_investment_marine_1_modifier
+		has_country_modifier = military_investment_marine_2_modifier
+		has_country_modifier = military_investment_marine_3_modifier
+		has_country_modifier = military_investment_marine_4_modifier
+		has_country_modifier = military_investment_marine_5_modifier
+	}
+}

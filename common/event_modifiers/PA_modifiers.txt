@@ -1,0 +1,301 @@
+##################################################################################################
+# Professional Armies Modifiers
+##################################################################################################
+
+### mage doctrine ###
+military_investment_mages_10_modifier = {}
+military_investment_mages_9_modifier = {}
+military_investment_mages_8_modifier = {}
+military_investment_mages_7_modifier = {}
+military_investment_mages_6_modifier = {}
+military_investment_mages_5_modifier = {
+	discipline = 0.10
+	is_cawa_modifier = yes
+}
+military_investment_mages_4_modifier = {
+	discipline = 0.08
+	is_cawa_modifier = yes
+}
+military_investment_mages_3_modifier = {
+	discipline = 0.06
+	is_cawa_modifier = yes
+}
+military_investment_mages_2_modifier = {
+	discipline = 0.04
+	is_cawa_modifier = yes
+}
+military_investment_mages_1_modifier = {
+	discipline = 0.02
+	is_cawa_modifier = yes
+}
+
+### artifice doctrine ###
+military_investment_artificer_10_modifier = {}
+military_investment_artificer_9_modifier = {}
+military_investment_artificer_8_modifier = {}
+military_investment_artificer_7_modifier = {}
+military_investment_artificer_6_modifier = {}
+military_investment_artificer_5_modifier = {
+	discipline = 0.10
+	is_carolean_modifier = yes
+}
+military_investment_artificer_4_modifier = {
+	discipline = 0.08
+	is_carolean_modifier = yes
+}
+military_investment_artificer_3_modifier = {
+	discipline = 0.06
+	is_carolean_modifier = yes
+}
+military_investment_artificer_2_modifier = {
+	discipline = 0.04
+	is_carolean_modifier = yes
+}
+military_investment_artificer_1_modifier = {
+	discipline = 0.02
+	is_carolean_modifier = yes
+}
+
+### adventurer doctrine ###
+military_investment_adventurer_10_modifier = {}
+military_investment_adventurer_9_modifier = {}
+military_investment_adventurer_8_modifier = {}
+military_investment_adventurer_7_modifier = {}
+military_investment_adventurer_6_modifier = {}
+military_investment_adventurer_5_modifier = {
+	discipline = 0.10
+	is_mercenary_modifier = yes
+}
+military_investment_adventurer_4_modifier = {
+	discipline = 0.08
+	is_mercenary_modifier = yes
+}
+military_investment_adventurer_3_modifier = {
+	discipline = 0.06
+	is_mercenary_modifier = yes
+}
+military_investment_adventurer_2_modifier = {
+	discipline = 0.04
+	is_mercenary_modifier = yes
+}
+military_investment_adventurer_1_modifier = {
+	discipline = 0.02
+	is_mercenary_modifier = yes
+}
+
+### national doctrine ###
+military_investment_national_elite_10_modifier = {}
+military_investment_national_elite_9_modifier = {}
+military_investment_national_elite_8_modifier = {}
+military_investment_national_elite_7_modifier = {}
+military_investment_national_elite_6_modifier = {}
+military_investment_national_elite_5_modifier = {
+	discipline = 0.10
+	is_mamluks_modifier = yes
+}
+military_investment_national_elite_4_modifier = {
+	discipline = 0.08
+	is_mamluks_modifier = yes
+}
+military_investment_national_elite_3_modifier = {
+	discipline = 0.06
+	is_mamluks_modifier = yes
+}
+military_investment_national_elite_2_modifier = {
+	discipline = 0.04
+	is_mamluks_modifier = yes
+}
+military_investment_national_elite_1_modifier = {
+	discipline = 0.02
+	is_mamluks_modifier = yes
+}
+
+### marine doctrine ###
+military_investment_marine_10_modifier = {}
+military_investment_marine_9_modifier = {}
+military_investment_marine_8_modifier = {}
+military_investment_marine_7_modifier = {}
+military_investment_marine_6_modifier = {}
+military_investment_marine_5_modifier = {
+	discipline = 0.10
+	is_marine_modifier = yes
+}
+military_investment_marine_4_modifier = {
+	discipline = 0.08
+	is_marine_modifier = yes
+}
+military_investment_marine_3_modifier = {
+	discipline = 0.06
+	is_marine_modifier = yes
+}
+military_investment_marine_2_modifier = {
+	discipline = 0.04
+	is_marine_modifier = yes
+}
+military_investment_marine_1_modifier = {
+	discipline = 0.02
+	is_marine_modifier = yes
+}
+
+### Infantry Professionalization ###
+
+military_investment_infantry_1_modifier = {
+	infantry_power = 0.02
+}
+
+military_investment_infantry_2_modifier = {
+	infantry_power = 0.04
+}
+
+military_investment_infantry_3_modifier = {
+	infantry_power = 0.06
+}
+
+military_investment_infantry_4_modifier = {
+	infantry_power = 0.08
+}
+
+military_investment_infantry_5_modifier = {
+	infantry_power = 0.10
+}
+
+military_investment_infantry_6_modifier = {
+	infantry_power = 0.12
+}
+
+military_investment_infantry_7_modifier = {
+	infantry_power = 0.14
+}
+
+military_investment_infantry_8_modifier = {
+	infantry_power = 0.16
+}
+
+military_investment_infantry_9_modifier = {
+	infantry_power = 0.18
+}
+
+military_investment_infantry_10_modifier = {
+	infantry_power = 0.20
+}
+
+### Cavalry Professionalization ###
+
+military_investment_cavalry_1_modifier = {
+	cavalry_power = 0.02
+}
+
+military_investment_cavalry_2_modifier = {
+	cavalry_power = 0.04
+}
+
+military_investment_cavalry_3_modifier = {
+	cavalry_power = 0.06
+}
+
+military_investment_cavalry_4_modifier = {
+	cavalry_power = 0.08
+}
+
+military_investment_cavalry_5_modifier = {
+	cavalry_power = 0.10
+}
+
+military_investment_cavalry_6_modifier = {
+	cavalry_power = 0.12
+}
+
+military_investment_cavalry_7_modifier = {
+	cavalry_power = 0.14
+}
+
+military_investment_cavalry_8_modifier = {
+	cavalry_power = 0.16
+}
+
+military_investment_cavalry_9_modifier = {
+	cavalry_power = 0.18
+}
+
+military_investment_cavalry_10_modifier = {
+	cavalry_power = 0.20
+}
+
+### Artillery Professionalization ###
+
+military_investment_artillery_1_modifier = {
+	artillery_power = 0.02
+}
+
+military_investment_artillery_2_modifier = {
+	artillery_power = 0.04
+}
+
+military_investment_artillery_3_modifier = {
+	artillery_power = 0.06
+}
+
+military_investment_artillery_4_modifier = {
+	artillery_power = 0.08
+}
+
+military_investment_artillery_5_modifier = {
+	artillery_power = 0.10
+}
+
+military_investment_artillery_6_modifier = {
+	artillery_power = 0.12
+}
+
+military_investment_artillery_7_modifier = {
+	artillery_power = 0.14
+}
+
+military_investment_artillery_8_modifier = {
+	artillery_power = 0.16
+}
+
+military_investment_artillery_9_modifier = {
+	artillery_power = 0.18
+}
+
+military_investment_artillery_10_modifier = {
+	artillery_power = 0.20
+}
+
+### Temporary Bonuses ###
+
+PA_temporary_discipline_boost_modifier = {
+	discipline = 0.05
+	drill_decay_modifier = -0.50
+	army_tradition_from_battle = 0.50
+}
+
+PA_temporary_fort_defense_boost_modifier = {
+	defensiveness = 0.33
+	garrison_size = 0.33
+	own_territory_dice_roll_bonus = 1
+}
+
+PA_temporary_manpower_recovery_boost_modifier = {
+	reinforce_speed = 0.33
+	land_attrition = -0.20
+	movement_speed = 0.20
+	enable_forced_march = yes
+	#monthly manpower 50%
+}
+
+PA_temporary_morale_boost_modifier = {
+	artillery_barrage_cost = -0.25
+	artillery_levels_available_vs_fort = 3
+	artillery_level_modifier = 0.33
+}
+
+PA_temporary_generals_boost_modifier = {
+	leader_land_fire = 4
+	leader_land_shock = 4
+	leader_land_manuever = 4
+	max_general_fire = 2
+	max_general_shock  = 2
+	max_general_maneuver  = 2
+}

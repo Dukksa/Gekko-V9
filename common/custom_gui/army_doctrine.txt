@@ -1,0 +1,719 @@
+custom_button = {
+	name = land_doctrine_button
+    potential = { }
+  	trigger = { }
+  	effect = { 
+		if = {
+			limit = { NOT = { has_country_flag = PA_has_army_doctrine_window_enabled_flag } }
+			set_country_flag = PA_has_army_doctrine_window_enabled_flag
+		}
+		else = {
+			clr_country_flag = PA_has_army_doctrine_window_enabled_flag
+		}
+	}
+	tooltip = "Army Doctrines"
+}
+
+custom_button = {
+	name = army_doctrines_investment_button
+    potential = { has_country_flag = PA_has_army_doctrine_window_enabled_flag }
+  	trigger = { army_tradition = 10 }
+  	effect = {
+		add_army_tradition = -10
+		custom_tooltip = army_doctrines_investment_button_tt
+		hidden_effect = {
+			export_to_variable = { which = military_reform_power_gain_modifier_var value = modifier:military_reform_power_gain_modifier }
+			export_to_variable = { which = temp value = modifier:military_reform_power_gain_modifier }
+			while = {
+				limit = { check_variable = { which = temp value = 0.01 } }
+				change_variable = { which = temp value = -0.01 }
+				change_variable = { which = military_reform_progress_var value = 0.1 }
+				if = {
+					limit = { check_variable = { which = military_reform_progress_var value = 100 } }
+					change_variable = { which = military_reforms_tokens_var value = 1 }
+					change_variable = { which = military_reform_progress_var value = -100 }
+				}
+			}
+		}
+	}
+	tooltip = "Invest in Army Doctrines"
+}
+
+custom_window = {
+	name = land_doctrine_window
+	
+    potential = { has_country_flag = PA_has_army_doctrine_window_enabled_flag }
+}
+custom_icon = {
+	name = PA_army_professionalism_window_bg
+	potential = { }
+}
+
+custom_text_box = {
+	name = PA_army_reform_availabe_text
+	potential = { }
+}
+custom_text_box = {
+	name = PA_army_reform_progress_text
+	potential = { }
+}
+
+custom_button = {
+	name = PA_army_doctrine_drilled_army_button
+	tooltip = PA_army_doctrine_drilled_army_button_tooltip
+    potential = { }
+	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = { has_country_modifier = military_investment_mages_5_modifier }
+			custom_trigger_tooltip = {
+				tooltip = "Maxed Out"
+				NOT = { has_country_modifier = military_investment_mages_5_modifier }
+			}
+		}
+	}
+  	effect = { 
+		increase_military_investment = { type = mages }
+	}
+}
+
+custom_button = {
+	name = PA_army_doctrine_mass_army_button
+	tooltip = PA_army_doctrine_mass_army_button_tooltip
+    potential = { }
+  	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = { has_country_modifier = military_investment_artificer_5_modifier }
+			custom_trigger_tooltip = {
+				tooltip = "Maxed Out"
+				NOT = { has_country_modifier = military_investment_artificer_5_modifier }
+			}
+		}
+	}
+  	effect = { 
+		increase_military_investment = { type = artificer }
+	}
+}
+
+custom_button = {
+	name = PA_army_doctrine_mercenary_army_button
+	tooltip = PA_army_doctrine_mercenary_army_button_tooltip
+    potential = { }
+	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = { has_country_modifier = military_investment_adventurer_5_modifier }
+			custom_trigger_tooltip = {
+				tooltip = "Maxed Out"
+				NOT = { has_country_modifier = military_investment_adventurer_5_modifier }
+			}
+		}
+	}
+  	effect = { 
+		increase_military_investment = { type = adventurer }
+	}
+}
+
+custom_button = {
+	name = PA_army_doctrine_generals_button
+	tooltip = PA_army_doctrine_generals_button_tooltip
+    potential = { }
+	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = { has_country_modifier = military_investment_national_elite_5_modifier }
+			custom_trigger_tooltip = {
+				tooltip = "Maxed Out"
+				NOT = { has_country_modifier = military_investment_national_elite_5_modifier }
+			}
+		}
+	}
+  	effect = { 
+		increase_military_investment = { type = national_elite }
+	}
+}
+
+custom_button = {
+	name = PA_army_doctrine_defensive_button
+	tooltip = PA_army_doctrine_defensive_button_tooltip
+    potential = { }
+	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = { has_country_modifier = military_investment_marine_5_modifier }
+			custom_trigger_tooltip = {
+				tooltip = "Maxed Out"
+				NOT = { has_country_modifier = military_investment_marine_5_modifier }
+			}
+		}
+	}
+  	effect = { 
+		increase_military_investment = { type = marine }
+	}
+}
+
+custom_icon = {
+	name = PA_army_doctrine_drilled_army_level
+	tooltip = PA_drilled_army_level_tooltip
+	potential = { }
+	frame = {
+		number = 6
+		trigger = { has_country_modifier = military_investment_mages_5_modifier }
+	}
+	frame = {
+		number = 5
+		trigger = { has_country_modifier = military_investment_mages_4_modifier }
+	}
+	frame = {
+		number = 4
+		trigger = { has_country_modifier = military_investment_mages_3_modifier }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_modifier = military_investment_mages_2_modifier }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_modifier = military_investment_mages_1_modifier }
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = { has_country_modifier = military_investment_mages_1_modifier }
+			NOT = { has_country_modifier = military_investment_mages_2_modifier }
+			NOT = { has_country_modifier = military_investment_mages_3_modifier }
+			NOT = { has_country_modifier = military_investment_mages_4_modifier }
+			NOT = { has_country_modifier = military_investment_mages_5_modifier }
+		}
+	}
+}
+
+custom_icon = {
+	name = PA_army_doctrine_mass_army_level
+	tooltip = PA_mass_army_level_tooltip
+	potential = { }
+	frame = {
+		number = 6
+		trigger = { has_country_modifier = military_investment_artificer_5_modifier }
+	}
+	frame = {
+		number = 5
+		trigger = { has_country_modifier = military_investment_artificer_4_modifier }
+	}
+	frame = {
+		number = 4
+		trigger = { has_country_modifier = military_investment_artificer_3_modifier }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_modifier = military_investment_artificer_2_modifier }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_modifier = military_investment_artificer_1_modifier }
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = { has_country_modifier = military_investment_artificer_1_modifier }
+			NOT = { has_country_modifier = military_investment_artificer_2_modifier }
+			NOT = { has_country_modifier = military_investment_artificer_3_modifier }
+			NOT = { has_country_modifier = military_investment_artificer_4_modifier }
+			NOT = { has_country_modifier = military_investment_artificer_5_modifier }
+		}
+	}
+}
+
+custom_icon = {
+	name = PA_army_doctrine_mercenary_army_level
+	tooltip = PA_mercenary_army_level_tooltip
+	potential = { }
+	frame = {
+		number = 6
+		trigger = { has_country_modifier = military_investment_adventurer_5_modifier }
+	}
+	frame = {
+		number = 5
+		trigger = { has_country_modifier = military_investment_adventurer_4_modifier }
+	}
+	frame = {
+		number = 4
+		trigger = { has_country_modifier = military_investment_adventurer_3_modifier }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_modifier = military_investment_adventurer_2_modifier }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_modifier = military_investment_adventurer_1_modifier }
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = { has_country_modifier = military_investment_adventurer_1_modifier }
+			NOT = { has_country_modifier = military_investment_adventurer_2_modifier }
+			NOT = { has_country_modifier = military_investment_adventurer_3_modifier }
+			NOT = { has_country_modifier = military_investment_adventurer_4_modifier }
+			NOT = { has_country_modifier = military_investment_adventurer_5_modifier }
+		}
+	}
+}
+
+custom_icon = {
+	name = PA_army_doctrine_generals_level
+	tooltip = PA_generals_level_tooltip
+	potential = { }
+	frame = {
+		number = 6
+		trigger = { has_country_modifier = military_investment_national_elite_5_modifier }
+	}
+	frame = {
+		number = 5
+		trigger = { has_country_modifier = military_investment_national_elite_4_modifier }
+	}
+	frame = {
+		number = 4
+		trigger = { has_country_modifier = military_investment_national_elite_3_modifier }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_modifier = military_investment_national_elite_2_modifier }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_modifier = military_investment_national_elite_1_modifier }
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = { has_country_modifier = military_investment_national_elite_1_modifier }
+			NOT = { has_country_modifier = military_investment_national_elite_2_modifier }
+			NOT = { has_country_modifier = military_investment_national_elite_3_modifier }
+			NOT = { has_country_modifier = military_investment_national_elite_4_modifier }
+			NOT = { has_country_modifier = military_investment_national_elite_5_modifier }
+		}
+	}
+}
+
+custom_icon = {
+	name = PA_army_doctrine_defensive_level
+	tooltip = PA_defensive_level_tooltip
+	potential = { }
+	frame = {
+		number = 6
+		trigger = { has_country_modifier = military_investment_marine_5_modifier }
+	}
+	frame = {
+		number = 5
+		trigger = { has_country_modifier = military_investment_marine_4_modifier }
+	}
+	frame = {
+		number = 4
+		trigger = { has_country_modifier = military_investment_marine_3_modifier }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_modifier = military_investment_marine_2_modifier }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_modifier = military_investment_marine_1_modifier }
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = { has_country_modifier = military_investment_marine_1_modifier }
+			NOT = { has_country_modifier = military_investment_marine_2_modifier }
+			NOT = { has_country_modifier = military_investment_marine_3_modifier }
+			NOT = { has_country_modifier = military_investment_marine_4_modifier }
+			NOT = { has_country_modifier = military_investment_marine_5_modifier }
+		}
+	}
+}
+
+custom_button = {
+	name = PA_temporary_boost_discipline_button
+	tooltip = PA_temporary_boost_discipline_button_tooltip
+    potential = { }
+  	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = {has_country_modifier = PA_temporary_discipline_boost_modifier}
+			NOT = { has_country_modifier = PA_temporary_discipline_boost_modifier }
+		}
+	}
+  	effect = { 
+		change_variable = { which = military_reforms_tokens_var value = -1 }
+		add_country_modifier = {
+			name = PA_temporary_discipline_boost_modifier
+			duration = 1825
+		}
+	}
+}
+
+custom_button = {
+	name = PA_temporary_boost_fort_defense_button
+	tooltip = PA_temporary_boost_fort_defense_button_tooltip
+    potential = { }
+  	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = {has_country_modifier = PA_temporary_fort_defense_boost_modifier}
+			NOT = { has_country_modifier = PA_temporary_fort_defense_boost_modifier }
+		}
+	}
+  	effect = { 
+		change_variable = { which = military_reforms_tokens_var value = -1 }
+		add_country_modifier = {
+			name = PA_temporary_fort_defense_boost_modifier
+			duration = 1825
+		}
+	}
+}
+
+custom_button = {
+	name = PA_temporary_boost_manpower_button
+	tooltip = PA_temporary_boost_manpower_button_tooltip
+    potential = { }
+  	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = {has_country_modifier = PA_temporary_manpower_recovery_boost_modifier}
+			NOT = { has_country_modifier = PA_temporary_manpower_recovery_boost_modifier }
+		}
+	}
+  	effect = { 
+		change_variable = { which = military_reforms_tokens_var value = -1 }
+		add_country_modifier = {
+			name = PA_temporary_manpower_recovery_boost_modifier
+			duration = 1825
+		}
+		custom_tooltip = PA_temporary_manpower_recovery_boost_tt
+	}
+}
+
+custom_button = {
+	name = PA_temporary_boost_morale_button
+	tooltip = PA_temporary_boost_morale_button_tooltip
+    potential = { }
+  	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = {has_country_modifier = PA_temporary_morale_boost_modifier}
+			NOT = { has_country_modifier = PA_temporary_morale_boost_modifier }
+		}
+	}
+  	effect = { 
+		change_variable = { which = military_reforms_tokens_var value = -1 }
+		add_country_modifier = {
+			name = PA_temporary_morale_boost_modifier
+			duration = 1825
+		}
+	}
+}
+
+custom_button = {
+	name = PA_temporary_boost_generals_button
+	tooltip = PA_temporary_boost_generals_button_tooltip
+    potential = { }
+  	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = {has_country_modifier = PA_temporary_generals_boost_modifier}
+			NOT = { has_country_modifier = PA_temporary_generals_boost_modifier }
+		}
+	}
+  	effect = {
+		change_variable = { which = military_reforms_tokens_var value = -1 }
+		add_country_modifier = {
+			name = PA_temporary_generals_boost_modifier
+			duration = 1825
+		}
+	}
+}
+
+# custom_button = {
+	# name = PA_unit_professionalization_button
+    # potential = {
+		# NOT = { has_country_flag = PA_has_unit_professionalization_window_enabled_flag }
+	# }
+  	# trigger = { }
+  	# effect = { 
+		# set_country_flag = PA_has_unit_professionalization_window_enabled_flag
+	# }
+# }
+
+# custom_icon = {
+	# name = PA_unit_professionalization_window_bg
+	# potential = {
+		# has_country_flag = PA_has_unit_professionalization_window_enabled_flag
+	# }
+# }
+
+custom_icon = {
+	name = PA_unit_professionalization_infantry_icon
+	potential = { }
+}
+
+custom_icon = {
+	name = PA_unit_professionalization_cavalry_icon
+	potential = { }
+}
+
+custom_icon = {
+	name = PA_unit_professionalization_artillery_icon
+	potential = { }
+}
+
+# custom_button = {
+	# name = PA_exit_unit_professionalization_window
+    # potential = {
+		# has_country_flag = PA_has_unit_professionalization_window_enabled_flag
+	# }
+  	# trigger = { }
+  	# effect = { 
+		# clr_country_flag = PA_has_unit_professionalization_window_enabled_flag
+	# }
+# }
+
+custom_icon = {
+	name = PA_unit_professionalization_infantry_level
+	tooltip = PA_infantry_professionalisation_tooltip
+	potential = { }
+	frame = {
+		number = 11
+		trigger = { has_country_modifier = military_investment_infantry_10_modifier }
+	}
+	frame = {
+		number = 10
+		trigger = { has_country_modifier = military_investment_infantry_9_modifier }
+	}
+	frame = {
+		number = 9
+		trigger = { has_country_modifier = military_investment_infantry_8_modifier }
+	}
+	frame = {
+		number = 8
+		trigger = { has_country_modifier = military_investment_infantry_7_modifier }
+	}
+	frame = {
+		number = 7
+		trigger = { has_country_modifier = military_investment_infantry_6_modifier }
+	}
+	frame = {
+		number = 6
+		trigger = { has_country_modifier = military_investment_infantry_5_modifier }
+	}
+	frame = {
+		number = 5
+		trigger = { has_country_modifier = military_investment_infantry_4_modifier }
+	}
+	frame = {
+		number = 4
+		trigger = { has_country_modifier = military_investment_infantry_3_modifier }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_modifier = military_investment_infantry_2_modifier }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_modifier = military_investment_infantry_1_modifier }
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = { has_country_modifier = military_investment_infantry_1_modifier }
+			NOT = { has_country_modifier = military_investment_infantry_2_modifier }
+			NOT = { has_country_modifier = military_investment_infantry_3_modifier }
+			NOT = { has_country_modifier = military_investment_infantry_4_modifier }
+			NOT = { has_country_modifier = military_investment_infantry_5_modifier }
+			NOT = { has_country_modifier = military_investment_infantry_6_modifier }
+			NOT = { has_country_modifier = military_investment_infantry_7_modifier }
+			NOT = { has_country_modifier = military_investment_infantry_8_modifier }
+			NOT = { has_country_modifier = military_investment_infantry_9_modifier }
+			NOT = { has_country_modifier = military_investment_infantry_10_modifier }
+		}
+	}
+}
+
+custom_icon = {
+	name = PA_unit_professionalization_cavalry_level
+	tooltip = PA_cavalry_professionalisation_tooltip
+	potential = { }
+	frame = {
+		number = 11
+		trigger = { has_country_modifier = military_investment_cavalry_10_modifier }
+	}
+	frame = {
+		number = 10
+		trigger = { has_country_modifier = military_investment_cavalry_9_modifier }
+	}
+	frame = {
+		number = 9
+		trigger = { has_country_modifier = military_investment_cavalry_8_modifier }
+	}
+	frame = {
+		number = 8
+		trigger = { has_country_modifier = military_investment_cavalry_7_modifier }
+	}
+	frame = {
+		number = 7
+		trigger = { has_country_modifier = military_investment_cavalry_6_modifier }
+	}
+	frame = {
+		number = 6
+		trigger = { has_country_modifier = military_investment_cavalry_5_modifier }
+	}
+	frame = {
+		number = 5
+		trigger = { has_country_modifier = military_investment_cavalry_4_modifier }
+	}
+	frame = {
+		number = 4
+		trigger = { has_country_modifier = military_investment_cavalry_3_modifier }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_modifier = military_investment_cavalry_2_modifier }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_modifier = military_investment_cavalry_1_modifier }
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = { has_country_modifier = military_investment_cavalry_1_modifier }
+			NOT = { has_country_modifier = military_investment_cavalry_2_modifier }
+			NOT = { has_country_modifier = military_investment_cavalry_3_modifier }
+			NOT = { has_country_modifier = military_investment_cavalry_4_modifier }
+			NOT = { has_country_modifier = military_investment_cavalry_5_modifier }
+			NOT = { has_country_modifier = military_investment_cavalry_6_modifier }
+			NOT = { has_country_modifier = military_investment_cavalry_7_modifier }
+			NOT = { has_country_modifier = military_investment_cavalry_8_modifier }
+			NOT = { has_country_modifier = military_investment_cavalry_9_modifier }
+			NOT = { has_country_modifier = military_investment_cavalry_10_modifier }
+		}
+	}
+}
+
+custom_icon = {
+	name = PA_unit_professionalization_artillery_level
+	tooltip = PA_artillery_professionalisation_tooltip
+	potential = { }
+	frame = {
+		number = 11
+		trigger = { has_country_modifier = military_investment_artillery_10_modifier }
+	}
+	frame = {
+		number = 10
+		trigger = { has_country_modifier = military_investment_artillery_9_modifier }
+	}
+	frame = {
+		number = 9
+		trigger = { has_country_modifier = military_investment_artillery_8_modifier }
+	}
+	frame = {
+		number = 8
+		trigger = { has_country_modifier = military_investment_artillery_7_modifier }
+	}
+	frame = {
+		number = 7
+		trigger = { has_country_modifier = military_investment_artillery_6_modifier }
+	}
+	frame = {
+		number = 6
+		trigger = { has_country_modifier = military_investment_artillery_5_modifier }
+	}
+	frame = {
+		number = 5
+		trigger = { has_country_modifier = military_investment_artillery_4_modifier }
+	}
+	frame = {
+		number = 4
+		trigger = { has_country_modifier = military_investment_artillery_3_modifier }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_modifier = military_investment_artillery_2_modifier }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_modifier = military_investment_artillery_1_modifier }
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = { has_country_modifier = military_investment_artillery_1_modifier }
+			NOT = { has_country_modifier = military_investment_artillery_2_modifier }
+			NOT = { has_country_modifier = military_investment_artillery_3_modifier }
+			NOT = { has_country_modifier = military_investment_artillery_4_modifier }
+			NOT = { has_country_modifier = military_investment_artillery_5_modifier }
+			NOT = { has_country_modifier = military_investment_artillery_6_modifier }
+			NOT = { has_country_modifier = military_investment_artillery_7_modifier }
+			NOT = { has_country_modifier = military_investment_artillery_8_modifier }
+			NOT = { has_country_modifier = military_investment_artillery_9_modifier }
+			NOT = { has_country_modifier = military_investment_artillery_10_modifier }
+		}
+	}
+}
+
+custom_button = {
+	name = PA_unit_professionalization_infantry_level_up
+	tooltip = PA_unit_professionalization_infantry_level_up_tooltip
+    potential = { }
+  	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = { has_country_modifier = military_investment_infantry_10_modifier }
+			custom_trigger_tooltip = {
+				tooltip = "Maxed Out"
+				NOT = { has_country_modifier = military_investment_infantry_10_modifier }
+			}
+		}
+	}
+  	effect = { 
+		increase_military_investment = { type = infantry }
+	}
+}
+
+custom_button = {
+	name = PA_unit_professionalization_cavalry_level_up
+	tooltip = PA_unit_professionalization_cavalry_level_up_tooltip
+    potential = { }
+  	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = { has_country_modifier = military_investment_cavalry_10_modifier }
+			custom_trigger_tooltip = {
+				tooltip = "Maxed Out"
+				NOT = { has_country_modifier = military_investment_cavalry_10_modifier }
+			}
+		}
+	}
+  	effect = { 
+		increase_military_investment = { type = cavalry }
+	}
+}
+
+custom_button = {
+	name = PA_unit_professionalization_artillery_level_up
+	tooltip = PA_unit_professionalization_artillery_level_up_tooltip
+    potential = { }
+  	trigger = {
+		check_variable = { which = military_reforms_tokens_var value = 1 }
+		if = {
+			limit = { has_country_modifier = military_investment_artillery_10_modifier }
+			custom_trigger_tooltip = {
+				tooltip = "Maxed Out"
+				NOT = { has_country_modifier = military_investment_artillery_10_modifier }
+			}
+		}
+	}
+  	effect = { 
+		increase_military_investment = { type = artillery }
+	}
+}

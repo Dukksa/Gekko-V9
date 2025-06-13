@@ -10,6 +10,16 @@ on_startup = {
 		}
 		save_global_event_target_as = EmperorOfChina
 	}
+	random_country = {
+		limit = { ai = no }
+		if = {
+			limit = { calc_true_if = { all_country = { ai = no } amount = 2 } }
+			set_global_flag = mp_lobby_flag
+		}
+		else = {
+			clr_global_flag = mp_lobby_flag
+		}
+	}
 	events = {
 		muslim_school_events.20		#Pick School
 		#flavor_got.1		#Event for Gotland to select their mission tree
@@ -2373,6 +2383,15 @@ on_siberian_pulse = {
 
 # country random events
 on_monthly_pulse = {
+	if = {	#bertus mod
+		limit = {
+			if = {
+				limit = { has_global_flag = mp_lobby_flag }
+				OR = { ai = no overlord = { ai = no }  }
+			}
+		}
+		get_monthly_military_reform = yes
+	}
 }
 
 on_yearly_pulse = {

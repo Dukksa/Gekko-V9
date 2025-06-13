@@ -1,0 +1,836 @@
+#Strict Drills
+defined_text = {
+	name = GetStrictDrillsTooltip
+	
+	text = {
+		localisation_key = PA_drilled_army_level_effects_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_mages_1_modifier
+				has_country_modifier = military_investment_mages_2_modifier
+				has_country_modifier = military_investment_mages_3_modifier
+				has_country_modifier = military_investment_mages_4_modifier
+				has_country_modifier = military_investment_mages_5_modifier
+			}
+		}
+	}
+}
+defined_text = {
+	name = GetStrictDrillsModifier
+	
+	text = {
+		localisation_key = PA_doctrine_drilled_army_gui_tooltip_L1
+		trigger = {
+			has_country_modifier = military_investment_mages_1_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_drilled_army_gui_tooltip_L2
+		trigger = {
+			has_country_modifier = military_investment_mages_2_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_drilled_army_gui_tooltip_L3
+		trigger = {
+			has_country_modifier = military_investment_mages_3_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_drilled_army_gui_tooltip_L4
+		trigger = {
+			has_country_modifier = military_investment_mages_4_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_drilled_army_gui_tooltip_L5
+		trigger = {
+			has_country_modifier = military_investment_mages_5_modifier
+		}
+	}
+}
+#Mass Army
+defined_text = {
+	name = GetMassArmyTooltip
+	
+	text = {
+		localisation_key = PA_mass_army_level_effects_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_artificer_1_modifier
+				has_country_modifier = military_investment_artificer_2_modifier
+				has_country_modifier = military_investment_artificer_3_modifier
+				has_country_modifier = military_investment_artificer_4_modifier
+				has_country_modifier = military_investment_artificer_5_modifier
+			}
+		}
+	}
+}
+defined_text = {
+	name = GetMassArmyModifier
+	
+	text = {
+		localisation_key = PA_doctrine_mass_army_gui_tooltip_L1
+		trigger = {
+			has_country_modifier = military_investment_artificer_1_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_mass_army_gui_tooltip_L2
+		trigger = {
+			has_country_modifier = military_investment_artificer_2_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_mass_army_gui_tooltip_L3
+		trigger = {
+			has_country_modifier = military_investment_artificer_3_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_mass_army_gui_tooltip_L4
+		trigger = {
+			has_country_modifier = military_investment_artificer_4_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_mass_army_gui_tooltip_L5
+		trigger = {
+			has_country_modifier = military_investment_artificer_5_modifier
+		}
+	}
+}
+#Mercenary Primacy
+defined_text = {
+	name = GetMercenaryPrimacyTooltip
+	
+	text = {
+		localisation_key = PA_mercenary_army_level_effects_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_adventurer_1_modifier
+				has_country_modifier = military_investment_adventurer_2_modifier
+				has_country_modifier = military_investment_adventurer_3_modifier
+				has_country_modifier = military_investment_adventurer_4_modifier
+				has_country_modifier = military_investment_adventurer_5_modifier
+			}
+		}
+	}
+}
+defined_text = {
+	name = GetMercenaryPrimacyModifier
+
+	text = {
+		localisation_key = PA_doctrine_mercenary_army_gui_tooltip_L1
+		trigger = {
+			has_country_modifier = military_investment_adventurer_1_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_mercenary_army_gui_tooltip_L2
+		trigger = {
+			has_country_modifier = military_investment_adventurer_2_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_mercenary_army_gui_tooltip_L3
+		trigger = {
+			has_country_modifier = military_investment_adventurer_3_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_mercenary_army_gui_tooltip_L4
+		trigger = {
+			has_country_modifier = military_investment_adventurer_4_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_mercenary_army_gui_tooltip_L5
+		trigger = {
+			has_country_modifier = military_investment_adventurer_5_modifier
+		}
+	}
+}
+#Meritocratic Leadership
+defined_text = {
+	name = GetGeneralsTooltip
+	
+	text = {
+		localisation_key = PA_generals_level_effects_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_national_elite_1_modifier
+				has_country_modifier = military_investment_national_elite_2_modifier
+				has_country_modifier = military_investment_national_elite_3_modifier
+				has_country_modifier = military_investment_national_elite_4_modifier
+				has_country_modifier = military_investment_national_elite_5_modifier
+			}
+		}
+	}
+}
+defined_text = {
+	name = GetMeritocraticLeadershipModifier
+
+	text = {
+		localisation_key = PA_doctrine_generals_gui_tooltip_L1
+		trigger = {
+			has_country_modifier = military_investment_national_elite_1_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_generals_gui_tooltip_L2
+		trigger = {
+			has_country_modifier = military_investment_national_elite_2_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_generals_gui_tooltip_L3
+		trigger = {
+			has_country_modifier = military_investment_national_elite_3_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_generals_gui_tooltip_L4
+		trigger = {
+			has_country_modifier = military_investment_national_elite_4_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_generals_gui_tooltip_L5
+		trigger = {
+			has_country_modifier = military_investment_national_elite_5_modifier
+		}
+	}
+}
+#Heartland Protection
+defined_text = {
+	name = GetDefensiveTooltip
+	
+	text = {
+		localisation_key = PA_defensive_level_effects_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_marine_1_modifier
+				has_country_modifier = military_investment_marine_2_modifier
+				has_country_modifier = military_investment_marine_3_modifier
+				has_country_modifier = military_investment_marine_4_modifier
+				has_country_modifier = military_investment_marine_5_modifier
+			}
+		}
+	}
+}
+defined_text = {
+	name = GetHeartlandProtectionModifier
+	
+	text = {
+		localisation_key = PA_doctrine_defensive_gui_tooltip_L1
+		trigger = {
+			has_country_modifier = military_investment_marine_1_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_defensive_gui_tooltip_L2
+		trigger = {
+			has_country_modifier = military_investment_marine_2_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_defensive_gui_tooltip_L3
+		trigger = {
+			has_country_modifier = military_investment_marine_3_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_defensive_gui_tooltip_L4
+		trigger = {
+			has_country_modifier = military_investment_marine_4_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_doctrine_defensive_gui_tooltip_L5
+		trigger = {
+			has_country_modifier = military_investment_marine_5_modifier
+		}
+	}
+}
+#Infantry Professionalisation
+defined_text = {
+	name = GetInfantryProfessionalisationTooltip
+	
+	text = {
+		localisation_key = PA_infantry_professionalisation_effects_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_infantry_1_modifier
+				has_country_modifier = military_investment_infantry_2_modifier
+				has_country_modifier = military_investment_infantry_3_modifier
+				has_country_modifier = military_investment_infantry_4_modifier
+				has_country_modifier = military_investment_infantry_5_modifier
+				has_country_modifier = military_investment_infantry_6_modifier
+				has_country_modifier = military_investment_infantry_7_modifier
+				has_country_modifier = military_investment_infantry_8_modifier
+				has_country_modifier = military_investment_infantry_9_modifier
+				has_country_modifier = military_investment_infantry_10_modifier
+			}
+		}
+	}
+}
+defined_text = {
+	name = GetInfantryProfessionalisationModifier
+	
+	text = {
+		localisation_key = PA_infantry_professionalisation_gui_tooltip_L1
+		trigger = {
+			has_country_modifier = military_investment_infantry_1_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_infantry_professionalisation_gui_tooltip_L2
+		trigger = {
+			has_country_modifier = military_investment_infantry_2_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_infantry_professionalisation_gui_tooltip_L3
+		trigger = {
+			has_country_modifier = military_investment_infantry_3_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_infantry_professionalisation_gui_tooltip_L4
+		trigger = {
+			has_country_modifier = military_investment_infantry_4_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_infantry_professionalisation_gui_tooltip_L5
+		trigger = {
+			has_country_modifier = military_investment_infantry_5_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_infantry_professionalisation_gui_tooltip_L6
+		trigger = {
+			has_country_modifier = military_investment_infantry_6_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_infantry_professionalisation_gui_tooltip_L7
+		trigger = {
+			has_country_modifier = military_investment_infantry_7_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_infantry_professionalisation_gui_tooltip_L8
+		trigger = {
+			has_country_modifier = military_investment_infantry_8_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_infantry_professionalisation_gui_tooltip_L9
+		trigger = {
+			has_country_modifier = military_investment_infantry_9_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_infantry_professionalisation_gui_tooltip_L10
+		trigger = {
+			has_country_modifier = military_investment_infantry_10_modifier
+		}
+	}
+}
+#Cavalry Professionalisation
+defined_text = {
+	name = GetCavalryProfessionalisationTooltip
+	
+	text = {
+		localisation_key = PA_cavalry_professionalisation_effects_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_cavalry_1_modifier
+				has_country_modifier = military_investment_cavalry_2_modifier
+				has_country_modifier = military_investment_cavalry_3_modifier
+				has_country_modifier = military_investment_cavalry_4_modifier
+				has_country_modifier = military_investment_cavalry_5_modifier
+				has_country_modifier = military_investment_cavalry_6_modifier
+				has_country_modifier = military_investment_cavalry_7_modifier
+				has_country_modifier = military_investment_cavalry_8_modifier
+				has_country_modifier = military_investment_cavalry_9_modifier
+				has_country_modifier = military_investment_cavalry_10_modifier
+			}
+		}
+	}
+}
+defined_text = {
+	name = GetCavalryProfessionalisationModifier
+	
+	text = {
+		localisation_key = PA_cavalry_professionalisation_gui_tooltip_L1
+		trigger = {
+			has_country_modifier = military_investment_cavalry_1_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_cavalry_professionalisation_gui_tooltip_L2
+		trigger = {
+			has_country_modifier = military_investment_cavalry_2_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_cavalry_professionalisation_gui_tooltip_L3
+		trigger = {
+			has_country_modifier = military_investment_cavalry_3_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_cavalry_professionalisation_gui_tooltip_L4
+		trigger = {
+			has_country_modifier = military_investment_cavalry_4_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_cavalry_professionalisation_gui_tooltip_L5
+		trigger = {
+			has_country_modifier = military_investment_cavalry_5_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_cavalry_professionalisation_gui_tooltip_L6
+		trigger = {
+			has_country_modifier = military_investment_cavalry_6_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_cavalry_professionalisation_gui_tooltip_L7
+		trigger = {
+			has_country_modifier = military_investment_cavalry_7_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_cavalry_professionalisation_gui_tooltip_L8
+		trigger = {
+			has_country_modifier = military_investment_cavalry_8_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_cavalry_professionalisation_gui_tooltip_L9
+		trigger = {
+			has_country_modifier = military_investment_cavalry_9_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_cavalry_professionalisation_gui_tooltip_L10
+		trigger = {
+			has_country_modifier = military_investment_cavalry_10_modifier
+		}
+	}
+}
+#Artillery Professionalisation
+defined_text = {
+	name = GetArtilleryProfessionalisationTooltip
+	
+	text = {
+		localisation_key = PA_artillery_professionalisation_effects_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_artillery_1_modifier
+				has_country_modifier = military_investment_artillery_2_modifier
+				has_country_modifier = military_investment_artillery_3_modifier
+				has_country_modifier = military_investment_artillery_4_modifier
+				has_country_modifier = military_investment_artillery_5_modifier
+				has_country_modifier = military_investment_artillery_6_modifier
+				has_country_modifier = military_investment_artillery_7_modifier
+				has_country_modifier = military_investment_artillery_8_modifier
+				has_country_modifier = military_investment_artillery_9_modifier
+				has_country_modifier = military_investment_artillery_10_modifier
+			}
+		}
+	}
+}
+defined_text = {
+	name = GetArtilleryProfessionalisationModifier
+	
+	text = {
+		localisation_key = PA_artillery_professionalisation_gui_tooltip_L1
+		trigger = {
+			has_country_modifier = military_investment_artillery_1_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_artillery_professionalisation_gui_tooltip_L2
+		trigger = {
+			has_country_modifier = military_investment_artillery_2_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_artillery_professionalisation_gui_tooltip_L3
+		trigger = {
+			has_country_modifier = military_investment_artillery_3_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_artillery_professionalisation_gui_tooltip_L4
+		trigger = {
+			has_country_modifier = military_investment_artillery_4_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_artillery_professionalisation_gui_tooltip_L5
+		trigger = {
+			has_country_modifier = military_investment_artillery_5_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_artillery_professionalisation_gui_tooltip_L6
+		trigger = {
+			has_country_modifier = military_investment_artillery_6_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_artillery_professionalisation_gui_tooltip_L7
+		trigger = {
+			has_country_modifier = military_investment_artillery_7_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_artillery_professionalisation_gui_tooltip_L8
+		trigger = {
+			has_country_modifier = military_investment_artillery_8_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_artillery_professionalisation_gui_tooltip_L9
+		trigger = {
+			has_country_modifier = military_investment_artillery_9_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_artillery_professionalisation_gui_tooltip_L10
+		trigger = {
+			has_country_modifier = military_investment_artillery_10_modifier
+		}
+	}
+}
+
+defined_text = {
+	name = GetArmyDoctrineCostTrigger
+	
+	text = {
+		localisation_key = PA_army_doctrine_trigger_L0_tooltip
+		trigger = {
+			NOT = { PA_has_active_army_doctrine_trigger = yes }
+		}
+	}
+	text = {
+		localisation_key = PA_army_doctrine_trigger_L1_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_mages_1_modifier
+				has_country_modifier = military_investment_artificer_1_modifier
+				has_country_modifier = military_investment_adventurer_1_modifier
+				has_country_modifier = military_investment_national_elite_1_modifier
+				has_country_modifier = military_investment_marine_1_modifier
+			}
+		}
+	}
+	text = {
+		localisation_key = PA_army_doctrine_trigger_L2_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_mages_2_modifier
+				has_country_modifier = military_investment_artificer_2_modifier
+				has_country_modifier = military_investment_adventurer_2_modifier
+				has_country_modifier = military_investment_national_elite_2_modifier
+				has_country_modifier = military_investment_marine_2_modifier
+			}
+		}
+	}
+	text = {
+		localisation_key = PA_army_doctrine_trigger_L3_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_mages_3_modifier
+				has_country_modifier = military_investment_artificer_3_modifier
+				has_country_modifier = military_investment_adventurer_3_modifier
+				has_country_modifier = military_investment_national_elite_3_modifier
+				has_country_modifier = military_investment_marine_3_modifier
+			}
+		}
+	}
+	text = {
+		localisation_key = PA_army_doctrine_trigger_L4_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_mages_4_modifier
+				has_country_modifier = military_investment_artificer_4_modifier
+				has_country_modifier = military_investment_adventurer_4_modifier
+				has_country_modifier = military_investment_national_elite_4_modifier
+				has_country_modifier = military_investment_marine_4_modifier
+			}
+		}
+	}
+	text = {
+		localisation_key = PA_army_doctrine_trigger_L5_tooltip
+		trigger = {
+			OR = {
+				has_country_modifier = military_investment_mages_5_modifier
+				has_country_modifier = military_investment_artificer_5_modifier
+				has_country_modifier = military_investment_adventurer_5_modifier
+				has_country_modifier = military_investment_national_elite_5_modifier
+				has_country_modifier = military_investment_marine_5_modifier
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = GetInfantryProfessionalizationCostTrigger
+	
+	text = {
+		localisation_key = PA_professionalization_trigger_L0_tooltip
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_modifier = military_investment_infantry_1_modifier
+					has_country_modifier = military_investment_infantry_2_modifier
+					has_country_modifier = military_investment_infantry_3_modifier
+					has_country_modifier = military_investment_infantry_4_modifier
+					has_country_modifier = military_investment_infantry_5_modifier
+					has_country_modifier = military_investment_infantry_6_modifier
+					has_country_modifier = military_investment_infantry_7_modifier
+					has_country_modifier = military_investment_infantry_8_modifier
+					has_country_modifier = military_investment_infantry_9_modifier
+					has_country_modifier = military_investment_infantry_10_modifier
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L1_tooltip
+		trigger = {
+			has_country_modifier = military_investment_infantry_1_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L2_tooltip
+		trigger = {
+			has_country_modifier = military_investment_infantry_2_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L3_tooltip
+		trigger = {
+			has_country_modifier = military_investment_infantry_3_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L4_tooltip
+		trigger = {
+			has_country_modifier = military_investment_infantry_4_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L5_tooltip
+		trigger = {
+			has_country_modifier = military_investment_infantry_5_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L6_tooltip
+		trigger = {
+			has_country_modifier = military_investment_infantry_6_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L7_tooltip
+		trigger = {
+			has_country_modifier = military_investment_infantry_7_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L8_tooltip
+		trigger = {
+			has_country_modifier = military_investment_infantry_8_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L9_tooltip
+		trigger = {
+			has_country_modifier = military_investment_infantry_9_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L10_tooltip
+		trigger = {
+			has_country_modifier = military_investment_infantry_10_modifier
+		}
+	}
+}
+
+defined_text = {
+	name = GetCavalryProfessionalizationCostTrigger
+	
+	text = {
+		localisation_key = PA_professionalization_trigger_L0_tooltip
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_modifier = military_investment_cavalry_1_modifier
+					has_country_modifier = military_investment_cavalry_2_modifier
+					has_country_modifier = military_investment_cavalry_3_modifier
+					has_country_modifier = military_investment_cavalry_4_modifier
+					has_country_modifier = military_investment_cavalry_5_modifier
+					has_country_modifier = military_investment_cavalry_6_modifier
+					has_country_modifier = military_investment_cavalry_7_modifier
+					has_country_modifier = military_investment_cavalry_8_modifier
+					has_country_modifier = military_investment_cavalry_9_modifier
+					has_country_modifier = military_investment_cavalry_10_modifier
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L1_tooltip
+		trigger = {
+			has_country_modifier = military_investment_cavalry_1_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L2_tooltip
+		trigger = {
+			has_country_modifier = military_investment_cavalry_2_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L3_tooltip
+		trigger = {
+			has_country_modifier = military_investment_cavalry_3_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L4_tooltip
+		trigger = {
+			has_country_modifier = military_investment_cavalry_4_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L5_tooltip
+		trigger = {
+			has_country_modifier = military_investment_cavalry_5_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L6_tooltip
+		trigger = {
+			has_country_modifier = military_investment_cavalry_6_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L7_tooltip
+		trigger = {
+			has_country_modifier = military_investment_cavalry_7_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L8_tooltip
+		trigger = {
+			has_country_modifier = military_investment_cavalry_8_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L9_tooltip
+		trigger = {
+			has_country_modifier = military_investment_cavalry_9_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L10_tooltip
+		trigger = {
+			has_country_modifier = military_investment_cavalry_10_modifier
+		}
+	}
+}
+
+defined_text = {
+	name = GetArtilleryProfessionalizationCostTrigger
+	
+	text = {
+		localisation_key = PA_professionalization_trigger_L0_tooltip
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_modifier = military_investment_artillery_1_modifier
+					has_country_modifier = military_investment_artillery_2_modifier
+					has_country_modifier = military_investment_artillery_3_modifier
+					has_country_modifier = military_investment_artillery_4_modifier
+					has_country_modifier = military_investment_artillery_5_modifier
+					has_country_modifier = military_investment_artillery_6_modifier
+					has_country_modifier = military_investment_artillery_7_modifier
+					has_country_modifier = military_investment_artillery_8_modifier
+					has_country_modifier = military_investment_artillery_9_modifier
+					has_country_modifier = military_investment_artillery_10_modifier
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L1_tooltip
+		trigger = {
+			has_country_modifier = military_investment_artillery_1_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L2_tooltip
+		trigger = {
+			has_country_modifier = military_investment_artillery_2_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L3_tooltip
+		trigger = {
+			has_country_modifier = military_investment_artillery_3_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L4_tooltip
+		trigger = {
+			has_country_modifier = military_investment_artillery_4_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L5_tooltip
+		trigger = {
+			has_country_modifier = military_investment_artillery_5_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L6_tooltip
+		trigger = {
+			has_country_modifier = military_investment_artillery_6_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L7_tooltip
+		trigger = {
+			has_country_modifier = military_investment_artillery_7_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L8_tooltip
+		trigger = {
+			has_country_modifier = military_investment_artillery_8_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L9_tooltip
+		trigger = {
+			has_country_modifier = military_investment_artillery_9_modifier
+		}
+	}
+	text = {
+		localisation_key = PA_professionalization_trigger_L10_tooltip
+		trigger = {
+			has_country_modifier = military_investment_artillery_10_modifier
+		}
+	}
+}
