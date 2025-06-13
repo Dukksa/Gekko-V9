@@ -301,7 +301,7 @@
  X_CRI_reform_8_title:0 "Unite the Tatars"
  X_CRI_reform_8_emperor:0 "Unite the Tatars"
  X_CRI_reform_8_desc:0 ""
- X_CRI_reform_8_tt:0 "§WCountry changes to §Y[GLH.GetName]§!.\nIf we own §Y[466.GetName]§!, then §Y[466.GetName]§! will become the new Capital.\nIf our Government Rank is less than §YEmpire§!, the Government Rank of §Y[GLH.GetName]§! changes to §YEmpire§!.\nThe event '§YNew Traditions & Ambitions§!' happens.\n§Y[GLH.GetName]§! gains a permanent claim on all §YTatar§! provinces.§!"
+ X_CRI_reform_8_tt:0 "\n§RWarning if u pass this reform you will not be able to pass any other reforms!!!§!\n\n§WCountry changes to §Y[GLH.GetName]§!.\nIf we own §Y[466.GetName]§!, then §Y[466.GetName]§! will become the new Capital.\nIf our Government Rank is less than §YEmpire§!, the Government Rank of §Y[GLH.GetName]§! changes to §YEmpire§!.\nThe event '§YNew Traditions & Ambitions§!' happens.\n§Y[GLH.GetName]§! gains a permanent claim on all §YTatar§! provinces.§!"
  #Reform tooltips
  X_CRI_reform_1_passed_tt:0 "§YReinforce Genghisid Rule§! Khanate Reform has been enacted."
  #Event Modifiers

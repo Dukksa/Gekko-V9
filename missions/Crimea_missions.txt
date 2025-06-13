@@ -27,9 +27,12 @@ X_CRI_slot_1 = {
 					share = 45
 				}
 			}
-			custom_trigger_tooltip = { 
-				tooltip = X_CRI_mission_3_tt
-				has_country_flag = X_CRI_genoa_cedes_gazaria_cflag 
+			OR = {
+				is_year = 1500
+				custom_trigger_tooltip = { 
+					tooltip = X_CRI_mission_3_tt
+					has_country_flag = X_CRI_genoa_cedes_gazaria_cflag 
+				}
 			}
 		}
 		effect = {
