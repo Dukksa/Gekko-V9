@@ -555,7 +555,7 @@ ENG_the_wooden_wall = {
 	ship_durability = 0.05
 }
 ENG_regional = {
-	development_cost = -0.05
+	local_development_cost = -0.05
 	local_build_cost = -0.1
 	trade_goods_size_modifier = 0.1
 }
