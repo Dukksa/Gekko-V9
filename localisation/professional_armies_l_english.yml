@@ -14,7 +14,7 @@
  PA_check_xp_title: "Check XP"
  
  PA_army_doctrine_drilled_army_button_tooltip: "§YMagic Doctrine§!\n§g"Battlemages have infinite ways to fight, training would better their fighting abilities and made them more lethal."§!"
- PA_army_doctrine_mass_army_button_tooltip: "§YArtificer Doctrine§!\n§g"Any army that wants to be up to day on new military technologies must take advantage from innovations. Fire arms on the hands of War Artificers wil be unstoppable"§!"
+ PA_army_doctrine_mass_army_button_tooltip: "§YArtificer Doctrine§!\n§g"Any army that wants to be up to day on new military technologies must take advantage from innovations. Fire arms on the hands of wil be unstoppable"§!"
  PA_army_doctrine_mercenary_army_button_tooltip: "§YAdventurer Doctrine§!\n§g"There is no general or officer who would not in battle rather have ADventurer soldiers under his command than any others."§!"
  PA_army_doctrine_generals_button_tooltip: "§YNational Doctrine§!\n§g"And so I say that in a nation which seeks excelence its National Elite troops must be the best of the best, some will say that fire is fearful, some others that battlemages are superior, but what is paramount is our national pride! Which makes us unstoppable."§!"
  PA_army_doctrine_defensive_button_tooltip: "§YMarine Doctrine§!\n§g"There is no defense line better than the sea, and so we will take advantage of that to surpass enemy sea walls and make amphibious attacks. Our battle ground extends into the sea and further beyond."§!"
@@ -90,11 +90,11 @@
  PA_doctrine_drilled_army_L4_modifier: "Army With a State (§JStrict Drills 4§!)"
  PA_doctrine_drilled_army_L5_modifier: "Envy of All, Equal to None (§GStrict Drills 5§!)"
  
- PA_doctrine_drilled_army_gui_tooltip_L1: "Battlemages Discipline: §G+2.0%§!"
- PA_doctrine_drilled_army_gui_tooltip_L2: "Battlemages Discipline: §G+4.0%§!"
- PA_doctrine_drilled_army_gui_tooltip_L3: "Battlemages Discipline: §G+6.0%§!"
- PA_doctrine_drilled_army_gui_tooltip_L4: "Battlemages Discipline: §G+8.0%§!"
- PA_doctrine_drilled_army_gui_tooltip_L5: "Battlemages Discipline: §G+10.0%§!"
+ PA_doctrine_drilled_army_gui_tooltip_L1: "Morale Of Armies: §G+0.08§!"
+ PA_doctrine_drilled_army_gui_tooltip_L2: "Morale Of Armies: §G+0.15§!"
+ PA_doctrine_drilled_army_gui_tooltip_L3: "Morale Of Armies: §G+0.22§!"
+ PA_doctrine_drilled_army_gui_tooltip_L4: "Morale Of Armies: §G+0.30§!"
+ PA_doctrine_drilled_army_gui_tooltip_L5: "Morale Of Armies: §G+0.38§!"
  
  PA_mass_army_level_tooltip: "[Root.GetMassArmyTooltip]"
  PA_mass_army_level_effects_tooltip: "We currently get the following effects from our doctrine:\n[Root.GetMassArmyModifier]"
@@ -105,11 +105,11 @@
  PA_doctrine_mass_army_L4_modifier: "Levée en Masse (§JMass Army 4§!)"
  PA_doctrine_mass_army_L5_modifier: "Every Man a Soldier (§GMass Army 5§!)"
  
- PA_doctrine_mass_army_gui_tooltip_L1: "War Artificers Discipline: §G+2.0%§!"
- PA_doctrine_mass_army_gui_tooltip_L2: "War Artificers Discipline: §G+4.0%§!"
- PA_doctrine_mass_army_gui_tooltip_L3: "War Artificers Discipline: §G+6.0%§!"
- PA_doctrine_mass_army_gui_tooltip_L4: "War Artificers Discipline: §G+8.0%§!"
- PA_doctrine_mass_army_gui_tooltip_L5: "War Artificers Discipline: §G+10.0%§!"
+ PA_doctrine_mass_army_gui_tooltip_L1: "Discipline: §G+1.0%§!"
+ PA_doctrine_mass_army_gui_tooltip_L2: "Discipline: §G+2.0%§!"
+ PA_doctrine_mass_army_gui_tooltip_L3: "Discipline: §G+3.0%§!"
+ PA_doctrine_mass_army_gui_tooltip_L4: "Discipline: §G+4.0%§!"
+ PA_doctrine_mass_army_gui_tooltip_L5: "Discipline: §G+5.0%§!"
  
  PA_mercenary_army_level_tooltip: "[Root.GetMercenaryPrimacyTooltip]"
  PA_mercenary_army_level_effects_tooltip: "We currently get the following effects from our doctrine:\n[Root.GetMercenaryPrimacyModifier]"
@@ -120,11 +120,11 @@
  PA_doctrine_mercenary_army_L4_modifier: "Soldiers Without Borders (§JMercenary Primacy 4§!)"
  PA_doctrine_mercenary_army_L5_modifier: "Lords of War (§GMercenary Primacy 5§!)"
  
- PA_doctrine_mercenary_army_gui_tooltip_L1: "Mercenary Discipline: §G+2.0%§!"
- PA_doctrine_mercenary_army_gui_tooltip_L2: "Mercenary Discipline: §G+4.0%§!"
- PA_doctrine_mercenary_army_gui_tooltip_L3: "Mercenary Discipline: §G+6.0%§!"
- PA_doctrine_mercenary_army_gui_tooltip_L4: "Mercenary Discipline: §G+8.0%§!"
- PA_doctrine_mercenary_army_gui_tooltip_L5: "Mercenary Discipline: §G+10.0%§!"
+ PA_doctrine_mercenary_army_gui_tooltip_L1: "Mercenary Discipline: §G+1.0%§!"
+ PA_doctrine_mercenary_army_gui_tooltip_L2: "Mercenary Discipline: §G+2.0%§!"
+ PA_doctrine_mercenary_army_gui_tooltip_L3: "Mercenary Discipline: §G+3.0%§!"
+ PA_doctrine_mercenary_army_gui_tooltip_L4: "Mercenary Discipline: §G+4.0%§!"
+ PA_doctrine_mercenary_army_gui_tooltip_L5: "Mercenary Discipline: §G+5.0%§!"
  
  PA_generals_level_tooltip: "[Root.GetGeneralsTooltip]"
  PA_generals_level_effects_tooltip: "We currently get the following effects from our doctrine:\n[Root.GetMeritocraticLeadershipModifier]"
@@ -135,11 +135,11 @@
  PA_doctrine_generals_L4_modifier: "Legacy of Heroes (§JMeritocratic Leadership 4§!)"
  PA_doctrine_generals_L5_modifier: "Immortal Legends (§GMeritocratic Leadership 5§!)"
  
- PA_doctrine_generals_gui_tooltip_L1: "National Elites Discipline: §G+2.0%§!"
- PA_doctrine_generals_gui_tooltip_L2: "National Elites Discipline: §G+4.0%§!"
- PA_doctrine_generals_gui_tooltip_L3: "National Elites Discipline: §G+6.0%§!"
- PA_doctrine_generals_gui_tooltip_L4: "National Elites Discipline: §G+8.0%§!"
- PA_doctrine_generals_gui_tooltip_L5: "National Elites Discipline: §G+10.0%§!"
+ PA_doctrine_generals_gui_tooltip_L1: "Fire And Shock Damage Recieved: §G-2.0%§!"
+ PA_doctrine_generals_gui_tooltip_L2: "Fire And Shock Damage Recieved: §G-4.0%§!"
+ PA_doctrine_generals_gui_tooltip_L3: "Fire And Shock Damage Recieved: §G-6.0%§!"
+ PA_doctrine_generals_gui_tooltip_L4: "Fire And Shock Damage Recieved: §G-8.0%§!"
+ PA_doctrine_generals_gui_tooltip_L5: "Fire And Shock Damage Recieved: §G-10.0%§!"
  
  PA_defensive_level_tooltip: "[Root.GetDefensiveTooltip]"
  PA_defensive_level_effects_tooltip: "We currently get the following effects from our doctrine:\n[Root.GetHeartlandProtectionModifier]"
@@ -150,11 +150,11 @@
  PA_doctrine_defensive_L4_modifier: "They Shall Not Pass (§JHeartland Protection 4§!)"
  PA_doctrine_defensive_L5_modifier: "Not One Step Back (§GHeartland Protection 5§!)"
  
- PA_doctrine_defensive_gui_tooltip_L1: "Marines Discipline: §G+2.0%§!"
- PA_doctrine_defensive_gui_tooltip_L2: "Marines Discipline: §G+4.0%§!"
- PA_doctrine_defensive_gui_tooltip_L3: "Marines Discipline: §G+6.0%§!"
- PA_doctrine_defensive_gui_tooltip_L4: "Marines Discipline: §G+8.0%§!"
- PA_doctrine_defensive_gui_tooltip_L5: "Marines Discipline: §G+10.0%§!"
+ PA_doctrine_defensive_gui_tooltip_L1: "Marines Discipline: §G+1.0%§!"
+ PA_doctrine_defensive_gui_tooltip_L2: "Marines Discipline: §G+2.0%§!"
+ PA_doctrine_defensive_gui_tooltip_L3: "Marines Discipline: §G+3.0%§!"
+ PA_doctrine_defensive_gui_tooltip_L4: "Marines Discipline: §G+4.0%§!"
+ PA_doctrine_defensive_gui_tooltip_L5: "Marines Discipline: §G+5.0%§!"
  
  PA_unit_professionalization_infantry_level_up_tooltip: "§YRaise Infantry Standards§!\nWe can invest our experience in war to instill upon our troops new tactics and standards, so long as we have the capacity to do so."
  

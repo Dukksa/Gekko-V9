@@ -9,24 +9,19 @@ military_investment_mages_8_modifier = {}
 military_investment_mages_7_modifier = {}
 military_investment_mages_6_modifier = {}
 military_investment_mages_5_modifier = {
-	discipline = 0.10
-	is_cawa_modifier = yes
+	land_morale_constant = 0.375
 }
 military_investment_mages_4_modifier = {
-	discipline = 0.08
-	is_cawa_modifier = yes
+	land_morale_constant = 0.300
 }
 military_investment_mages_3_modifier = {
-	discipline = 0.06
-	is_cawa_modifier = yes
+	land_morale_constant = 0.225
 }
 military_investment_mages_2_modifier = {
-	discipline = 0.04
-	is_cawa_modifier = yes
+	land_morale_constant = 0.150
 }
 military_investment_mages_1_modifier = {
-	discipline = 0.02
-	is_cawa_modifier = yes
+	land_morale_constant = 0.075
 }
 
 ### artifice doctrine ###
@@ -36,24 +31,19 @@ military_investment_artificer_8_modifier = {}
 military_investment_artificer_7_modifier = {}
 military_investment_artificer_6_modifier = {}
 military_investment_artificer_5_modifier = {
-	discipline = 0.10
-	is_carolean_modifier = yes
+	discipline = 0.05
 }
 military_investment_artificer_4_modifier = {
-	discipline = 0.08
-	is_carolean_modifier = yes
+	discipline = 0.04
 }
 military_investment_artificer_3_modifier = {
-	discipline = 0.06
-	is_carolean_modifier = yes
+	discipline = 0.03
 }
 military_investment_artificer_2_modifier = {
-	discipline = 0.04
-	is_carolean_modifier = yes
+	discipline = 0.02
 }
 military_investment_artificer_1_modifier = {
-	discipline = 0.02
-	is_carolean_modifier = yes
+	discipline = 0.01
 }
 
 ### adventurer doctrine ###
@@ -63,23 +53,23 @@ military_investment_adventurer_8_modifier = {}
 military_investment_adventurer_7_modifier = {}
 military_investment_adventurer_6_modifier = {}
 military_investment_adventurer_5_modifier = {
-	discipline = 0.10
+	discipline = 0.05
 	is_mercenary_modifier = yes
 }
 military_investment_adventurer_4_modifier = {
-	discipline = 0.08
-	is_mercenary_modifier = yes
-}
-military_investment_adventurer_3_modifier = {
-	discipline = 0.06
-	is_mercenary_modifier = yes
-}
-military_investment_adventurer_2_modifier = {
 	discipline = 0.04
 	is_mercenary_modifier = yes
 }
-military_investment_adventurer_1_modifier = {
+military_investment_adventurer_3_modifier = {
+	discipline = 0.03
+	is_mercenary_modifier = yes
+}
+military_investment_adventurer_2_modifier = {
 	discipline = 0.02
+	is_mercenary_modifier = yes
+}
+military_investment_adventurer_1_modifier = {
+	discipline = 0.01
 	is_mercenary_modifier = yes
 }
 
@@ -90,24 +80,24 @@ military_investment_national_elite_8_modifier = {}
 military_investment_national_elite_7_modifier = {}
 military_investment_national_elite_6_modifier = {}
 military_investment_national_elite_5_modifier = {
-	discipline = 0.10
-	is_mamluks_modifier = yes
+	shock_damage_received = -0.10
+	fire_damage_received = -0.10
 }
 military_investment_national_elite_4_modifier = {
-	discipline = 0.08
-	is_mamluks_modifier = yes
+	shock_damage_received = -0.08
+	fire_damage_received = -0.08
 }
 military_investment_national_elite_3_modifier = {
-	discipline = 0.06
-	is_mamluks_modifier = yes
+	shock_damage_received = -0.06
+	fire_damage_received = -0.06
 }
 military_investment_national_elite_2_modifier = {
-	discipline = 0.04
-	is_mamluks_modifier = yes
+	shock_damage_received = -0.04
+	fire_damage_received = -0.04
 }
 military_investment_national_elite_1_modifier = {
-	discipline = 0.02
-	is_mamluks_modifier = yes
+	shock_damage_received = -0.02
+	fire_damage_received = -0.02
 }
 
 ### marine doctrine ###
@@ -117,23 +107,23 @@ military_investment_marine_8_modifier = {}
 military_investment_marine_7_modifier = {}
 military_investment_marine_6_modifier = {}
 military_investment_marine_5_modifier = {
-	discipline = 0.10
+	discipline = 0.05
 	is_marine_modifier = yes
 }
 military_investment_marine_4_modifier = {
-	discipline = 0.08
-	is_marine_modifier = yes
-}
-military_investment_marine_3_modifier = {
-	discipline = 0.06
-	is_marine_modifier = yes
-}
-military_investment_marine_2_modifier = {
 	discipline = 0.04
 	is_marine_modifier = yes
 }
-military_investment_marine_1_modifier = {
+military_investment_marine_3_modifier = {
+	discipline = 0.03
+	is_marine_modifier = yes
+}
+military_investment_marine_2_modifier = {
 	discipline = 0.02
+	is_marine_modifier = yes
+}
+military_investment_marine_1_modifier = {
+	discipline = 0.01
 	is_marine_modifier = yes
 }
 
@@ -292,9 +282,9 @@ PA_temporary_morale_boost_modifier = {
 }
 
 PA_temporary_generals_boost_modifier = {
-	leader_land_fire = 4
-	leader_land_shock = 4
-	leader_land_manuever = 4
+	leader_land_fire = 2
+	leader_land_shock = 2
+	leader_land_manuever = 2
 	max_general_fire = 2
 	max_general_shock  = 2
 	max_general_maneuver  = 2
