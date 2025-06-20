@@ -633,13 +633,13 @@ war_taxes = {
 }
 
 stability = {
-	global_trade_power = 0.01			#1% chance each step.
+	global_trade_power = 0.1			#1% chance each step.
 	global_spy_defence = 0.05				#-15 to +15% modifier
 }
 
 positive_stability = {
 	global_unrest = -1					#-1% revolt risk each step
-	global_tax_modifier = 0.05
+	global_tax_modifier = 0.01
 	global_missionary_strength = 0.005
 	temples_influence = 0.02
 	mr_aristocrats_influence = 0.03

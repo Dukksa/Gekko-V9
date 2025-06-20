@@ -2,13 +2,13 @@ pol_struggle_for_royal_power_disaster = {
 	potential = {
 		normal_or_historical_nations = yes
 		has_country_flag = pol_pact_conventa_flag # so must start as Poland
-		current_age = age_of_absolutism
+		current_age = age_of_reformation
 		NOT = { has_country_flag = pol_zebrzydowski_rebellion_flag }
 		is_lesser_in_union = no
 	}
 	
 	can_start = {
-		current_age = age_of_absolutism
+		current_age = age_of_reformation
 		OR = {
 			has_reform = polish_elective_monarchy
 			has_reform = polish_great_sejm
@@ -23,7 +23,7 @@ pol_struggle_for_royal_power_disaster = {
 				NOT = { has_reform = polish_elective_monarchy }
 				NOT = { has_reform = polish_great_sejm }
 			} 
-			NOT = { current_age = age_of_absolutism }
+			NOT = { current_age = age_of_reformation }
 		}
 	}
 	
