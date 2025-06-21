@@ -191,6 +191,7 @@ monarchy = {
 				
 				###Gecko###
 				establish_qurchi_corps_reform
+				X_CRI_fix_for_meritocracy
 				#upgrade_janissary_weaponry_reform
 			}
 		}

@@ -14,6 +14,13 @@ X_CRI_great_tatar_state_reform = {
 	allow_force_tributary = no
 	lock_level_when_selected = yes
 
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+		factions = {
+		}
+	}
+
 	
 	modifiers = {
 		meritocracy = 0.25
@@ -38,6 +45,31 @@ X_CRI_great_tatar_state_reform = {
 		tribal_federation_mechanic
 	}
 	
+}
+
+#tier 2 that gets given by an event to fix the meritocracy
+X_CRI_fix_for_meritocracy = {
+	potential = {
+		OR = {
+			is_emperor_of_china = yes
+			have_had_reform = X_CRI_great_tatar_state_reform
+		}
+	}
+
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+		factions = {
+		}
+	}
+
+	modifiers = {
+		global_manpower_modifier = 0.1
+		global_tax_modifier = 0.2
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 
 #this one is  the one u get when forming golden horde

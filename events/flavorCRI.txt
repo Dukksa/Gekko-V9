@@ -710,3 +710,26 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = flavor_cri.9
+	title = flavor_cri.9.t
+	desc = flavor_cri.9.d
+	picture = MONGOL_BANNERS_eventPicture
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		NOT = { has_country_flag = got_the_tier2 }
+		is_emperor_of_china = yes
+	}
+
+	option = {
+		name = flavor_cri.9.a
+
+		set_country_flag = got_the_tier2
+		add_government_reform = X_CRI_fix_for_meritocracy
+	}
+}
