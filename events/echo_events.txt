@@ -575,30 +575,30 @@ country_event = {
 }
 
 #colour them subjects
-country_event = {
-	id = coloured_subjects.1
-	title = coloured_subjects.1.t
-	desc = coloured_subjects.1.d
-	picture = NOBLE_ESTATE_DEMANDS_eventPicture
-
-	hidden = yes
-
-	trigger = {
-		is_subject = yes
-		NOT = { is_subject_of_type = tributary_state }
-		NOT = { has_country_flag = has_overlords_colour }
-	}
-
-	immediate = {
-		change_country_color = { country = overlord }
-		set_country_flag = has_overlords_colour
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = coloured_subjects.1.a
-	}
-}
+#country_event = {
+#	id = coloured_subjects.1
+#	title = coloured_subjects.1.t
+#	desc = coloured_subjects.1.d
+#	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+#
+#	hidden = yes
+#
+#	trigger = {
+#		is_subject = yes
+#		NOT = { is_subject_of_type = tributary_state }
+#		NOT = { has_country_flag = has_overlords_colour }
+#	}
+#
+#	immediate = {
+#		change_country_color = { country = overlord }
+#		set_country_flag = has_overlords_colour
+#	}
+#
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#
+#	option = {
+#		name = coloured_subjects.1.a
+#	}
+#}

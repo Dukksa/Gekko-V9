@@ -130,7 +130,7 @@ ganga = {
 shakti = { 
 	#(Military - Offensive) 
 	siege_ability = 0.15
-	discipline = 0.05
+	discipline = 0.1
 	
 	potential = { religion = hinduism }
 	trigger = {}
