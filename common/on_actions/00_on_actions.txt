@@ -6283,11 +6283,37 @@ on_centralized_state = {
 	else_if = {
 		limit = {
 			owner = {
+				AND = {
+					has_government_attribute = centralize_state_no_reform_cost
+					administrative_ideas = 5
+				}
+			}
+		}
+		owner = {
+			add_adm_power = 100
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
 				has_government_attribute = centralize_state_half_refund
 			}
 		}
 		owner = {
 			add_adm_power = 100
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
+				AND = {
+					has_government_attribute = centralize_state_half_refund
+					administrative_ideas = 5
+				}
+			}
+		}
+		owner = {
+			add_adm_power = 50
 		}
 	}
 	if = {

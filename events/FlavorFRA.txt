@@ -118,7 +118,7 @@ country_event = {
 	option = {			# Time to build a stronger nation
 		name = "flavor_fra.EVTOPTA3104"
 		#add_stability_or_adm_power = yes
-		add_adm_power = 75
+		add_adm_power = 125
 	}
 }
 
@@ -1855,45 +1855,21 @@ country_event = {
 		add_truce_with = BUR
 		1879 = {
 			cede_province = FRA
-			hidden_effect = { 
-				add_local_autonomy = -90 
-				add_core = FRA
-			}
 		}
 		4385 = {
 			cede_province = FRA
-			hidden_effect = { 
-				add_local_autonomy = -90 
-				add_core = FRA
-			}
 		}
 		168 = {
 			cede_province = FRA
-			hidden_effect = { 
-				add_local_autonomy = -90 
-				add_core = FRA
-			}
 		}
 		167 = {
 			cede_province = FRA
-			hidden_effect = { 
-				add_local_autonomy = -90 
-				add_core = FRA
-			}
 		}
 		6081 = {
 			cede_province = FRA
-			hidden_effect = { 
-				add_local_autonomy = -90 
-				add_core = FRA
-			}
 		}
 		6082 = {
 			cede_province = FRA
-			hidden_effect = { 
-				add_local_autonomy = -90 
-				add_core = FRA
-			}
 		}
 		87 = {
 			cede_province = BUR

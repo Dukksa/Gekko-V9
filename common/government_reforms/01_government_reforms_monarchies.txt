@@ -394,7 +394,7 @@ absolutist_france_reform = {
 		#fire_damage = 0.1
 	}
 	custom_attributes = {
-		centralize_state_development = yes 
+		centralize_state_half_refund = yes 
 	}
 }
 
