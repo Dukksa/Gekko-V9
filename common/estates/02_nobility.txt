@@ -10,6 +10,7 @@ estate_nobles = {
 			ai = no
 			overlord = { ai = no }
 			was_player = yes
+			tag = TEU
 		}
 		#NOT = { has_government_attribute = is_merchant_republic }
 		#NOT = { has_reform = veche_republic }

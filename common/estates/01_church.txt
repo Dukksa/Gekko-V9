@@ -11,6 +11,7 @@ estate_church = {
 			ai = no
 			overlord = { ai = no }
 			was_player = yes
+			tag = TEU
 		}
 		NOT = { has_government_attribute = disables_estate_church }
 		NOT = { has_disabled_estate = { estate = estate_church } }

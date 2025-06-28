@@ -12,7 +12,7 @@ prussian_confederation_disaster = {
 	
 	can_start = {
 		has_any_disaster = no
-		is_year = 1450
+		is_year = 1445
 		current_age = age_of_discovery
 		has_estate = estate_burghers
 	}
