@@ -1195,7 +1195,8 @@ quality_ideas = {
 	
 	bonus = {
 		janissaries_loyalty_modifier = 0.1
-		yearly_army_professionalism = 0.005
+		yearly_army_professionalism = 0.0025
+		military_reform_power_gain_modifier = 0.15
 	}
 	private_to_marshal = {
 		infantry_power = 0.1
