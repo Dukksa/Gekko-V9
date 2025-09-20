@@ -1774,6 +1774,7 @@ WoC_austria_2_1 = {
 			custom_tooltip = SEPERATOR_TOOLTIP
 
 			add_army_professionalism = 0.05
+			add_army_tradition_or_mil_power = { amount = 15 }
 		} 
 	}
 

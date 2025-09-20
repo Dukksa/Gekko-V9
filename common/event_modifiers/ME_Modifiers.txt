@@ -1412,7 +1412,7 @@ sic_champion_christianity = {
 	monarch_military_power = 1
 }
 sic_norman_knights = {
-	infantry_shock = 0.05	
+	infantry_shock = 0.15	
 }
 
 #Event modifiers

@@ -10029,6 +10029,7 @@ spa_overseas_wealth_modifier = {
 spa_victory_netherlands_modifier = {
 	reduced_trade_penalty_on_non_main_tradenode = 0.25
 	trade_efficiency = 0.1
+	artillery_fire = 0.25
 }
 
 spa_transatlantic_migrations_modifier = {
