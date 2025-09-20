@@ -1409,7 +1409,7 @@ high_army_professionalism = {
 	#land_maintenance_modifier = 0.2	#0→0.2
 	land_attrition = -0.25	#0→-0.25
 	yearly_army_professionalism = -0.01	#0→-0.01
-	monthly_military_reform_power_gain = 0.2
+	military_reform_power_gain_modifier = 0.2
 }
 
 streltsy_modifier = {
