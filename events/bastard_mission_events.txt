@@ -133,7 +133,7 @@ country_event = {
 	option = { #More captains
 		name = X_VEN_events.2.b
 		add_navy_tradition = -30
-		create_admiral = { tradition = 90 culture = albanian}
+		create_admiral = { tradition = 90 culture = serbian}
 		add_yearly_sailors = 5
 	}
 	
@@ -143,7 +143,7 @@ country_event = {
 			type = naval_reformer
 			skill = 3
 			discount = yes
-			culture = albanian
+			culture = serbian
 			religion = orthodox
 		}
 	}

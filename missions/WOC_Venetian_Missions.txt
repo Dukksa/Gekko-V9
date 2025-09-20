@@ -835,7 +835,7 @@ X_VEN_slot_2 = {
 			OR = {
 				AND = {
 					province_id = 4754
-					NOT = { culture = albanian }
+					NOT = { culture = serbian }
 					OR = {
 						NOT = { owned_by = ROOT }
 						unrest = 1
@@ -844,7 +844,7 @@ X_VEN_slot_2 = {
 				AND = {
 					owned_by = ROOT
 					has_port = yes
-					culture = albanian
+					culture = serbian
 					unrest = 1
 				}
 				AND = {
@@ -863,16 +863,9 @@ X_VEN_slot_2 = {
 		
 		trigger = {
 			AND = {
-				if = {
-					limit = {
-						4754 = {
-							NOT = { culture = albanian }
-						}
-					}
-					4754 = {
-						owned_by = ROOT
-						NOT = { unrest = 1 }
-					}
+				4754 = {
+					owned_by = ROOT
+					NOT = { unrest = 1 }
 				}
 				custom_trigger_tooltip = {
 					tooltip = X_VEN_mission_4_tt
@@ -880,7 +873,7 @@ X_VEN_slot_2 = {
 						num_of_owned_provinces_with = {
 							value = 1
 							has_port = yes
-							culture = albanian
+							culture = serbian
 							unrest = 1
 						}
 					}

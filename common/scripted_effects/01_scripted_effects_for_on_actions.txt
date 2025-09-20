@@ -2404,7 +2404,6 @@ on_culture_demoted_effect = {
 				NOT = { accepted_culture = serbian }
 				NOT = { accepted_culture = bosnian }
 				NOT = { accepted_culture = slovene }
-				NOT = { accepted_culture = albanian }
 				NOT = { accepted_culture = croatian }
 			}
 		}

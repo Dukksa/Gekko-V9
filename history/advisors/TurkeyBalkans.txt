@@ -471,7 +471,7 @@ advisor = {
 	location = 151 #Thrace
 	
 	skill = 1
-	culture = albanian
+	culture = greek
 	religion = sunni
 	type = statesman
 	date = 1569.1.1 #appointed governor of Egypt
@@ -576,7 +576,7 @@ advisor = {
 	location = 143 #Albania (born there)
 	
 	religion = sunni
-	culture = albanian
+	culture = greek
 	skill = 2
 	type = statesman
 	date = 1605.1.1 #30 years old
@@ -807,7 +807,7 @@ advisor = {
 	location = 151 #Thrace (don't know better location)
 	
 	skill = 1
-	culture = albanian
+	culture = greek
 	religion = sunni
 	type = statesman
 	date = 1661.9.30

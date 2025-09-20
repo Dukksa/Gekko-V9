@@ -1323,29 +1323,6 @@ caliphate_reform = {
 	}
 }
 
-league_of_lezhe_reform = {
-	icon = "giga_chad"
-	allow_normal_conversion = yes
-	potential = {
-		primary_culture = albanian
-	}
-	nation_designer_trigger = {
-		primary_culture = albanian
-	}
-	valid_for_nation_designer = yes
-	nation_designer_cost = 30
-	modifiers = {
-		morale_damage = 0.1
-		hostile_attrition = 1
-		defensiveness = 0.25
-	}
-	custom_attributes = {
-		winning_battles_increases_legitimacy = yes
-	}
-	ai = {
-		factor = 1
-	}
-}
 
 barbary_sultanate_reform = {
 	icon = "barbary_eyalet_government"
