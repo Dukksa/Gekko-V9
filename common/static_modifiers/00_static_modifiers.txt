@@ -879,7 +879,7 @@ army_tradition = {
 	yearly_army_professionalism = 0.01
 	land_forcelimit_modifier = 0.15
 	mercenary_manpower = 0.15
-	monthly_military_reform_power_gain = 0.5 # bertus thingy
+	monthly_military_reform_power_gain = 0.4 # bertus thingy
 }
 
 navy_tradition = {
