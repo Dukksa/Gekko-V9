@@ -107,24 +107,24 @@ military_investment_marine_8_modifier = {}
 military_investment_marine_7_modifier = {}
 military_investment_marine_6_modifier = {}
 military_investment_marine_5_modifier = {
-	discipline = 0.05
-	is_marine_modifier = yes
+	shock_damage = 0.125
+	fire_damage = 0.125
 }
 military_investment_marine_4_modifier = {
-	discipline = 0.04
-	is_marine_modifier = yes
+	shock_damage = 0.088
+	fire_damage = 0.088
 }
 military_investment_marine_3_modifier = {
-	discipline = 0.03
-	is_marine_modifier = yes
+	shock_damage = 0.066
+	fire_damage = 0.066
 }
 military_investment_marine_2_modifier = {
-	discipline = 0.02
-	is_marine_modifier = yes
+	shock_damage = 0.047
+	fire_damage = 0.047
 }
 military_investment_marine_1_modifier = {
-	discipline = 0.01
-	is_marine_modifier = yes
+	shock_damage = 0.025
+	fire_damage = 0.025
 }
 
 ### Infantry Professionalization ###

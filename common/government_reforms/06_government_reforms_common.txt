@@ -4501,6 +4501,11 @@ diwan_al_khass_reform = {
 		#development_cost = -0.05
 		build_cost = -0.1
 	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+	}
 	
 	ai = {
 		factor = 10
