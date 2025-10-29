@@ -1,0 +1,460 @@
+centralized_state_permanent_modifiers = {
+    local_build_time = -0.10
+	regiment_recruit_speed = -0.10
+	local_friendly_movement_speed = 0.1
+}
+
+kielak_colonial_mission_capital_wall = {
+	local_defensiveness = 0.25
+	local_hostile_movement_speed = -0.15
+}
+
+kielak_colonial_mission_build_phase = {
+	build_cost = -0.1
+	build_time = -0.25
+}
+
+kielak_colonial_mission_dev_phase = {
+	development_cost = -0.05
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+}
+
+kielak_colonial_mission_controlling_the_estates = {
+	all_estate_loyalty_equilibrium = 0.1
+	all_estate_influence_modifier = 0.1
+	republican_tradition = 0.2
+}
+
+kielak_colonial_fred_assasinate = {
+	republican_tradition = -0.2
+	global_unrest = 2
+}
+
+kielak_colonial_last_resort = {
+	manpower_recovery_speed = -0.1
+	global_regiment_cost = 0.1
+	discipline = -0.025
+}
+
+
+kielak_colonial_increase_navy_size = {
+	naval_forcelimit = 20
+}
+kielak_colonial_navy_improvements = {
+	sailor_maintenance_modifer = -0.1
+	navy_tradition = 0.25
+}
+
+kielak_colonial_transport_attrition = {
+	transport_attrition = -0.2
+}
+
+kielak_colonial_formable_cavalry_ratio = {
+	cav_to_inf_ratio = 0.10
+	leader_land_manuever = 1
+}
+
+kielak_colonial_formable_cavalry_flanking = {
+	cavalry_flanking = 0.25
+}
+
+
+kielak_colonial_formable_cavalry_offensive = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_power = 0.1
+	morale_damage = 0.10
+	
+	
+
+}
+
+kielak_colonial_formable_cavalry_defensive = {
+	is_revolutionary_guard_modifier = yes
+	fire_damage_received = -0.1
+	shock_damage_received = -0.1
+}
+
+kielak_colonial_formable_infantry_pip = {
+	army_tradition_from_battle = 0.1
+	leader_land_manuever = 1
+}
+
+kielak_colonial_formable_infantry_buff = {
+	reinforce_cost_modifier = -0.1
+	drill_gain_modifier = 0.1
+}
+
+kielak_colonial_formable_infantry_offensive = {
+	is_revolutionary_guard_modifier = yes
+	infantry_power = 0.1
+	morale_damage = 0.10
+}
+
+kielak_colonial_formable_infantry_defensive = {
+	is_revolutionary_guard_modifier = yes
+	fire_damage_received = -0.1
+	shock_damage_received = -0.1
+}
+
+kielak_colonial_formable_californian_coastline_defenses = {
+	hostile_disembark_speed = 0.5
+	local_ship_repair = 0.25
+	ship_recruit_speed = -0.25
+	local_sailors_modifier = 0.15
+}
+
+kielak_colonial_formable_californian_colorado_mountain_development = {
+	local_development_cost = -0.25
+}
+
+kielak_colonial_formable_californian_colorado_mountain_fortification = {
+	local_defensiveness = 0.25
+	local_garrison_size = 0.2
+}
+
+kielak_colonial_formable_californian_wildfire_protection = {
+	global_monthly_devastation = -0.1
+	global_prosperity_growth = 0.1
+	global_trade_goods_size_modifier = 0.1
+}
+
+kielak_colonial_formable_californian_unlock_mesa_verde = {
+	build_cost = -0.1
+}
+
+kielak_colonial_alaska_area_buff = {
+	local_development_cost = -0.1
+	local_defensiveness = 0.1
+	local_manpower_modifier = 0.15
+}
+
+kielak_colonial_formable_alaska_mountain_pass = {
+	local_defensiveness = 0.15
+	local_garrison_size = 0.2
+	local_garrison_damage = 0.2
+}
+
+kielak_colonial_formable_alaska_pollock_fishing = {
+	trade_goods_size = 2
+	province_trade_power_value = 20
+}
+
+kielak_colonial_formable_alaska_light_ship_dominance = {
+	global_ship_trade_power = 0.15
+	global_prov_trade_power_modifier = 0.15
+}
+
+kielak_colonial_formable_alaska_winter_warfare = {
+	land_attrition = -0.2
+	global_supply_limit_modifier = 0.25
+}
+
+kielak_colonial_formable_alaska_arctic_assasins = {
+	discipline = 0.025
+	drill_decay_modifier = -0.1
+}
+
+kielak_colonial_formable_canada_newfoundland_buff = {
+	province_trade_power_value = 5
+	local_ship_cost = -0.2
+}
+
+kielak_colonial_formable_canada_forrest_expansion = {
+	local_development_cost = -0.05
+	local_manpower_modifier = 0.1
+}
+
+kielak_colonial_formable_canada_hide_behind_trees = {
+	fire_damage_received = -0.05
+	morale_damage_received = -0.05
+}
+
+kielak_colonial_formable_canada_maple_syrup = {
+	global_unrest = -2
+	global_trade_goods_size_modifier = 0.1
+	build_cost = -0.1
+}
+
+kielak_colonial_formable_canada_51st_state = {
+	republican_tradition = 0.2
+	land_forcelimit_modifier = 0.2
+}
+
+kielak_colonial_formable_brazil_jungle_expeditions = {
+	land_attrition = -0.1
+	movement_speed = 0.05
+}
+
+kielak_colonial_formable_brazil_rio_de_janeiro = {
+	tax_income = 60
+}
+
+kielak_colonial_formable_brazil_cristo_redentor = {
+	manpower_in_true_faith_provinces= 0.15
+	global_missionary_strength = 0.03
+}
+
+kielak_colonial_formable_brazil_heart_of_the_amazonas = {
+	local_defender_dice_roll_bonus = 1
+}
+
+kielak_colonial_formable_brazil_amazonas_river_prosperity = {
+	local_development_cost = -0.15
+}
+
+kielak_colonial_formable_brazil_amazonas_gulf_harbor = {
+	local_sailors = 150
+	local_ship_cost = -0.2
+	local_ship_repair = 0.2
+}
+
+kielak_brazil_centralize_state_tax_buff = {
+	local_tax_modifier = 0.20
+}
+
+kielak_brazil_centralize_tax_heaven = {
+	global_tax_modifier = 0.5
+}
+
+kielak_colonial_formable_peru_nazca_port = {
+	ship_recruit_speed = -0.30
+	local_ship_cost = -0.30
+}
+
+kielak_colonial_formable_peru_mountain_warfare = {
+	land_attrition = -0.1
+	movement_speed = 0.1
+}
+
+kielak_colonial_formable_peru_mountain_warriors = {
+	shock_damage = 0.05
+	fire_damage = 0.05
+	morale_damage_received = -0.1
+}
+
+kielak_colonial_formable_chile_patagonia_dev_cost = {
+	local_development_cost = -0.1
+	province_trade_power_modifier = 0.2
+}
+
+kielak_colonial_formable_chile_navy = {
+	naval_forcelimit_modifier = 0.15
+}
+
+kielak_colonial_formable_chile_strait_of_death = {
+	local_own_coast_naval_combat_bonus = 1
+}
+
+kielak_colonial_formable_chile_grain_bay = {
+	local_manpower_modifier = 0.2
+}
+
+kielak_colonial_formable_chile_grain_bay_army = {
+	global_manpower_modifier = 0.1
+	land_forcelimit_modifier = 0.1
+}
+
+kielak_colonial_formable_chile_promote_mining = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+kielak_colonial_formable_chile_fully_developed = {
+	land_morale = 0.05
+	regiment_manpower_usage = -0.05
+}
+
+kielak_colonial_formable_carribean_growth_spurt = {
+	development_cost = -0.05
+}
+
+kielak_colonial_formable_carribean_cuban_cigars = {
+	trade_goods_size = 2
+	province_trade_power_value = 25
+}
+
+kielak_colonial_formable_carribean_captain_jack_sparrow = {
+	naval_morale = 0.05
+	naval_morale_damage_received = -0.05
+}
+
+kielak_colonial_formable_carribean_protecting_trade = {
+	global_ship_trade_power = 0.1
+	trade_efficiency = 0.05
+	allowed_marine_fraction = 0.1
+}
+
+kielak_colonial_formable_carribean_protecting_trade_2 = {
+	global_own_trade_power = 0.1
+	allowed_marine_fraction = 0.1
+}
+
+kielak_colonial_formable_carribean_elite_marines = {
+	land_morale = 0.075
+	is_marine_modifier = yes
+}
+
+kielak_colonial_formable_carribean_troop_shipments = {
+	transport_attrition = -0.2
+	allowed_marine_fraction = 0.1
+}
+
+kielak_colonial_formable_mexico_tackle_inflation = {
+	inflation_reduction = 0.05
+}
+
+kielak_colonial_formable_mexico_infinite_gold = {
+	local_gold_depletion_chance_modifier = -1
+	trade_goods_size_modifier = 0.1
+}
+
+kielak_colonial_formable_mexico_manpower = {
+	global_manpower_modifier = 0.1
+}
+
+kielak_colonial_formable_mexico_forcelimit = {
+	land_forcelimit_modifier = 0.1
+}
+
+kielak_colonial_formable_mexico_military_manpower = {
+	morale_damage_received = -0.1
+}
+
+kielak_colonial_formable_mexico_military_forcelimit = {
+	morale_damage = 0.1
+}
+
+kielak_colonial_formable_mexico_military_manpower_and_forcelimit = {
+	morale_damage_received = -0.1
+	morale_damage = 0.1
+}
+
+kielak_colonial_formable_mexico_rio_grande_border = {
+	local_defensiveness = 0.2
+	local_garrison_damage = 0.15
+}
+
+kielak_colonial_formable_mexico_el_paso_border = {
+	local_defensiveness = 0.2
+	local_garrison_damage = 0.15
+}
+
+kielak_colonial_formable_mexico_dominance = {
+	max_absolutism_effect = 0.1
+	max_absolutism = 25
+	republican_tradition = 0.25
+}
+
+kielak_colonial_formable_vermont_floridian_marshland = {
+	local_development_cost = -0.1
+	local_production_efficiency = 0.15
+}
+
+kielak_colonial_formable_vermont_miami = {
+	local_ship_cost = -0.2
+	local_ship_repair = 0.1
+	local_sailors = 250
+}
+
+kielak_colonial_formable_vermont_jamestown_trade = {
+	province_trade_power_modifier = 0.3
+}
+
+kielak_colonial_formable_vermont_take_me_home = {
+	fire_damage_received = -0.05
+}
+
+kielak_colonial_formable_vermont_naval_ambitions = {
+	naval_maintenance_modifier = -0.1
+	naval_forcelimit_modifier = 0.1
+}
+
+kielak_colonial_formable_vermont_naval_ambitions_2 = {
+	leader_naval_fire = 1
+	leader_naval_shock = 1
+}
+
+kielak_colonial_formable_vermont_naval_ambitions_3 = {
+	global_sailors_modifier = 0.05
+	sailors_recovery_speed = 0.1
+	allowed_marine_fraction = 0.15
+}
+
+kielak_colonial_formable_central_america_jungle_development = {
+	development_cost = -0.05
+}
+
+kielak_colonial_formable_central_america_jungle_warrios = {
+	movement_speed = 0.1
+	land_morale = 0.05
+}
+
+kielak_colonial_formable_central_america_jungle_vines = {
+	local_hostile_movement_speed = -0.3
+	local_defensiveness = 0.1
+}
+
+kielak_colonial_formable_central_america_boulder_trap = {
+	local_garrison_damage = 0.3
+	local_garrison_size = 0.2
+}
+
+kielak_colonial_formable_illinois_louisiana = {
+	local_development_cost = -0.05
+	province_trade_power_modifier = 0.25
+}
+
+kielak_colonial_formable_illinois_flatlands = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+kielak_colonial_formable_illinois_flatlands_2 = {
+	shock_damage = 0.05
+	fire_damage = 0.05
+}
+
+kielak_colonial_formable_illinois_religious_consolidation = {
+	stability_cost_modifier = -0.2
+	global_missionary_strength = 0.01
+
+}
+
+kielak_colonial_formable_illinois_religious_state = {
+	advisor_cost = -0.15
+}
+
+kielak_colonial_formable_illinois_all_powerfull = {
+	manpower_in_true_faith_provinces = 0.2
+}
+
+kielak_colonial_formable_venezuelan_jungle = {
+	land_attrition = -0.1
+	morale_damage_received = -0.1
+}
+
+kielak_colonial_formable_venezuelan_protect_panama = {
+	local_defensiveness = 0.1
+	local_hostile_attrition = 2
+}
+
+kielak_colonial_formable_venezuelan_republic = {
+	republican_tradition = 0.2
+}
+
+kielak_colonial_formable_venezuelan_building_spree = {
+	build_cost = -0.15
+	build_time = -0.15
+	great_project_upgrade_cost = -0.25
+
+}
+
+kielak_colonial_formable_venezuelan_cocain_empire = {
+	global_trade_goods_size_modifier = 0.1
+	max_absolutism_effect = 0.1
+}
+
+kielak_colonial_formable_carribean_may_raid_coasts = {
+	may_perform_slave_raid_on_same_religion = yes
+	coast_raid_range = 1
+}
