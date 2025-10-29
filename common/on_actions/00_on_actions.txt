@@ -2220,6 +2220,21 @@ on_adm_development = {
 			}
 		}
 	}
+	if = {
+		limit = { owner = { has_country_flag = kielak_brazil_tax_dev_can_dev_mil } }
+		random_list = {
+			5 = { add_base_manpower = 1 }
+			95 = { }
+		}
+	}
+
+	if = {
+		limit = { owner = { has_country_flag = kielak_brazil_tax_dev_can_dev_mil_2 } }
+		random_list = {
+			10 = { add_base_manpower = 1 }
+			90 = { }
+		}
+	}
 }
 
 # province
@@ -6337,6 +6352,23 @@ on_centralized_state = {
 					add_base_manpower = 1
 				}
 			}
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_country_flag = kielak_brazil_centralize_state_buff}
+		}
+		area = {
+			add_province_modifier = {
+				name = kielak_brazil_centralize_state_tax_buff
+				duration = -1
+			}
+		}
+	}
+	area = {
+		add_province_modifier = {
+				name = centralized_state_permanent_modifiers
+				duration = -1
 		}
 	}
 }

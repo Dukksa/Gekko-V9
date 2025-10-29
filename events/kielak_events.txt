@@ -1,0 +1,678 @@
+namespace = kielak_events
+
+country_event = { #Colonial Nations generate strong ruler
+	id = kielak_events.12
+	title = kielak_events.12.t
+	picture = CATHOLIC_RULERS_PRAYING_eventPicture
+	desc = kielak_events.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kielak_events.12_option_a
+		set_country_flag = took_john
+		define_ruler = {
+			name = "John J. Johnson"
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			adm = 6
+			dip = 3
+			mil = 3
+			claim = 100
+			age = 30
+
+		}
+		hidden_effect = {
+			add_ruler_personality = architectural_visionary_personality
+		}
+		
+		
+	}
+
+	option = {
+		name = kielak_events.12_option_b
+		set_country_flag = took_william
+		define_ruler = {
+			name = "William W. Willson"
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			adm = 3
+			dip = 6
+			mil = 3
+			claim = 100
+			age = 30
+		}
+		hidden_effect = {
+			add_ruler_personality = industrious_personality
+		}
+		
+		
+	}
+
+	option = {
+		name = kielak_events.12_option_c
+		set_country_flag = took_fred
+		define_ruler = {
+			name = "Fred F. Fredrickson"
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			adm = 3
+			dip = 3
+			mil = 6
+			claim = 100
+			age = 30
+		}
+		hidden_effect = {
+			add_ruler_personality = cruel_personality
+		}
+		
+	}
+
+}
+
+
+country_event = { #Colonial Nations Fred hates John
+	id = kielak_events.13
+	title = kielak_events.13.t
+	picture = PANIC_eventPicture
+	desc = kielak_events.13.d
+
+	trigger = {
+		has_country_flag = took_john
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	immediate = {
+		clr_country_flag = took_john
+	}
+
+	option = {
+		name = kielak_events.13_option_a
+		capital_scope = {
+			spawn_rebels = {
+				size = 2
+				type = leadered_peasant_rebels
+				leader = "Fred F. Fredrickson"
+			}
+		}	
+
+	}
+
+}
+
+country_event = { #Colonial Nations Fred hates William
+	id = kielak_events.14
+	title = kielak_events.14.t
+	picture = PANIC_eventPicture
+	desc = kielak_events.14.d
+
+	trigger = {
+		has_country_flag = took_william
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	immediate = {
+		clr_country_flag = took_william
+	}
+
+	option = {
+		name = kielak_events.14_option_a
+		capital_scope = {
+			spawn_rebels = {
+				size = 2
+				type = leadered_peasant_rebels
+				leader = "Fred F. Fredrickson"
+			}
+		}	
+
+	}
+
+}
+
+country_event = { #Colonial Nations John and William hate Fred
+	id = kielak_events.15
+	title = kielak_events.15.t
+	picture = PANIC_eventPicture
+	desc = kielak_events.15.d
+
+	trigger = {
+		has_country_flag = took_fred
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	immediate = {
+		clr_country_flag = took_fred
+		set_country_flag = revolts_of_john_and_william
+	}
+
+	option = {
+		name = kielak_events.15_option_a
+		capital_scope = {
+			spawn_rebels = {
+				size = 2
+				type = leadered_peasant_rebels
+				leader = "John J. Johnson"
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				size = 2
+				type = leadered_peasant_rebels
+				leader = "William W. Willson"
+			}
+		}	
+
+	}
+
+}
+
+country_event = { #Colonial Nations John and William back for more
+	id = kielak_events.16
+	title = kielak_events.16.t
+	picture = PANIC_eventPicture
+	desc = kielak_events.16.d
+
+	trigger = {
+		has_country_flag = revolts_of_john_and_william
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	immediate = {
+		clr_country_flag = revolts_of_john_and_william
+		set_country_flag = last_resort_of_john_and_william
+	}
+
+	option = {
+		add_stability = -1
+		name = kielak_events.16_option_a
+		capital_scope = {
+			spawn_rebels = {
+				size = 3
+				type = leadered_peasant_rebels
+				leader = "John J. Johnson"
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				size = 1
+				type = leadered_peasant_rebels
+				leader = "William W. Willson"
+			}
+		}	
+
+	}
+
+}
+
+country_event = { #Colonial Nations John and William last resort
+	id = kielak_events.17
+	title = kielak_events.17.t
+	picture = PANIC_eventPicture
+	desc = kielak_events.17.d
+
+	trigger = {		
+		has_country_flag = last_resort_of_john_and_william
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	immediate = {
+		clr_country_flag = last_resort_of_john_and_william
+	}
+
+	option = {
+		name = kielak_events.17_option_a
+		add_stability = -1
+		kill_ruler = yes
+		add_country_modifier = {
+			name = kielak_colonial_fred_assasinate
+			duration = 3650
+		}	
+	}
+
+}
+
+
+country_event = { #Colonial Formables Infantry or Cavalry Nation choice
+	id = kielak_events.18
+	title = kielak_events.18.t
+	picture = BIG_BOOK_eventPicture
+	desc = kielak_events.18.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kielak_events.18_option_a
+		hidden_effect = {
+			set_country_flag = colonial_infantry_path
+		}
+		
+	}
+
+	option = {
+		name = kielak_events.18_option_b
+		hidden_effect = {
+			set_country_flag = colonial_cavalry_path
+		}
+		
+	}
+
+}
+
+country_event = { #Colonial Formables Cavalry offensive or defensive
+	id = kielak_events.19
+	title = kielak_events.19.t
+	picture = PRAYING_eventPicture
+	desc = kielak_events.19.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kielak_events.19_option_a
+		hidden_effect = {
+			set_country_flag = colonial_cavalry_offensive_path
+		}
+		
+	}
+
+	option = {
+		name = kielak_events.19_option_b
+		hidden_effect = {
+			set_country_flag = colonial_cavalry_defensive_path
+		}
+		
+	}
+
+}
+
+
+country_event = { #Colonial Formables respawn wiped elite cavalry
+	id = kielak_events.20
+	title = kielak_events.20.t
+	picture = TEMPORAL_RIFT_eventPicture
+	desc = kielak_events.20.d
+
+	trigger = {
+		AND = {
+			NOT = {
+				num_of_special_units = {
+					special_unit_category = cossacks
+					type = cavalry
+					value = 1
+				}
+			}
+			
+			had_country_flag = {
+				flag = spawned_elite_cavalry
+				days = 9125
+			}
+
+			capital_scope = {
+				controlled_by = ROOT
+				has_siege = no
+			}
+		}
+		
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		clr_country_flag = spawned_elite_cavalry
+	}
+
+	option = {
+		name = kielak_events.20_option_a
+		create_unit_forcelimit_percentage = {
+				type = cavalry
+				special_unit_category = cossacks
+				force_limit_percentage = 0.1
+			}
+		hidden_effect = {
+			set_country_flag = spawned_elite_cavalry
+		}
+			
+		
+	}
+
+
+
+}
+
+
+country_event = { #Colonial Formables Infantry offensive or defensive
+	id = kielak_events.21
+	title = kielak_events.21.t
+	picture = REVOLT_HUGUENOTS_eventPicture
+	desc = kielak_events.21.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kielak_events.21_option_a
+		hidden_effect = {
+			set_country_flag = colonial_infantry_offensive_path
+		}
+		
+	}
+
+	option = {
+		name = kielak_events.21_option_b
+		hidden_effect = {
+			set_country_flag = colonial_infantry_defensive_path
+		}
+		
+	}
+
+}
+
+country_event = { #Colonial Formables respawn wiped elite cavalry
+	id = kielak_events.22
+	title = kielak_events.22.t
+	picture = TEMPORAL_RIFT_eventPicture
+	desc = kielak_events.22.d
+
+	trigger = {
+		AND = {
+			NOT = {
+				num_of_special_units = {
+					special_unit_category = cossacks
+					type = infantry
+					value = 1
+				}
+			}
+			
+			had_country_flag = {
+				flag = spawned_elite_infantry
+				days = 9125
+			}
+
+			capital_scope = {
+				controlled_by = ROOT
+				has_siege = no
+			}
+		}
+		
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		clr_country_flag = spawned_elite_infantry
+	}
+
+	option = {
+		name = kielak_events.22_option_a
+		create_unit_forcelimit_percentage = {
+				type = infantry
+				special_unit_category = cossacks
+				force_limit_percentage = 0.1
+			}
+		hidden_effect = {
+			set_country_flag = spawned_elite_infantry
+		}
+			
+		
+	}
+
+
+
+}
+
+
+country_event = { #Colonial Formables California Fortify California Plateu
+	id = kielak_events.23
+	title = kielak_events.23.t
+	picture = GREAT_BUILDING_eventPicture
+	desc = kielak_events.23.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kielak_events.23_option_a
+			
+		875 = {
+			add_permanent_province_modifier = {
+				name = kielak_colonial_formable_californian_colorado_mountain_fortification
+				duration = -1
+			}
+			add_base_manpower = 4
+		}
+	}
+	option = {
+		name = kielak_events.23_option_b
+			
+		878 = {
+			add_permanent_province_modifier = {
+				name = kielak_colonial_formable_californian_colorado_mountain_fortification
+				duration = -1
+			}
+			add_base_manpower = 4
+		}
+	}
+	option = {
+		name = kielak_events.23_option_c
+			
+		2493 = {
+			add_permanent_province_modifier = {
+				name = kielak_colonial_formable_californian_colorado_mountain_fortification
+				duration = -1
+			}
+			add_base_manpower = 4
+		}
+	}
+	option = {
+		name = kielak_events.23_option_d
+			
+		2493 = {
+			add_permanent_province_modifier = {
+				name = kielak_colonial_formable_californian_colorado_mountain_fortification
+				duration = -1
+			}
+			add_base_manpower = 4
+		}
+	}
+
+
+
+}
+
+country_event = { #Colonial Formables California Fortify Northern California
+	id = kielak_events.24
+	title = kielak_events.24.t
+	picture = GREAT_BUILDING_eventPicture
+	desc = kielak_events.24.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kielak_events.24_option_a
+			
+		2480 = {
+			add_permanent_province_modifier = {
+				name = kielak_colonial_formable_californian_colorado_mountain_fortification
+				duration = -1
+			}
+			add_base_manpower = 4
+		}
+	}
+	option = {
+		name = kielak_events.24_option_b
+			
+		2477 = {
+			add_permanent_province_modifier = {
+				name = kielak_colonial_formable_californian_colorado_mountain_fortification
+				duration = -1
+			}
+			add_base_manpower = 4
+		}
+	}
+	option = {
+		name = kielak_events.24_option_c
+			
+		871 = {
+			add_permanent_province_modifier = {
+				name = kielak_colonial_formable_californian_colorado_mountain_fortification
+				duration = -1
+			}
+			add_base_manpower = 4
+		}
+	}
+
+
+
+
+}
+
+country_event = { #Colonial Formables Alaska Mountain Pass Defenses
+	id = kielak_events.25
+	title = kielak_events.25.t
+	picture = GREAT_BUILDING_eventPicture
+	desc = kielak_events.25.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kielak_events.25_option_a
+			
+		2481 = {
+			add_or_upgrade_fort_building = yes
+			add_permanent_province_modifier = {
+				name = kielak_colonial_formable_alaska_mountain_pass
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = kielak_events.25_option_b
+			
+		2020 = {
+			add_or_upgrade_fort_building = yes
+			add_permanent_province_modifier = {
+				name = kielak_colonial_formable_alaska_mountain_pass
+				duration = -1
+			}
+		}
+	}
+
+
+
+
+
+}
+
+country_event = { #Colonial Formables Mexico Develop Mexico
+	id = kielak_events.26
+	title = kielak_events.26.t
+	picture = CITY_DEVELOPMENT_eventPicture
+	desc = kielak_events.26.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kielak_events.26_option_a
+			
+		add_country_modifier = {
+			name = kielak_colonial_formable_mexico_manpower
+			duration = -1
+		}
+	}
+	option = {
+		name = kielak_events.26_option_b
+			
+		add_country_modifier = {
+			name = kielak_colonial_formable_mexico_forcelimit
+			duration = -1
+		}
+	}
+
+
+}
+
+country_event = { #Colonial Formables Mexico Rio Grand and El Passo Defense Lines
+	id = kielak_events.27
+	title = kielak_events.27.t
+	picture = FORT_eventPicture
+	desc = kielak_events.27.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kielak_events.27_option_a
+			
+		2499 = {
+			add_or_upgrade_fort_building = yes
+			add_permanent_province_modifier = {
+				name = kielak_colonial_formable_mexico_rio_grande_border
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = kielak_events.27_option_b
+			
+		2498 = {
+			add_or_upgrade_fort_building = yes
+			add_permanent_province_modifier = {
+				name = kielak_colonial_formable_mexico_el_paso_border
+				duration = -1
+			}
+		}
+	}
+
+
+}
+
+country_event = { #West Indies loses Tortuga
+    id = kielak_events.32 #
+    title = kielak_events.32.t
+    desc = kielak_events.32.d
+    picture = PIRATE_CAPTAINS_eventPicture
+   
+	
+	trigger = {
+		AND = {
+			has_country_modifier = kielak_colonial_formable_carribean_may_raid_coasts
+			489 = {
+				NOT = {
+					owned_by = ROOT
+				}
+			}
+		}
+		
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kielak_events.32_option_a
+		remove_country_modifier = kielak_colonial_formable_carribean_may_raid_coasts
+		add_prestige = -25
+		add_stability = -1
+		
+	}
+
+}

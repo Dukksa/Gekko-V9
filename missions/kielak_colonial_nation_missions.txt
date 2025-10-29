@@ -1,0 +1,4869 @@
+# Missions for Colonial Nations in NW and their Formables
+kielak_colonial_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		AND = {
+			is_colonial_nation = yes
+			capital_scope = {
+				NOT = {
+					OR = {
+						colonial_region = colonial_south_africa
+						colonial_region = colonial_australia
+						colonial_region = colonial_east_indies
+					}
+				}
+			}
+		}
+	}
+	kielak_colonial_mission_1_1 = {
+		icon = indonesian_trade
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			navy_size_percentage = 1
+		}
+		effect = {
+			define_advisor = {
+				type = naval_reformer
+				name = "Jack Starling"
+				cost_multiplier = 0.75
+				age = 40
+				skill = 2
+			}
+		}
+	}
+	kielak_colonial_mission_1_2 = {
+		icon = imperial_navy
+		position = 2
+		required_missions = {
+			kielak_colonial_mission_1_1
+		}
+		trigger = {
+			navy_size_percentage = 1
+			sailors_percentage = 1
+			dock = 5
+		}
+		effect = {
+			custom_tooltip = "A random province gets its dock upgraded."
+			random_owned_province = {
+				limit = {
+					has_dock_building_trigger = yes
+				}
+				upgrade_dock_building = yes
+			}
+		}
+	}
+	kielak_colonial_mission_1_3 = {
+		icon = crusader_fleet
+		position = 3
+		required_missions = {
+			kielak_colonial_mission_1_2
+		}
+		trigger = {
+			grown_by_development = 200
+			num_of_total_ports = 10
+			shipyard = 10
+		}
+		effect = {
+			custom_tooltip = "A random province gets its shipyard upgraded."
+			random_owned_province = {
+				limit = {
+					has_shipyard_building_trigger = yes
+				}
+				upgrade_shipyard_building = yes
+			}
+			add_country_modifier = {
+				name = kielak_colonial_increase_navy_size
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_mission_1_4 = {
+		icon = mission_galleass
+		position = 4
+		required_missions = {
+			kielak_colonial_mission_1_3
+		}
+		trigger = {
+			grown_by_development = 350
+			naval_forcelimit = 100
+			num_of_heavy_ship = 20
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_navy_improvements
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_mission_1_5 = {
+		icon = mission_rb_grow_the_channel
+		position = 5
+		required_missions = {
+			kielak_colonial_mission_1_4
+		}
+		trigger = {
+			navy_size_percentage = 1
+			naval_forcelimit = 250
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_transport_attrition
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_missions_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		AND = {
+			is_colonial_nation = yes
+			capital_scope = {
+				NOT = {
+					OR = {
+						colonial_region = colonial_south_africa
+						colonial_region = colonial_australia
+						colonial_region = colonial_east_indies
+					}
+				}
+			}
+		}
+	}
+	kielak_colonial_mission_2_1 = {
+		icon = fra_educational_reforms
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			AND = {
+				ADM = 6
+				DIP = 6
+				MIL = 6
+			}
+		}
+		effect = {
+			add_republican_tradition = 25
+			add_stability = 1
+			add_prestige = 20
+		}
+	}
+	kielak_colonial_mission_2_2 = {
+		icon = fra_develop_trade
+		position = 2
+		required_missions = {
+			kielak_colonial_mission_2_1
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			republican_tradition = 90
+			stability = 1
+			reform_level = 2
+		}
+		effect = {
+			change_government_reform_progress = 100
+			change_estate_land_share = {
+				estate = estate_church
+				share = -5
+			}
+			change_estate_land_share = {
+				estate = estate_burghers
+				share = -5
+			}
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				change_estate_land_share = {
+					estate = estate_nobles
+					share = -5
+				}
+			}
+		}
+	}
+	kielak_colonial_mission_2_3 = {
+		icon = mission_english_renaissance
+		position = 3
+		required_missions = {
+			kielak_colonial_mission_2_2
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			crown_land_share = 50
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_mission_controlling_the_estates
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_mission_2_4 = {
+		icon = spa_infantes_aragon
+		position = 4
+		required_missions = {
+			kielak_colonial_mission_2_3
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			reform_level = 8
+			republican_tradition = 90
+			stability = 3
+		}
+		effect = {
+			custom_tooltip = "This Event will let us chose a new Ruler for our Country."
+			country_event = {
+				id = kielak_events.12
+			}
+		}
+	}
+}
+
+kielak_colonial_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		is_colonial_nation = yes
+		AND = {
+			is_colonial_nation = yes
+			capital_scope = {
+				NOT = {
+					OR = {
+						colonial_region = colonial_south_africa
+						colonial_region = colonial_australia
+						colonial_region = colonial_east_indies
+					}
+				}
+			}
+		}
+	}
+	#Develop Capital Province
+	kielak_colonial_mission_3_1 = {
+		icon = mission_conquer_50_development
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+		}
+		trigger = {
+			capital_scope = {
+				area_for_scope_province = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			capital_scope = {
+				if = {
+					limit = {
+						has_fort_building_trigger = yes
+					}
+					add_base_manpower = 2
+					add_province_modifier = {
+						name = kielak_colonial_mission_capital_wall
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_fort_building_trigger = no
+					}
+					add_building = fort_15th
+					add_province_modifier = {
+						name = kielak_colonial_mission_capital_wall
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	kielak_colonial_mission_3_2 = {
+		icon = prosperity_for_all
+		position = 2
+		required_missions = {
+			kielak_colonial_mission_3_1
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			capital_scope = {
+				area_for_scope_province = {
+					type = all
+					owned_by = ROOT
+					development = 15
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = "The next time we expand infrastructure in a province we will get a special event allowing us to customize further the province."
+			hidden_effect = {
+				set_country_flag = kielak_expand_infra_buff_flag
+			}
+		}
+	}
+	kielak_colonial_mission_3_3 = {
+		icon = consolidate_switzerland
+		position = 3
+		required_missions = {
+			kielak_colonial_mission_3_2
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			grown_by_states = 4
+		}
+		effect = {
+			add_treasury = 500
+			add_country_modifier = {
+				name = kielak_colonial_mission_build_phase
+				duration = 1825
+			}
+		}
+	}
+	kielak_colonial_mission_3_4 = {
+		icon = mission_rb_conquer_wales
+		position = 4
+		required_missions = {
+			kielak_colonial_mission_3_3
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			all_owned_province = {
+				is_prosperous = yes
+				num_of_buildings_in_province = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_mission_dev_phase
+				duration = 3650
+			}
+		}
+	}
+}
+
+kielak_colonial_missions_slot_4 = {
+	slot = 4
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		AND = {
+			is_colonial_nation = yes
+			capital_scope = {
+				NOT = {
+					OR = {
+						colonial_region = colonial_south_africa
+						colonial_region = colonial_australia
+						colonial_region = colonial_east_indies
+					}
+				}
+			}
+		}
+	}
+	kielak_colonial_mission_4_1 = {
+		icon = mission_landsknecht_soldier
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			overlord = {
+				capital_scope = {
+					controlled_by = THIS
+					has_siege = no
+				}
+			}
+			mil_tech = 9
+			AND = {
+				NOT = {
+					mission_completed = kielak_colonial_mission_4_2
+				}
+				NOT = {
+					mission_completed = kielak_colonial_mission_4_3
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 9
+						NOT = {
+							mil_tech = 11
+						}
+					}
+				}
+				manpower = 25
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 11
+						NOT = {
+							mil_tech = 14
+						}
+					}
+				}
+				manpower = 27
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 14
+						NOT = {
+							mil_tech = 16
+						}
+					}
+				}
+				manpower = 29
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 16
+						NOT = {
+							mil_tech = 18
+						}
+					}
+				}
+				manpower = 30
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 18
+						NOT = {
+							mil_tech = 20
+						}
+					}
+				}
+				manpower = 32
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 20
+						NOT = {
+							mil_tech = 22
+						}
+					}
+				}
+				manpower = 34
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 22
+						NOT = {
+							mil_tech = 24
+						}
+					}
+				}
+				manpower = 36
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 24
+						NOT = {
+							mil_tech = 26
+						}
+					}
+				}
+				manpower = 38
+			}
+			if = {
+				limit = {
+					mil_tech = 26
+				}
+				manpower = 40
+			}
+		}
+		effect = {
+			custom_tooltip = "We will spawn a full combat width worth of our infantry in the capital of our overlord. The manpower and ducat cost will be payed by us."
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 9
+						NOT = {
+							mil_tech = 11
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 25
+							unit_type = infantry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -25
+				add_treasury = -250
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 11
+						NOT = {
+							mil_tech = 14
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 27
+							unit_type = infantry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -27
+				add_treasury = -270
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 14
+						NOT = {
+							mil_tech = 16
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 29
+							unit_type = infantry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -29
+				add_treasury = -290
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 16
+						NOT = {
+							mil_tech = 18
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 30
+							unit_type = infantry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -30
+				add_treasury = -300
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 18
+						NOT = {
+							mil_tech = 20
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 32
+							unit_type = infantry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -32
+				add_treasury = -320
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 20
+						NOT = {
+							mil_tech = 22
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 34
+							unit_type = infantry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -34
+				add_treasury = -340
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 22
+						NOT = {
+							mil_tech = 24
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 36
+							unit_type = infantry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -36
+				add_treasury = -360
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 24
+						NOT = {
+							mil_tech = 26
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 38
+							unit_type = infantry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -38
+				add_treasury = -380
+			}
+			else_if = {
+				limit = {
+					mil_tech = 26
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 40
+							unit_type = infantry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -40
+				add_treasury = -400
+			}
+		}
+	}
+	kielak_colonial_mission_4_2 = {
+		icon = mission_cossack_cavalry
+		position = 2
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			overlord = {
+				capital_scope = {
+					controlled_by = THIS
+					has_siege = no
+				}
+			}
+			mil_tech = 9
+			AND = {
+				NOT = {
+					mission_completed = kielak_colonial_mission_4_1
+				}
+				NOT = {
+					mission_completed = kielak_colonial_mission_4_3
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 9
+						NOT = {
+							mil_tech = 11
+						}
+					}
+				}
+				manpower = 25
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 11
+						NOT = {
+							mil_tech = 14
+						}
+					}
+				}
+				manpower = 27
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 14
+						NOT = {
+							mil_tech = 16
+						}
+					}
+				}
+				manpower = 29
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 16
+						NOT = {
+							mil_tech = 18
+						}
+					}
+				}
+				manpower = 30
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 18
+						NOT = {
+							mil_tech = 20
+						}
+					}
+				}
+				manpower = 32
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 20
+						NOT = {
+							mil_tech = 22
+						}
+					}
+				}
+				manpower = 34
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 22
+						NOT = {
+							mil_tech = 24
+						}
+					}
+				}
+				manpower = 36
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 24
+						NOT = {
+							mil_tech = 26
+						}
+					}
+				}
+				manpower = 38
+			}
+			if = {
+				limit = {
+					mil_tech = 26
+				}
+				manpower = 40
+			}
+		}
+		effect = {
+			custom_tooltip = "We will spawn a full combat width worth of our cavalry in the capital of our overlord. The manpower and ducat cost will be payed by us."
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 9
+						NOT = {
+							mil_tech = 11
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 25
+							unit_type = cavalry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -25
+				add_treasury = -625
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 11
+						NOT = {
+							mil_tech = 14
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 27
+							unit_type = cavalry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -27
+				add_treasury = -675
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 14
+						NOT = {
+							mil_tech = 16
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 29
+							unit_type = cavalry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -29
+				add_treasury = -725
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 16
+						NOT = {
+							mil_tech = 18
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 30
+							unit_type = cavalry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -30
+				add_treasury = -750
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 18
+						NOT = {
+							mil_tech = 20
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 32
+							unit_type = cavalry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -32
+				add_treasury = -800
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 20
+						NOT = {
+							mil_tech = 22
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 34
+							unit_type = cavalry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -34
+				add_treasury = -850
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 22
+						NOT = {
+							mil_tech = 24
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 36
+							unit_type = cavalry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -36
+				add_treasury = -900
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 24
+						NOT = {
+							mil_tech = 26
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 38
+							unit_type = cavalry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -38
+				add_treasury = -950
+			}
+			else_if = {
+				limit = {
+					mil_tech = 26
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 40
+							unit_type = cavalry
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -40
+				add_treasury = -1000
+			}
+		}
+	}
+	kielak_colonial_mission_4_3 = {
+		icon = mission_cannons_firing
+		position = 3
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			overlord = {
+				capital_scope = {
+					controlled_by = THIS
+					has_siege = no
+				}
+			}
+			mil_tech = 9
+			AND = {
+				NOT = {
+					mission_completed = kielak_colonial_mission_4_1
+				}
+				NOT = {
+					mission_completed = kielak_colonial_mission_4_2
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 9
+						NOT = {
+							mil_tech = 11
+						}
+					}
+				}
+				manpower = 25
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 11
+						NOT = {
+							mil_tech = 14
+						}
+					}
+				}
+				manpower = 27
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 14
+						NOT = {
+							mil_tech = 16
+						}
+					}
+				}
+				manpower = 29
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 16
+						NOT = {
+							mil_tech = 18
+						}
+					}
+				}
+				manpower = 30
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 18
+						NOT = {
+							mil_tech = 20
+						}
+					}
+				}
+				manpower = 32
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 20
+						NOT = {
+							mil_tech = 22
+						}
+					}
+				}
+				manpower = 34
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 22
+						NOT = {
+							mil_tech = 24
+						}
+					}
+				}
+				manpower = 36
+			}
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 24
+						NOT = {
+							mil_tech = 26
+						}
+					}
+				}
+				manpower = 38
+			}
+			if = {
+				limit = {
+					mil_tech = 26
+				}
+				manpower = 40
+			}
+		}
+		effect = {
+			custom_tooltip = "We will spawn a full combat width worth of our artillery in the capital of our overlord. The manpower and ducat cost will be payed by us."
+			if = {
+				limit = {
+					AND = {
+						mil_tech = 9
+						NOT = {
+							mil_tech = 11
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 25
+							unit_type = artillery
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -25
+				add_treasury = -750
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 11
+						NOT = {
+							mil_tech = 14
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 27
+							unit_type = artillery
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -27
+				add_treasury = -810
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 14
+						NOT = {
+							mil_tech = 16
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 29
+							unit_type = artillery
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -29
+				add_treasury = -870
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 16
+						NOT = {
+							mil_tech = 18
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 30
+							unit_type = artillery
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -30
+				add_treasury = -840
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 18
+						NOT = {
+							mil_tech = 20
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 32
+							unit_type = artillery
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -32
+				add_treasury = -900
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 20
+						NOT = {
+							mil_tech = 22
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 34
+							unit_type = artillery
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -34
+				add_treasury = -960
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 22
+						NOT = {
+							mil_tech = 24
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 36
+							unit_type = artillery
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -36
+				add_treasury = -1020
+			}
+			else_if = {
+				limit = {
+					AND = {
+						mil_tech = 24
+						NOT = {
+							mil_tech = 26
+						}
+					}
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 38
+							unit_type = artillery
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -38
+				add_treasury = -1080
+			}
+			else_if = {
+				limit = {
+					mil_tech = 26
+				}
+				overlord = {
+					capital_scope = {
+						create_units_of_type_in_province = {
+							amount = 40
+							unit_type = artillery
+							who = ROOT
+						}
+					}
+				}
+				add_manpower = -40
+				add_treasury = -1140
+			}
+		}
+	}
+}
+
+kielak_colonial_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		AND = {
+			is_colonial_nation = yes
+			capital_scope = {
+				NOT = {
+					OR = {
+						colonial_region = colonial_south_africa
+						colonial_region = colonial_australia
+						colonial_region = colonial_east_indies
+					}
+				}
+			}
+		}
+	}
+	kielak_colonial_mission_5_1 = {
+		icon = mission_assemble_an_army
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			army_size_percentage = 1
+		}
+		effect = {
+			define_advisor = {
+				type = army_reformer
+				name = "Martin Shooter"
+				cost_multiplier = 0.75
+				age = 40
+				skill = 2
+			}
+		}
+	}
+	kielak_colonial_mission_5_2 = {
+		icon = mission_mnd_dai_control_the_army
+		position = 2
+		required_missions = {
+			kielak_colonial_mission_5_1
+		}
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 1
+			barracks = 10
+		}
+		effect = {
+			capital_scope = {
+				add_or_upgrade_manpower_building = yes
+			}
+		}
+	}
+	kielak_colonial_mission_5_3 = {
+		icon = qng_ten_grand_campaigns
+		position = 3
+		required_missions = {
+			kielak_colonial_mission_5_2
+		}
+		trigger = {
+			grown_by_development = 200
+			all_owned_province = {
+				has_manpower_building_trigger = yes
+			}
+		}
+		effect = {
+			capital_scope = {
+				if = {
+					limit = {
+						has_building = soldier_households
+					}
+					add_base_manpower = 5
+				}
+				else = {
+					add_building = soldier_households
+				}
+			}
+		}
+	}
+	kielak_colonial_mission_5_4 = {
+		icon = fortress_of_belgrade
+		position = 4
+		required_missions = {
+			kielak_colonial_mission_5_3
+		}
+		trigger = {
+			grown_by_development = 350
+			all_owned_province = {
+				has_forcelimit_building_trigger = yes
+			}
+		}
+		effect = {
+			capital_scope = {
+				if = {
+					limit = {
+						has_building = armory
+					}
+					add_base_manpower = 5
+				}
+				else = {
+					add_building = armory
+				}
+			}
+		}
+	}
+	kielak_colonial_mission_5_5 = {
+		icon = army_reforms
+		position = 5
+		required_missions = {
+			kielak_colonial_mission_5_4
+		}
+		trigger = {
+			ai = no
+			NOT = {
+				manpower_percentage = 0.1
+			}
+			overlord = {
+				NOT = {
+					manpower_percentage = 0.1
+				}
+				all_owned_province = {
+					NOT = {
+						has_construction = army
+					}
+				}
+			}
+			all_owned_province = {
+				NOT = {
+					has_construction = army
+				}
+			}
+			NOT = {
+				has_country_modifier = slackening_modifier
+			}
+		}
+		effect = {
+			add_yearly_manpower = 0.5
+			add_army_professionalism = 0.05
+			add_country_modifier = {
+				name = kielak_colonial_last_resort
+				duration = 3650
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		has_country_flag = became_dominion
+	}
+	kielak_colonial_formables_mission_1_8 = {
+		icon = mission_teutonic_lancer
+		position = 8
+		required_missions = {
+			kielak_colonial_formables_mission_2_7
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = "Has chosen Durable Path"
+				hidden_trigger = {
+					has_country_flag = colonial_cavalry_defensive_path
+				}
+			}
+			capital_scope = {
+				controlled_by = ROOT
+				has_siege = no
+			}
+			total_development = 500
+			all_owned_province = {
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+			}
+			armory = 15
+		}
+		effect = {
+			custom_tooltip = "Will spawn a elite stack of cavalry equal to 10% of our forcelimit. If all our elite cavalry get wiped they will respawn after 25 years."
+			add_country_modifier = {
+				name = kielak_colonial_formable_cavalry_defensive
+				duration = -1
+			}
+			create_unit_forcelimit_percentage = {
+				type = cavalry
+				special_unit_category = revolutionary_guard
+				force_limit_percentage = 0.1
+			}
+			hidden_effect = {
+				set_country_flag = spawned_elite_cavalry
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_missions_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		has_country_flag = became_dominion
+	}
+	kielak_colonial_formables_mission_2_6 = {
+		icon = mam_refine_the_furusiyya
+		position = 6
+		required_missions = {
+			kielak_colonial_formables_mission_3_5
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = "Has chosen the Cavalry Path"
+				hidden_trigger = {
+					has_country_flag = colonial_cavalry_path
+				}
+			}
+			cavalry_fraction = 0.6
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_cavalry_ratio
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_mission_2_7 = {
+		icon = mission_protect_albania
+		position = 7
+		required_missions = {
+			kielak_colonial_formables_mission_2_6
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_global_modifier_value = {
+				which = cavalry_power
+				value = 0.2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_cavalry_flanking
+				duration = -1
+			}
+			country_event = {
+				id = kielak_events.19
+			}
+		}
+	}
+	kielak_colonial_formables_mission_2_8 = {
+		icon = mission_control_the_ganges_delta
+		position = 8
+		required_missions = {
+			kielak_colonial_formables_mission_2_7
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = "Has chosen Fierce Path"
+				hidden_trigger = {
+					has_country_flag = colonial_cavalry_offensive_path
+				}
+			}
+			capital_scope = {
+				controlled_by = ROOT
+				has_siege = no
+			}
+			total_development = 500
+			all_owned_province = {
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+			}
+			armory = 15
+		}
+		effect = {
+			custom_tooltip = "Will spawn a elite stack of cavalry equal to 10% of our forcelimit. If all our elite cavalry get wiped they will respawn after 25 years."
+			add_country_modifier = {
+				name = kielak_colonial_formable_cavalry_offensive
+				duration = -1
+			}
+			create_unit_forcelimit_percentage = {
+				type = cavalry
+				special_unit_category = revolutionary_guard
+				force_limit_percentage = 0.1
+			}
+			hidden_effect = {
+				set_country_flag = spawned_elite_cavalry
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		has_country_flag = became_dominion
+	}
+	kielak_colonial_formables_mission_3_5 = {
+		icon = mission_russian_patriarchatee
+		position = 5
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			ai = no
+		}
+		effect = {
+			custom_tooltip = "Lets us choose between the Cavalry or Infantry Path"
+			country_event = {
+				id = kielak_events.18
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_missions_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		has_country_flag = became_dominion
+	}
+	kielak_colonial_formables_mission_4_6 = {
+		icon = mission_recruit_streltsy
+		position = 6
+		required_missions = {
+			kielak_colonial_formables_mission_3_5
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = "Has chosen Infantry Path"
+				hidden_trigger = {
+					has_country_flag = colonial_infantry_path
+				}
+			}
+			infantry_fraction = 0.7
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_infantry_pip
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_mission_4_7 = {
+		icon = mission_fekete_sereg
+		position = 7
+		required_missions = {
+			kielak_colonial_formables_mission_4_6
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_global_modifier_value = {
+				which = infantry_power
+				value = 0.2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_infantry_buff
+				duration = -1
+			}
+			country_event = {
+				id = kielak_events.21
+			}
+		}
+	}
+	kielak_colonial_formables_mission_4_8 = {
+		icon = mission_the_varangians
+		position = 8
+		required_missions = {
+			kielak_colonial_formables_mission_4_7
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = "Has chosen Agressive Path"
+				hidden_trigger = {
+					has_country_flag = colonial_infantry_offensive_path
+				}
+			}
+			capital_scope = {
+				controlled_by = ROOT
+				has_siege = no
+			}
+			total_development = 500
+			all_owned_province = {
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+			}
+			armory = 15
+		}
+		effect = {
+			custom_tooltip = "Will spawn a elite stack of infantry equal to 10% of our forcelimit. If all our elite infantry get wiped they will respawn after 25 years."
+			add_country_modifier = {
+				name = kielak_colonial_formable_infantry_offensive
+				duration = -1
+			}
+			create_unit_forcelimit_percentage = {
+				type = infantry
+				special_unit_category = revolutionary_guard
+				force_limit_percentage = 0.1
+			}
+			hidden_effect = {
+				set_country_flag = spawned_elite_infantry
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		has_country_flag = became_dominion
+	}
+	kielak_colonial_formables_mission_5_8 = {
+		icon = mission_livonian_knights
+		position = 8
+		required_missions = {
+			kielak_colonial_formables_mission_4_7
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = "Has chosen Defensive Path"
+				hidden_trigger = {
+					has_country_flag = colonial_infantry_defensive_path
+				}
+			}
+			capital_scope = {
+				controlled_by = ROOT
+				has_siege = no
+			}
+			total_development = 500
+			all_owned_province = {
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+			}
+			armory = 15
+		}
+		effect = {
+			custom_tooltip = "Will spawn a elite stack of infantry equal to 10% of our forcelimit. If all our elite infantry get wiped they will respawn after 25 years."
+			add_country_modifier = {
+				name = kielak_colonial_formable_infantry_defensive
+				duration = -1
+			}
+			create_unit_forcelimit_percentage = {
+				type = infantry
+				special_unit_category = revolutionary_guard
+				force_limit_percentage = 0.1
+			}
+			hidden_effect = {
+				set_country_flag = spawned_elite_infantry
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_ALA_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ALA
+	}
+	kielak_colonial_formables_ALA_mission_1_9 = {
+		icon = mission_fish_markets
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 979
+		}
+		trigger = {
+			979 = {
+				owned_by = ROOT
+				development = 15
+			}
+		}
+		effect = {
+			979 = {
+				if = {
+					limit = {
+						NOT = {
+							trade_goods = fish
+						}
+					}
+					change_trade_goods = fish
+				}
+				add_or_upgrade_production_building = yes
+				add_or_upgrade_trade_building = yes
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_alaska_pollock_fishing
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_ALA_mission_1_10 = {
+		icon = mission_longships
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_ALA_mission_1_9
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			light_ship_fraction = 0.8
+			num_of_light_ship = 100
+			navy_tradition = 70
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_alaska_light_ship_dominance
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_ALA_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ALA
+	}
+	kielak_colonial_formables_ALA_mission_3_8 = {
+		icon = mission_rb_settle_the_north
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = alaska_area
+				area = east_alaska_area
+			}
+			OR = {
+				NOT = {
+					development = 15
+				}
+				has_manpower_building_trigger = no
+			}
+		}
+		trigger = {
+			AND = {
+				alaska_area = {
+					type = all
+					owned_by = ROOT
+					development = 15
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+				}
+				east_alaska_area = {
+					type = all
+					owned_by = ROOT
+					development = 15
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = alaska_expand_infra_tooltip
+			hidden_effect = {
+				set_country_flag = kielak_alaska_expand_infra_arctic_buff
+			}
+			alaska_area = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_alaska_area_buff
+					duration = -1
+				}
+			}
+			east_alaska_area = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_alaska_area_buff
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_ALA_mission_3_9 = {
+		icon = mission_rb_colonise_canada
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_ALA_mission_3_8
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				has_terrain = mountain
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				has_terrain = mountain
+				development = 20
+			}
+		}
+		effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_mountain_expansion
+			}
+		}
+	}
+	kielak_colonial_formables_ALA_mission_3_10 = {
+		icon = alpine_defenses
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_ALA_mission_3_9
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2020
+				province_id = 2481
+			}
+		}
+		trigger = {
+			2481 = {
+				owned_by = ROOT
+				development = 30
+				has_fort_building_trigger = yes
+			}
+			2020 = {
+				owned_by = ROOT
+				development = 30
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = {
+			country_event = {
+				id = kielak_events.25
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_ALA_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ALA
+	}
+	kielak_colonial_formables_ALA_mission_5_9 = {
+		icon = mission_protect_white_sea_trade
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			region = cascadia_region
+			OR = {
+				NOT = {
+					development = 20
+				}
+				NOT = {
+					num_of_buildings_in_province = 4
+				}
+			}
+		}
+		trigger = {
+			cascadia_region = {
+				type = all
+				owned_by = ROOT
+				development = 20
+				num_of_buildings_in_province = 4
+			}
+			manpower_percentage = 0.9
+			army_size_percentage = 0.9
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_alaska_winter_warfare
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_ALA_mission_5_10 = {
+		icon = mission_norse_faith
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_ALA_mission_5_9
+		}
+		provinces_to_highlight = {
+			region = cascadia_region
+			has_climate = arctic
+			OR = {
+				NOT = {
+					num_of_times_expanded_infrastructure = 3
+				}
+				NOT = {
+					has_building = armory
+				}
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				region = cascadia_region
+				has_climate = arctic
+				num_of_times_expanded_infrastructure = 3
+				has_building = armory
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_alaska_arctic_assasins
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_BRZ_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AME
+	}
+	kielak_colonial_formables_BRZ_mission_1_9 = {
+		icon = mnd_maj_sunda_relations
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			region = brazil_region
+			has_terrain = jungle
+			NOT = {
+				development = 15
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = brazil_region
+				has_terrain = jungle
+				development = 15
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_brazil_jungle_expeditions
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_BRZ_mission_1_10 = {
+		icon = mission_portuguese_malacca
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_BRZ_mission_1_9
+		}
+		provinces_to_highlight = {
+			province_id = 763
+		}
+		trigger = {
+			763 = {
+				owned_by = ROOT
+				development = 30
+				has_tax_building_trigger = yes
+			}
+		}
+		effect = {
+			763 = {
+				add_or_upgrade_tax_building = yes
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_brazil_rio_de_janeiro
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = kielak_colonial_formable_brazil_cristo_redentor
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_BRZ_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AME
+	}
+	kielak_colonial_formables_BRZ_mission_3_8 = {
+		icon = mission_african_gold
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region = brazil_region
+				has_tax_building_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = "Centralizing a State will increase the Tax income of the whole state by 20%. This does not stack."
+			hidden_effect = {
+				set_country_flag = kielak_brazil_centralize_state_buff
+			}
+		}
+	}
+	kielak_colonial_formables_BRZ_mission_3_9 = {
+		icon = mission_guilds_of_barcelona
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_BRZ_mission_3_8
+		}
+		provinces_to_highlight = {
+			region = brazil_region
+			NOT = {
+				has_province_modifier = centralized_state_permanent_modifiers
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = "Have centralized state on 40 unique provinces within the Brazil region."
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				region = brazil_region
+				has_province_modifier = centralized_state_permanent_modifiers
+			}
+		}
+		effect = {
+			custom_tooltip = "Every Tax Dev Click will now have a 5% chance of adding 1 Manpower Dev."
+			hidden_effect = {
+				set_country_flag = kielak_brazil_tax_dev_can_dev_mil
+			}
+		}
+	}
+	kielak_colonial_formables_BRZ_mission_3_10 = {
+		icon = dominant_economy
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_BRZ_mission_3_9
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			total_development = 1000
+			all_owned_province = {
+				has_tax_building_trigger = yes
+				base_tax = 10
+			}
+		}
+		effect = {
+			custom_tooltip = "Every Tax Dev Click will now have a 10% chance of adding 1 Manpower Dev."
+			hidden_effect = {
+				clr_country_flag = kielak_brazil_tax_dev_can_dev_mil
+				set_country_flag = kielak_brazil_tax_dev_can_dev_mil_2
+			}
+			add_country_modifier = {
+				name = kielak_brazil_centralize_tax_heaven
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_BRZ_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AME
+	}
+	kielak_colonial_formables_BRZ_mission_5_9 = {
+		icon = mission_pow_just_around_the_riverbend
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2930
+				province_id = 2934
+				province_id = 2935
+			}
+			NOT = {
+				development = 20
+			}
+		}
+		trigger = {
+			2930 = {
+				owned_by = ROOT
+				development = 20
+				has_production_building_trigger = yes
+			}
+			2934 = {
+				owned_by = ROOT
+				development = 20
+				has_production_building_trigger = yes
+			}
+			2935 = {
+				owned_by = ROOT
+				development = 20
+				has_production_building_trigger = yes
+			}
+		}
+		effect = {
+			2934 = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_brazil_heart_of_the_amazonas
+					duration = -1
+				}
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			2935 = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_brazil_amazonas_river_prosperity
+					duration = -1
+				}
+			}
+			2930 = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_brazil_amazonas_river_prosperity
+					duration = -1
+				}
+			}
+			2890 = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_brazil_amazonas_river_prosperity
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_BRZ_mission_5_10 = {
+		icon = mission_caribbean_cn
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_BRZ_mission_5_9
+		}
+		provinces_to_highlight = {
+			province_id = 2890
+		}
+		trigger = {
+			2890 = {
+				owned_by = ROOT
+				development = 30
+				has_shipyard_building_trigger = yes
+				has_dock_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_building = impressment_offices
+			}
+		}
+		effect = {
+			2890 = {
+				add_or_upgrade_shipyard_building = yes
+				add_or_upgrade_dock_building = yes
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_brazil_amazonas_gulf_harbor
+					duration = -1
+				}
+				center_of_trade = 3
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_CAN_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIN
+	}
+	kielak_colonial_formables_CAN_mission_1_9 = {
+		icon = mission_che_the_cave_country
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			area = newfoundland_area
+			OR = {
+				NOT = {
+					development = 15
+				}
+				has_trade_building_trigger = no
+			}
+		}
+		trigger = {
+			newfoundland_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			980 = {
+				add_or_upgrade_shipyard_building = yes
+			}
+			981 = {
+				add_or_upgrade_shipyard_building = yes
+			}
+			2573 = {
+				add_or_upgrade_shipyard_building = yes
+			}
+			newfoundland_area = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_canada_newfoundland_buff
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_CAN_mission_1_10 = {
+		icon = mission_ne_great_lakes_conquest
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_CAN_mission_1_9
+		}
+		provinces_to_highlight = {
+			area = newfoundland_area
+			OR = {
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					has_building = impressment_offices
+				}
+			}
+		}
+		trigger = {
+			newfoundland_area = {
+				type = all
+				owned_by = ROOT
+				development = 30
+				has_building = impressment_offices
+			}
+		}
+		effect = {
+			981 = {
+				center_of_trade = 3
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_CAN_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIN
+	}
+	kielak_colonial_formables_CAN_mission_3_8 = {
+		icon = mission_expand_into_the_forest
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			region = canada_region
+			has_terrain = forest
+			NOT = {
+				development = 20
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = canada_region
+				has_terrain = forest
+				development = 20
+			}
+		}
+		effect = {
+			custom_tooltip = kielak_colonial_formables_CAN_mission_3_8_effect_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_terrain = forest
+					}
+					add_permanent_province_modifier = {
+						name = kielak_colonial_formable_canada_forrest_expansion
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_CAN_mission_3_9 = {
+		icon = mission_build_up_to_force_limit
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_CAN_mission_3_8
+		}
+		provinces_to_highlight = {
+			superregion = north_america_superregion
+			has_terrain = forest
+			NOT = {
+				development = 30
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				has_terrain = forest
+				development = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_canada_hide_behind_trees
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_CAN_mission_3_10 = {
+		icon = mission_the_finns
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_CAN_mission_3_9
+		}
+		provinces_to_highlight = {
+			superregion = north_america_superregion
+			has_terrain = forest
+			has_terrain = woods
+			NOT = {
+				development = 30
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				OR = {
+					has_terrain = woods
+					has_terrain = forest
+				}
+				development = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_canada_maple_syrup
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_CAN_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIN
+	}
+	kielak_colonial_formables_CAN_mission_5_9 = {
+		icon = mission_swedish_military_advise
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			region = northeast_america_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = northeast_america_region
+			}
+		}
+		effect = {
+			northeast_america_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	kielak_colonial_formables_CAN_mission_5_10 = {
+		icon = mission_swedish_nobility
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_CAN_mission_5_9
+		}
+		provinces_to_highlight = {
+			region = northeast_america_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region = northeast_america_region
+			}
+		}
+		effect = {
+			southeast_america_region = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = kielak_colonial_formable_canada_51st_state
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_CHL_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CHL
+	}
+	kielak_colonial_formables_CHL_mission_1_9 = {
+		icon = mission_sw_against_the_desert
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 782
+		}
+		trigger = {
+			782 = {
+				development = 15
+				has_trade_building_trigger = yes
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+		}
+		effect = {
+			782 = {
+				center_of_trade = 3
+			}
+			patagonia_area = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_chile_patagonia_dev_cost
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_CHL_mission_1_10 = {
+		icon = mission_polynesian_navy_build
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_CHL_mission_1_9
+		}
+		provinces_to_highlight = {
+			province_id = 782
+		}
+		trigger = {
+			782 = {
+				has_building = impressment_offices
+			}
+			patagonia_area = {
+				type = all
+				owned_by = ROOT
+				development = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_chile_navy
+				duration = -1
+			}
+			782 = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_chile_strait_of_death
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_CHL_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CHL
+	}
+	kielak_colonial_formables_CHL_mission_3_8 = {
+		icon = mission_che_the_cave_country
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = southern_chile_area
+				area = northern_chile_area
+				area = nehuenken_area
+				area = cuyo_area
+			}
+			NOT = {
+				development = 15
+			}
+		}
+		trigger = {
+			southern_chile_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+			}
+			northern_chile_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+			}
+			cuyo_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+			}
+			nehuenken_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+			}
+		}
+		effect = {
+			custom_tooltip = "Manpower Dev Clicks now have a 5% Chance to give us Mil Mana equal to DOUBLE the Manpower Development of the Province."
+			hidden_effect = {
+				set_country_flag = kielak_chile_mana_cashback_on_dev
+			}
+		}
+	}
+	kielak_colonial_formables_CHL_mission_3_9 = {
+		icon = mission_pue_restore_mesa_verde
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_CHL_mission_3_8
+		}
+		provinces_to_highlight = {
+			region = la_plata_region
+			OR = {
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_buildings_in_province = 4
+				}
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				development = 30
+				num_of_buildings_in_province = 4
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				development = 50
+			}
+		}
+		effect = {
+			custom_tooltip = "Manpower Dev Clicks now have a 5% Chance to give us Mil Mana equal to TRIPPLE the Manpower Development of the Province."
+			hidden_effect = {
+				clr_country_flag = kielak_chile_mana_cashback_on_dev
+				set_country_flag = kielak_chile_mana_cashback_on_dev_2
+			}
+		}
+	}
+	kielak_colonial_formables_CHL_mission_3_10 = {
+		icon = mission_mnd_maj_end_disaster
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_CHL_mission_3_9
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			total_development = 1000
+			all_owned_province = {
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					has_building = armory
+					has_building = impressment_offices
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				development = 60
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_chile_fully_developed
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_CHL_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CHL
+	}
+	kielak_colonial_formables_CHL_mission_5_9 = {
+		icon = mission_pol_breadbasket_europe
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			area = banda_oriental_area
+			NOT = {
+				development = 30
+			}
+		}
+		trigger = {
+			banda_oriental_area = {
+				type = all
+				development = 30
+			}
+		}
+		effect = {
+			banda_oriental_area = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_chile_grain_bay
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_CHL_mission_5_10 = {
+		icon = per_establish_the_qurchi
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_CHL_mission_5_9
+		}
+		provinces_to_highlight = {
+			area = banda_oriental_area
+			NOT = {
+				development = 40
+			}
+			NOT = {
+				has_building = armory
+			}
+		}
+		trigger = {
+			banda_oriental_area = {
+				type = all
+				development = 40
+				has_building = armory
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_chile_grain_bay_army
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_ILI_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ILI
+	}
+	kielak_colonial_formables_ILI_mission_1_9 = {
+		icon = mission_colonize_louisiana
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_terrain = grasslands
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_terrain = savannah
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_illinois_flatlands
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_ILI_mission_1_10 = {
+		icon = mission_pol_tend_east
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_ILI_mission_1_9
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				is_flatland = yes
+				development = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_illinois_flatlands_2
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_ILI_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ILI
+	}
+	kielak_colonial_formables_ILI_mission_3_8 = {
+		icon = mission_restore_faith_in_the_throne
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			total_development = 700
+			religious_unity = 0.9
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = kielak_colonial_formable_illinois_religious_consolidation
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_ILI_mission_3_9 = {
+		icon = mission_intervene_in_castile
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_ILI_mission_3_8
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			stability = 3
+			NOT = {
+				average_unrest = 2
+			}
+			religious_unity = 0.99
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_illinois_religious_state
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_ILI_mission_3_10 = {
+		icon = mission_crown_of_sweden
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_ILI_mission_3_9
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			republican_tradition = 100
+			adm = 6
+			dip = 6
+			mil = 6
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_illinois_all_powerfull
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_ILI_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ILI
+	}
+	kielak_colonial_formables_ILI_mission_5_9 = {
+		icon = mission_eric_the_pirate
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			area = lower_louisiana_area
+		}
+		trigger = {
+			lower_louisiana_area = {
+				type = all
+				development = 15
+			}
+			893 = {
+				development = 20
+			}
+		}
+		effect = {
+			lower_louisiana_area = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_illinois_louisiana
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_ILI_mission_5_10 = {
+		icon = mission_norwegian_ship
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_ILI_mission_5_9
+		}
+		provinces_to_highlight = {
+			area = lower_louisiana_area
+			NOT = {
+				development = 30
+			}
+		}
+		trigger = {
+			lower_louisiana_area = {
+				type = all
+				development = 30
+				has_building = impressment_offices
+			}
+			893 = {
+				has_trade_building_trigger = yes
+				has_shipyard_building_trigger = yes
+				has_dock_building_trigger = yes
+			}
+		}
+		effect = {
+			893 = {
+				center_of_trade = 3
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_MEX_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GCA
+	}
+	kielak_colonial_formables_MEX_mission_1_9 = {
+		icon = mission_african_gold
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			area = mexico_area
+			NOT = {
+				development = 20
+			}
+		}
+		trigger = {
+			mexico_area = {
+				type = all
+				development = 20
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_mexico_tackle_inflation
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_MEX_mission_1_10 = {
+		icon = dominant_economy
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_MEX_mission_1_9
+		}
+		provinces_to_highlight = {
+			area = mexico_area
+			NOT = {
+				development = 30
+			}
+		}
+		trigger = {
+			treasury = 5000
+			NOT = {
+				inflation = 1
+			}
+			NOT = {
+				num_of_loans = 1
+			}
+			NOT = {
+				corruption = 1
+			}
+			is_in_deficit = no
+			army_size_percentage = 0.9
+			navy_size_percentage = 0.9
+			land_maintenance = 0.9
+			naval_maintenance = 0.9
+			mexico_area = {
+				type = all
+				development = 30
+			}
+		}
+		effect = {
+			mexico_area = {
+				add_base_production = 5
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_mexico_infinite_gold
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_MEX_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GCA
+	}
+	kielak_colonial_formables_MEX_mission_3_8 = {
+		icon = mission_colonize_the_caribbean
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			region = mexico_region
+		}
+		trigger = {
+			mexico_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			rio_grande_region = {
+				add_permanent_claim = ROOT
+			}
+			central_america_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	kielak_colonial_formables_MEX_mission_3_9 = {
+		icon = mission_kingdom_of_new_spain
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_MEX_mission_3_8
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = rio_grande_region
+				region = central_america_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 15
+					region = central_america_region
+					owned_by = ROOT
+				}
+				AND = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 15
+						region = rio_grande_region
+						owned_by = ROOT
+					}
+					2499 = {
+						owned_by = ROOT
+						has_fort_building_trigger = yes
+					}
+					2498 = {
+						owned_by = ROOT
+						has_fort_building_trigger = yes
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = "If we fulfill this mission by owning land in the Central America Region we unlock the Tropical City Planning Burghers Estate Priviledge. If we fulfill this mission by owning land in the Rio Grande Region we will get an event that allows us to improve the defensive capabilities of either El Passo or Rio Grande. If both then both. "
+			if = {
+				limit = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 15
+						region = central_america_region
+						owned_by = ROOT
+					}
+				}
+				unlock_estate_privilege = {
+					estate_privilege = estate_burghers_tropical_nation
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							value = 15
+							region = rio_grande_region
+							owned_by = ROOT
+						}
+						2499 = {
+							owned_by = ROOT
+							has_fort_building_trigger = yes
+						}
+						2498 = {
+							owned_by = ROOT
+							has_fort_building_trigger = yes
+						}
+					}
+				}
+				country_event = {
+					id = kielak_events.27
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_MEX_mission_3_10 = {
+		icon = mission_intervene_in_castile
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_MEX_mission_3_9
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			total_development = 1000
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 100
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_mexico_dominance
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_MEX_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = GCA
+	}
+	kielak_colonial_formables_MEX_mission_5_9 = {
+		icon = mission_turning_the_tables
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			region = mexico_region
+			NOT = {
+				development = 20
+			}
+			NOT = {
+				num_of_buildings_in_province = 4
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				development = 20
+				num_of_buildings_in_province = 4
+			}
+		}
+		effect = {
+			country_event = {
+				id = kielak_events.26
+			}
+			custom_tooltip = " This event will either give us 10% manpower or 10% forcelimit depending on our choice. "
+		}
+	}
+	kielak_colonial_formables_MEX_mission_5_10 = {
+		icon = mission_brazilian_bandeirantes
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_MEX_mission_5_9
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				land_forcelimit = 300
+				max_manpower = 600
+			}
+		}
+		effect = {
+			custom_tooltip = "If we fulfill this mission via the Max Manpower requirement we get -10% Morale Damage Received. If we fulfill this mission via the Forcelimit requirement we get +10% Morale Damage. If we fulfill both we get both."
+			if = {
+				limit = {
+					max_manpower = 600
+					NOT = {
+						land_forcelimit = 300
+					}
+				}
+				add_country_modifier = {
+					name = kielak_colonial_formable_mexico_military_manpower
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						max_manpower = 600
+					}
+					land_forcelimit = 300
+				}
+				add_country_modifier = {
+					name = kielak_colonial_formable_mexico_military_forcelimit
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						max_manpower = 600
+						land_forcelimit = 300
+					}
+				}
+				add_country_modifier = {
+					name = kielak_colonial_formable_mexico_military_manpower_and_forcelimit
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_PEU_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = PEU
+	}
+	kielak_colonial_formables_PEU_mission_1_9 = {
+		icon = mission_tawantinsuyu
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			region = peru_region
+			NOT = {
+				development = 15
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = peru_region
+				development = 15
+			}
+		}
+		effect = {
+			custom_tooltip = "Distribute a total of 30 Development across all our Mountain Provinces"
+			distribute_development = {
+				amount = 10
+				type = manpower
+				limit = "
+					has_terrain = mountain
+				"
+			}
+			distribute_development = {
+				amount = 10
+				type = tax
+				limit = "
+					has_terrain = mountain
+				"
+			}
+			distribute_development = {
+				amount = 10
+				type = production
+				limit = "
+					has_terrain = mountain
+				"
+			}
+		}
+	}
+	kielak_colonial_formables_PEU_mission_1_10 = {
+		icon = mission_royal_roads
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_PEU_mission_1_9
+		}
+		provinces_to_highlight = {
+			region = peru_region
+			NOT = {
+				development = 20
+			}
+			has_terrain = mountain
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = peru_region
+				development = 20
+				has_terrain = mountain
+			}
+		}
+		effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_mountain_expansion
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_PEU_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = PEU
+	}
+	kielak_colonial_formables_PEU_mission_3_8 = {
+		icon = mission_chapultepec_aqueduct
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			region = peru_region
+			has_fort_building_trigger = no
+		}
+		trigger = {
+			capital_scope = {
+				has_fort_building_trigger = yes
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = peru_region
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_or_upgrade_fort_building = yes
+				if = {
+					limit = {
+						NOT = {
+							trade_goods = gold
+						}
+					}
+					change_trade_goods = gold
+				}
+				else_if = {
+					limit = {
+						trade_goods = gold
+					}
+					add_base_production = 4
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_PEU_mission_3_9 = {
+		icon = mission_dalaskogen
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_PEU_mission_3_8
+		}
+		provinces_to_highlight = {
+			region = peru_region
+			has_fort_building_trigger = yes
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = peru_region
+				development = 30
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_peru_mountain_warfare
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_PEU_mission_3_10 = {
+		icon = mission_hessian_jaeger_corps
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_PEU_mission_3_9
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				has_terrain = mountain
+				development = 30
+				has_building = armory
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_peru_mountain_warriors
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_PEU_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = PEU
+	}
+	kielak_colonial_formables_PEU_mission_5_9 = {
+		icon = mission_northumberland_coast
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 806
+		}
+		trigger = {
+			806 = {
+				owned_by = ROOT
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+				has_trade_building_trigger = yes
+				development = 20
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				has_port = yes
+			}
+		}
+		effect = {
+			806 = {
+				add_or_upgrade_shipyard_building = yes
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_peru_nazca_port
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_PEU_mission_5_10 = {
+		icon = mission_sailor_boat
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_PEU_mission_5_9
+		}
+		provinces_to_highlight = {
+			province_id = 806
+		}
+		trigger = {
+			806 = {
+				development = 30
+				has_building = impressment_offices
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			806 = {
+				add_or_upgrade_trade_building = yes
+				center_of_trade = 3
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_SNA_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SNA
+	}
+	kielak_colonial_formables_SNA_mission_1_9 = {
+		icon = mission_retake_ceuta
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = california_area
+				area = baja_california_area
+			}
+		}
+		trigger = {
+			baja_california_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				AND = {
+					OR = {
+						has_building = shipyard
+						has_building = grand_shipyard
+					}
+					OR = {
+						has_building = dock
+						has_building = drydock
+					}
+				}
+			}
+			california_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				AND = {
+					OR = {
+						has_building = shipyard
+						has_building = grand_shipyard
+					}
+					OR = {
+						has_building = dock
+						has_building = drydock
+					}
+				}
+			}
+		}
+		effect = {
+			california_area = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_californian_coastline_defenses
+					duration = -1
+				}
+			}
+			baja_california_area = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_californian_coastline_defenses
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_SNA_mission_1_10 = {
+		icon = mission_sponsor_piracy
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_SNA_mission_1_9
+		}
+		provinces_to_highlight = {
+			province_id = 866
+			OR = {
+				area = california_area
+				area = baja_california_area
+			}
+			OR = {
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					has_building = impressment_offices
+				}
+			}
+		}
+		trigger = {
+			866 = {
+				owned_by = ROOT
+			}
+			baja_california_area = {
+				type = all
+				owned_by = ROOT
+				development = 30
+				has_building = impressment_offices
+			}
+			california_area = {
+				type = all
+				owned_by = ROOT
+				development = 30
+				has_building = impressment_offices
+			}
+		}
+		effect = {
+			866 = {
+				center_of_trade = 3
+			}
+			866 = {
+				man_of_war_heavy = ROOT
+				man_of_war_heavy = ROOT
+				man_of_war_heavy = ROOT
+				man_of_war_heavy = ROOT
+				man_of_war_heavy = ROOT
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_SNA_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SNA
+	}
+	kielak_colonial_formables_SNA_mission_3_8 = {
+		icon = mission_fire_of_london
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			capital_scope = {
+				development = 30
+				has_building = armory
+			}
+			all_owned_province = {
+				development = 15
+				is_prosperous = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_californian_wildfire_protection
+				duration = -1
+			}
+			cascadia_region = {
+				add_permanent_claim = ROOT
+			}
+			mexico_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	kielak_colonial_formables_SNA_mission_3_9 = {
+		icon = expand_the_terraferma
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_SNA_mission_3_8
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = cascadia_region
+				region = mexico_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					region = cascadia_region
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					region = mexico_region
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = "If we fulfill this mission by owning enough provinces in the mexico region our capital will start producing gold. If we fulfill this mission by owning enough provinces in the cascadia region our capital will start producing cloves."
+			if = {
+				limit = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 15
+						region = mexico_region
+					}
+				}
+				capital_scope = {
+					change_trade_goods = gold
+				}
+			}
+			if = {
+				limit = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 15
+						region = cascadia_region
+					}
+				}
+				capital_scope = {
+					change_trade_goods = cloves
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_SNA_mission_3_10 = {
+		icon = mission_pue_restore_mesa_verde
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_SNA_mission_3_9
+		}
+		provinces_to_highlight = {
+			province_id = 875
+		}
+		trigger = {
+			republican_tradition = 100
+			prestige = 100
+			army_professionalism = 1
+			stability = 3
+			875 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_californian_unlock_mesa_verde
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_SNA_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SNA
+	}
+	kielak_colonial_formables_SNA_mission_5_9 = {
+		icon = french_indochina
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			area = colorado_plateau_area
+			OR = {
+				NOT = {
+					development = 15
+				}
+				has_manpower_building_trigger = no
+				has_forcelimit_building_trigger = no
+			}
+		}
+		trigger = {
+			colorado_plateau_area = {
+				type = ALL
+				owned_by = ROOT
+				development = 15
+				AND = {
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+					OR = {
+						has_building = regimental_camp
+						has_building = conscription_center
+					}
+				}
+			}
+		}
+		effect = {
+			colorado_plateau_area = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_californian_colorado_mountain_development
+					duration = -1
+				}
+			}
+			country_event = {
+				id = kielak_events.23
+			}
+		}
+	}
+	kielak_colonial_formables_SNA_mission_5_10 = {
+		icon = fortress_switzerland
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_SNA_mission_5_9
+		}
+		provinces_to_highlight = {
+			area = northern_california_area
+			OR = {
+				NOT = {
+					development = 15
+				}
+				has_manpower_building_trigger = no
+				has_forcelimit_building_trigger = no
+			}
+		}
+		trigger = {
+			northern_california_area = {
+				type = ALL
+				owned_by = ROOT
+				development = 15
+				AND = {
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+					OR = {
+						has_building = regimental_camp
+						has_building = conscription_center
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = "All Mountain Provinces in the Northern California Area receive the modifier listed below."
+			northern_california_area = {
+				limit = {
+					has_terrain = mountain
+				}
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_californian_colorado_mountain_development
+					duration = -1
+				}
+			}
+			country_event = {
+				id = kielak_events.24
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_CAM_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CAM
+	}
+	kielak_colonial_formables_CAM_mission_1_9 = {
+		icon = mission_jungle
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 4585
+		}
+		trigger = {
+			4585 = {
+				development = 30
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = {
+			4585 = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_central_america_jungle_vines
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_CAM_mission_1_10 = {
+		icon = mission_rb_inland_india
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_CAM_mission_1_9
+		}
+		provinces_to_highlight = {
+			province_id = 4585
+		}
+		trigger = {
+			4585 = {
+				development = 40
+				has_fort_building_trigger = yes
+				has_building = armory
+			}
+		}
+		effect = {
+			4585 = {
+				add_or_upgrade_fort_building = yes
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_central_america_boulder_trap
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_CAM_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CAM
+	}
+	kielak_colonial_formables_CAM_mission_3_8 = {
+		icon = mission_conquer_bengal_dlh
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			region = central_america_region
+			NOT = {
+				development = 10
+			}
+			has_terrain = jungle
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = central_america_region
+				has_terrain = jungle
+				development = 15
+			}
+		}
+		effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_tropical_nation
+			}
+			add_country_modifier = {
+				name = kielak_colonial_formable_central_america_jungle_development
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_CAM_mission_3_9 = {
+		icon = mission_clear_the_delta
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_CAM_mission_3_8
+		}
+		provinces_to_highlight = {
+			region = central_america_region
+			has_terrain = jungle
+			OR = {
+				NOT = {
+					development = 20
+				}
+				NOT = {
+					num_of_buildings_in_province = 4
+				}
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = central_america_region
+				has_terrain = jungle
+				development = 20
+				num_of_buildings_in_province = 4
+			}
+		}
+		effect = {
+			custom_tooltip = "Diplo Dev Clicks on Jungle Provinces now have a 10% Chance to add 2 instead of 1 Dip Dev."
+			hidden_effect = {
+				set_country_flag = kielak_central_america_jungle_dev_clicks
+			}
+		}
+	}
+	kielak_colonial_formables_CAM_mission_3_10 = {
+		icon = mission_aztec_city_alliance
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_CAM_mission_3_9
+		}
+		provinces_to_highlight = {
+			region = central_america_region
+			has_terrain = jungle
+			OR = {
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					has_building = armory
+				}
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = central_america_region
+				has_terrain = jungle
+				development = 30
+				has_building = armory
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_central_america_jungle_warrios
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_CAM_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CAM
+	}
+	kielak_colonial_formables_CAM_mission_5_9 = {
+		icon = mission_chichen_itza
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			area = yucatan_area
+		}
+		trigger = {
+			846 = {
+				owned_by = ROOT
+				development = 20
+			}
+			yucatan_area = {
+				type = all
+				development = 15
+			}
+		}
+		effect = {
+			846 = {
+				add_great_project_tier = {
+					type = chichen_itza
+					tier = 1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_CAM_mission_5_10 = {
+		icon = mission_chichen_itzas
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_CAM_mission_5_9
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 846
+				province_id = 2633
+			}
+		}
+		trigger = {
+			846 = {
+				development = 30
+			}
+			2633 = {
+				development = 30
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			2633 = {
+				center_of_trade = 3
+				add_or_upgrade_trade_building = yes
+			}
+			846 = {
+				add_great_project_tier = {
+					type = chichen_itza
+					tier = 1
+				}
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_VNZ_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = HER
+	}
+	kielak_colonial_formables_VNZ_mission_1_9 = {
+		icon = mission_jungle
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			region = colombia_region
+			has_terrain = jungle
+			NOT = {
+				development = 15
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = colombia_region
+				has_terrain = jungle
+				development = 15
+			}
+		}
+		effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_tropical_nation
+			}
+		}
+	}
+	kielak_colonial_formables_VNZ_mission_1_10 = {
+		icon = mission_mnd_khm_restored_empire
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_VNZ_mission_1_9
+		}
+		provinces_to_highlight = {
+			region = colombia_region
+			has_terrain = jungle
+			NOT = {
+				development = 30
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = colombia_region
+				has_terrain = jungle
+				development = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_venezuelan_jungle
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_VNZ_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = HER
+	}
+	kielak_colonial_formables_VNZ_mission_3_8 = {
+		icon = mission_mnd_maj_porch_of_mecca
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			republican_tradition = 80
+			stability = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_venezuelan_republic
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_VNZ_mission_3_9 = {
+		icon = dominant_economy
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_VNZ_mission_3_8
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			treasury = 10000
+			NOT = {
+				inflation = 1
+			}
+			NOT = {
+				num_of_loans = 1
+			}
+			NOT = {
+				corruption = 1
+			}
+			is_in_deficit = no
+			army_size_percentage = 0.9
+			navy_size_percentage = 0.9
+			land_maintenance = 0.9
+			naval_maintenance = 0.9
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_venezuelan_building_spree
+				duration = 3650
+			}
+		}
+	}
+	kielak_colonial_formables_VNZ_mission_3_10 = {
+		icon = mission_oceania_assemble_an_army
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_VNZ_mission_3_9
+		}
+		provinces_to_highlight = {
+			region = colombia_region
+			OR = {
+				NOT = {
+					has_manufactory_trigger = yes
+				}
+				NOT = {
+					num_of_buildings_in_province = 5
+				}
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 55
+				region = colombia_region
+				has_manufactory_trigger = yes
+				num_of_buildings_in_province = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_venezuelan_cocain_empire
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_VNZ_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = HER
+	}
+	kielak_colonial_formables_VNZ_mission_5_9 = {
+		icon = mission_ne_great_lakes_conquest
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2664
+				province_id = 2819
+				province_id = 835
+			}
+		}
+		trigger = {
+			2664 = {
+				development = 20
+				has_fort_building_trigger = yes
+			}
+			2819 = {
+				development = 20
+				has_fort_building_trigger = yes
+			}
+			835 = {
+				development = 30
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			835 = {
+				center_of_trade = 3
+			}
+		}
+	}
+	kielak_colonial_formables_VNZ_mission_5_10 = {
+		icon = mission_mnd_siam_revolution
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_VNZ_mission_5_9
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2664
+				province_id = 2819
+				province_id = 835
+			}
+		}
+		trigger = {
+			2664 = {
+				development = 30
+				has_fort_building_trigger = yes
+			}
+			2819 = {
+				development = 30
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = {
+			835 = {
+				add_or_upgrade_trade_building = yes
+			}
+			2664 = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_venezuelan_protect_panama
+					duration = -1
+				}
+			}
+			2819 = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_venezuelan_protect_panama
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_VRM_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ARC
+	}
+	kielak_colonial_formables_VRM_mission_1_9 = {
+		icon = mission_che_botanical_exports
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = florida_area
+				area = north_florida_area
+			}
+			NOT = {
+				development = 15
+			}
+		}
+		trigger = {
+			florida_area = {
+				type = all
+				development = 15
+			}
+			north_florida_area = {
+				type = all
+				development = 15
+			}
+		}
+		effect = {
+			florida_area = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_vermont_floridian_marshland
+					duration = -1
+				}
+			}
+			north_florida_area = {
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_vermont_floridian_marshland
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_VRM_mission_1_10 = {
+		icon = mission_ne_great_lakes_conquest
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_VRM_mission_1_9
+		}
+		provinces_to_highlight = {
+			province_id = 2536
+		}
+		trigger = {
+			2536 = {
+				development = 30
+				has_shipyard_building_trigger = yes
+				has_dock_building_trigger = yes
+			}
+		}
+		effect = {
+			2536 = {
+				if = {
+					limit = {
+						has_building = impressment_offices
+					}
+					add_base_production = 5
+					add_permanent_province_modifier = {
+						name = kielak_colonial_formable_vermont_miami
+						duration = -1
+					}
+				}
+				else = {
+					add_building = impressment_offices
+					add_permanent_province_modifier = {
+						name = kielak_colonial_formable_vermont_miami
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_VRM_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ARC
+	}
+	kielak_colonial_formables_VRM_mission_3_8 = {
+		icon = mission_raid_christian_trade
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_ports = 15
+			navy_size_percentage = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_vermont_naval_ambitions
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_VRM_mission_3_9 = {
+		icon = mission_corsairs_of_the_north_sea
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_VRM_mission_3_8
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			navy_size_percentage = 1
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				has_port = yes
+				has_shipyard_building_trigger = yes
+				has_dock_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_vermont_naval_ambitions_2
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_VRM_mission_3_10 = {
+		icon = mission_colonize_the_west
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_VRM_mission_3_9
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				has_port = yes
+				has_building = impressment_offices
+			}
+			navy_size_percentage = 1
+			num_of_heavy_ship = 100
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_vermont_naval_ambitions_3
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_VRM_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ARC
+	}
+	kielak_colonial_formables_VRM_mission_5_9 = {
+		icon = mission_dominate_genoa
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			area = chesapeake_area
+			OR = {
+				NOT = {
+					development = 20
+				}
+				NOT = {
+					num_of_buildings_in_province = 4
+				}
+			}
+		}
+		trigger = {
+			chesapeake_area = {
+				type = all
+				development = 20
+				num_of_buildings_in_province = 4
+			}
+		}
+		effect = {
+			950 = {
+				center_of_trade = 3
+				add_permanent_province_modifier = {
+					name = kielak_colonial_formable_vermont_jamestown_trade
+					duration = -1
+				}
+			}
+		}
+	}
+	kielak_colonial_formables_VRM_mission_5_10 = {
+		icon = mission_control_venice
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_VRM_mission_5_9
+		}
+		provinces_to_highlight = {
+			area = chesapeake_area
+			OR = {
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_buildings_in_province = 5
+				}
+				NOT = {
+					has_building = armory
+				}
+			}
+		}
+		trigger = {
+			chesapeake_area = {
+				type = all
+				development = 30
+				num_of_buildings_in_province = 5
+				has_building = armory
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_vermont_take_me_home
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_WSI_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = FRE
+	}
+	kielak_colonial_formables_WSI_mission_1_9 = {
+		icon = mission_gain_mana
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = cuba_area
+				area = east_cuba_area
+			}
+			NOT = {
+				development = 20
+			}
+		}
+		trigger = {
+			cuba_area = {
+				type = all
+				owned_by = ROOT
+				development = 20
+			}
+			east_cuba_area = {
+				type = all
+				owned_by = ROOT
+				development = 20
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_carribean_growth_spurt
+				duration = 1825
+			}
+		}
+	}
+	kielak_colonial_formables_WSI_mission_1_10 = {
+		icon = mission_pow_the_laughing_king
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_WSI_mission_1_9
+		}
+		provinces_to_highlight = {
+			province_id = 4624
+			NOT = {
+				development = 30
+			}
+		}
+		trigger = {
+			4624 = {
+				development = 30
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			4624 = {
+				add_or_upgrade_trade_building = yes
+				if = {
+					limit = {
+						NOT = {
+							trade_goods = tobacco
+						}
+					}
+					change_trade_goods = tobacco
+					add_permanent_province_modifier = {
+						name = kielak_colonial_formable_carribean_cuban_cigars
+						duration = -1
+					}
+				}
+				else = {
+					add_permanent_province_modifier = {
+						name = kielak_colonial_formable_carribean_cuban_cigars
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_WSI_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = FRE
+	}
+	kielak_colonial_formables_WSI_mission_3_8 = {
+		icon = end_genoese_competition
+		position = 8
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_ships_protecting_trade = 50
+			navy_size_percentage = 1
+			num_of_heavy_ship = 30
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_carribean_protecting_trade
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_WSI_mission_3_9 = {
+		icon = mission_unite_coromandel
+		position = 9
+		required_missions = {
+			kielak_colonial_formables_WSI_mission_3_8
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			navy_size_percentage = 1
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_carribean_protecting_trade_2
+				duration = -1
+			}
+		}
+	}
+	kielak_colonial_formables_WSI_mission_3_10 = {
+		icon = mission_raid_christian_trade
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_WSI_mission_3_9
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			navy_size_percentage = 1
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				has_building = impressment_offices
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kielak_colonial_formable_carribean_elite_marines
+				duration = -1
+			}
+			add_country_modifier = {
+				name = kielak_colonial_formable_carribean_troop_shipments
+				duration = -1
+			}
+		}
+	}
+}
+
+kielak_colonial_formables_WSI_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = FRE
+	}
+	kielak_colonial_formables_WSI_mission_5_9 = {
+		icon = mission_pirate_fleet
+		position = 9
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 489
+		}
+		trigger = {
+			489 = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+				development = 30
+			}
+		}
+		effect = {
+			489 = {
+				add_great_project_tier = {
+					type = tortuga_island
+					tier = 1
+				}
+				add_or_upgrade_shipyard_building = yes
+				add_or_upgrade_dock_building = yes
+			}
+		}
+	}
+	kielak_colonial_formables_WSI_mission_5_10 = {
+		icon = mission_pirate_flag
+		position = 10
+		required_missions = {
+			kielak_colonial_formables_WSI_mission_5_9
+		}
+		provinces_to_highlight = {
+			province_id = 489
+		}
+		trigger = {
+			489 = {
+				has_great_project = {
+					type = tortuga_island
+					tier = 3
+				}
+			}
+		}
+		effect = {
+			define_ruler = {
+				name = "Captain Jack Sparrow"
+				age = 30
+				dynasty = ROOT
+				culture = ROOT
+				adm = 4
+				dip = 6
+				mil = 5
+			}
+			hidden_effect = {
+				add_ruler_personality = legendary_pirate_personality
+				add_ruler_personality = babbling_buffoon_personality
+			}
+			add_ruler_modifier = {
+				name = kielak_colonial_formable_carribean_captain_jack_sparrow
+			}
+			489 = {
+				create_flagship = {
+					type = heavy_ship
+					name = "The Black Pearl"
+				}
+				center_of_trade = 3
+			}
+			custom_tooltip = SEPERATOR_TOOLTIP
+			custom_tooltip = "Until we lose ownership of Tortuga we will also get:"
+			custom_tooltip = SEPERATOR_TOOLTIP
+			add_country_modifier = {
+				name = kielak_colonial_formable_carribean_may_raid_coasts
+				duration = -1
+			}
+		}
+	}
+}

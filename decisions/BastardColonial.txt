@@ -52,6 +52,7 @@ country_decisions = {
 			effect  = {
 				change_tag = AUS
 				remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 				add_government_reform = h_reform_dominion
 				if = {
 					limit = { has_custom_ideas = no }
@@ -97,6 +98,7 @@ country_decisions = {
 			effect  = {
 				change_tag = DSA
 				remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 				add_government_reform = h_reform_dominion
 				if = {
 					limit = { has_custom_ideas = no }
@@ -142,6 +144,7 @@ country_decisions = {
 			effect  = {
 				change_tag = ORJ
 				remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 				add_government_reform = h_reform_dominion
 				if = {
 					limit = { has_custom_ideas = no }
@@ -187,6 +190,7 @@ country_decisions = {
 		effect  = {
 			change_tag = BEO
 			remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 			add_government_reform = h_reform_dominion
 			if = {
 				limit = { has_custom_ideas = no }
@@ -232,6 +236,7 @@ country_decisions = {
 		effect  = {
 			change_tag = AME
 			remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 			add_government_reform = h_reform_dominion
 			if = {
 				limit = { has_custom_ideas = no }
@@ -277,6 +282,7 @@ country_decisions = {
 		effect  = {
 			change_tag = HER
 			remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 			add_government_reform = h_reform_dominion
 			if = {
 				limit = { has_custom_ideas = no }
@@ -334,6 +340,7 @@ country_decisions = {
 		effect  = {
 			change_tag = GCA
 			remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 			add_government_reform = h_reform_dominion
 			if = {
 				limit = { has_custom_ideas = no }
@@ -380,6 +387,7 @@ country_decisions = {
 		effect  = {
 			change_tag = PLA
 			remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 			add_government_reform = h_reform_dominion
 			if = {
 				limit = { has_custom_ideas = no }
@@ -437,6 +445,7 @@ country_decisions = {
 		effect  = {
 			change_tag = ARC
 			remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 			add_government_reform = h_reform_dominion
 			if = {
 				limit = { has_custom_ideas = no }
@@ -494,6 +503,7 @@ country_decisions = {
 		effect  = {
 			change_tag = VIN
 			remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 			add_government_reform = h_reform_dominion
 			if = {
 				limit = { has_custom_ideas = no }
@@ -539,6 +549,7 @@ country_decisions = {
 		effect  = {
 			change_tag = LUS
 			remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 			add_government_reform = h_reform_dominion
 			if = {
 				limit = { has_custom_ideas = no }
@@ -584,6 +595,7 @@ country_decisions = {
 		effect  = {
 			change_tag = FRE
 			remove_non_electors_emperors_from_empire_effect = yes
+            swap_non_generic_missions = yes
 			add_government_reform = h_reform_dominion
 			if = {
 				limit = { has_custom_ideas = no }
