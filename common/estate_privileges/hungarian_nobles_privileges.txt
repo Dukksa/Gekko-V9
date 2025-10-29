@@ -1,0 +1,198 @@
+#Cav CA and cost
+gc_hungarian_nobles_privilege_1 = {
+	icon = privilege_raise_host
+	max_absolutism = -5
+	loyalty = 0.00
+	influence = 0.10
+	land_share = 5
+	is_valid = {
+	}
+	modifier_by_land_ownership = {
+        cavalry_power = 0.2
+        cavalry_cost = -0.2
+	}		
+	ai_will_do = {					
+        factor = 1000                               
+    }			
+}
+
+#Spawns cav
+#gc_hungarian_nobles_privilege_2 = {
+ #   icon = privilege_raise_host
+  #  max_absolutism = -5
+   # loyalty = 0.10
+    #influence = 0.15
+	#cooldown_years = 10
+#	on_cooldown_expires = { 
+#		country_event = { id = gecko.1000 }
+#	}#
+#	is_valid = {
+#	}
+#	can_select = {
+#		NOT = { has_estate_privilege = gc_hungarian_nobles_privilege_2 }
+#	}
+#	on_granted = {
+#		create_general = {
+#			tradition = 50
+#		}
+#		if = {
+#			limit = {
+#				capital_scope = { 
+#					owned_by = ROOT
+#				}
+#			}
+#			capital_scope = { 
+#				add_unit_construction = {
+#					type = cavalry
+#					amount = 30
+#					speed = 0.999 #seems to be capped to some point
+#					cost = 0
+#				}
+#			}
+#		}
+#		if = {
+#			limit = {
+#				capital_scope = {
+#					NOT = {
+#						owned_by = ROOT
+#					}
+#				}
+#			}
+#			random_owned_province = { 
+#				add_unit_construction = {
+#					type = cavalry
+#					amount = 30
+#					speed = 0.999 #seems to be capped to some point
+#					cost = 0
+#				}
+#			}
+#		}
+#	}
+#	on_revoked = {
+#	}
+#	penalties = {
+#	}
+#	benefits = {
+#
+#	}
+#	ai_will_do = {
+#		factor = 0
+#	}
+#}
+
+#Allows for Cossacks to be recruited
+gc_hungarian_nobles_privilege_3 = {
+	icon = privilege_conscript_cossack_elite
+	max_absolutism = -5
+	influence = 0.10
+	#land_share = 5
+	is_valid = {
+	}
+	penalties = {
+	}
+	benefits = {
+		special_unit_forcelimit = 0.1
+	}	
+	ai_will_do = {					
+        factor = 0                              
+    }			
+}
+
+#loyalty for tax privilege
+gc_hungarian_nobles_privilege_4 = {
+	icon = privilege_give_money
+	max_absolutism = -5
+	loyalty = 0
+	influence = 0.1
+	land_share = 0
+	penalties = {
+		global_tax_modifier = 0.1
+	}
+	ai_will_do = {					
+        factor = 0                              
+    }
+}
+
+#Hungarian Noble Officers
+gc_hungarian_nobles_privilege_5 = {
+	icon = privilege_promote_purbias
+	max_absolutism = -5
+	loyalty = 0
+	influence = 0.1
+	land_share = 0
+	benefits = {
+		general_cost = -0.05
+		army_tradition_decay = -0.0025
+	}
+	ai_will_do = {					
+        factor = 0                              
+    }
+}
+
+#Hungarian Cardinals
+gc_hungarian_nobles_privilege_6 = {
+	icon = privilege_send_emissary_to_pope
+	max_absolutism = -5
+	influence = 0.05
+	land_share = 0
+	is_valid = {
+		religion = catholic
+	}
+	benefits = {
+		papal_influence = 2
+	}
+	penalties = {
+		curia_powers_cost = 0.05
+	}
+	ai_will_do = {					
+        factor = 0                              
+    }
+}
+
+#Hungarian Tolerance
+gc_hungarian_nobles_privilege_7 = {
+	icon = privilege_tolerance_heathen
+	max_absolutism = -5
+	loyalty = 0.00
+	influence = 0.00
+	land_share = 0
+	benefits = {
+		tolerance_heretic = 2
+	}
+	penalties = {
+		global_missionary_strength = -0.02
+	}
+	ai_will_do = {					
+        factor = 0                              
+    }
+}
+
+#Integrate Hungarian Shock Tactics
+gc_hungarian_nobles_privilege_8 = {
+	icon = privilege_supply_arms
+	max_absolutism = -5
+	influence = 0.1
+	land_share = 0
+	benefits = {
+		shock_damage = 0.1
+		cavalry_flanking = 1
+	}
+	ai_will_do = {					
+        factor = 0                              
+    }
+}
+
+#Land Rights
+gc_hungarian_nobles_privilege_9 = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -5
+	loyalty = 0
+	influence = 0.05
+	land_share = 5
+	benefits = {
+		governing_capacity = 100
+	}
+	ai_will_do = {					
+        factor = 0                              
+    }
+}

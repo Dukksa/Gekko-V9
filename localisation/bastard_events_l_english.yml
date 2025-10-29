@@ -35,6 +35,40 @@ echo.12.h:0 "£no£ Don't Recruit Anyone"
 #####
 #estate privileges
 ####
+#Hungarian Nobles Estate
+
+ gc_estate_hungarian_nobles:0 "Hungarian Nobles"
+ gc_estate_hungarian_nobles_desc:0 "Part of the Reforms was accepting Hungarian Nobles as equals."
+ gc_hungarian_nobles_loyalty_modifier:0 "Hungarian Nobility Loyalty Equilibrium"
+ gc_hungarian_nobles_influence_modifier:0 "Hungarian Nobility Influence"
+
+ gc_hungarian_nobles_privilege_1:0 "Integrate Hungarian Cavalry"
+ gc_hungarian_nobles_privilege_1_desc:0 "The Noble Cavalry of the Hungarian Nobility will join our ranks."
+
+ gc_hungarian_nobles_privilege_2:0 "Hungarian Noble Levies"
+ gc_hungarian_nobles_privilege_2_desc:0 ""
+
+ gc_hungarian_nobles_privilege_3:0 "Allow Cossack settlements"
+ gc_hungarian_nobles_privilege_3_desc:0 ""
+
+ gc_hungarian_nobles_privilege_4:0 "Tax priviliges"
+ gc_hungarian_nobles_privilege_4_desc:0 ""
+
+ gc_hungarian_nobles_privilege_5:0 "Hungarian Noble Officers"
+ gc_hungarian_nobles_privilege_5_desc:0 ""
+
+ gc_hungarian_nobles_privilege_6:0 "Hungarian Cardinals"
+ gc_hungarian_nobles_privilege_6_desc:0 ""
+
+ gc_hungarian_nobles_privilege_7:0 "Enact Hungarian Tolerance"
+ gc_hungarian_nobles_privilege_7_desc:0 ""
+
+ gc_hungarian_nobles_privilege_8:0 "Integrate Shock Tactics"
+ gc_hungarian_nobles_privilege_8_desc:0 ""
+
+ gc_hungarian_nobles_privilege_9:0 "Land Rights"
+ gc_hungarian_nobles_privilege_9_desc:0 ""
+
 echo.14.t:0 "Lapse of Burgher Demands"
 echo.14.d:0 "5 years have passed since we granted our Burghers further control over the state's affairs. We now have an opportunity to revert this decision and seize the Burgher's possessions back."
 echo.14.a:0 "Renew the privilege."

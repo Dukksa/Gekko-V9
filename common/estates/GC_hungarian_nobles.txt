@@ -1,0 +1,151 @@
+gc_estate_hungarian_nobles = {
+	icon = 14
+
+	# If true, country will get estate
+	trigger = {
+        OR = {
+            tag = AHU
+        }
+		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = veche_republic }
+		NOT = { government = native }
+		NOT = { has_reform = trading_city }
+		NOT = { has_reform = siberian_tribe }
+		NOT = { is_revolutionary_republic_trigger = yes }
+		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = { has_reform = peasants_republic }
+		NOT = { has_reform = american_republic }
+		NOT = { has_reform = federal_republic }
+		if = {
+			limit = {
+				NOT = { religion_group = muslim }
+				NOT = { religion = sikhism }
+				NOT = { religion = buddhism }
+				NOT = { religion = vajrayana }
+				NOT = { religion = mahayana }
+			}
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_rajput }
+		}
+		OR = {
+			NOT = { has_reform = celestial_empire }
+			has_dlc = "Mandate of Heaven"
+		}
+		is_nomad = no
+		is_colonial_nation = no
+		OR = {
+			NOT = { has_dlc = "Common Sense" }
+			AND = {
+				NOT = { has_reform = parliamentary_reform }
+				NOT = { has_reform = theocratic_democracy_reform }
+				NOT = { has_reform = regionally_elected_commanders }
+				NOT = { has_reform = protectorate_parliament_reform }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Dharma" }
+			}
+			has_parliament = no
+		}
+		NOT = { has_reform = revolutionary_empire_reform }
+	}
+
+	country_modifier_happy = {
+		cavalry_power = 0.2
+		land_maintenance_modifier = -0.1
+		monthly_support_heir_gain = 0.33
+	}
+	country_modifier_neutral = {
+		land_maintenance_modifier = -0.1
+	}	
+	country_modifier_angry = {
+		cavalry_cost = 0.2
+		land_maintenance_modifier = 0.1
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		gc_hungarian_nobles_loyalty_modifier = 0.2
+	}
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { is_state_core = owner }
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 10
+	
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+			}
+		}	
+		influence = -40
+	}
+	
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+			}
+		}
+		loyalty = -20
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_NOBLE_CONSORT
+		trigger = {
+			has_dlc = "Rights of Man"
+			has_consort = yes
+			is_origin_of_consort = ROOT
+		}
+		loyalty = 5
+	}
+	
+	color = { 200 100 50 }
+	
+	privileges = {
+		gc_hungarian_nobles_privilege_1
+		#gc_hungarian_nobles_privilege_2
+		gc_hungarian_nobles_privilege_3
+		gc_hungarian_nobles_privilege_4
+		gc_hungarian_nobles_privilege_5
+		gc_hungarian_nobles_privilege_6
+		gc_hungarian_nobles_privilege_7
+		gc_hungarian_nobles_privilege_8
+		gc_hungarian_nobles_privilege_9
+	}
+
+	agendas = {
+		
+	}
+	
+	influence_from_dev_modifier = 1.0
+}

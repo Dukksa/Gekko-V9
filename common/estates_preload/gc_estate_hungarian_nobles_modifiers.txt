@@ -1,0 +1,16 @@
+gc_estate_hungarian_nobles = {
+	modifier_definition = {
+		type = loyalty
+		key = gc_hungarian_nobles_loyalty_modifier
+		trigger = {
+			has_estate = gc_estate_hungarian_nobles
+		}
+	}	
+	modifier_definition = {
+		type = influence
+		key = gc_hungarian_nobles_influence_modifier
+		trigger = {
+			has_estate = gc_estate_hungarian_nobles
+		}
+	}
+}
