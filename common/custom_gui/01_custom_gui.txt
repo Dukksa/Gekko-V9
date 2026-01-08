@@ -22,31 +22,22 @@ custom_button = {
 	tooltip = iv_tradecenter_button_title
     potential = {
         owned_by = FROM				#You want this so that you can only see this button on your own provinces!
+		owner = { is_colonial_nation = no }
     }
     trigger = { 
 		FROM = {
 			NOT = { has_country_modifier = trade_hub_created }
-
-			if = {
-				limit = {
-					ROOT = {
-						OR = {
-							continent = north_america
-							continent = south_america
-						}
-					}
-				}
-				treasury = 500
-				dip_power = 100
-			}
-			else = {
-				treasury = 200
-				dip_power = 50
-			}
-			
+			treasury = 500
+			dip_power = 100
 			is_at_war = no
 		}	
 		ROOT = {
+			NOT = {
+				continent = north_america
+			}
+			NOT = {
+				continent = south_america
+			}
 			is_state_core = FROM
 			development = 30
 			NOT = { 
@@ -65,25 +56,12 @@ custom_button = {
 	}
     effect = { 
 		owner = { #This will apply to the country
-
-			if = {
-				limit = {
-					ROOT = {
-						OR = {
-							continent = north_america
-							continent = south_america
-						}
-					}
-				}
-				add_treasury = -500
-				add_dip_power = -100
+			add_treasury = -500
+			add_dip_power = -100
+			add_country_modifier = {
+				name = trade_hub_created
+				duration = 3650
 			}
-			else = {
-				add_treasury = -200
-				add_dip_power = -50
-			}
-
-			
 		}
 
 		#These will apply on the province
