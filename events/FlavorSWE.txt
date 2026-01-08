@@ -2585,9 +2585,9 @@ country_event = {
 			}
 			define_leader_to_ruler = {
 				name = "Johan Vasa"
-				adm = 6
-				dip = 4
-				mil = 4
+				adm = 5
+				dip = 5
+				mil = 5
 				claim = 50
 				fixed = yes
 			}
@@ -2598,9 +2598,9 @@ country_event = {
 			}
 			define_leader_to_ruler = {
 				name = "Erik Vasa"
-				adm = 6
-				dip = 4
-				mil = 4
+				adm = 5
+				dip = 5
+				mil = 5
 				claim = 50
 				fixed = yes
 			}
@@ -2611,9 +2611,9 @@ country_event = {
 			}
 			define_leader_to_ruler = {
 				name = "Gustav Vasa"
-				adm = 6
-				dip = 4
-				mil = 4
+				adm = 5
+				dip = 5
+				mil = 5
 				claim = 50
 				fixed = yes
 			}
@@ -2626,9 +2626,9 @@ country_event = {
 				name = "Johan I"
 				dynasty = "Vasa"
 				age = 25
-				adm = 6
-				dip = 4
-				mil = 4
+				adm = 5
+				dip = 5
+				mil = 5
 			}
 		}
 		else_if = {
@@ -2639,9 +2639,9 @@ country_event = {
 				name = "Erik I"
 				dynasty = "Vasa"
 				age = 25
-				adm = 6
-				dip = 4
-				mil = 4
+				adm = 5
+				dip = 5
+				mil = 5
 			}
 		}
 		else = {
@@ -2649,9 +2649,9 @@ country_event = {
 				name = "Gustav I"
 				dynasty = "Vasa"
 				age = 25
-				adm = 6
-				dip = 4
-				mil = 4
+				adm = 5
+				dip = 5
+				mil = 5
 			}
 			hidden_effect = {
 				add_ruler_personality = lawgiver_personality
@@ -3337,9 +3337,9 @@ country_event = {
 			name = "Gustav I"
 			dynasty = "Vasa"
 			age = 27
-			adm = 6
-			dip = 4
-			mil = 4
+			adm = 5
+			dip = 5
+			mil = 5
 		}
 		if = {
 			limit = { has_heir = yes }
