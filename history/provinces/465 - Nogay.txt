@@ -13,6 +13,7 @@ base_manpower = 3
 is_city = yes
 add_core = NOG
 center_of_trade = 1
+add_province_triggered_modifier = conquest_of_nogay
 
 
 discovered_by = muslim

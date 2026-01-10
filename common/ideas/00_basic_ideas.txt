@@ -810,7 +810,7 @@ aristocracy_ideas = {
 	category = MIL
 
 	bonus = {
-		fire_damage_received = -0.15
+		fire_damage_received = -0.1
 		monthly_military_reform_power_gain = 0.1
 	}
 	military_traditions = {

@@ -6,6 +6,9 @@ technology_group = indian
 capital = 522	# Delhi
 fixed_capital = 522 # Cannot move capital away from this province & no power cost to move to it
 religious_school = maliki_school
+add_truce_with = BNG
+add_truce_with = MER
+add_truce_with = MYS
 
 1435.1.1 = {
 	monarch = {

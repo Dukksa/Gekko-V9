@@ -551,6 +551,32 @@ conquest_of_tabriz = {
 	}
 }
 
+conquest_of_nogay = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+				nogai_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = PREV
+				}	
+			}
+		controlled_by = ROOT
+		has_owner_accepted_culture = yes	
+	}	
+
+	merchants = 1
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
 conquest_of_samarkand = {
 	potential = {
 		normal_or_historical_nations = yes

@@ -5,6 +5,8 @@ religion = sunni
 technology_group = indian
 capital = 563	# Pandua
 religious_school = maliki_school
+add_truce_with = MER
+add_truce_with = MYS
 
 
 #Sultans of Bengal
