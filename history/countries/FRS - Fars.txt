@@ -2,7 +2,6 @@ government = monarchy
 add_government_reform = iqta
 government_rank = 1
 primary_culture = persian
-add_accepted_culture = gulf_arabic
 religion = shiite
 technology_group = muslim
 capital = 2218 # Shiraz
@@ -20,14 +19,14 @@ historical_rival = KAS
 historical_rival = CHG
 
 add_sailors = 5000
-add_army_tradition = 30
+
 
 #1444.9.11 = { leader = {	name = "Dukksa da Great"  birth_date = 1427.6.4 type = general	fire = 2	shock = 6	manuever = 3	siege = 3 } }
 
 1442.1.1 = { #New Regent, taking over from Shaykh Muhibb al-Din Abu'l Khayr
 	religion = shiite
 	religious_school = hanafi_school
-	add_piety = -1
+	add_piety = -0.5
 	monarch = {
 		name = "Dukksa da"
 		dynasty = "Timurid"
@@ -38,7 +37,7 @@ add_army_tradition = 30
 		religion = shiite
 		adm = 4
 		dip = 3
-		mil = 6
+		mil = 5
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = inspiring_leader_personality

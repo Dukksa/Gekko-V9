@@ -120,7 +120,7 @@ Fars_Missions_slot_1 = {
 		}
 
 		Fars_conquer_mushasha = {
-			position = 6
+			position = 7
 			required_missions = {
 				Fars_build_to_forcelimit
 			}
@@ -163,47 +163,6 @@ Fars_Missions_slot_1 = {
 					add_permanent_claim = ROOT
 				}
 				2999 = {add_permanent_claim = ROOT}
-			}
-		}
-
-		Fars_lose_war = {
-			position = 8
-			required_missions = {
-			}
-			trigger = {
-				NOT = { mission_completed = Fars_win_war}
-				OR = {
-					is_in_war = {
-						attacker_leader = FRS
-						defender_leader = ARL
-						war_score = -30
-					}
-					is_in_war = {
-						attacker_leader = ARL
-						defender_leader = FRS
-						war_score = -30
-					}
-				}
-			}
-			effect = {
-				add_country_modifier = {
-					name = defense_at_all_costs
-					duration = 3650
-				}
-				capital_scope = {
-					persian_shamshir = root
-					persian_shamshir = root
-					persian_shamshir = root
-					persian_shamshir = root
-					persian_shamshir = root
-					persian_shamshir = root
-					persian_shamshir = root
-					persian_shamshir = root
-					persian_shamshir = root
-					persian_shamshir = root
-				}
-				add_manpower = 20
-				add_years_of_income = 3
 			}
 		}
 	}
@@ -354,7 +313,7 @@ Fars_Missions_slot_3 = {
 
 
 	Fars_build_to_forcelimit = {
-		position = 5
+		position = 6
 		required_missions = {
 		}
 		icon = league_of_the_public_weal
@@ -489,7 +448,7 @@ Fars_Missions_slot_4 = {
 	}
 
 	Fars_conquer_baluchistan = {
-		position = 6
+		position = 7
 		required_missions = {
 			Fars_build_to_forcelimit
 		}
@@ -501,15 +460,15 @@ Fars_Missions_slot_4 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			kalat_area = { 
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			makran_area = { 
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			} 
-		}
+		kalat_area = { 
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+		makran_area = { 
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	} 
+	}
 		effect = { 
 			add_prestige = 15
 			add_years_of_income = 1.5
@@ -538,7 +497,7 @@ Fars_Missions_slot_4 = {
 	}
 
 	Fars_advance_into_persia ={
-		position = 7
+		position = 8
 		required_missions = {
 			Fars_conquer_baluchistan
 		}
@@ -566,47 +525,6 @@ Fars_Missions_slot_4 = {
 			}
 		}
 	}
-
-	Fars_win_war = {
-		position = 8
-		required_missions = {
-		}
-		trigger = {
-			NOT = { mission_completed = Fars_lose_war}
-			OR = {
-				is_in_war = {
-					attacker_leader = FRS
-					defender_leader = ARL
-					war_score = 30
-				}
-				is_in_war = {
-					attacker_leader = ARL
-					defender_leader = FRS
-					war_score = 30
-				}
-			}
-		}
-		effect = {
-			#break the walls of tabriz
-			#get a bunch of siege ability and manpower for 10 years
-			add_country_modifier = {
-				name = "victory_over_ardabil"
-				duration = 3650
-			}
-			#also spawn 5 artillery regiments
-			capital_scope = {
-				houfnice = root
-				houfnice = root
-				houfnice = root
-				houfnice = root
-				houfnice = root
-			}
-			add_army_tradition_or_mil_power = { amount = 20}
-			add_manpower = 10
-			add_years_of_income = 2
-		}
-	}
-
 }
 Fars_Missions_slot_5 = {
 	slot = 5
@@ -711,7 +629,7 @@ Fars_Missions_slot_5 = {
 		}
 	}
 	Fars_advance_into_india ={
-		position = 7
+		position = 8
 		required_missions = {
 			Fars_conquer_baluchistan
 		}

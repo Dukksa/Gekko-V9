@@ -13,6 +13,29 @@ country_event = {
 		tag = FRS
 	}
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			4332 = {
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+				galley = root
+	
+			}
+		}
+	}
 	
 	option = {
 		ai_chance = {
