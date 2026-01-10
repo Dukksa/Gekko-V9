@@ -1705,6 +1705,18 @@ ME_Karatshar = {
 ME_fars_regency = {
 	advisor_cost = -0.1
 }
+victory_over_ardabil = {
+	siege_ability = 0.15
+	shock_damage = 0.1
+	fire_damage = 0.1
+	discipline = 0.025
+}
+
+defense_at_all_costs = {
+	defensiveness = 0.3
+	shock_damage_received = -0.2
+	morale_damage_received = -0.1
+}
 
 ME_Baysonqor = {
 	land_morale = 0.075
