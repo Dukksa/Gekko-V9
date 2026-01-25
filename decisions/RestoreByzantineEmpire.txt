@@ -3,42 +3,10 @@ country_decisions = {
 	restore_byzantine_empire = {
 		major = yes
 		potential = {
-			always = no
-			OR = {
-				was_never_end_game_tag_trigger = yes
-				AND = {
-					was_tag = BYZ
-					tag = MOE
-					has_country_flag = BYZ_accepted_ottoman_threat
-				}
-			}
-			normal_or_historical_nations = yes
+			tag = HUN
 			NOT = { has_country_flag = formed_byzantium_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			OR = {
-				is_free_or_tributary_trigger = yes
-				ai = no
-			}
 			NOT = { exists = BYZ }
 			NOT = { exists = GRE }
-			NOT = { tag = HLR }
-			NOT = { tag = ROM }
-			NOT = { tag = TUR }
-			OR = {
-				culture_group = byzantine
-				not = { primary_culture = goths }
-				AND = {
-					has_idea = MFA_byzantine_claimants
-					dynasty = "Palaiologos"
-				}
-			}
-			OR = {
-				religion = orthodox
-				has_idea = MFA_byzantine_claimants
-			}
 		}
 		provinces_to_highlight = {
 			OR = {

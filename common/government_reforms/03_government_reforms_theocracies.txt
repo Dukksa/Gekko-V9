@@ -1658,7 +1658,7 @@ regionally_elected_commanders = {
 		has_parliament = yes
 		custom_attributes = {
 			blocked_call_diet = yes
-			disables_estate_nobles = yes
+			#disables_estate_nobles = yes
 		}
 	}
 	ai = {

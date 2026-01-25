@@ -5262,6 +5262,7 @@ orangist_stadholders_reform = {
 apostolic_kingdom = {
 	icon = "apostolic_kingdom"
 	allow_normal_conversion = yes
+	lock_level_when_selected = yes
 	potential = {
 		religion = catholic
 		OR = {
