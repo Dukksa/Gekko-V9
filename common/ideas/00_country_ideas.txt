@@ -10204,7 +10204,7 @@ KHO_ideas = {
 
 TRS_ideas = {
 	start = {
-		land_morale = 0.1
+		shock_damage_received = 0.15
 		cavalry_cost = -0.1
 	}
 	bonus = {
