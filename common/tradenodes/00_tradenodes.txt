@@ -395,7 +395,7 @@ burma={
 		587 2401 4398 #karenni_area 
 		582 2395 2396 4404 4405 #kachin_area
 		568 579 2402 #arakan_area
-		586 590 1815 2403 4399 #lower_burma_area
+		586 590 1815 4399 #lower_burma_area
 
 		4401
 		4400
