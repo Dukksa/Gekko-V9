@@ -3043,18 +3043,18 @@ country_event = { #The Heirs of Charlemagne
 		ai_chance = {
 			factor = 25
 		}
-		if = {
-			limit = {
-				exists = FRA
-				valid_for_personal_unions_trigger = yes
-				FRA = { valid_for_personal_unions_trigger = yes }
-			}
-			add_casus_belli = {
-				type = cb_restore_personal_union
-				months = 240
-				target = FRA
-			}
-		}
+		#if = {
+		#	limit = {
+		#		exists = FRA
+		#		valid_for_personal_unions_trigger = yes
+		#		FRA = { valid_for_personal_unions_trigger = yes }
+		#	}
+		#	add_casus_belli = {
+		#		type = cb_restore_personal_union
+		#		months = 240
+		#		target = FRA
+		#	}
+		#}
 		add_prestige = -25
 		every_elector = { 
 			add_opinion = {
