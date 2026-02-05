@@ -964,6 +964,46 @@ statesman = {
 			trade_efficiency = 0.02
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_government_attribute = enables_statesman_autonomy_reduction }
+		}
+		modifier = {
+			global_autonomy = -0.01
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = GER_statesmen_abso_flag }
+		}
+		modifier = {
+			yearly_absolutism = 0.4
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = GER_statesmen_morale_flag }
+		}
+		modifier = {
+			land_morale = 0.02
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = GER_statesmen_autonomy_flag }
+		}
+		modifier = {
+			global_autonomy = -0.02
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_flag = boh_empower_diplo_advisors }
+		}
+		modifier = {
+			reasons_to_elect = 5
+		}
+	}
 
 	chance = {
 		factor = 1

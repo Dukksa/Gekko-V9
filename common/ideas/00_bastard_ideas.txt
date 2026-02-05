@@ -2376,7 +2376,7 @@ EGY_ideas = {
 	free = yes		#will be added at load.
 	
 	egy_centralization_works = {
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 	training_missions_in_egypt = {
 		country_military_power = 1
@@ -2384,14 +2384,13 @@ EGY_ideas = {
 	}
 	b_purchase_new_mamelukes = {
 		infantry_power = 0.1
-		shock_damage_received = -0.1
 	}
 	nile_production = {
 		production_efficiency = 0.15
 	}
 	westernize_the_military = {
 		max_general_fire = 1
-		fire_damage = 0.15
+		fire_damage = 0.1
 	}
 	mediterranean_shipwrights = {
 		sea_repair = yes

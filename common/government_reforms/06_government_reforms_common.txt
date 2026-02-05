@@ -4737,6 +4737,7 @@ german_franconian_reform = {
 		has_country_flag = GER_unlocked_franconian_reform
 	}
 	modifiers = {
+		governing_capacity_modifier = 0.15
     	idea_cost = -0.1
 		same_culture_advisor_cost = -0.1
 	}
@@ -4788,6 +4789,7 @@ german_saxon_reform = {
 		has_country_flag = GER_unlocked_saxon_reform
 	}
 	modifiers = {
+		governing_capacity_modifier = 0.15
     	production_efficiency = 0.1
 	}
 	
@@ -4842,6 +4844,7 @@ german_lower_saxon_reform = {
 		has_country_flag = GER_unlocked_lower_saxon_reform
 	}
 	modifiers = {
+		governing_capacity_modifier = 0.15
     	trade_efficiency = 0.1
 		own_coast_naval_combat_bonus = 1.0
 	}
@@ -4863,6 +4866,7 @@ german_rhenish_reform = {
 		has_country_flag = GER_unlocked_rhenish_reform
 	}
 	modifiers = {
+		governing_capacity_modifier = 0.15
     	ae_impact = -0.15 
 		diplomats = 1
 	}
@@ -4882,6 +4886,7 @@ german_austrian_reform = {
 		has_country_flag = GER_unlocked_austrian_reform
 	}
 	modifiers = {
+		governing_capacity_modifier = 0.25
     	chance_to_inherit = 0.25
 	}
 	
@@ -4900,6 +4905,7 @@ german_bavarian_reform = {
         has_country_flag = GER_unlocked_bavarian_reform
     }
     modifiers = {
+		governing_capacity_modifier = 0.15
         monthly_splendor = 2
         prestige = 1
     }
@@ -4933,6 +4939,7 @@ german_prussian_reform = {
         has_country_flag = GER_unlocked_prussian_reform
     }
     modifiers = {
+		governing_capacity_modifier = 0.15
         monthly_militarized_society = 0.1
         monthly_prussian_militarized_society_1 = 0.1
         monthly_prussian_militarized_society_2 = 0.1
@@ -4976,6 +4983,7 @@ german_swiss_reform = {
 		has_country_flag = GER_unlocked_swiss_reform
 	}
 	modifiers = {
+		governing_capacity_modifier = 0.15
     	mercenary_manpower = 0.25
 	}
 	
@@ -5003,6 +5011,7 @@ german_swabian_reform = {
         has_country_flag = GER_unlocked_swabian_reform
     }
     modifiers = {
+		governing_capacity_modifier = 0.15
         inflation_reduction = 0.1
         development_cost_in_primary_culture = -0.1
     }
@@ -5033,6 +5042,7 @@ german_westphalian_reform = {
 		has_country_flag = GER_unlocked_westphalian_reform
 	}
 	modifiers = {
+		governing_capacity_modifier = 0.15
     	papal_influence = 1
 		church_power_modifier = 0.25
 		monthly_fervor_increase = 1

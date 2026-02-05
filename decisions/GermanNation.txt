@@ -227,6 +227,15 @@ country_decisions = {
 			}
 			add_prestige = 25
 			set_country_flag = formed_germany_flag
+			if = {
+				limit = { has_dlc = "Winds of Change" }
+				set_country_flag = GER_stuck_disunited
+				add_government_reform = german_cultural_disunity_reform
+				freeze_government_power = {
+					mechanic_type = cultural_unity_mechanic
+					power_type = cultural_unity
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 100

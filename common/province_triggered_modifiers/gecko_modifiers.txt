@@ -520,11 +520,6 @@ conquest_of_saint_petersburg = {
 conquest_of_tabriz = {
 	potential = {
 		normal_or_historical_nations = yes
-		OR = {
-			religion = sunni
-			religion = shiite
-			religion = ibadi
-		}
 	}
 	trigger = {
 		owner = {
@@ -669,12 +664,6 @@ conquest_of_copenhagen = {
 conquest_of_herat = {
 	potential = {
 		normal_or_historical_nations = yes
-		OR = {
-			religion = sunni
-			religion = shiite
-			religion = ibadi
-			religion = tengri_pagan_reformed
-		}
 	}
 	trigger = {
 		controlled_by = ROOT
