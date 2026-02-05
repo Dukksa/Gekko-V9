@@ -441,8 +441,15 @@ administrative_missions = {
 		trigger = { share_of_starting_income = 1.5 }
 		effect = {
 			add_country_modifier = {
-				name = "gc_growing_economy"
+				name = "growing_economy"
 				duration = 9125 #25 years
+			}
+			define_advisor = {
+				type = treasurer
+				skill = 1
+				culture = ROOT
+				religion = ROOT
+				cost_multiplier = 0.5
 			}
 		}
 	}

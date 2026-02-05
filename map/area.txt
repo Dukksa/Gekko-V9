@@ -1807,7 +1807,7 @@ mascarenes_area = { #3
 }
 
 indian_ocean_islands_area = { #5
-	574 1248 1101 1998 1999
+	574 1248 1101 1998
 }
 
 papua_area = { #5 (Papuan Peninsula)
@@ -4105,6 +4105,7 @@ X_unused_provinces_area = {
 	841 844 847 849
 	851 854
 	891
+	1999
 	2638
 	2640 2649 
 	2653 2657 
