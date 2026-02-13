@@ -79,9 +79,9 @@ change_estate_land_share = {
 		name = "Friedrich II"
 		dynasty = "von Hohenzollern"
 		birth_date = 1413.11.19
-		adm = 3
-		dip = 3
-		mil = 3
+		adm = 4
+		dip = 4
+		mil = 4
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = incorruptible_personality
@@ -104,9 +104,9 @@ change_estate_land_share = {
 		birth_date = 1414.11.9
 		death_date = 1486.3.11
 		claim = 95
-		adm = 3
-		dip = 3
-		mil = 3
+		adm = 4
+		dip = 4
+		mil = 4
 	}
 	set_country_flag = albrecht_achilles_flag
 }
