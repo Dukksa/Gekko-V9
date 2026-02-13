@@ -3,8 +3,8 @@ silk_road_empire = { #tier 1
 	icon = "asian_scripture"
 	lock_level_when_selected = yes
 	potential = {
-			always = no
-		}
+		tag = BUK
+	}
 	modifiers = {
 		merchants = 2
 		missionaries = 1
@@ -14,7 +14,6 @@ silk_road_empire = { #tier 1
 		#movement_speed = 0.20	
 		governing_capacity = 150
 		fort_maintenance_modifier = -0.2
-		
 	}
 	government_abilities = {
 		tribal_federation_mechanic
