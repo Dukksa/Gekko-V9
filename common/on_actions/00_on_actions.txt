@@ -1442,6 +1442,23 @@ on_bankruptcy = {
 	add_dip_power = 100
 	add_mil_power = 100
 	add_war_exhaustion = -20
+
+	if = {
+		limit = {
+			has_estate_privilege = estate_burghers_indebted_to_burghers
+
+		}
+		remove_estate_privilege = estate_burghers_indebted_to_burghers
+	}
+
+	if = {
+		limit = {
+			has_estate_privilege = estate_jains_indebted_to_jains
+
+		}
+		remove_estate_privilege = estate_jains_indebted_to_jains
+	}
+	
 }
 
 # country (country annexing, root = target)
