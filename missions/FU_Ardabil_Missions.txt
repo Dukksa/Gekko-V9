@@ -19,7 +19,7 @@ fu_ardabil_missions_1 = {
 			}
 		}
 		effect = {
-			add_army_tradition = 20
+			#add_army_tradition = 20
 			imereti_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -345,31 +345,31 @@ fu_ardabil_missions_4 = {
 			hidden_effect = {
 				if = { 
 					limit = { has_adm_advisor_3 = yes }
-					add_adm_power = 150
+					add_adm_power = 80
 				}
 				else_if = {
 					limit = { has_adm_advisor_2 = yes }
-					add_adm_power = 100 
+					add_adm_power = 40 
 				}
-				else = { add_adm_power = 50 }
+				else = { add_adm_power = 20 }
 				if = { 
 					limit = { has_dip_advisor_3 = yes }
-					add_dip_power = 150
+					add_dip_power = 80
 				}
 				else_if = {
 					limit = { has_dip_advisor_2 = yes }
-					add_dip_power = 100 
+					add_dip_power = 40 
 				}
-				else = { add_dip_power = 50 }
+				else = { add_dip_power = 20 }
 				if = { 
 					limit = { has_mil_advisor_3 = yes }
-					add_mil_power = 150
+					add_mil_power = 80
 				}
 				else_if = {
 					limit = { has_mil_advisor_2 = yes }
-					add_mil_power = 100 
+					add_mil_power = 40 
 				}
-				else = { add_mil_power = 50 }
+				else = { add_mil_power = 20 }
 			}
 			custom_tooltip = arl_if_level_3_adm_advisor_tt 
 			tooltip = {

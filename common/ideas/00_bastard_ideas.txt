@@ -803,7 +803,7 @@ HES_ideas = {
 		defensiveness = 0.1
 	}
 	let_in_religious_emigrants = {
-		global_tax_modifier = 0.1
+		trade_efficiency = 0.1
 	}
 	marburg_university = {
 		idea_cost = -0.1

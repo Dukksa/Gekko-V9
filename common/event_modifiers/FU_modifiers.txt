@@ -71,7 +71,7 @@ arl_spreading_twelver_islam_modifier = {
 	warscore_cost_vs_other_religion = -0.2
 }
 arl_war_of_faithful_modifier = {
-	land_morale = 0.1
+	land_morale = 0.05
 }
 arl_efficient_integrateion_modifier = {
 	core_creation = -0.1 
@@ -80,7 +80,7 @@ arl_masterful_negotiators_modifier = {
 	ae_impact = -0.2
 }
 arl_valuable_lessons_of_war_modifier = {
-	army_tradition = 1 
+	army_tradition = 0.5
 }
 arl_zaidi_scripture_modifier = {
 	monthly_piety = -0.001 

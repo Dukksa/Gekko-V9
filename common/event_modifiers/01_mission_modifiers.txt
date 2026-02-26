@@ -8356,7 +8356,7 @@ tur_janissary_example = {
 
 tur_janissary_loyalty = {
 	janissaries_loyalty_modifier = 0.1
-	janissary_cost_modifier = -0.33
+	#janissary_cost_modifier = -0.33
 }
 
 tur_respected_the_patriarchate = {

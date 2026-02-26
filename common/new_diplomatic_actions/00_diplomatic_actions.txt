@@ -383,6 +383,7 @@ fabricate_ottoman_invasion_cb = {
 	require_acceptance = no
 
 	is_visible = {
+		always = no
 		has_government_attribute = has_eyalets
 	}
 	is_allowed = {

@@ -28,14 +28,6 @@ vassal = {
 	end_date = 1809.1.1
 }
 
-#Tributary to Malwa
-guarantee = {
-	first = MLW
-	second = BGA
-	start_date = 1436.1.1
-	end_date = 1470.1.1
-}
-
 #Vijayanagar
 
 alliance = { #Vijayanagara and the Reddys
@@ -78,24 +70,6 @@ vassal = {
 
 #Bundelkhand
 
-#Bundelkhand overlord
-vassal = {
-	first = MLW
-	second = KLP
-	start_date = 1443.1.1
-	end_date = 1531.1.1
-}
-
-vassal = {
-	first = MLW
-	second = BND
-	start_date = 1443.1.1
-	end_date = 1531.1.1
-}
-
-
-#Bagelkhand
-
 vassal = {
 	first = JNP
 	second = BGL
@@ -105,44 +79,7 @@ vassal = {
 
 #Gondwana
 
-#Gondwana overlord
-vassal = {
-	first = MLW
-	second = GDW
-	start_date = 1441.1.1
-	end_date = 1531.1.1
-}
-
-
 #Orissa & Garjats
-
-vassal = { #Garjat
-	first = ORI
-	second = GRJ 
-	start_date = 1444.1.1
-	end_date = 1568.1.1
-}
-
-vassal = { #Parlakhimidi
-	first = ORI
-	second = PRD
-	start_date = 1444.1.1
-	end_date = 1568.1.1
-}
-
-vassal = { #Keonhjar
-	first = ORI
-	second = KJH
-	start_date = 1444.1.1
-	end_date = 1568.1.1
-}
-
-vassal = { #Jeypore
-	first = ORI
-	second = JPR
-	start_date = 1444.1.1
-	end_date = 1576.1.1
-}
 
 #Telingana
 
