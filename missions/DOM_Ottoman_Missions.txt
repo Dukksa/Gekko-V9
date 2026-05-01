@@ -2329,11 +2329,6 @@ tur_egyptian_conquest = {
 				limit = {
 					exists = MAM
 				}
-				add_casus_belli = {
-					type = cb_ottoman_invasion
-					target = MAM
-					months = 600
-				}
 				custom_tooltip = tur_defeat_the_mamluks_at
 			}
 			egypt_region = {

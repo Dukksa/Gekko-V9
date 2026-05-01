@@ -32,9 +32,9 @@ canton = {
 	liberty_desire_negative_prestige = 0.0
 	liberty_desire_development_ratio = 0.2
 	liberty_desire_same_dynasty = -10.0
-	pays_overlord = 2
-	forcelimit_to_overlord = 0.25
-	manpower_to_overlord = 0.25
+	pays_overlord = 1.5
+	forcelimit_to_overlord = 0.20
+	manpower_to_overlord = 0.20
 	relative_power_class = 1
 	restoration_cb = cb_disloyal_vassal
 	
