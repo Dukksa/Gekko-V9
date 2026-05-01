@@ -20,13 +20,6 @@ alliance = {
 	end_date = 1454.4.9
 }
 
-alliance = {
-	first = TUN
-	second = MOR
-	start_date = 1444.1.1
-	end_date = 1454.4.9
-}
-
 vassal = {
 	first = DLH
 	second = SRM

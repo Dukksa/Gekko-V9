@@ -1,19 +1,17 @@
-#355 - Sirt
+# - Thubaqt
 
 owner = TRP
 controller = TRP
 culture = tunisian
 religion = sunni
-capital = "Ben Jawad"
-trade_goods = fish
+capital = "Thubaqt"
+trade_goods = cloth
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = TUN
 add_core = TRP
-add_local_autonomy = 25
 
 
 
@@ -26,4 +24,5 @@ discovered_by = eastern
 1558.1.1 = {
 	owner = TRP
 	controller = TRP
-} #Turgut Reis conquers Sirte
+	add_core = TRP
+} #Turgut Reis conquers Thubaqt

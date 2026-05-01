@@ -1,7 +1,7 @@
 # - Titteri
 
-owner = TLC
-controller = TLC
+owner = MOR
+controller = MOR
 culture = algerian
 religion = sunni
 capital = "Medea"
@@ -12,6 +12,7 @@ base_production = 1
 base_manpower = 1
 is_city = yes
 add_core = TLC
+add_core = MOR
 
 
 

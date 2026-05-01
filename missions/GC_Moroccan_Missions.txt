@@ -611,7 +611,7 @@ gc_morocco_3 = {
 			NOT = { num_of_rebel_controlled_provinces = 1 }
 		}
 		effect = {
-			algiers_area  = {
+			maghreb_region  = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}

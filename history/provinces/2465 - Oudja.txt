@@ -1,7 +1,7 @@
 # - Oujda
 
-owner = TLC
-controller = TLC
+owner = MOR
+controller = MOR
 culture = berber
 religion = sunni
 capital = "Oujda"
@@ -12,6 +12,7 @@ base_production = 3
 base_manpower = 1
 is_city = yes
 add_core = TLC
+add_core = MOR
 
 
 

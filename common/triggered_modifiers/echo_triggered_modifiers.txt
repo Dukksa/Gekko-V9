@@ -339,16 +339,6 @@ Berber_Raids = {
 				great_power_rank = 5
 				is_great_power = no
 			}
-			OR = {
-				AND = {
-					tag = MOR
-					alliance_with = TUN
-				}
-				AND = {
-					tag = TUN
-					alliance_with = MOR
-				}
-			}
 			NOT = {
 				is_lacking_institutions = yes
 			}

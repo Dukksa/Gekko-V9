@@ -1,7 +1,7 @@
 #336 - Tlemcen
 
-owner = TLC
-controller = TLC
+owner = MOR
+controller = MOR
 culture = berber
 religion = sunni
 capital = "Tlemcen"
@@ -13,6 +13,7 @@ base_manpower = 3
 is_city = yes
 fort_15th = yes #Tlemcen Fortifications, site of many long sieges - Controls this area.
 add_core = TLC
+add_core = MOR
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
