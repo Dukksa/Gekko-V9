@@ -1305,3 +1305,30 @@ X_mande_culture_full_control_cmod = {
 	siege_ability = 0.125
 	prestige = 1.250
 }
+
+solis4245 = {
+	discipline = 0.05
+	shock_damage_received = -0.1
+	is_marine_modifier = yes 
+}
+
+influence_ideas_per_dip_tech_3  = { global_tax_income = 8  land_forcelimit = 2  global_manpower = 4.5  }
+influence_ideas_per_dip_tech_4  = { global_tax_income = 16  land_forcelimit = 3    global_manpower = 6    }
+influence_ideas_per_dip_tech_5  = { global_tax_income = 20  land_forcelimit = 4  global_manpower = 7.5  }
+influence_ideas_per_dip_tech_6  = { global_tax_income = 24  land_forcelimit = 5    global_manpower = 9    }
+influence_ideas_per_dip_tech_7  = { global_tax_income = 30  land_forcelimit = 6 global_manpower = 10.5 }
+influence_ideas_per_dip_tech_8  = { global_tax_income = 36  land_forcelimit = 7   global_manpower = 12   }
+influence_ideas_per_dip_tech_9  = { global_tax_income = 42  land_forcelimit = 8 global_manpower = 13.5 }
+influence_ideas_per_dip_tech_10 = { global_tax_income = 48  land_forcelimit = 9   global_manpower = 15   }
+influence_ideas_per_dip_tech_11 = { global_tax_income = 52 land_forcelimit = 10 global_manpower = 18   }
+influence_ideas_per_dip_tech_12 = { global_tax_income = 56 land_forcelimit = 11   global_manpower = 19.5 }
+influence_ideas_per_dip_tech_13 = { global_tax_income = 60 land_forcelimit = 12 global_manpower = 21   }
+influence_ideas_per_dip_tech_14 = { global_tax_income = 64 land_forcelimit = 13   global_manpower = 22.5 }
+influence_ideas_per_dip_tech_15 = { global_tax_income = 68 land_forcelimit = 14 global_manpower = 24   }
+influence_ideas_per_dip_tech_16 = { global_tax_income = 72 land_forcelimit = 15   global_manpower = 25.5 }
+influence_ideas_per_dip_tech_17 = { global_tax_income = 80 land_forcelimit = 16 global_manpower = 27   }
+influence_ideas_per_dip_tech_18 = { global_tax_income = 100 land_forcelimit = 20   global_manpower = 28.5 }
+influence_ideas_per_dip_tech_19 = { global_tax_income = 120 land_forcelimit = 22 global_manpower = 30   }
+influence_ideas_per_dip_tech_20 = { global_tax_income = 140 land_forcelimit = 24   global_manpower = 31.5 }
+influence_ideas_per_dip_tech_21 = { global_tax_income = 160 land_forcelimit = 26 global_manpower = 33   }
+influence_ideas_per_dip_tech_22 = { global_tax_income = 180 land_forcelimit = 30   global_manpower = 34.5 }

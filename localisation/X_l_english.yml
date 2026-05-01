@@ -609,3 +609,11 @@
  ####################
  X_unused_provinces_area:0 ""
  X_unused_provinces_continent:0 ""
+
+  i82:0 "Strong Subjects"
+ i82_desc:0 "§TPer our dip tech§! level, our vassals and marches gain:\n§G+4§! Yearly Tax Income\n§G+1§! Forcelimit\n§G+1,500§! Manpower\n"
+
+  kits_blessing:0 "Kit's Blessing"
+ kits_blessing_desc:0 "'§YIndebted to the [Root.GetBurghersName]§!' Estate Privilege §Ggrants 10§! Loans."
+
+ delete_world_title:0 "Delete The Asia"

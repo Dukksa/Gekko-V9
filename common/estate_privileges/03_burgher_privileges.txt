@@ -476,6 +476,7 @@ estate_burghers_indebted_to_burghers = {
 	on_granted = {
 		if = {
 			limit = {
+				has_idea = kits_blessing
 				has_country_flag = BYZ_buff_burgher_loans_flag
 			}
 			custom_tooltip = BYZ_estate_burghers_indebted_to_burghers_effect_tooltip
@@ -496,41 +497,59 @@ estate_burghers_indebted_to_burghers = {
 		}
 		hidden_effect = {
 			add_loan = {
-				fixed_interest = 2.5
+				fixed_interest = 2
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 2.5
+				fixed_interest = 2
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 2.5
+				fixed_interest = 2
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 2.5
+				fixed_interest = 2
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 2.5
+				fixed_interest = 2
 				duration = 60
 				estate_loan = yes
 			}
 			if = {
 				limit = {
+					OR = { 
+					has_idea = kits_blessing
 					has_country_flag = BYZ_buff_burgher_loans_flag
+					}
 				}
 				add_loan = {
-					fixed_interest = 2.5
+					fixed_interest = 2
 					duration = 60
 					estate_loan = yes
 				}
 				add_loan = {
-					fixed_interest = 2.5
+					fixed_interest = 2
+					duration = 60
+					estate_loan = yes
+				}
+					add_loan = {
+					fixed_interest = 2
+					duration = 60
+					estate_loan = yes
+				}
+					add_loan = {
+					fixed_interest = 2
+					duration = 60
+					estate_loan = yes
+				}
+					add_loan = {
+					fixed_interest = 2	
 					duration = 60
 					estate_loan = yes
 				}
