@@ -466,7 +466,7 @@ gc_por_2 = {
 				change_religion = catholic
 			}
 			define_explorer = {
-				name = "Lançarote de Freitas"
+				name = "Lanï¿½arote de Freitas"
 				shock = 1
 				fire = 3
 				manuever = 2
@@ -655,21 +655,8 @@ gc_por_2_b = {
 				manuever = 5
 				siege = 0
 			}
-			country_event = {
-				id = flavor_por.11
-			}
-			malabar_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			596 = { add_permanent_claim = ROOT } 
-			if = { 
-				limit = { has_dlc = "Rule Britannia" }
-				change_innovativeness = 2
-			}
+			
+			
 		}
 	}
 	
@@ -1242,9 +1229,9 @@ gc_por_4 = {
 			}
 			if = {
 				limit = {
-					1177 = { is_empty = yes }
+					1163 = { is_empty = yes }
 				}	
-					1177 = {
+					1163 = {
 						cede_province = POR
 						add_core = POR
 						change_culture = portugese
@@ -1265,19 +1252,19 @@ gc_por_4 = {
 		position = 3
 		
 		provinces_to_highlight = {
-			province_id = 1201
+			province_id = 1133
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = { 
-			1201 = {
+			1133 = {
 				owned_by = ROOT
 			}
 		}
 	
 		effect = {
-			1201 = {
+			1133 = {
 				add_base_production = 3
 				add_base_manpower = 3
 				add_province_modifier = {

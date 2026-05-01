@@ -727,4 +727,28 @@ country_decisions = {
 	#	
 	#	ai_will_do = {factor = 0}
 	#}
+	delete_world = {
+		color = { 0 0 0 }
+		potential = {
+			ai = no
+			NOT = { has_global_flag = cleared_east	}
+		}
+		effect = {
+			east_indies_superregion = {destroy_province_permanently = yes }
+			oceania_superregion = {destroy_province_permanently = yes }
+			china_superregion = {destroy_province_permanently = yes }
+			far_east_superregion = {destroy_province_permanently = yes }
+			india_superregion = {destroy_province_permanently = yes }
+			southern_africa_superregion = {destroy_province_permanently = yes }
+			tartary_superregion = {destroy_province_permanently = yes }
+			mongolia_region = {destroy_province_permanently = yes }
+			east_siberia_region = {destroy_province_permanently = yes }
+			tibet_region = {destroy_province_permanently = yes }
+			ural_area = {destroy_province_permanently = yes }
+			khorasan_region = {destroy_province_permanently = yes}
+			makran_area = {destroy_province_permanently = yes}
+			kalat_area = {destroy_province_permanently = yes}
+			set_global_flag = cleared_east
+		}
+	}
 }

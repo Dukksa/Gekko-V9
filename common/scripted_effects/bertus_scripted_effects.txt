@@ -53,3 +53,15 @@ get_treasury_fraction = {
 		}
 	}
 }
+
+destroy_province_permanently = {
+	hidden_effect = {
+		cede_province = ---
+		add_permanent_province_modifier = { name = cant_colonize duration = -1 }
+		add_colonysize = -1000
+		add_base_tax = -1000
+		add_base_production = -1000
+		add_base_manpower = -1000
+		change_culture = jan_mayenese
+	}
+}

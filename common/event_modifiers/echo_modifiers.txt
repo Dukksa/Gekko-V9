@@ -116,3 +116,7 @@ h_event_dip = {
 h_event_mil = {
 	army_tradition = 0.5
 }
+
+cant_colonize = {
+	local_colonial_growth = -1000
+}
