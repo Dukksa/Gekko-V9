@@ -1571,10 +1571,11 @@ subject_nation = {
 	#land_forcelimit	= -3
 	#naval_forcelimit = -6
 	caravan_power = -0.9
+	development_cost = -0.5
 }
 
 vassal_nation = {
-	development_cost = -0.5
+	#development_cost = -0.5
 }
 
 ai_overlord_modifier = {
