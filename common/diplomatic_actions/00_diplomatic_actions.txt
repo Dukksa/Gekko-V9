@@ -564,16 +564,6 @@ royal_marriage = {
 	}
 }
 
-guaranteeaction = {
-	effect = {
-		change_asha_vahishta = { value = 1 }
-	}
-}
-threaten_war = {
-	effect = {
-		change_asha_vahishta = { value = -10 }
-	}
-}
 insultaction = {
 	effect = {
 		change_asha_vahishta = { value = -5 }
@@ -950,5 +940,69 @@ support_independence_action = {
 		allow = {
 			always = no
 		}
+	}
+}
+
+threaten_war = {
+	  condition = {
+        allow = {
+            always = no
+        }
+
+		potential = {
+			
+		}
+    }
+
+	effect = {
+		change_asha_vahishta = { value = 1 }
+	}
+}
+
+guaranteeaction = {
+	  condition = {
+        allow = {
+            always = no
+        }
+
+		potential = {
+			
+		}
+    }
+
+	effect = {
+		change_asha_vahishta = { value = 1 }
+	}
+}
+
+warningaction = {
+	  condition = {
+        allow = {
+            always = no
+        }
+
+		potential = {
+			
+		}
+    }
+
+	effect = {
+		change_asha_vahishta = { value = 1 }
+	}
+}
+
+grant_freecity = {
+	  condition = {
+        allow = {
+            always = no
+        }
+
+		potential = {
+			
+		}
+    }
+
+	effect = {
+		change_asha_vahishta = { value = 1 }
 	}
 }

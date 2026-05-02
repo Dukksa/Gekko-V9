@@ -59,7 +59,7 @@ difficulty_easy_ai = {
 }
 
 difficulty_normal_ai = {
-	development_cost = 1
+	
 }
 
 difficulty_hard_ai = {
@@ -365,7 +365,6 @@ march_bonus = {
 	fort_maintenance_modifier = -0.25
 	land_maintenance_modifier = -0.25
 	naval_maintenance_modifier = -0.15
-	development_cost = -0.25
 }
 
 pu_subject_bonus = {
@@ -623,6 +622,7 @@ ai_nation = {
 	global_tax_income = 24
 	national_focus_years = -10	
 	technology_cost = -0.05
+	development_cost = 1
 	
 }
 
@@ -1540,10 +1540,12 @@ self_governing_colony_subject = {
 
 march_subject = {
 	land_forcelimit = 1
+	development_cost = -0.25
 }
 
 vassal_subject = {
 	land_forcelimit = 1
+	development_cost = -0.25
 }
 
 daimyo_subject = {
@@ -1551,6 +1553,7 @@ daimyo_subject = {
 
 appanage_subject = {
 	defensiveness = 0.25
+	development_cost = -0.25
 }
 
 appanage_overlord = {
@@ -1571,7 +1574,6 @@ subject_nation = {
 	#land_forcelimit	= -3
 	#naval_forcelimit = -6
 	caravan_power = -0.9
-	development_cost = -0.25
 }
 
 vassal_nation = {
