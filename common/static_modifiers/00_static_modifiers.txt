@@ -1540,12 +1540,10 @@ self_governing_colony_subject = {
 
 march_subject = {
 	land_forcelimit = 1
-	development_cost = -0.25
 }
 
 vassal_subject = {
 	land_forcelimit = 1
-	development_cost = -0.25
 }
 
 daimyo_subject = {
@@ -1553,7 +1551,6 @@ daimyo_subject = {
 
 appanage_subject = {
 	defensiveness = 0.25
-	development_cost = -0.25
 }
 
 appanage_overlord = {
@@ -1577,7 +1574,7 @@ subject_nation = {
 }
 
 vassal_nation = {
-	#development_cost = 0.5
+	development_cost = -0.5
 }
 
 ai_overlord_modifier = {
