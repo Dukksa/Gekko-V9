@@ -727,28 +727,79 @@ country_decisions = {
 	#	
 	#	ai_will_do = {factor = 0}
 	#}
-	delete_world = {
-		color = { 0 0 0 }
-		potential = {
-			ai = no
-			NOT = { has_global_flag = cleared_east	}
-		}
+	#delete_world = {
+	#	color = { 0 0 0 }
+	#	potential = {
+	#		ai = no
+	#		NOT = { has_global_flag = cleared_east	}
+	#	}
+	#	effect = {
+	#		east_indies_superregion = {destroy_province_permanently = yes }
+	#		oceania_superregion = {destroy_province_permanently = yes }
+	#		china_superregion = {destroy_province_permanently = yes }
+	#		far_east_superregion = {destroy_province_permanently = yes }
+	#		india_superregion = {destroy_province_permanently = yes }
+	#		southern_africa_superregion = {destroy_province_permanently = yes }
+	#		tartary_superregion = {destroy_province_permanently = yes }
+	#		mongolia_region = {destroy_province_permanently = yes }
+	#		east_siberia_region = {destroy_province_permanently = yes }
+	#		tibet_region = {destroy_province_permanently = yes }
+	#		ural_area = {destroy_province_permanently = yes }
+	#		khorasan_region = {destroy_province_permanently = yes}
+	#		makran_area = {destroy_province_permanently = yes}
+	#		kalat_area = {destroy_province_permanently = yes}
+	#		set_global_flag = cleared_east
+	#	}
+	#}
+	prepare_for_holy_war = {	
+			###X###
+			major = yes
+			#######
+			potential = {
+					ai = no
+					religion_group = muslim
+					has_border_with_religious_enemy = yes
+				}
+				allow = {
+					religion_group = muslim
+					NOT = { has_country_modifier = jihad }
+					at_war_with_religious_enemy = yes
+					has_border_with_religious_enemy = yes
+					army_size_percentage = 0.9
+					manpower_percentage = 0.25
+				}
+				effect = {
+					add_piety = -2
+					add_country_modifier = {
+					name = "jihad"
+					duration = 1825
+					}
+				}	
+			}
+	revert_prepare_for_holy_war = {	
+			###X###
+			major = yes
+			#######
+			potential = {
+					ai = no
+					religion_group = muslim
+				}
+				allow = {
+					is_at_war = no
+					NOT = { has_country_modifier = jihad }
+					has_border_with_religious_enemy = yes
+					NOT = { piety = -0.80 }
+				}
+				effect = {
+					add_piety = 2
+				}
+			}
+	gecko_court_recruitment_decision = {
+		color = { 166  0  0 }
+		potential = { ai = no }
+		allow = { hidden_trigger = { NOT = { has_country_flag = gecko_mercs_in_tier_selection_event_cflag } } }
 		effect = {
-			east_indies_superregion = {destroy_province_permanently = yes }
-			oceania_superregion = {destroy_province_permanently = yes }
-			china_superregion = {destroy_province_permanently = yes }
-			far_east_superregion = {destroy_province_permanently = yes }
-			india_superregion = {destroy_province_permanently = yes }
-			southern_africa_superregion = {destroy_province_permanently = yes }
-			tartary_superregion = {destroy_province_permanently = yes }
-			mongolia_region = {destroy_province_permanently = yes }
-			east_siberia_region = {destroy_province_permanently = yes }
-			tibet_region = {destroy_province_permanently = yes }
-			ural_area = {destroy_province_permanently = yes }
-			khorasan_region = {destroy_province_permanently = yes}
-			makran_area = {destroy_province_permanently = yes}
-			kalat_area = {destroy_province_permanently = yes}
-			set_global_flag = cleared_east
+			country_event = { id = gecko_court.1 }
 		}
 	}
 }

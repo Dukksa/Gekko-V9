@@ -606,7 +606,7 @@ trade_kontor_network_1 = {
 
 }
 
-public_road_act = {
+public_road_act1 = {
 	monarch_power = DIP
 	
 	potential = {

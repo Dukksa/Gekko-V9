@@ -16,6 +16,8 @@
  PR_grand_captain_decision:0 "Grand Captain"
  prepare_for_holy_war_title:0 "§RPrepare For Holy War§!" 
  prepare_for_holy_war_desc:0 "The clouds are tinged with mud and sand as the enemies of our faith march ever closer to our borders. Fortunately, we are not the only ones to notice it, warriors flock to our banners as the potential new Ghazis flood into the country. Let us fill our mosques and battle ranks with these veteran warriors of the faith."
+ revert_prepare_for_holy_war_title:0 "Time for Peace"
+ revert_prepare_for_holy_war_desc:0 "Clouds are gone, now it is time for enlightment."
  enlist_rajputs_title:0 "Enlist Rajputs"
  enlist_rajputs_desc:0 "Rajputs, one of the 4 Varnas of our society, have always led the political authority of the preceding states in the region. Though their religions are numerous thanks to the missionary works of Muslim Traders and Therevada Buddhists, their ancestral tribes and ties still bind them to one another. Let us ignore their religious differences and instead fuel our armies with this warrior class."
  gc_war_taxes_notification_title:0 "§RWAR TAXES ARE ON§!"

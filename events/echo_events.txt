@@ -169,37 +169,37 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = echo.10.a
-		add_adm_power = -15
+		add_treasury = -33
 		create_advisor = philosopher
 	}
 	option = {
 		name = echo.10.b
-		add_adm_power = -15
+		add_treasury = -33
 		create_advisor = natural_scientist
 	}
 	option = {
 		name = echo.10.c
-		add_adm_power = -15
+		add_treasury = -33
 		create_advisor = artist
 	}
 	option = {
 		name = echo.10.d
-		add_adm_power = -15
+		add_treasury = -33
 		create_advisor = treasurer
 	}
 	option = {
 		name = echo.10.e
-		add_adm_power = -15
+		add_treasury = -33
 		create_advisor = theologian
 	}
 	option = {
 		name = echo.10.f
-		add_adm_power = -15
+		add_treasury = -33
 		create_advisor = master_of_mint
 	}
 	option = {
 		name = echo.10.g
-		add_adm_power = -15
+		add_treasury = -33
 		create_advisor = inquisitor
 	}
 	option = {
@@ -219,37 +219,37 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = echo.11.a
-		add_dip_power = -15
+		add_treasury = -33
 		create_advisor = statesman
 	}
 	option = {
 		name = echo.11.b
-		add_dip_power = -15
+		add_treasury = -33
 		create_advisor = naval_reformer
 	}
 	option = {
 		name = echo.11.c
-		add_dip_power = -15
+		add_treasury = -33
 		create_advisor = trader
 	}
 	option = {
 		name = echo.11.d
-		add_dip_power = -15
+		add_treasury = -33
 		create_advisor = spymaster
 	}
 	option = {
 		name = echo.11.e
-		add_dip_power = -15
+		add_treasury = -33
 		create_advisor = colonial_governor
 	}
 	option = {
 		name = echo.11.f
-		add_dip_power = -15
+		add_treasury = -33
 		create_advisor = diplomat
 	}
 	option = {
 		name = echo.11.g
-		add_dip_power = -15
+		add_treasury = -33
 		create_advisor = navigator
 	}
 	option = {
@@ -269,37 +269,37 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = echo.12.a
-		add_mil_power = -15
+		add_treasury = -33
 		create_advisor = army_reformer
 	}
 	option = {
 		name = echo.12.b
-		add_mil_power = -15
+		add_treasury = -33
 		create_advisor = army_organiser
 	}
 	option = {
 		name = echo.12.c
-		add_mil_power = -15
+		add_treasury = -33
 		create_advisor = commandant
 	}
 	option = {
 		name = echo.12.d
-		add_mil_power = -15
+		add_treasury = -33
 		create_advisor = quartermaster
 	}
 	option = {
 		name = echo.12.e
-		add_mil_power = -15
+		add_treasury = -33
 		create_advisor = recruitmaster
 	}
 	option = {
 		name = echo.12.f
-		add_mil_power = -15
+		add_treasury = -33
 		create_advisor = fortification_expert
 	}
 	option = {
 		name = echo.12.g
-		add_mil_power = -15
+		add_treasury = -33
 		create_advisor = grand_captain
 	}
 	option = {

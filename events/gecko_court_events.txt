@@ -12,17 +12,14 @@ country_event = {
 	immediate = { hidden_effect = { set_country_flag = gecko_court_in_court_recruitment_cflag } }
 	
 	option = { #Recruit Administrative advisor
-		trigger = { adm_power = 25 }
 		name = gecko_court.1.a
 		country_event = { id = echo.10 }
 	}
 	option = { #Recruit Diplomatic advisor
-		trigger = { dip_power = 25 }
 		name = gecko_court.1.b
 		country_event = { id = echo.11 }
 	}
 	option = { #Recruit Military advisor
-		trigger = { mil_power = 25 }
 		name = gecko_court.1.c
 		country_event = { id = echo.12 }
 	}

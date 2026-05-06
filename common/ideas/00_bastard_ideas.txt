@@ -2285,7 +2285,7 @@ ADU_ideas = {
 MAM2_ideas = { #Mission reward to double mam_monopoly_ports // see mam_establish_merchant_escorts
 	start = {
 		trade_steering = 0.5
-		global_tax_modifier = 0.15
+		cavalry_power = 0.1
 	}
 	
 	bonus = {
@@ -2299,7 +2299,7 @@ MAM2_ideas = { #Mission reward to double mam_monopoly_ports // see mam_establish
 	free = yes
 	
 	purchase_new_mamelukes = {
-		cavalry_power = 0.1
+		global_tax_modifier = 0.15
 	}
 	monuments_to_greatness = {
 		development_cost = -0.05
@@ -2325,7 +2325,7 @@ MAM2_ideas = { #Mission reward to double mam_monopoly_ports // see mam_establish
 MAM_ideas = {
 	start = {
 		trade_steering = 0.5
-		global_tax_modifier = 0.15
+		cavalry_power = 0.1
 		
 	}
 	
@@ -2339,7 +2339,7 @@ MAM_ideas = {
 	free = yes
 	
 	purchase_new_mamelukes = {
-		cavalry_power = 0.1
+		global_tax_modifier = 0.15
 	}
 	monuments_to_greatness = {
 		development_cost = -0.05
