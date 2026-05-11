@@ -18,7 +18,7 @@ edict_devastation_edict = {
 	}
 	
 	modifier = {
-		local_monthly_devastation = -1
+		local_monthly_devastation = -0.25
 		local_prosperity_growth	 = 0.25
 	}
 	

@@ -643,7 +643,7 @@ shipyard = {
 }
 
 fort_15th = {
-	cost = 200
+	cost = 100
 	time = 30
 	build_trigger = {
 		OR = {
