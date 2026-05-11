@@ -758,13 +758,11 @@ country_decisions = {
 			potential = {
 					ai = no
 					religion_group = muslim
-					has_border_with_religious_enemy = yes
 				}
 				allow = {
 					religion_group = muslim
 					NOT = { has_country_modifier = jihad }
 					at_war_with_religious_enemy = yes
-					has_border_with_religious_enemy = yes
 					army_size_percentage = 0.9
 					manpower_percentage = 0.25
 				}
@@ -787,7 +785,6 @@ country_decisions = {
 				allow = {
 					is_at_war = no
 					NOT = { has_country_modifier = jihad }
-					has_border_with_religious_enemy = yes
 					NOT = { piety = -0.80 }
 				}
 				effect = {

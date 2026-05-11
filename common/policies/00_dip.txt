@@ -434,28 +434,28 @@ centralization_power_act = {
 
  #Merc Ideas Policies 
 
-# loyal_conduct_act = { 
-# 	monarch_power = DIP
+ loyal_conduct_act = { 
+ 	monarch_power = DIP
 	
-# 	potential = {
-# 		has_idea_group = trade_ideas
-# 		has_idea_group = spy_ideas   
-# 	}
+ 	potential = {
+ 		has_idea_group = trade_ideas
+ 		has_idea_group = infrastructure_ideas  
+ 	}
 	
-# 	allow = {
-# 		full_idea_group = trade_ideas
-# 		full_idea_group = spy_ideas 
-# 	}
+ 	allow = {
+ 		full_idea_group = trade_ideas
+ 		full_idea_group = infrastructure_ideas
+ 	}
 	
-# 	global_trade_power = 0.1
-# 	center_of_trade_upgrade_cost = -0.15
+ 	global_trade_power = 0.1
+ 	center_of_trade_upgrade_cost = -0.15
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1		
-# 	}
-# }
+ 	effect = {}
+ 	removed_effect = {}
+ 	ai_will_do = {
+ 		factor = 1		
+ 	}
+}
 
 #  diplomatic_arms_act = { 
 #  	monarch_power = MIL

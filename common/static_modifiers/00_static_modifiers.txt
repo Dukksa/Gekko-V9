@@ -350,7 +350,6 @@ march_bonus = {
 	country_diplomatic_power = 1
 	country_military_power = 1
 	advisor_cost = -0.25
-	development_cost = -0.15
 	technology_cost = -0.15
 	global_manpower = 2.5
 	global_sailors = 1250
@@ -1571,11 +1570,10 @@ subject_nation = {
 	#land_forcelimit	= -3
 	#naval_forcelimit = -6
 	caravan_power = -0.9
-	development_cost = -0.5
 }
 
 vassal_nation = {
-	#development_cost = -0.5
+	development_cost = -0.5
 }
 
 ai_overlord_modifier = {
@@ -1760,6 +1758,7 @@ support_loyalists = {
 send_officers = {
 	discipline = 0.05
 	land_morale = 0.1
+	development_cost = -0.75
 }
 
 divert_trade = {
